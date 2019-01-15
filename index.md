@@ -1,0 +1,40 @@
+---
+title: François Husson 
+---
+
+<div>
+<div class="column-left">
+<p>F. Husson</p>
+</div>
+
+
+<div class="column-right">
+
+<h2 id="descriptif">Descriptif</h2>
+<ul>
+<li><a href="recherche.hlm">Recherche</a></li>
+<li><a href="publis.html">Publis</a></li>
+<li><a href="enseignement.html">Enseignement</a></li>
+<li><a href="coinr.html">Coin R</a></li>
+<li><a href="donnees.html">Données</a></li>
+</ul>
+
+<h1 style="margin-top:-1px;">Actualit&eacute;s&nbsp;</h1> <table width="621" height="122" border="1">     <tbody>         <tr>             <td align="center"><a href="http://www.pur-editions.fr/detail.php?idOuv=826" style="background-color: rgb(255, 255, 255); font-size: 1em; text-align: left;"><img width="71" height="100" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96350_exo.jpg" alt="" /></a></td>             <td align="center"><a href="http://www.crcpress.com/product/isbn/9781439881453" style="background-color: rgb(255, 255, 255);"><img width="70" height="97" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96356_cover_RforStat_small.jpg" alt="" /></a></td>             <td align="center"><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/support2cours/livres/statistiques.avec.R"><img width="73" height="101" alt="" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96349_Stat_R3_couv.jpg" /></a></td>             <td align="center"><a href="http://http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109387_Libra_Analisis_de_Datos_con_R.pdf" style="background-color: rgb(255, 255, 255);"><img width="65" height="95" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/105481_Facto_esp.jpg" alt="" /></a></td>             <td align="center"><a href="http://factominer.free.fr/livre/" style="background-color: rgb(255, 255, 255);"><img width="74" height="102" alt="" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96348_analyse_donnees_R_2e_edition_couv_BD.jpg" /></a></td>             <td align="center"><a href="https://www.crcpress.com/Exploratory-Multivariate-Analysis-by-Example-Using-R-Second-Edition/Husson-Le-Pages/p/book/9781138196346"><img width="68" height="104" alt="" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109386_ExploratoryMultivariateAnalysis.jpg" /></a></td>             <td align="center"><a href="https://r-stat-sc-donnees.github.io/"><img width="66" height="103" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109388_R_stat_sc_donnees.png" alt="" /></a></td>         </tr>         <tr>             <td align="center"><p>1re &eacute;d : 2005<br />             2nd &eacute;d : 2013</p></td>             <td align="center">2012</td>             <td align="center">1re &eacute;d : 2008<br />             2e &eacute;d : 2010<br />             3e &eacute;d : 2012</td>             <td align="center">2013</td>             <td align="center">1re &eacute;d : 2009<br />             2nd &eacute;d : 2016</td>             <td align="center">1re &eacute;d : 2011<br />             2nd &eacute;d : 2017</td>             <td align="center">2018             <table width="72" height="27">             </table></td>         </tr>     </tbody> </table> <p>&nbsp; <table width="628" height="115">     <tbody>         <tr>             <td><a href="https://r-stat-sc-donnees.github.io/"><img width="66" height="103" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109388_R_stat_sc_donnees.png" alt="" /></a></td>             <td><p><span class="bold">Sortie du livre &quot;<span class="italic">R pour la statistique et la science des donn&eacute;es</span>&quot; (oct 2018)<br />             Pour plus d'information :</span><span class="bold"> <a href="https://r-stat-sc-donnees.github.io/">voir ici</a></span><br />             <span class="bold">Pour le commander :&nbsp; <a href="http://www.pur-editions.fr/detail.php?idOuv=4716">voir&nbsp; ici</a></span></p></td>         </tr>     </tbody> </table> <span class="bold">El libro &quot;An&aacute;lisis de datos con R&quot; est&aacute; disponible gratuitamente: <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109387_Libra_Analisis_de_Datos_con_R.pdf">descargar</a></span></p> <p><span class="bold"><a href="https://francoishusson.wordpress.com/">Blog</a> on missing values and Exploratory Multivariate Data Analysis.</span></p> <ul>     <li>Publication du livre<span class="italic"> R pour la statistique et la science de donn&eacute;es</span> (25 octobre 2018)</li>     <li>The 2nd edition of the book <span class="bold"><a href="https://www.crcpress.com/Exploratory-Multivariate-Analysis-by-Example-Using-R-Second-Edition/Husson-Le-Pages/p/book/9781138196346?tab=rev"><span class="italic">Exploratory Multivariate Data Analysis</span></a></span> is published. See <a href="https://www.crcpress.com/Exploratory-Multivariate-Analysis-by-Example-Using-R-Second-Edition/Husson-Le-Pages/p/book/9781138196346?tab=rev">some reviews</a>.</li>     <li>La 2&egrave;me &eacute;dition augment&eacute;e du livre <a href="http://www.pur-editions.fr/detail.php?idOuv=2166"><span class="bold">Analyse de donn&eacute;es avec R</span></a> est disponible depuis le 15 f&eacute;v 2016.</li>     <li><a href="https://www.fun-mooc.fr/courses/course-v1:agrocampusouest+40001S04+session04/about"><span class="bold">1800 participants for the 2nd session of the MOOC on Exploratory Multivariate Data Analysis (2nd edition)</span></a> - 3rd session in March 2019</li>     <li><a href="https://www.fun-mooc.fr/courses/course-v1:agrocampusouest+40001S04+session04/about"><span class="bold">5300 participants au MOOC d'analyse des donn&eacute;es multidimensionnelles (4&egrave;me session)</span></a> - 5&egrave;me session en mars 2019</li>     <li>Des cours en ligne sur une <a href="https://www.youtube.com/HussonFrancois">cha&icirc;ne Youtube</a></li>     <li><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/enseignement#AnaDo">Cours d'analyse de donn&eacute;es </a>(version fran&ccedil;aise)</li>     <li><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/enseignement?languageId=1#AnaDoGB">Course on Exploratory multivariate data analysis</a> (in English)</li>     <li>Directeur de la collection <span class="italic"><a href="http://www.pur-editions.fr/collection.php?idColl=88">Pratique de la statistique</a></span> aux Presses Universitaires de Rennes (depuis mars 2012)</li>     <li>Editeur associ&eacute; du <a href="http://journal-sfds.fr/index.php/J-SFdS/">Journal de la Soci&eacute;t&eacute; Fran&ccedil;aise de Statistique</a> (depuis f&eacute;vrier 2014)</li>     <li>Membre du comit&eacute; &eacute;ditorial de la <span class="italic">collection Pratique R</span> (collection statistique avec R de chez EDP, depuis novembre 2009)</li>     <li>Un MOOC en sensom&eacute;trie dont les cours et transparents sont disponibles <a href="http://tice.agrocampus-ouest.fr/course/view.php?id=665">ici</a></li> </ul> <h4>&nbsp;</h4>
+		</div>
+		<div id="footer">
+                <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h1>François Husson</h1>
+<h4>Professeur en statistique</h4> <p>Tel : +33 2 23 48 58 86<br /> husson[at]agrocampus-ouest.fr<br /><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br />Blog : https://francoishusson.wordpress.com/</a> &nbsp;&nbsp;<a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h1><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Mon laboratoire</a></h1> <p>IRMAR - UMR 6625 du CNRS<br />UP de math&eacute;matiques appliqu&eacute;s <br /> Agrocampus Ouest<br /> 65 rue de St-Brieuc CS 84215<br /> 35042 Rennes Cedex (France)</p>
+	</div>
+</div>
+		</div>
+	</div>
+  
+</div>
+</div>
