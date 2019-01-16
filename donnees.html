@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>François Husson - Données</title>
+	<meta name="Generator" content="Infoglue">
+	<!--<meta name="Keywords" content=""/>-->
+	<meta name="robots" content="index, follow">
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="./assets/css-member-site" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/92858_favicon4.ico" type="image/x-icon">
+	<link rel="icon" href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/92858_favicon4.ico" type="image/x-icon">
+	
+	<!-- Google API's -->
+<script type="text/javascript" src="./assets/jsapi"></script>
+<script language="Javascript" type="text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="./assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+	<script type="text/javascript" src="./assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<div id="ie">
+<![endif]-->
+	<div id="container">
+		<div id="header">
+<h1 class="ui-corner-bottom" style="margin-bottom:-1em; color:#333; text-align:center;"><span style=" background-color:rgba(255,255,255,.5);">François Husson</span></h1><div class="carousel-wrap">
+	<div class="carousel center-vertical">
+		<div class="caroufredsel_wrapper" style="position: relative; overflow: hidden; margin: 0px; width: 1333px; height: 140px;"><div id="carousel-5324" style="margin: 0px; float: none; position: absolute; top: 0px; left: 216.5px; width: 3783px; height: 140px;"><img width="900" height="140" alt="" src="./img/banniere_livre.png" style="margin-right: 216.5px;"><img width="650" height="140" src="./img/developpement.png" style="font-size: 0.8em; background-color: rgb(255, 255, 255); margin-right: 0px;" alt=""></div></div>
+		<div class="clearfix"></div>
+		<div class="timer" id="carousel-5324-timer" style="width: 826.016px; overflow: hidden;"></div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<script>
+	$(function(){
+		$("#carousel-5324").carouFredSel({
+			direction: "left",
+			width: $("#carousel-5324").parents(".carousel-wrap").innerWidth(),
+			items: {
+				visible: 1,
+				start: "random"
+			},
+			scroll: {
+				items: null,
+				easing: "easeInOutQuart",
+				duration: 500,
+				mousewheel: true,
+				pauseOnHover: "resume"
+			},
+			auto: {
+				pauseDuration: 6000,
+				onPauseStart: function( percentage, duration ) {
+					$("#carousel-5324-timer").stop().animate(
+					  { width: $("#carousel-5324").parents(".carousel-wrap").innerWidth() },
+					  { duration: duration,
+						easing: "linear" }
+					);
+				}, 
+				onPausePause: function( percentage, duration ) {
+					$("#carousel-5324-timer").stop();
+				},
+				onPauseEnd: function( percentage, duration ) {
+					$("#carousel-5324-timer").stop().width( 0 );
+				}
+			}
+		}).find(".img").hover(
+			function() { $(this).find(".legend").slideDown(); },
+			function() { $(this).find(".legend").slideUp();	}
+		);
+		
+		$("#carousel-5324 a").fancybox({
+			cyclic: true,
+			scrolling: "no",
+			centerOnScroll: true,
+			titlePosition: "inside",
+			titleFormat: formatTitle,
+			onComplete: function() {
+				$("#carousel-5324").trigger("pause");
+			},
+			onClosed: function() {
+				$("#carousel-5324").trigger("play");
+			}
+		});
+		
+		$("#carousel-5324 img:last").load(function() {
+			$(window).resize();
+		});
+	});
+	
+	$(window).resize(function() {
+		$("#carousel-5324").trigger(
+			"configuration",
+			["width", $("#carousel-5324").parents(".carousel-wrap").innerWidth()]
+		).parent().css('width',$("#carousel-5324").parents(".carousel-wrap").innerWidth());
+	});
+</script>
+		</div>
+		<div id="nav">
+<ul class="nav">
+<li><a href="index.html" title="" class="current">Accueil</a></li>
+<li><a href="recherche.html" title="">Recherche</a></li>
+<li><a href="publis.html" title="">Publis</a></li>
+<li><a href="enseignement.html" title="">Enseignement</a></li>
+<li><a href="MOOC.html" title="">MOOC</a></li>
+<li><a href="coinR.html" title="">Coin R</a></li>
+<li><a href="donnees.html" title="">Données</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/data.sets?languageId=1">English version<br>
+<img width="64" height="64" alt="" src="./img/flag_gb.png"></a></h2>
+</div>
+<div class="article">
+<h2>Liens</h2>
+<p><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/" target="_blank">Mon laboratoire</a><br> <a href="http://factominer.free.fr/" target="_blank">FactoMineR</a><br> <a href="http://sensominer.free.fr/" target="_blank">SensoMineR</a><br> <a href="http://www.sfds.asso.fr/56-Presentation">SFdS agro-industrie</a><br> <a href="http://www.agrocampus-ouest.fr/" target="_blank"><img height="57" width="85" alt="" src="./img/logo_AO.gif"></a></p>
+</div>
+		</div>
+		<div id="content">
+<h1>Données</h1>
+<p>Voici quelques jeux de données en <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees#anado">analyse des données</a> et <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees#senso">sensométrie</a>. D'autres jeux de données sont disponibles <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/support2cours/donnees">ici</a>.</p> <h2 id="anado">Analyse des données</h2> <p>Plusieurs jeux de données sont issus du livre <a href="http://factominer.free.fr/livre/">Analyse de données avec R </a>(F. Husson, S. Lê et J. Pagès, 2009, PUR).<br> Le script R permet de refaire les analyses commentées dans le livre par un simple copié-collé.</p> <ul>     <li>Jeux de données pour l'Analyse en Composantes Principales (ACP)     <ul>         <li><a href="http://factominer.free.fr/livre/orange.csv">Jus d'oranges</a> (avec le <a href="http://factominer.free.fr/livre/orange.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/base_conso.csv">Consommation des ménages</a> (avec le <a href="http://factominer.free.fr/livre/base_conso.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/temperat.csv">Température dans les capitales européennes</a> (avec le <a href="http://factominer.free.fr/livre/temperat.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/poulet.csv">Génomique sur les poulets</a> (avec le <a href="http://factominer.free.fr/livre/poulet.txt">script R</a>)</li>         <li>Dégustation de vins par <a href="./img/expert_vins.csv">un jury d'experts oenologues</a>, par un <a href="./img/jury1_vins.csv">jury d'étudiants</a> et par un <a href="./img/jury2_vins.csv">jury de consommateurs</a></li>         <li><a href="./img/decathlon.csv">Performance au décathlon</a></li>         <li><a href="./img/pluie.csv">Pluviométrie dans les villes françaises</a></li>         <li><a href="./img/temperat.txt">Température dans les villes françaises</a></li>     </ul></li>     <li>Jeux de données pour l'Analyse des correspondances (AFC)     <ul>         <li><a href="http://factominer.free.fr/livre/femme_travail.csv">Enquête sur le travail des femmes (en 1970)</a> (avec le <a href="http://factominer.free.fr/livre/femme_travail.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/JO.csv">Médailles au Jeux Olympiques</a> (avec le <a href="http://factominer.free.fr/livre/JO.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/vins.csv">Description de vins</a> (avec le <a href="http://factominer.free.fr/livre/vins.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/deces.csv">Causes de décès</a> (avec le <a href="http://factominer.free.fr/livre/deces.txt">script R</a>)</li>         <li><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees">Effectif étudiant dans les universités</a></li>         <li><a href="./img/election.csv">Résultats aux élections présidentielles de 2002 par région</a></li>     </ul></li>     <li>Jeux de données pour l'Analyse des correspondances Multiples (ACM ou AFCM)     <ul>         <li><a href="http://factominer.free.fr/livre/the.csv">Enquête sur la consommation de thé</a> (avec le <a href="http://factominer.free.fr/livre/the.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/ogm.csv">Enquête sur les OGM</a> (avec le <a href="http://factominer.free.fr/livre/ogm.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/parfums.csv">Description de parfums par catégorisation</a> (avec le <a href="http://factominer.free.fr/livre/parfums.txt">script R</a>)</li>         <li><a href="./img/credit.csv">Crédit bancaire</a></li>     </ul></li>     <li>Jeux de données pour la Classification Ascendante Hiérarchique (CAH)     <ul>         <li><a href="http://factominer.free.fr/livre/temperat.csv">Température dans les capitales européennes</a>(avec le <a href="http://factominer.free.fr/livre/temperat_classif.txt">script R</a>)</li>         <li><a href="http://factominer.free.fr/livre/the_classif.csv">Enquête sur la consommation de thé</a> (avec le<a href="http://factominer.free.fr/livre/the_classif.txt"> script R</a></li>         <li><a href="http://factominer.free.fr/livre/decoupage.csv">Decoupage en classes d'une variable</a> (avec le<a href="http://factominer.free.fr/livre/decoupage.txt"> script R</a>)</li>     </ul></li> </ul> <h2 id="senso">Jeux de données en sensométrie</h2> <ul>     <li>Jeu de données parfums (dégustation 2014) : <a href="./img/QDA_parfums_2014.csv">données QDA</a>, <a href="./img/catego_parfums_2014.csv">données de catégorisation </a>(fichiers csv)</li><li>Jeu de données parfums (données recueillies en 2013 par A. Emzivat, N. Le Cam, A. Gehin et E. Dufeil) : <a href="./img/frise_publicit__s.pdf">les publicités</a>, <a href="./img/questionnaire_univers.pdf">le questionnaire</a>, <a href="./img/Catego_parfum.csv">catégorisation sur les publicités</a>, <a href="./img/QDA_pub_parfums.csv">description des publicités par recueil classique QDA</a>, catégorisation des parfums (<a href="./img/catego_parfums_2013.csv">séance 1</a>, <a href="./img/catego_2013_S2.csv">séance 2</a>)</li><li>Jeu de données chocolat (<a href="./img/choc_etu.xls">description étudiant</a>, et <a href="./img/choc_centre.xls">description par des experts</a>)</li>     <li>Jeu de données jus d'orange     <ul>         <li><a href="./img/orange0506.zip">En 2005-06</a> : nom des jus d'oranges, description par recueil classique, description par un recueil par nappe</li>         <li><a href="./img/orange0607.zip">En 2006-07</a> : nom des jus d'oranges, description par recueil classique, description par un recueil par nappe</li>         <li>Données de préférences : <a href="./img/Pref_jus_orange.doc">nom</a> des jus d'oranges, <a href="./img/Pref_jus_orange.xls">préférence</a></li>         <li><a href="./img/orange0910.zip">En 2009-10</a> : nom des jus d'oranges, description par recueil classique, description par catégorisation</li>     </ul></li>     <li><a href="./img/biscuit.zip">Jeu de données biscuit</a> : nom des biscuits, description par recueil classique réalisée par les français et par les pakistanais, description par un recueil par nappe, description par un recueil par nappe et mots, <a href="./img/hedo.csv">données de préférences</a></li>     <li><a href="./img/vins.zip">Jeu de données vins</a> : nom des vins, description par recueil classique réalisée par les experts et par deux jurys étudiants, description par un recueil par nappe, données de préférences</li>     <li><a href="./img/parfums.zip">Jeu de données parfum</a> : nom, description par recueil classique réalisée par des experts et par des étudiants, description par catégorisation, description par nappe d'étudiants et nappe de consommateurs, données de préférences.</li>     <li><a href="./img/cocktail.zip">Jeu de données cocktail</a> : description par recueil classique réalisée par un recueil classique (<a href="./img/QDA_cocktail.csv">QDA_cocktail</a>), leur composition physico-chimique, description par un recueil par nappe, données de préférences (<a href="./img/hedo_cocktail.txt">hedo_cocktail</a>). Le tableau suivant synthétise description sensorielle classique et par nappe et description physico-chimique.</li>     <li>Données compotes : <a href="./img/compote.xls">jeu de données</a></li> </ul>
+		</div>
+		<div id="footer">
+                <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h1>François Husson</h1>
+<h4>Professeur en statistique</h4> <p>Tel : +33 2 23 48 58 86<br> husson[at]agrocampus-ouest.fr<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h1><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Mon laboratoire</a></h1> <p>IRMAR - UMR 6625 du CNRS<br>UP de mathématiques appliqués <br> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+
+
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

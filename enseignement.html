@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0088)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/enseignement -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>François Husson - Enseignement</title>
+	<meta name="Generator" content="Infoglue">
+	<!--<meta name="Keywords" content="enseignement"/>-->
+	<meta name="robots" content="index, follow">
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="./assets/css-member-site" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/92858_favicon4.ico" type="image/x-icon">
+	<link rel="icon" href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/92858_favicon4.ico" type="image/x-icon">
+	
+	<!-- Google API's -->
+<script type="text/javascript" src="./assets/jsapi"></script>
+<script language="Javascript" type="text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="./assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+	<script type="text/javascript" src="./assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<div id="ie">
+<![endif]-->
+	<div id="container">
+		<div id="header">
+<h1 class="ui-corner-bottom" style="margin-bottom:-1em; color:#333; text-align:center;"><span style=" background-color:rgba(255,255,255,.5);">François Husson</span></h1><div class="carousel-wrap">
+	<div class="carousel center-vertical">
+		<div class="caroufredsel_wrapper" style="position: relative; overflow: hidden; margin: 0px; width: 1333px; height: 140px;"><div id="carousel-5324" style="margin: 0px; float: none; position: absolute; top: 0px; left: 216.5px; width: 3783px; height: 140px;"><img width="900" height="140" alt="" src="./img/banniere_livre.png" style="margin-right: 216.5px;"><img width="650" height="140" src="./img/developpement.png" style="font-size: 0.8em; background-color: rgb(255, 255, 255); margin-right: 0px;" alt=""></div></div>
+		<div class="clearfix"></div>
+		<div class="timer" id="carousel-5324-timer" style="width: 1156.82px; overflow: hidden;"></div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<script>
+	$(function(){
+		$("#carousel-5324").carouFredSel({
+			direction: "left",
+			width: $("#carousel-5324").parents(".carousel-wrap").innerWidth(),
+			items: {
+				visible: 1,
+				start: "random"
+			},
+			scroll: {
+				items: null,
+				easing: "easeInOutQuart",
+				duration: 500,
+				mousewheel: true,
+				pauseOnHover: "resume"
+			},
+			auto: {
+				pauseDuration: 6000,
+				onPauseStart: function( percentage, duration ) {
+					$("#carousel-5324-timer").stop().animate(
+					  { width: $("#carousel-5324").parents(".carousel-wrap").innerWidth() },
+					  { duration: duration,
+						easing: "linear" }
+					);
+				}, 
+				onPausePause: function( percentage, duration ) {
+					$("#carousel-5324-timer").stop();
+				},
+				onPauseEnd: function( percentage, duration ) {
+					$("#carousel-5324-timer").stop().width( 0 );
+				}
+			}
+		}).find(".img").hover(
+			function() { $(this).find(".legend").slideDown(); },
+			function() { $(this).find(".legend").slideUp();	}
+		);
+		
+		$("#carousel-5324 a").fancybox({
+			cyclic: true,
+			scrolling: "no",
+			centerOnScroll: true,
+			titlePosition: "inside",
+			titleFormat: formatTitle,
+			onComplete: function() {
+				$("#carousel-5324").trigger("pause");
+			},
+			onClosed: function() {
+				$("#carousel-5324").trigger("play");
+			}
+		});
+		
+		$("#carousel-5324 img:last").load(function() {
+			$(window).resize();
+		});
+	});
+	
+	$(window).resize(function() {
+		$("#carousel-5324").trigger(
+			"configuration",
+			["width", $("#carousel-5324").parents(".carousel-wrap").innerWidth()]
+		).parent().css('width',$("#carousel-5324").parents(".carousel-wrap").innerWidth());
+	});
+</script>
+		</div>
+		<div id="nav">
+<ul class="nav">
+<li><a href="index.html" title="" class="current">Accueil</a></li>
+<li><a href="recherche.html" title="">Recherche</a></li>
+<li><a href="publis.html" title="">Publis</a></li>
+<li><a href="enseignement.html" title="">Enseignement</a></li>
+<li><a href="MOOC.html" title="">MOOC</a></li>
+<li><a href="coinR.html" title="">Coin R</a></li>
+<li><a href="donnees.html" title="">Données</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2><a href="teaching.html">English version<br>
+<img width="64" height="64" alt="" src="./img/flag_gb.png"></a></h2>
+</div>
+<div class="article">
+<h2>Liens</h2>
+<p><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/" target="_blank">Mon laboratoire</a><br> <a href="http://factominer.free.fr/" target="_blank">FactoMineR</a><br> <a href="http://sensominer.free.fr/" target="_blank">SensoMineR</a><br> <a href="http://www.sfds.asso.fr/56-Presentation">SFdS agro-industrie</a><br> <a href="http://www.agrocampus-ouest.fr/" target="_blank"><img height="57" width="85" alt="" src="./img/logo_AO.gif"></a></p>
+</div>
+		</div>
+		<div id="content">
+<h1>Activités d'enseignement</h1>
+<p>Je suis responsable de la <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/spe-stat">spécialisation de statistique appliquée</a> (environ 25 étudiants par an).</p><p>J'enseigne un module de statistique générale (estimation, tests d'hypothèses, analyse de variance, régression linéiare), un module d'analyse de données sous forme de MOOC, un module de sensométrie.</p>
+</h1><h2>Livres en français</h2>
+<table>     <tbody>         
+<tr><td align="center"><p><img width="33" height="50" alt="" src="./img/R_stat_sc_donnees.png"></p></td>             
+<td><p>F. Husson, et al.<br>             (2018) <span class="italic"><a href="https://r-stat-sc-donnees.github.io/">R pour la statistique et la science des données</a></span>.<br>             Presses Universitaires de Rennes 25€. <a href="http://pur-editions.fr/detail.php?idOuv=4716">Commander</a>.</p></td>         </tr>
+<tr><td align="center"><p><img width="33" height="50" alt="" src="./img/analyse_donnees_R_2e_edition_couv_BD.jpg"></p></td>             
+<td><p>F. Husson, S. Lê &amp; J. Pagès<br>             (2016) <span class="italic"><a href="http://factominer.free.fr/livre/">Analyse de données avec R, 2ème édition revue et augmentée</a></span>.<br>             Presses Universitaires de Rennes 18€. <a href="http://www.pur-editions.fr/detail.php?idOuv=2166">Commander</a>.</p></td>         </tr>         <tr>             <td align="center"><p><img width="32" height="50" alt="" src="./img/Stat_R3_couv.jpg"></p></td>             <td><p>P-A. Cornillon, A. Guyader, F. Husson, N. Jégou, J. Josse, M. Kloareg,  E. Matzner-Lober, L. Rouvière.<br>             (2012) <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/support2cours/livres/statistiques.avec.R"><span class="italic">Statistique avec R, 3ème edition revue et augmentée</span></a>.<br>             Presses Universitaires de Rennes 15€. (<a href="./img/av_propos_statR.pdf">Avant-propos du livre</a>, <a href="./img/Table_matiere_statR_v3.pdf">Sommaire</a>). <a href="http://www.pur-editions.fr/detail.php?idOuv=1836">Commander</a>.</p></td>         </tr>         <tr>             <td align="center"><p><img width="32" height="50" src="./img/livre_exo.jpg" alt=""></p></td>             <td><p>Husson F. et Pagès J.<br>             (20013) <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/support2cours/livres/stat.generale.utilisateurs-exo.corriges"><span class="italic">Statistiques générales pour utilisateurs. 2  - Exercices et corrigés</span></a>.<br>             Presses Universitaires de Rennes 20€.  (<a href="./img/descriptif_exo.pdf">Descriptif du livre</a>, <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/support2cours/livres/stat.generale.utilisateurs-exo.corriges">données</a>). <a href="http://www.pur-editions.fr/detail.php?idOuv=826">Commander</a>.</p></td>         
+</tr>     </tbody> </table>
+
+<h2>Livres en anglais</h2>
+<table>     <tbody>                  <tr>             <td align="center"><p><img alt="" src="./img/RforStat_small.jpg" height="54" width="42"></p></td>             
+<td><p>Cornillon, P-A., Guyader, A., Husson, F., Jégou, N., Josse, J., Kloareg, M., Matzner-Lober, E. &amp; Rouvière, L.<br>             (2012). <span class="italic"><a href="http://www.crcpress.com/product/isbn/9781439881453">R for Statistics</a></span>.<br>             Chapman &amp; Hall/CRC Computer Science &amp; Data Analysis.</p></td>         
+</tr><tr>             <td align="center"><p><img src="./img/ExploratoryMultivariateAnalysis.jpg" alt="" height="66" width="42"></p></td>             <td>F. Husson, S. Lê &amp; J. Pagès<br>             (2017)<span class="italic"> <a href="http://www.crcpress.com/product/isbn/9781439835807">Exploratory Multivariate Analysis by Example Using R</a></span>. 2ème édition.<br>             Chapman &amp; Hall/CRC Computer Science &amp; Data Analysis. <a href="http://www.crcpress.com/product/isbn/9781439835807">Commander</a>. <a href="http://factominer.free.fr/book">Données</a></td>         </tr>     </tbody> </table>
+<h2>Livre en espagnol</h2>
+<table>     <tbody>         <tr>             <td align="center"><p><img width="33" height="50" src="./img/Facto_esp.jpg" alt="">&nbsp;</p></td>             <td><p>F. Husson, S. Lê &amp; J. Pagès<br>             (2012) <span class="italic">Análisis de datos con R</span>. (<a href="http://http//factominer.free.fr/libra/index.html">Datos</a>) (<a href="http://www.lalibreriadelau.com/libros-de-estadistica-ca39_79/libro-analisis-de-datos-con-r-p218688">Comprar</a>)<br>             Escuela Colombiana de Ingenieria Julio Garavito.&nbsp;<strong style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, sans-serif; font-size: 11px; line-height: 19px;">ISBN:</strong><span style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, sans-serif; font-size: 11px; line-height: 19px;">&nbsp;</span><span itemprop="isbn" style="color: rgb(51, 51, 51); font-family: Tahoma, Arial, sans-serif; font-size: 11px; line-height: 19px;">978-958-8726-05-2</span></p><p><a href="./img/Libra_Analisis_de_Datos_con_R.pdf" style="position: relative; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14.4px; background: rgb(255, 255, 255); color: rgb(17, 85, 204); text-decoration: none; font-family: &quot;trebuchet ms&quot;, verdana, arial, tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Descargar <span style="color: rgb(51, 51, 51); font-family: &quot;trebuchet ms&quot;, verdana, arial, tahoma; font-size: 14.4px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">gratuitamente</span></a></p></td>         </tr>     </tbody> </table><div class="article">
+<h1>Vidéos sur le module d'analyse de données</h1>
+<p><a name="AnaDo"></a>Cet ensemble de vidéos propose un cours d'analyse de données (les liens en bleu correspondent à des cours, les liens en marron à des mise en oeuvre sur ordinateur).</p> <p></p><table width="718" height="386">     <tbody>         <tr>             <td><h4>1. Analyse en composantes principales (ACP)&nbsp;</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=KrNbyM925wI">Données - problématiques</a></li>                 <li><a href="https://www.youtube.com/watch?v=IQJr3hbYGn8">Etude des individus et des variables&nbsp;</a></li>                 <li><a href="https://www.youtube.com/watch?v=Oi4aQcUb1Yc">Aides à l'interprétation&nbsp;</a></li>                 <li><a href="https://www.youtube.com/watch?v=1QPRsg3Bxok"><font color="brown">L'ACP avec FactoMineR</font>&nbsp;</a></li>                 <li><a href="https://www.youtube.com/watch?v=1QPRsg3Bxok">&nbsp;</a><a href="https://www.youtube.com/watch?v=4T9tDX4aVS4"><font color="brown">Graphes interactifs avec Factoshiny</font>&nbsp;</a></li>                 <li><a href="https://www.youtube.com/watch?v=bdD9P3fGb70"><font color="brown">Gestion des données manquantes en ACP</font></a></li>             </ol>             <ul>                 <li><a href="./img/AnaDo_ACP_cours_slides.pdf">Diaporama correspondant aux vidéos d'ACP<font color="brown"></font></a></li>             </ul>             <h4>2. Analyse des correspondances (AFC)&nbsp;</h4>             <ol>                 <li><a href="https://youtu.be/KsSmAwiNKnw">Données - problématique et modèle d'indépendance&nbsp;</a></li>                 <li><a href="https://youtu.be/B2mAeRRBunk">Visualisation des nuages de lignes et de colonnes&nbsp;</a></li>                 <li><a href="https://youtu.be/QgASpH8zVo4">Inertie et pourcetnage d'inertie&nbsp;</a></li>                 <li><a href="https://youtu.be/EL88lwm-Kkc">Représentation simultanée&nbsp;</a></li>                 <li><a href="https://youtu.be/clXIk0bE8dc">Aides à l'interprétation&nbsp;</a></li>                 <li><a href="https://www.youtube.com/watch?v=f_lgjXVdTAk"><font color="brown">L'AFC avec FactoMineR</font>&nbsp;</a></li>                 <li><a href="https://youtu.be/W1my-DEoPZ0">Etude de cas : analyse textuelle&nbsp;</a></li>             </ol>             <ul>                 <li><a href="./img/AnaDo_AFC_cours_slides_v2.pdf">Diaporama correspondant aux vidéos d'AFC</a></li>             </ul>            <h4>3. Analyse des correspondances multiples (ACM)&nbsp;</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=C_JhUZtrPsc">Données - problématiques</a></li>                 <li><a href="https://www.youtube.com/watch?v=S7ojPthc0bE">Etude des individus</a></li>                 <li><a href="https://www.youtube.com/watch?v=liWN3V7RkZc">Etude des modalités</a></li>                 <li><a href="https://www.youtube.com/watch?v=lt9F2Iumzxs">Aides à l'interprétation</a></li>                 <li><a href="https://www.youtube.com/watch?v=u17atQJDkeM"><font color="brown">ACM avec FactoMineR</font></a></li>                 <li><a href="https://www.youtube.com/watch?v=4F2C11hcvMM"><font color="brown">Gestion des données manquantes en ACM</font></a></li>             </ol>             <ul>                 <li><a href="./img/AnaDo_ACM_cours_slides.pdf">Diaporama correspondant aux vidéos d'ACM<font color="brown"></font></a></li>             </ul></td>             <td><h4>4. Classification&nbsp;</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=SE_4dLh5vXY">Classification ascendante hiérarchique</a></li>                 <li><a href="https://www.youtube.com/watch?v=3XVoGXVG1mo">Exemple et choix du nombre de classes</a></li>                 <li><a href="https://www.youtube.com/watch?v=3VLGFOMj8oI">Méthode de partitionnement et complémentarité avec la CAH</a></li>                 <li><a href="https://www.youtube.com/watch?v=S-vfGS-VTDI">Caractérisation des classes d'individus</a></li>                 <li><a href="https://www.youtube.com/watch?v=3tT29UtHqd0"><font color="brown">Classification avec FactoMineR</font></a></li>                 <li><a href="https://www.youtube.com/watch?v=N7GkrUYP1LM"><font color="brown">Caractérisation des classes avec FactoMineR</font></a></li>             </ol>             <ul>                 <li><a href="./img/AnaDo_CLASSIF_cours_slides.pdf">Diaporama correspondant aux vidéos de classification</a></li>             </ul>             <h4>5. Analyse Factorielle Multiple (AFM)</h4>             <ol><li><a href="https://www.youtube.com/watch?v=1U-s8u1rcpo">Données - problématiques</a></li><li><a href="https://www.youtube.com/watch?v=u8SA8d8h6MU">Equilibre et ACP globale</a></li><li><a href="https://www.youtube.com/watch?v=abQllkEfIeM">Etude des groupes de variables</a></li><li><a href="https://www.youtube.com/watch?v=g8aOwlsgk2U">Compléments (données qualitatives, fréquences, aides à l'interprétation)</a></li><li><a href="https://www.youtube.com/watch?v=miCPrUe7Yq8"><font color="brown">L'AFM avec FactoMineR</font></a></li></ol>             <ul><li><a href="./img/AnaDo_AFM_cours_Slides.pdf">Diaporama correspondant aux vidéos de l'AFM</a></li></ul><h4>Pour conclure</h4>             <ul>                 <li><a href="https://www.youtube.com/watch?v=UrS00sOpeec">Démarche en analyse de données</a>&nbsp;&nbsp;</li>                 <li><a href="./img/AnaDo_demarche_slides.pdf">Diaporama correspondant à cette vidéo</a></li>             </ul></td>         </tr>     </tbody> </table><p></p>
+<h1>Vidéos sur le module de sensométrie</h1>
+<p>Cet ensemble de vidéos propose un cours de sensométrie.</p><p>Recueil de données chocolat : <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaZJXQZLMEe-MZy7qNjS232giGtIkXkG3RBK2USU4WDFRNDg/viewform?usp=sf_link">fiche descriptive</a></p> <p></p><table width="711" height="423">     <tbody>         <tr>             <td><h4>1. Introduction</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=jBZj235cNoI">Introduction à la sensométrie</a></li>                 <li><a href="https://www.youtube.com/watch?v=A4VyjBGD9vY">Plans d'expériences en analyse sensorielle</a></li>                 <li><a href="https://www.youtube.com/watch?v=hUgrGU4KRlc"><font color="brown">Installation de R et SensoMineR</font></a></li>                 <li><a href="https://www.youtube.com/watch?v=NODQFUE037s"><font color="brown">Importation de données</font></a></li>                 <li><a href="https://www.youtube.com/watch?v=XGm5ETNyUOc"><font color="brown">Plans d'expériences avec SensoMineR</font></a></li>             </ol></td>             <td><h4>2. Caractérisation de produits</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=8u_gST4thWs">Présentation du jeu de données chocolat</a></li>                 <li><a href="https://www.youtube.com/watch?v=_XeBfUnfPx0">Modèle d'analyse de variance en sensométrie</a></li>                 <li><a href="https://www.youtube.com/watch?v=pUd9wIsLymk">Caractérisation de produits</a></li>                 <li><a href="https://www.youtube.com/watch?v=GPbff0Q84R0"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>         </tr>         <tr>             <td><h4>3. Evaluation de la performance d'un jury</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=xOqxXdOtIz8">Cours</a></li>                 <li><a href="https://www.youtube.com/watch?v=Ac2meh0QEjE"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>             <td><h4>4. Construction d'un espace produits</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=y-95zZqyRic">Cours</a></li>                 <li><a href="https://www.youtube.com/watch?v=GPbff0Q84R0"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>         </tr>         <tr>             <td><h4>5. Cartographie des préférences</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=awFCi6nfJ64">Cours</a></li>                 <li><a href="https://www.youtube.com/watch?v=lOn6C0HDMdI"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>             <td><h4>6. Analyser des données de catégorisation</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=KEvxJmNYp34">Cours</a></li>                 <li><a href="https://www.youtube.com/watch?v=xlJppahGm2g"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>         </tr>     </tbody> </table><p></p>
+<h1>Tutorials</h1>
+<h3>Tutorial useR! 2015</h3> <p>The tutorial will take place in Aalborg. You can print the slides. If you want to use your laptop, you should install the following packages: FactoMineR, missMDA, VIM, Amelia, norm, mice. You can also download the two datasets.</p> <ul>     <li><a href="./img/user2015.pdf">Slides of the presentation</a></li>     <li>Ozone data: <a href="./img/ozoneNA.csv">dataset</a>, <a href="./img/ozone.R">lines of code</a></li>     <li>Ecological data: <a href="./img/ecological.csv">dataset</a>, <a href="./img/ecological.R">lines of code</a></li> </ul>
+<h1>Vidéos de quelques tutoriels sur R</h1>
+<p>Vous trouverez ici des vidéos pour mettre en oeuvre différentes méthodes statistiques grâce au logiciel R.</p> <table width="100%"><tbody><tr><td><a href="https://www.youtube.com/watch?v=LTzptqhGqQk">Installer un package </a></td><td>L<a href="https://www.youtube.com/watch?v=1QPRsg3Bxok">'analyse en composante principales</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=NETttIwaeCY">Importer des données </a></td><td><a href="https://www.youtube.com/watch?v=f_lgjXVdTAk">L'analyse des correspondances (AFC)</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=RtcuvOqTxQ4">Obtenir des statistiques descriptives </a></td><td><a href="https://www.youtube.com/watch?v=u17atQJDkeM">L'analyse des correspondances Multiples (ACM)</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=iHfRY9tHgBc">Construire des graphes simples</a></td><td><a href="https://www.youtube.com/watch?v=ny4IxoLgdeY">L'analyse factorielle multiple (AFM)</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=GWXRhipXhe0">Calcul de quantiles et de probabilités critiques</a></td><td><a href="https://www.youtube.com/watch?v=3tT29UtHqd0">La classification</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=E9heTqz3vSE">Tests et comparaison de moyennes</a></td><td><a href="https://www.youtube.com/watch?v=4T9tDX4aVS4">Factoshiny</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=sXFdHLaV7C0">L'analyse de variance</a></td><td><a href="https://www.youtube.com/watch?v=bdD9P3fGb70">Données manquantes en ACP</a></td></tr><tr><td><a href="https://www.youtube.com/watch?v=DYkBuNbcbSA">La régression linéaire simple </a></td><td><a href="https://www.youtube.com/watch?v=4F2C11hcvMM">Données manquantes en ACM</a></td></tr></tbody></table>
+<h1>Cours divers</h1>
+<h4>Cours de statistique générale (niveau L3)</h4>     <ul>         <li>Régression multiple : <a href="./img/transp_reg_mult_etu.pdf">diaporama</a>, <a href="./img/transp_reg_mult4.pdf">version 4 pages</a></li>         <li>Analyse de variance : <a href="./img/Cours_anova_in2_etu.pdf">diaporama</a>, <a href="./img/Cours_anova_in2_etu_4p.pdf">version 4 pages</a></li>         <li>Plans fractionnaires : <a href="./img/Cours_plan.pdf">diaporama</a>, <a href="./img/plan4.pdf">version 4 pages</a>, <a href="https://www.youtube.com/watch?v=LWWLvDlaZQ8">vidéo (1h30)</a></li>     </ul>       <h4>Cours sur les plans d'expériences</h4>     <ul>         <li><a href="./img/planfra_4facteurs.xlsx">Exercice d'introdution aux plans fractionnaires</a></li>         <li>Cours sur les plans fractionnaires : <a href="./img/Cours_plan.pdf">diaporama</a>, <a href="./img/plan4.pdf">version 4 pages</a>, <a href="https://www.youtube.com/watch?v=LWWLvDlaZQ8">vidéo (1h30)</a></li>         <li><a href="./img/plan_CC.xlsx">Exercice d'introduction aux plans continus</a></li>         <li>Cours sur les plans continus : <a href="./img/transp_plan_con.pdf">diaporama</a>, <a href="./img/transp_plan_con4.pdf">version 4 pages</a></li><li>Cours pour plan avancés (plus de 2 modalités, plans optimaux) : <a href="./img/transp_plan_quali_PlusDe2Mod.pdf">diaporama</a>, <a href="./img/transp_plan_quali_PlusDe2Mod_4pages.pdf">version 4 pages</a></li></ul><p>&nbsp;</p><h4>Cours de sensométrie (M2)</h4>     <ul>         <li>&nbsp;<a href="./img/questions.pdf">Questions-introduction</a></li>         <li><a href="./img/Espace_produit.pdf">Construction d'un espace produit - comparaison des espaces produits de plusieurs panels</a></li>         <li><a href="./img/preference.pdf">Cartographie des préférences</a></li>         <li><a href="./img/cours_catego_etu.pdf">Catégorisation de produits</a></li>         <li><a href="./img/tri.pdf">Tri hiérarchique</a></li>         <li><a href="./img/Nappe.pdf">Traitement de données recueillies par nappes</a></li>     </ul>      <h4>Cours avancés (niveau M2)</h4>     <ul>         <li>Evaluation de modèles : <a href="./img/valid_modele_beamer.pdf">diaporama</a>, <a href="./img/valid_modele4.pdf">version 4 pages</a>, <a href="./img/eval_azodyn_etudiant.xls">jeu de données</a></li>         <li>Modèles GAM : <a href="./img/presentation_gam.pdf">diaporama</a>, <a href="./img/presentation_gam4.pdf">version 4 pages</a>, <a href="./img/ozone.csv">jeu de données</a>, <a href="./img/prog_gam.r">code R</a></li>         <li>Cartes de contrôle (carte CUSUM) : <a href="./img/cours_carte.pdf">diaporama</a>, <a href="./img/cours_carte4.pdf">version 4 pages</a></li>     </ul>
+<h1>Projet étudiant (module de sensométrie)</h1>
+<p>Projet de sensométrie 2018:</p> <ul>     <li>Méthode JAR (<a href="./img/methodes_cata.pdf">diaporama</a>)</li>     <li>Méthode CATA (<a href="./img/methodes_cata.pdf">diaporama</a>)</li>     <li>Projective Flash Profile (<a href="./img/ProjectiveFlashProfile_ESR.pdf">diaporama</a>)</li>     <li>Digit Napping (<a href="./img/Digit_Napping.pdf">diaporama</a>, <a href="./img/Analyse_Holos.pdf">script</a>)</li>     <li>Dominance temporelle des sensations (<a href="./img/Dominance-Temporelle-des-Sensations-DTS.pdf">diaporama</a>)</li> </ul><p>Exposés de 2015:</p><ul>     <li><a href="./img/Dominance-Temporelle-des-Sensations-DTS.pdf">Dominance Temporelles des sensations</a></li>     <li>Méthode du profil idéal (<a href="./img/profil_Ideal.pdf">diaporama</a>, <a href="./img/script_projet_sensome__trie.R">code R</a>)</li>     <li>&nbsp;Analyse de données CATA (<a href="./img/CATA.pdf">diaporama</a>, <a href="./img/Script_CATA.R">code</a>, <a href="./img/cata.csv">données</a>)</li> </ul> <p><a name="senso2015"> </a></p>
+		</div>
+		<div id="footer">
+                <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h1>François Husson</h1>
+<h4>Professeur en statistique</h4> <p>Tel : +33 2 23 48 58 86<br> husson[at]agrocampus-ouest.fr<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h1><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Mon laboratoire</a></h1> <p>IRMAR - UMR 6625 du CNRS<br>UP de mathématiques appliqués <br> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+
+
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

@@ -1,40 +1,207 @@
----
-title: François Husson 
----
 
-<div>
-<div class="column-left">
-<p>F. Husson</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nathalie Vialaneix">
+    <meta name="description" content="Nathalie Vialaneix's website">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title> NV² |  </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Pygments CSS -->
+    <link href="/assets/pygments/pygments.css" rel="stylesheet">
+    
+    <!--mathjax-->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    
+    <!-- myJS -->
+    <script type="text/javascript" src="/assets/js/myjs.js"></script>
+  </head>
+
+  <!-- body -->
+	<body>
+		<div class="container">
+
+			<!-- navbar -->
+			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/">Home</a>
+					</div> <!-- navbar-header -->
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="/publications.html">Publications</a></li>
+									<li><a href="/software.html">Software</a></li>
+									<li><a href="/seminars2018.html">Seminars</a></li>
+									<li><a href="/students.html">Students</a></li>
+									<li><a href="/projects.html">Projects</a></li>
+									</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teaching<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-header">Courses for researchers</li>
+									<li><a href="/teaching/biostat1.html">Introduction to biostatistics</a></li>
+									<li><a href="/teaching/advanced_graphics.html">ggplot2 and interactivity</a></li>
+									<li><a href="/teaching/rnaseq.html">RNA-seq statistical analysis</a></li>
+									<li><a href="/teaching/network.html">Network inference and mining</a></li>
+									<li><a href="/teaching/learning.html">Statistical learning</a></li>
+									<li><a href="/teaching/git.html">(very short) Introduction to Git</a></li>
+									<li><a href="/doc/pdf/tutoR_cluster.pdf">Using R on the Bioinformatics PF cluster</a></li>
+									<li class="divider"></li>
+									<li class="dropdown-header">Various schools</li>
+									<li><a href="/teaching/cimi_sc.html">CIMI automn school 2017</a></li>
+									<li><a href="/teaching/lipm.html">Omic data analysis</a></li>
+									<li><a href="/teaching/jes2016/">JES 2016</a></li>
+									<li><a href="/teaching/sps_summer_school/">SPS summer school 2016</a></li>
+									<li><a href="/teaching/toconet.html">Toconet summer school 2016</a></li>
+									<li class="divider"></li>
+									<li class="dropdown-header">Undergraduate courses</li>
+									<li><a href="/teaching/m2se/">M2SE (TSE) - Graph mining</a></li>
+									<li><a href="/teaching/m1se/">M1SE (TSE) - Big data</a></li>
+									<li><a href="/teaching/stid.html">DUT STID</a></li>
+									<li><a href="/teaching/tide/">TIDE Master (Paris 1) - R</a></li>
+								</ul>
+							</li>
+							<li class="active"><a href="/aboutme.html">About me</a></li>
+							<li class="active"><a href="/about.html">About this site</a></li>
+							<li class="active"><a href="/blog.html">Blog</a></li>
+						</ul>
+					</div> <!-- navbar-collapse -->
+				</div> <!-- container -->
+			</div> <!-- navbar-inverse -->
+
+			<div class="row">
+				<div class="col-sm-9 blog-main">
+          
+          
+					<div class="row">
+  <div class="col-md-4">
+    <img alt="Nathalie Vialaneix" src="doc/png/nathalievv.png" width="250" /><br />
+    <small><em>Sed Lex</em></small><br />
+    <small><em>we can't all be Martha Stewart... some have to be Lisbeth Salander</em></small>
+  </div>
+  <div class="col-md-8">
+    <h2>Nathalie Vialaneix</h2>
+    <h4>Senior researcher (Directrice de Recherche - HDR), <a href="http://mia.toulouse.inra.fr/" target="_blank">Unité MIA-T</a>, INRA of 
+Toulouse</h4>
+
+    <strong>(snail) Mail</strong><br />
+    INRA, UR875 MIA-T<br />
+    BP 52627<br />
+    F-31326 Castanet Tolosan cedex<br />
+    France<br />
+    <br />
+    
+    <strong>Phone number</strong> +33 (0)5 61 28 55 73 - <strong>Fax</strong> +33 (0)5 61 28 53 35<br />
+    <strong>Email</strong> <a href="mailto:nathalie.vialaneix[AT]inra.fr">nathalie.vialaneix[AT]inra.fr</a><br />
+    <strong>PGP Key</strong> (<em>warning! new - and more secure - key: November 2016</em>)<br />
+    <ul><li>Id: 0x339F144E</li>
+      <li>Fingerprint: 551C 582A 867A BF18 65E8  6006 378C DF2A 339F 144E</li>
+      <li><a href="doc/asc/cle-nath.asc">Download asc file</a></li>
+    </ul>
+  </div>
 </div>
 
-
-<div class="column-right">
-
-<h2 id="descriptif">Descriptif</h2>
-<ul>
-<li><a href="recherche.hlm">Recherche</a></li>
-<li><a href="publis.html">Publis</a></li>
-<li><a href="enseignement.html">Enseignement</a></li>
-<li><a href="coinr.html">Coin R</a></li>
-<li><a href="donnees.html">Données</a></li>
-</ul>
-
-<h1 style="margin-top:-1px;">Actualit&eacute;s&nbsp;</h1> <table width="621" height="122" border="1">     <tbody>         <tr>             <td align="center"><a href="http://www.pur-editions.fr/detail.php?idOuv=826" style="background-color: rgb(255, 255, 255); font-size: 1em; text-align: left;"><img width="71" height="100" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96350_exo.jpg" alt="" /></a></td>             <td align="center"><a href="http://www.crcpress.com/product/isbn/9781439881453" style="background-color: rgb(255, 255, 255);"><img width="70" height="97" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96356_cover_RforStat_small.jpg" alt="" /></a></td>             <td align="center"><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/enseignement/support2cours/livres/statistiques.avec.R"><img width="73" height="101" alt="" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96349_Stat_R3_couv.jpg" /></a></td>             <td align="center"><a href="http://http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109387_Libra_Analisis_de_Datos_con_R.pdf" style="background-color: rgb(255, 255, 255);"><img width="65" height="95" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/105481_Facto_esp.jpg" alt="" /></a></td>             <td align="center"><a href="http://factominer.free.fr/livre/" style="background-color: rgb(255, 255, 255);"><img width="74" height="102" alt="" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/96348_analyse_donnees_R_2e_edition_couv_BD.jpg" /></a></td>             <td align="center"><a href="https://www.crcpress.com/Exploratory-Multivariate-Analysis-by-Example-Using-R-Second-Edition/Husson-Le-Pages/p/book/9781138196346"><img width="68" height="104" alt="" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109386_ExploratoryMultivariateAnalysis.jpg" /></a></td>             <td align="center"><a href="https://r-stat-sc-donnees.github.io/"><img width="66" height="103" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109388_R_stat_sc_donnees.png" alt="" /></a></td>         </tr>         <tr>             <td align="center"><p>1re &eacute;d : 2005<br />             2nd &eacute;d : 2013</p></td>             <td align="center">2012</td>             <td align="center">1re &eacute;d : 2008<br />             2e &eacute;d : 2010<br />             3e &eacute;d : 2012</td>             <td align="center">2013</td>             <td align="center">1re &eacute;d : 2009<br />             2nd &eacute;d : 2016</td>             <td align="center">1re &eacute;d : 2011<br />             2nd &eacute;d : 2017</td>             <td align="center">2018             <table width="72" height="27">             </table></td>         </tr>     </tbody> </table> <p>&nbsp; <table width="628" height="115">     <tbody>         <tr>             <td><a href="https://r-stat-sc-donnees.github.io/"><img width="66" height="103" src="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109388_R_stat_sc_donnees.png" alt="" /></a></td>             <td><p><span class="bold">Sortie du livre &quot;<span class="italic">R pour la statistique et la science des donn&eacute;es</span>&quot; (oct 2018)<br />             Pour plus d'information :</span><span class="bold"> <a href="https://r-stat-sc-donnees.github.io/">voir ici</a></span><br />             <span class="bold">Pour le commander :&nbsp; <a href="http://www.pur-editions.fr/detail.php?idOuv=4716">voir&nbsp; ici</a></span></p></td>         </tr>     </tbody> </table> <span class="bold">El libro &quot;An&aacute;lisis de datos con R&quot; est&aacute; disponible gratuitamente: <a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/109387_Libra_Analisis_de_Datos_con_R.pdf">descargar</a></span></p> <p><span class="bold"><a href="https://francoishusson.wordpress.com/">Blog</a> on missing values and Exploratory Multivariate Data Analysis.</span></p> <ul>     <li>Publication du livre<span class="italic"> R pour la statistique et la science de donn&eacute;es</span> (25 octobre 2018)</li>     <li>The 2nd edition of the book <span class="bold"><a href="https://www.crcpress.com/Exploratory-Multivariate-Analysis-by-Example-Using-R-Second-Edition/Husson-Le-Pages/p/book/9781138196346?tab=rev"><span class="italic">Exploratory Multivariate Data Analysis</span></a></span> is published. See <a href="https://www.crcpress.com/Exploratory-Multivariate-Analysis-by-Example-Using-R-Second-Edition/Husson-Le-Pages/p/book/9781138196346?tab=rev">some reviews</a>.</li>     <li>La 2&egrave;me &eacute;dition augment&eacute;e du livre <a href="http://www.pur-editions.fr/detail.php?idOuv=2166"><span class="bold">Analyse de donn&eacute;es avec R</span></a> est disponible depuis le 15 f&eacute;v 2016.</li>     <li><a href="https://www.fun-mooc.fr/courses/course-v1:agrocampusouest+40001S04+session04/about"><span class="bold">1800 participants for the 2nd session of the MOOC on Exploratory Multivariate Data Analysis (2nd edition)</span></a> - 3rd session in March 2019</li>     <li><a href="https://www.fun-mooc.fr/courses/course-v1:agrocampusouest+40001S04+session04/about"><span class="bold">5300 participants au MOOC d'analyse des donn&eacute;es multidimensionnelles (4&egrave;me session)</span></a> - 5&egrave;me session en mars 2019</li>     <li>Des cours en ligne sur une <a href="https://www.youtube.com/HussonFrancois">cha&icirc;ne Youtube</a></li>     <li><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/enseignement#AnaDo">Cours d'analyse de donn&eacute;es </a>(version fran&ccedil;aise)</li>     <li><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/enseignement?languageId=1#AnaDoGB">Course on Exploratory multivariate data analysis</a> (in English)</li>     <li>Directeur de la collection <span class="italic"><a href="http://www.pur-editions.fr/collection.php?idColl=88">Pratique de la statistique</a></span> aux Presses Universitaires de Rennes (depuis mars 2012)</li>     <li>Editeur associ&eacute; du <a href="http://journal-sfds.fr/index.php/J-SFdS/">Journal de la Soci&eacute;t&eacute; Fran&ccedil;aise de Statistique</a> (depuis f&eacute;vrier 2014)</li>     <li>Membre du comit&eacute; &eacute;ditorial de la <span class="italic">collection Pratique R</span> (collection statistique avec R de chez EDP, depuis novembre 2009)</li>     <li>Un MOOC en sensom&eacute;trie dont les cours et transparents sont disponibles <a href="http://tice.agrocampus-ouest.fr/course/view.php?id=665">ici</a></li> </ul> <h4>&nbsp;</h4>
-		</div>
-		<div id="footer">
-                <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
-<div class="inline-block-2">
-<div class="article">
-<h1>François Husson</h1>
-<h4>Professeur en statistique</h4> <p>Tel : +33 2 23 48 58 86<br /> husson[at]agrocampus-ouest.fr<br /><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br />Blog : https://francoishusson.wordpress.com/</a> &nbsp;&nbsp;<a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
-	</div>
-</div><div class="inline-block-2">
-<div class="article">
-<h1><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Mon laboratoire</a></h1> <p>IRMAR - UMR 6625 du CNRS<br />UP de math&eacute;matiques appliqu&eacute;s <br /> Agrocampus Ouest<br /> 65 rue de St-Brieuc CS 84215<br /> 35042 Rennes Cedex (France)</p>
-	</div>
+<div class="row">
+  <div class="col-md-3 col-md-offset-3">
+    <a href="http://www.inra.fr" target="_blank"><img alt="INRA" src="doc/jpg/inra.jpg" height="100" /></a>
+  </div>
+  <div class="col-md-3 col-md-offset-3">
+    <a href="http://mia.toulouse.inra.fr/" target="_blank"><img alt="UR MIA-T" src="doc/png/miat.png" height="100" /></a>
+  </div>
 </div>
-		</div>
-	</div>
-  
-</div>
-</div>
+<p><br /></p>
+ <!-- content of the page -->
+        
+				</div> 
+				<div class="col-sm-1 col-sm-offset-1 blog-sidebar">
+					<div class="sidebar-module sidebar-module-inset">
+						<img src="/img/tux-fille.png" width="125" />
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+
+      <div class="well">
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading"><span class="glyphicon glyphicon-volume-up"></span>&nbsp; News!</h4>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-12-15: <a href="/2018/12/15/user2019-cfp.html">useR! 2019 - submissions welcome</a></br>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-10-31: <a href="/2018/10/31/internship_metahcol.html">Proposition de stage Master printemps 2019 [pourvue]</a></br>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-10-24: <a href="/2018/10/24/r-miss-tastic.html">CRAN Task View on Missing Data</a></br>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-09-25: <a href="/2018/09/25/aimbert.html">Alyssa Imbert's PhD defense</a></br>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-09-24: <a href="/2018/09/24/internship_subpig.html">Proposition de stage Master printemps 2019 [pourvue]</a></br>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-09-22: <a href="/2018/09/22/netbio.html">NETBIO</a></br>
+            
+              <span class="glyphicon glyphicon-share-alt"></span> &nbsp; 2018-09-22: <a href="/2018/09/22/bioinfo_biostat_2018.html">Journée Bioinfo/Biostat</a></br>
+            
+          </div>
+        </div>
+      </div>
+
+			<!-- footer -->
+			<br>
+			<br>
+			<div class="panel-footer">
+				<img src="/img/tux-fille.png" width="50" />&nbsp;&copy; Nathalie Vialaneix - 2014/... | powered by
+				<a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, using 
+				<a href="http://getbootstrap.com" target="_blank">bootstrap</a>, 
+				<a href="http://kramdown.gettalong.org/" target="_blank">kramdown</a>, 
+				<a href="http://git-scm.com/" target="_blank">git</a>, 
+				<a href="http://www.mathjax.org/" target="_blank">MathJax</a>,
+				<a href="https://github.com/inukshuk/jekyll-scholar" target="_blank">jekyll-scholar</a>,
+				<a href="http://www.bibtex.org/" target="_blank">BibTex</a>,
+				<a href="https://github.com/citation-style-language/styles" target="_blank">CSL</a>, ...
+			</div>
+
+		</div> <!-- container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="/assets/bootstrap/js/bootstrap.js"></script>
+		
+		<!-- Piwik -->
+		<script type="text/javascript">
+			var pkBaseURL = (("https:" == document.location.protocol) ? "https://newpiwik.nathalievilla.org/" : "http://newpiwik.nathalievilla.org/");
+			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+				var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+				piwikTracker.trackPageView();
+				piwikTracker.enableLinkTracking();
+			} catch( err ) {}
+		</script>
+		<noscript>
+			<p><img src="http://newpiwik.nathalievilla.org/piwik.php?idsite=1" style="border:0" alt="" /></p>
+		</noscript>
+		<!-- End Piwik Tracking Code -->
+	</body>
+</html>
