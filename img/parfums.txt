@@ -1,0 +1,5 @@
+library(FactoMineR)
+parfums <- read.table("http://factominer.free.fr/livre/parfums.csv",header=TRUE,sep=";",row.names=1)
+res.parfums <- MCA(parfums)
+plot.MCA(res.parfums, invisible="var", col.ind="black")
+plot.MCA(res.parfums, invisible="ind", col.var="black")

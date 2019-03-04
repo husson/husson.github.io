@@ -1,0 +1,14 @@
+library(FactoMineR)
+ogm <- read.table("http://factominer.free.fr/livre/ogm.csv",header=TRUE,sep=";")
+summary(ogm[,1:16])
+levels(ogm$Position.Al.H)[4] <- levels(ogm$Position.Al.H)[1]
+levels(ogm$Position.Culture) <- c("Favorable","Pas Favorable du Tout","Plutôt Défavorable","Favorable")
+summary(ogm[,1:16])
+summary(ogm[,17:21], maxsum=Inf)
+res <- MCA(ogm, ncp=5, quali.sup=17:21, graph = FALSE)
+res
+res <- MCA(ogm, ncp=5, quali.sup=17:21, graph=FALSE, level.ventil=0.05)
+plot.MCA(res,invisible=c("var","quali.sup"),label=FALSE)
+plot.MCA(res,invisible=c("ind","quali.sup"),label=FALSE)
+plot.MCA(res,invisible=c("ind","quali.sup"))
+plot.MCA(res, col.quali.sup="brown", invisible=c("quanti.sup","ind","var"))

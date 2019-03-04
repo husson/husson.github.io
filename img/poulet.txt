@@ -1,0 +1,19 @@
+library(FactoMineR)
+poulet <- read.table("http://factominer.free.fr/livre/poulet.csv",header=TRUE,sep=";",dec=".",row.names=1)
+poulet <- as.data.frame(t(poulet))
+regime <- as.factor(c(rep("N",6),rep("J16",5),rep("J16R5",8),rep("J16R16",9),rep("J48",6),rep("J48R24",9)))
+poulet <- cbind.data.frame(regime,poulet)
+colnames(poulet)[1] <- "Régime"
+res.pca <- PCA(poulet,quali.sup=1)
+plot(res.pca, habillage=1, cex=0.7)
+plot(res.pca, choix="var", invisible="var")
+points(res.pca$var$coord[,1:2], cex=0.5)
+
+dimdesc(res.pca,proba=1e-5)
+plot(res.pca, habillage=1, axes=3:4)
+plot(res.pca, choix="var", invisible="var", axes=3:4)
+points(res.pca$var$coord[,3:4], cex=0.5)
+
+plotellipses(res.pca)
+
+plotellipses(res.pca,axes=3:4)

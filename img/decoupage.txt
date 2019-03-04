@@ -1,0 +1,25 @@
+library(FactoMineR)
+the <- read.table("http://factominer.free.fr/livre/the.csv",header=TRUE,sep=";")
+nb.classes <- 4
+coupure <- quantile(the[,22], seq(0,1,1/nb.classes))
+Xqual <- cut(the[,22],coupure, include.lowest=TRUE)
+summary(Xqual)
+hist(the$âge,col="grey",main="Histogramme de la variable âge",freq=FALSE, xlab="âge", nclass=15)
+
+vari <- the[,22]
+res.hcpc <- HCPC(vari, iter.max=10)
+
+max.cla = unlist(by(res.hcpc$data.clust[,1],res.hcpc$data.clust[,2],max))
+breaks=c(min(vari),max.cla)
+aaQuali = cut(vari, breaks, include.lowest=TRUE)
+summary(aaQuali)
+
+don.quali <- don
+for (i in 1:ncol(don.quali)){
+  vari = don.quali[,i]
+  res.hcpc=HCPC(vari, nb.clust=-1, graph=FALSE)
+  maxi = unlist(by(res.hcpc$data.clust[,1], res.hcpc$data.clust[,2],max))
+  breaks=c(min(vari),maxi)
+  aaQuali = cut(vari, breaks, include.lowest=TRUE)
+  don.quali[,i] = aaQuali
+}

@@ -1,0 +1,19 @@
+library(FactoMineR)
+the <- read.table("http://factominer.free.fr/livreV2/the.csv",header=TRUE,sep=";")
+
+res.mca<-MCA(the, quanti.sup=22, quali.sup=c(19:21,23:36))
+plot(res.mca,invisible=c("var","quali.sup"),cex=0.7)
+plot(res.mca,invisible=c("ind","quali.sup"))
+plot(res.mca,invisible="quali.sup")
+plot(res.mca,invisible="ind")
+plot(res.mca,invisible=c("ind","var"))
+
+summary(res.mca, nb.dec=2)
+lapply(dimdesc(res.mca),lapply,round,4)
+lapply(dimdesc(res.mca),lapply,signif,3)
+
+plotellipses(res.mca,keepvar=c("resto","lieuachat","relaxant","CSP"))
+
+plotellipses(res.mca,keepvar="resto", label="none")
+
+catdes(the, num.var = 18)

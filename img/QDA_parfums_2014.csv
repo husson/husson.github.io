@@ -1,0 +1,241 @@
+Séance;Juge;N° juge;Produit;Précédent;Rang;N° produit;Epicé;Capiteux;Fruité;Enveloppant;Vert;Vanille;Notes florales;Boise;Agrume;Fraicheur marine;Gourmand;Oriental
+1;Maud;1;Chanel_5;0;1;6;1;7;8;7;6;6;7;7;8;2;3;2
+1;Maud;1;Coco mademoiselle;Chanel_5;2;2;7;6;3;6;2;1;1;8;2;7;1;2
+1;Maud;1;Trésor;Coco mademoiselle;3;1;5;3;9;6;2;6;9;4;6;1;8;1
+1;Maud;1;Angel;Trésor;4;4;8;9;6;8;1;6;6;9;2;1;6;1
+1;Maud;1;Shalimar;Angel;5;9;9;7;6;6;1;4;3;6;3;2;7;9
+1;Maud;1;La petite robe noire;Shalimar;6;3;1;1;7;8;1;8;8;7;4;3;7;3
+1;Maud;1;Flower;La petite robe noire;7;7;6;8;3;6;7;3;8;7;7;3;6;1
+1;Maud;1;Amor amor;Flower;8;8;7;3;2;7;7;3;3;8;2;9;7;6
+1;Maud;1;Jadore;Amor amor;9;0;4;7;7;6;2;6;10;3;8;5;9;3
+1;Maud;1;Lolita Lempicka;Jadore;10;5;8;9;3;7;3;7;7;9;7;5;4;3
+1;Ibtihel;2;Coco mademoiselle;0;1;2;1;6;3;3;1;1;9;3;3;3;8;5
+1;Ibtihel;2;Angel;Coco mademoiselle;2;4;2;9;1;3;7;1;4;4;1;1;1;3
+1;Ibtihel;2;Chanel_5;Angel;3;6;2;7;1;7;7;1;8;7;1;1;7;3
+1;Ibtihel;2;La petite robe noire;Chanel_5;4;3;1;3;10;4;3;1;10;2;7;3;6;8
+1;Ibtihel;2;Trésor;La petite robe noire;5;1;7;10;9;8;3;1;8;7;1;3;1;6
+1;Ibtihel;2;Amor amor;Trésor;6;8;1;6;8;6;7;1;8;6;1;8;7;1
+1;Ibtihel;2;Shalimar;Amor amor;7;9;8;10;1;3;3;1;8;1;1;3;5;7
+1;Ibtihel;2;Lolita Lempicka;Shalimar;8;5;1;5;7;5;5;1;8;8;9;9;10;8
+1;Ibtihel;2;Flower;Lolita Lempicka;9;7;2;6;1;6;8;1;10;6;7;2;6;7
+1;Ibtihel;2;Jadore;Flower;10;0;1;2;9;4;3;3;9;7;8;4;7;2
+1;Lucie;3;Angel;0;1;4;8;9;2;6;1;7;6;2;1;5;5;5
+1;Lucie;3;La petite robe noire;Angel;2;3;3;6;4;5;1;9;10;7;3;2;7;3
+1;Lucie;3;Coco mademoiselle;La petite robe noire;3;2;3;4;2;3;1;4;6;6;7;7;1;1
+1;Lucie;3;Amor amor;Coco mademoiselle;4;8;1;9;1;10;1;1;6;6;8;9;1;1
+1;Lucie;3;Chanel_5;Amor amor;5;6;6;5;2;6;2;6;10;3;2;2;2;1
+1;Lucie;3;Lolita Lempicka;Chanel_5;6;5;8;6;2;3;4;6;7;2;8;7;3;2
+1;Lucie;3;Trésor;Lolita Lempicka;7;1;2;2;3;2;6;4;7;2;1;5;1;6
+1;Lucie;3;Jadore;Trésor;8;0;3;8;2;8;1;2;2;5;2;7;2;1
+1;Lucie;3;Shalimar;Jadore;9;9;10;10;6;10;4;1;6;9;3;8;6;7
+1;Lucie;3;Flower;Shalimar;10;7;1;1;1;2;2;6;5;4;2;6;2;9
+1;Maéva;4;La petite robe noire;0;1;3;3;8;4;6;6;3;3;9;7;3;1;10
+1;Maéva;4;Amor amor;La petite robe noire;2;8;7;7;6;7;3;1;6;7;10;2;2;6
+1;Maéva;4;Angel;Amor amor;3;4;5;8;6;7;6;1;6;9;5;6;3;5
+1;Maéva;4;Lolita Lempicka;Angel;4;5;8;8;5;8;1;8;1;5;1;1;8;3
+1;Maéva;4;Coco mademoiselle;Lolita Lempicka;5;2;2;7;2;6;6;1;7;7;7;1;1;6
+1;Maéva;4;Jadore;Coco mademoiselle;6;0;5;2;2;6;6;1;10;2;1;7;1;1
+1;Maéva;4;Chanel_5;Jadore;7;6;1;1;5;6;5;1;9;7;1;7;1;1
+1;Maéva;4;Flower;Chanel_5;8;7;7;5;1;7;1;1;7;9;7;1;1;1
+1;Maéva;4;Trésor;Flower;9;1;8;7;6;6;1;5;1;7;3;1;3;1
+1;Maéva;4;Shalimar;Trésor;10;9;10;6;5;6;1;1;1;6;3;1;3;6
+1;Lisa;5;Amor amor;0;1;8;3;1;7;4;1;6;5;6;7;3;9;5
+1;Lisa;5;Lolita Lempicka;Amor amor;2;5;7;4;5;5;3;8;4;7;3;2;6;8
+1;Lisa;5;Angel;Lolita Lempicka;3;4;7;6;3;5;3;5;3;9;2;1;4;9
+1;Lisa;5;Jadore;Angel;4;0;4;2;8;4;2;6;6;5;5;1;8;6
+1;Lisa;5;La petite robe noire;Jadore;5;3;7;6;4;6;1;4;3;7;4;2;9;6
+1;Lisa;5;Flower;La petite robe noire;6;7;7;6;1;7;2;6;3;6;3;2;5;6
+1;Lisa;5;Coco mademoiselle;Flower;7;2;4;3;5;4;2;4;4;3;6;3;6;6
+1;Lisa;5;Shalimar;Coco mademoiselle;8;9;8;5;2;6;1;9;2;7;1;1;6;8
+1;Lisa;5;Chanel_5;Shalimar;9;6;5;9;3;5;1;6;2;7;1;1;4;7
+1;Lisa;5;Trésor;Chanel_5;10;1;4;9;7;5;2;3;3;3;6;3;7;4
+1;Pauline;6;Lolita Lempicka;0;1;5;1;2;1;6;5;1;8;9;5;1;7;1
+1;Pauline;6;Jadore;Lolita Lempicka;2;0;5;1;1;3;5;1;10;7;1;5;1;1
+1;Pauline;6;Amor amor;Jadore;3;8;3;1;1;1;4;1;9;7;1;8;5;1
+1;Pauline;6;Flower;Amor amor;4;7;7;1;7;8;;6;1;4;1;1;8;8
+1;Pauline;6;La petite robe noire;Flower;5;3;8;8;1;8;1;5;5;8;1;1;5;7
+1;Pauline;6;Shalimar;La petite robe noire;6;9;10;10;1;10;1;1;1;10;1;1;1;5
+1;Pauline;6;Angel;Shalimar;7;4;1;1;7;5;1;7;7;1;9;1;7;1
+1;Pauline;6;Trésor;Angel;8;1;7;1;6;7;7;1;5;5;6;9;1;1
+1;Pauline;6;Coco mademoiselle;Trésor;9;2;1;7;3;1;1;1;3;6;1;7;1;3
+1;Pauline;6;Chanel_5;Coco mademoiselle;10;6;9;10;3;8;5;1;5;8;1;1;1;5
+1;Virginie;7;Jadore;0;1;0;1;4;9;8;3;5;6;1;1;5;9;1
+1;Virginie;7;Flower;Jadore;2;7;7;2;8;2;2;10;9;2;2;1;8;9
+1;Virginie;7;Lolita Lempicka;Flower;3;5;9;7;6;3;1;1;7;9;2;2;9;6
+1;Virginie;7;Shalimar;Lolita Lempicka;4;9;10;9;1;1;1;1;8;6;8;7;2;9
+1;Virginie;7;Amor amor;Shalimar;5;8;4;3;8;2;7;5;8;9;3;5;8;5
+1;Virginie;7;Trésor;Amor amor;6;1;1;1;3;2;5;7;8;8;7;8;7;1
+1;Virginie;7;La petite robe noire;Trésor;7;3;8;9;1;3;2;2;1;6;8;4;2;8
+1;Virginie;7;Chanel_5;La petite robe noire;8;6;2;4;5;4;7;5;2;1;2;10;5;1
+1;Virginie;7;Angel;Chanel_5;9;4;9;9;1;2;2;2;9;5;1;1;1;8
+1;Virginie;7;Coco mademoiselle;Angel;10;2;7;8;6;3;8;1;7;9;3;6;4;6
+1;Clément;8;Flower;0;1;7;1;1;8;6;4;8;8;1;1;1;2;1
+1;Clément;8;Shalimar;Flower;2;9;6;6;1;5;5;7;3;8;1;6;1;1
+1;Clément;8;Jadore;Shalimar;3;0;1;1;7;7;8;1;9;2;1;4;1;1
+1;Clément;8;Trésor;Jadore;4;1;1;3;4;8;1;8;9;1;1;1;1;1
+1;Clément;8;Lolita Lempicka;Trésor;5;5;5;8;2;5;4;7;1;2;1;7;1;1
+1;Clément;8;Chanel_5;Lolita Lempicka;6;6;3;4;8;5;8;1;8;1;1;5;1;1
+1;Clément;8;Amor amor;Chanel_5;7;8;4;3;7;10;6;1;9;7;4;7;2;1
+1;Clément;8;Coco mademoiselle;Amor amor;8;2;4;2;8;4;8;5;9;6;5;1;4;2
+1;Clément;8;La petite robe noire;Coco mademoiselle;9;3;1;1;6;6;5;8;6;2;1;1;8;1
+1;Clément;8;Angel;La petite robe noire;10;4;7;5;6;3;3;6;4;7;1;4;1;8
+1;Manon;9;Shalimar;0;1;9;3;3;4;1;1;1;4;2;1;6;2;1
+1;Manon;9;Trésor;Shalimar;2;1;1;1;7;9;1;1;9;2;1;4;3;2
+1;Manon;9;Flower;Trésor;3;7;8;6;4;1;1;1;3;2;1;5;3;1
+1;Manon;9;Chanel_5;Flower;4;6;7;7;4;4;2;1;4;2;1;7;6;1
+1;Manon;9;Jadore;Chanel_5;5;0;2;1;9;7;1;3;6;1;5;1;9;1
+1;Manon;9;Coco mademoiselle;Jadore;6;2;1;7;2;5;1;1;10;1;2;4;1;6
+1;Manon;9;Lolita Lempicka;Coco mademoiselle;7;5;1;3;7;8;2;9;3;2;6;3;8;4
+1;Manon;9;Angel;Lolita Lempicka;8;4;9;3;5;9;1;4;4;6;2;6;3;10
+1;Manon;9;Amor amor;Angel;9;8;3;7;8;3;1;1;4;1;3;6;8;3
+1;Manon;9;La petite robe noire;Amor amor;10;3;6;3;8;6;2;8;3;1;5;6;10;8
+1;Mathilde;10;Trésor;0;1;1;2;4;6;8;4;;7;7;3;8;3;2
+1;Mathilde;10;Chanel_5;Trésor;2;6;3;8;5;8;2;6;8;4;4;4;5;2
+1;Mathilde;10;Shalimar;Chanel_5;3;9;7;7;6;6;3;6;8;6;4;4;4;7
+1;Mathilde;10;Coco mademoiselle;Shalimar;4;2;4;7;7;6;8;5;7;6;6;5;3;2
+1;Mathilde;10;Flower;Coco mademoiselle;5;7;2;7;7;7;6;5;6;5;6;6;4;2
+1;Mathilde;10;Angel;Flower;6;4;5;8;8;7;6;9;8;9;4;3;7;5
+1;Mathilde;10;Jadore;Angel;7;0;4;3;7;5;4;5;8;7;6;6;6;3
+1;Mathilde;10;La petite robe noire;Jadore;8;3;5;;8;6;4;7;8;7;6;5;9;5
+1;Mathilde;10;Lolita Lempicka;La petite robe noire;9;5;4;6;8;6;6;6;8;7;8;7;6;5
+1;Mathilde;10;Amor amor;Lolita Lempicka;10;8;6;6;8;7;5;6;6;6;7;5;8;2
+1;Anas;11;Trésor;0;1;1;3;2;7;8;3;6;8;5;4;8;8;6
+1;Anas;11;Amor amor;Trésor;2;8;7;7;6;7;7;5;6;8;6;3;4;9
+1;Anas;11;Lolita Lempicka;Amor amor;3;5;4;3;2;6;5;8;7;6;3;3;8;8
+1;Anas;11;Jadore;Lolita Lempicka;4;0;5;7;4;6;5;7;9;7;7;8;4;3
+1;Anas;11;Angel;Jadore;5;4;8;8;6;7;8;7;5;9;9;4;7;9
+1;Anas;11;Flower;Angel;6;7;2;2;3;6;6;4;9;6;3;7;2;3
+1;Anas;11;Shalimar;Flower;7;9;9;8;4;5;7;3;4;9;3;4;5;8
+1;Anas;11;Coco mademoiselle;Shalimar;8;2;2;1;2;2;2;2;8;2;6;9;2;2
+1;Anas;11;Chanel_5;Coco mademoiselle;9;6;6;6;7;7;7;1;7;7;6;7;2;8
+1;Anas;11;La petite robe noire;Chanel_5;10;3;5;6;3;5;7;8;6;7;3;6;8;8
+1;Victor;12;Amor amor;0;1;8;1;1;7;3;1;4;2;1;3;6;1;1
+1;Victor;12;Jadore;Amor amor;2;0;1;8;1;4;6;1;1;2;1;3;1;1
+1;Victor;12;Trésor;Jadore;3;1;4;5;1;6;9;7;3;3;1;1;5;2
+1;Victor;12;Flower;Trésor;4;7;2;9;1;4;2;;1;8;2;4;2;1
+1;Victor;12;Lolita Lempicka;Flower;5;5;1;7;1;6;1;4;1;1;3;2;8;1
+1;Victor;12;Coco mademoiselle;Lolita Lempicka;6;2;2;1;1;3;4;1;6;7;4;3;1;4
+1;Victor;12;Angel;Coco mademoiselle;7;4;1;4;1;3;2;5;8;6;1;1;10;1
+1;Victor;12;La petite robe noire;Angel;8;3;6;1;4;1;1;7;1;4;5;4;2;1
+1;Victor;12;Shalimar;La petite robe noire;9;9;4;8;2;2;7;3;2;7;3;4;1;3
+1;Victor;12;Chanel_5;Shalimar;10;6;1;1;1;4;2;1;9;8;1;8;1;4
+2;Maud;1;Jadore;0;1;0;3;2;9;9;1;6;8;;8;3;8;3
+2;Maud;1;Trésor;Jadore;2;1;8;6;5;5;7;3;7;8;2;5;4;4
+2;Maud;1;Angel;Trésor;3;4;6;9;7;8;2;6;9;9;5;2;3;6
+2;Maud;1;Coco mademoiselle;Angel;4;2;2;2;9;9;2;7;9;6;5;3;8;3
+2;Maud;1;La petite robe noire;Coco mademoiselle;5;3;9;9;6;8;3;6;8;8;2;7;2;2
+2;Maud;1;Flower;La petite robe noire;6;7;8;2;2;5;4;4;9;6;9;6;7;9
+2;Maud;1;Lolita Lempicka;Flower;7;5;7;4;2;9;7;3;9;8;8;7;2;2
+2;Maud;1;Shalimar;Lolita Lempicka;8;9;10;2;4;6;1;6;6;8;7;2;3;10
+2;Maud;1;Amor amor;Shalimar;9;8;2;1;9;8;1;4;9;3;7;6;8;2
+2;Maud;1;Chanel_5;Amor amor;10;6;8;8;4;7;3;3;8;8;2;1;3;2
+2;Ibtihel;2;Trésor;0;1;1;7;9;3;6;5;1;8;6;6;1;7;7
+2;Ibtihel;2;Coco mademoiselle;Trésor;2;2;7;8;7;3;6;1;8;6;5;2;6;7
+2;Ibtihel;2;Jadore;Coco mademoiselle;3;0;1;7;7;5;7;1;9;8;8;2;9;2
+2;Ibtihel;2;Flower;Jadore;4;7;6;9;1;5;7;1;9;4;2;1;4;8
+2;Ibtihel;2;Angel;Flower;5;4;8;10;4;4;6;1;7;2;1;1;2;7
+2;Ibtihel;2;Shalimar;Angel;6;9;9;10;1;4;6;1;6;9;2;2;4;8
+2;Ibtihel;2;La petite robe noire;Shalimar;7;3;3;3;8;8;9;7;8;1;7;7;9;4
+2;Ibtihel;2;Chanel_5;La petite robe noire;8;6;7;10;5;3;7;1;8;7;3;2;4;7
+2;Ibtihel;2;Lolita Lempicka;Chanel_5;9;5;2;4;7;4;7;2;8;3;3;8;8;3
+2;Ibtihel;2;Amor amor;Lolita Lempicka;10;8;3;7;8;5;8;1;8;3;9;3;7;2
+2;Lucie;3;Coco mademoiselle;0;1;2;6;1;7;2;7;2;6;6;1;3;9;2
+2;Lucie;3;Flower;Coco mademoiselle;2;7;3;6;1;8;1;10;8;5;3;1;4;1
+2;Lucie;3;Trésor;Flower;3;1;1;6;1;6;7;2;7;3;1;4;1;1
+2;Lucie;3;Shalimar;Trésor;4;9;7;5;6;2;1;1;6;2;9;2;3;1
+2;Lucie;3;Jadore;Shalimar;5;0;1;9;1;10;3;1;7;5;1;8;1;1
+2;Lucie;3;Chanel_5;Jadore;6;6;1;1;6;2;4;1;6;1;1;7;1;1
+2;Lucie;3;Angel;Chanel_5;7;4;7;5;1;5;3;8;6;1;6;4;8;1
+2;Lucie;3;Amor amor;Angel;8;8;1;10;4;10;1;1;6;5;1;7;1;1
+2;Lucie;3;La petite robe noire;Amor amor;9;3;7;3;6;2;1;5;7;1;6;1;9;1
+2;Lucie;3;Lolita Lempicka;La petite robe noire;10;5;3;1;6;1;1;1;6;1;8;4;5;2
+2;Maéva;4;Flower;0;1;7;6;7;1;7;1;1;10;9;5;1;1;8
+2;Maéva;4;Shalimar;Flower;2;9;9;6;1;6;1;3;1;7;3;1;1;6
+2;Maéva;4;Coco mademoiselle;Shalimar;3;2;6;7;1;6;1;1;1;8;6;3;1;6
+2;Maéva;4;Chanel_5;Coco mademoiselle;4;6;2;1;1;6;9;1;10;6;1;10;1;1
+2;Maéva;4;Trésor;Chanel_5;5;1;5;6;;9;1;9;6;3;5;1;9;5
+2;Maéva;4;Amor amor;Trésor;6;8;5;5;7;5;1;1;6;7;9;3;1;1
+2;Maéva;4;Jadore;Amor amor;7;0;2;2;2;5;5;1;5;5;1;5;1;1
+2;Maéva;4;Lolita Lempicka;Jadore;8;5;6;9;3;9;1;7;1;1;1;1;8;6
+2;Maéva;4;Angel;Lolita Lempicka;9;4;6;7;1;7;3;3;1;2;5;3;5;5
+2;Maéva;4;La petite robe noire;Angel;10;3;2;5;9;5;3;5;6;1;3;3;7;6
+2;Lisa;5;Shalimar;0;1;9;7;6;2;5;2;5;3;7;5;2;3;7
+2;Lisa;5;Chanel_5;Shalimar;2;6;6;8;4;5;2;6;2;7;4;1;6;8
+2;Lisa;5;Flower;Chanel_5;3;7;4;7;2;6;2;7;3;8;4;2;5;5
+2;Lisa;5;Amor amor;Flower;4;8;4;2;8;4;2;2;4;3;7;1;6;3
+2;Lisa;5;Coco mademoiselle;Amor amor;5;2;3;5;7;4;1;3;5;3;6;2;6;3
+2;Lisa;5;Lolita Lempicka;Coco mademoiselle;6;5;7;6;2;4;1;4;1;5;3;1;8;6
+2;Lisa;5;Trésor;Lolita Lempicka;7;1;3;8;9;5;1;2;4;3;4;2;7;2
+2;Lisa;5;La petite robe noire;Trésor;8;3;5;4;7;4;1;6;2;4;7;1;6;3
+2;Lisa;5;Jadore;La petite robe noire;9;0;4;4;6;4;1;5;5;4;5;1;6;3
+2;Lisa;5;Angel;Jadore;10;4;8;9;2;4;1;5;2;6;1;1;3;7
+2;Pauline;6;Chanel_5;0;1;6;8;5;1;5;3;1;5;7;1;8;1;7
+2;Pauline;6;Amor amor;Chanel_5;2;8;1;2;3;3;1;1;8;7;1;9;1;1
+2;Pauline;6;Shalimar;Amor amor;3;9;9;8;1;8;3;1;1;8;1;1;1;5
+2;Pauline;6;Lolita Lempicka;Shalimar;4;5;2;1;7;4;1;4;4;1;6;6;1;1
+2;Pauline;6;Flower;Lolita Lempicka;5;7;6;2;3;1;1;6;2;6;1;2;6;4
+2;Pauline;6;La petite robe noire;Flower;6;3;5;9;1;9;1;7;3;4;1;1;5;5
+2;Pauline;6;Coco mademoiselle;La petite robe noire;7;2;1;1;2;5;1;1;9;5;6;5;2;4
+2;Pauline;6;Angel;Coco mademoiselle;8;4;7;1;5;4;1;1;3;5;8;7;4;1
+2;Pauline;6;Trésor;Angel;9;1;6;9;7;5;2;1;3;5;1;2;5;5
+2;Pauline;6;Jadore;Trésor;10;0;1;2;1;5;3;1;9;7;1;8;2;1
+2;Virginie;7;Amor amor;0;1;8;3;7;8;5;1;8;9;7;2;7;9;6
+2;Virginie;7;Lolita Lempicka;Amor amor;2;5;8;2;5;5;3;7;9;7;8;7;7;8
+2;Virginie;7;Chanel_5;Lolita Lempicka;3;6;1;7;1;3;7;1;9;5;7;10;1;1
+2;Virginie;7;La petite robe noire;Chanel_5;4;3;9;10;1;1;9;1;3;9;5;8;1;3
+2;Virginie;7;Shalimar;La petite robe noire;5;9;9;9;5;8;5;7;8;7;2;1;5;9
+2;Virginie;7;Angel;Shalimar;6;4;10;8;6;7;8;7;7;9;7;8;3;8
+2;Virginie;7;Flower;Angel;7;7;9;6;9;5;3;9;7;5;3;8;9;2
+2;Virginie;7;Jadore;Flower;8;0;1;7;9;4;5;8;8;7;3;8;10;5
+2;Virginie;7;Coco mademoiselle;Jadore;9;2;9;10;2;4;1;1;3;5;2;10;1;9
+2;Virginie;7;Trésor;Coco mademoiselle;10;1;1;2;7;10;4;10;7;2;5;9;10;1
+2;Clément;8;Lolita Lempicka;0;1;5;2;3;6;6;5;3;8;2;2;1;5;1
+2;Clément;8;La petite robe noire;Lolita Lempicka;2;3;3;4;6;3;1;1;6;6;5;1;5;1
+2;Clément;8;Amor amor;La petite robe noire;3;8;2;1;6;10;6;5;8;7;4;1;2;1
+2;Clément;8;Angel;Amor amor;4;4;8;5;3;3;6;5;6;8;2;1;1;8
+2;Clément;8;Chanel_5;Angel;5;6;1;1;7;;8;1;8;6;1;6;1;1
+2;Clément;8;Jadore;Chanel_5;6;0;1;1;6;5;8;5;9;6;1;1;1;1
+2;Clément;8;Shalimar;Jadore;7;9;6;6;2;2;4;1;1;8;5;4;1;1
+2;Clément;8;Trésor;Shalimar;8;1;1;1;7;7;6;7;8;2;1;2;2;1
+2;Clément;8;Flower;Trésor;9;7;1;1;6;6;7;7;7;3;2;6;2;1
+2;Clément;8;Coco mademoiselle;Flower;10;2;1;1;6;6;5;1;5;;7;1;1;1
+2;Manon;9;La petite robe noire;0;1;3;7;9;7;3;1;1;7;3;1;6;2;1
+2;Manon;9;Angel;La petite robe noire;2;4;9;3;6;7;2;1;7;5;1;4;3;1
+2;Manon;9;Lolita Lempicka;Angel;3;5;4;8;6;2;1;1;6;1;1;4;2;1
+2;Manon;9;Jadore;Lolita Lempicka;4;0;6;9;7;4;1;3;7;4;2;5;3;1
+2;Manon;9;Amor amor;Jadore;5;8;7;5;8;2;1;2;7;3;2;4;1;1
+2;Manon;9;Trésor;Amor amor;6;1;2;4;2;5;2;1;4;4;1;2;1;1
+2;Manon;9;Chanel_5;Trésor;7;6;6;8;7;9;1;3;4;7;2;3;1;2
+2;Manon;9;Coco mademoiselle;Chanel_5;8;2;8;6;6;5;3;1;7;5;1;5;2;2
+2;Manon;9;Shalimar;Coco mademoiselle;9;9;2;2;4;2;1;1;7;7;1;3;1;1
+2;Manon;9;Flower;Shalimar;10;7;3;3;6;7;2;1;7;3;2;6;3;1
+2;Mathilde;10;Angel;0;1;4;4;8;7;8;4;8;7;9;3;3;7;3
+2;Mathilde;10;Jadore;Angel;2;0;2;6;9;6;7;5;9;8;6;7;4;4
+2;Mathilde;10;La petite robe noire;Jadore;3;3;3;9;7;9;3;6;8;6;2;2;8;3
+2;Mathilde;10;Trésor;La petite robe noire;4;1;3;5;6;5;6;5;8;6;3;6;4;2
+2;Mathilde;10;Lolita Lempicka;Trésor;5;5;4;7;9;;5;6;8;7;6;7;8;2
+2;Mathilde;10;Coco mademoiselle;Lolita Lempicka;6;2;6;7;5;7;6;6;4;9;6;4;2;2
+2;Mathilde;10;Amor amor;Coco mademoiselle;7;8;6;8;8;7;6;5;7;8;6;7;4;2
+2;Mathilde;10;Flower;Amor amor;8;7;4;8;6;8;5;6;9;6;7;4;6;2
+2;Mathilde;10;Chanel_5;Flower;9;6;2;9;6;9;3;7;9;8;2;2;5;2
+2;Mathilde;10;Shalimar;Chanel_5;10;9;6;7;5;7;3;5;4;9;6;3;5;8
+2;Anas;11;Lolita Lempicka;0;1;5;7;8;5;6;7;5;5;8;3;4;2;8
+2;Anas;11;Jadore;Lolita Lempicka;2;0;3;3;3;4;4;4;9;2;3;7;3;6
+2;Anas;11;Amor amor;Jadore;3;8;5;7;3;6;6;4;4;7;8;3;2;8
+2;Anas;11;Chanel_5;Amor amor;4;6;7;6;3;5;6;3;9;7;6;5;6;7
+2;Anas;11;Trésor;Chanel_5;5;1;6;7;2;5;9;2;6;9;2;2;1;7
+2;Anas;11;Shalimar;Trésor;6;9;10;9;1;4;9;3;4;10;2;1;2;8
+2;Anas;11;Flower;Shalimar;7;7;5;2;2;6;3;5;9;6;7;8;2;4
+2;Anas;11;Angel;Flower;8;4;5;5;5;7;6;7;7;9;4;3;8;8
+2;Anas;11;La petite robe noire;Angel;9;3;8;7;4;5;7;7;6;7;2;2;6;5
+2;Anas;11;Coco mademoiselle;La petite robe noire;10;2;5;3;4;7;9;3;7;3;4;7;2;5
+2;Victor;12;Jadore;0;1;0;1;3;1;4;2;1;1;4;1;6;1;1
+2;Victor;12;Chanel_5;Jadore;2;6;5;4;1;2;3;1;6;6;1;7;1;3
+2;Victor;12;Lolita Lempicka;Chanel_5;3;5;3;4;4;4;1;6;1;2;1;1;7;1
+2;Victor;12;Shalimar;Lolita Lempicka;4;9;1;8;1;2;6;1;1;8;1;2;1;1
+2;Victor;12;Angel;Shalimar;5;4;4;2;1;5;1;6;1;3;3;1;9;1
+2;Victor;12;Amor amor;Angel;6;8;1;1;2;1;2;3;2;4;6;8;1;3
+2;Victor;12;Trésor;Amor amor;7;1;4;7;1;2;9;1;2;4;1;2;1;1
+2;Victor;12;Coco mademoiselle;Trésor;8;2;1;2;1;3;6;1;7;3;1;3;1;2
+2;Victor;12;Flower;Coco mademoiselle;9;7;2;1;1;4;3;4;7;9;1;5;1;3
+2;Victor;12;La petite robe noire;Flower;10;3;3;6;5;2;1;6;1;1;1;1;9;1

@@ -1,0 +1,5 @@
+library(FactoMineR)
+don = read.table("http://factominer.free.fr/livreV2/vins.csv",header=TRUE,row.names=1,sep=";", check.names=FALSE)
+res.ca=CA(don,col.sup=11,row.sup=nrow(don))
+barplot(res.ca$eig[,1],main="Valeurs propres",names.arg=1:nrow(res.ca$eig))
+round(res.ca$eig,3)
