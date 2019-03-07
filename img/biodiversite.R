@@ -1,5 +1,5 @@
 ##################################
-## Jeu de données biodiversité ###
+## Jeu de donnees biodiversite ###
 ##################################
 
 ## Importation des donnees
