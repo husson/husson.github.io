@@ -1,0 +1,7 @@
+library(FactoMineR)
+temperature <- read.table("https://husson.github.io/img/temperatFr.csv",header=TRUE, sep=";", dec=".", row.names=1)
+res <- PCA(temperature, quanti.sup=13:16, quali.sup=17)
+plot.PCA(res, choix="ind", habillage=17)
+summary(res)
+dimdesc(res)
+plotellipses(res)

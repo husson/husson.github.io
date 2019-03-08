@@ -4,8 +4,7 @@
 
 ## Importation des données
 
-setwd("C:/Users/husson/AOBox/Travail/huss/Enseign/cours/Analyse donnees/FC_cepe/data ecologie")
-riviere <- read.table("riviere.csv",sep=";",header=TRUE,row.names=1,fileEncoding="latin1")
+riviere <- read.table("https://husson.github.io/img/riviere.csv",sep=";",header=TRUE,row.names=1,fileEncoding="latin1")
 summary(riviere)
 
 ## ACP
