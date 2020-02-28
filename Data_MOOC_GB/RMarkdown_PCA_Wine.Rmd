@@ -1,0 +1,63 @@
+---
+title: "Principal Component Analysis (PCA) with FactoMineR (Wine dataset)"
+author: "Magalie Houée-Bigot & François Husson"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Import data 
+
+Upload the Expert Wine dataset on your computer. 
+```{r eval=TRUE, echo=FALSE}
+ setwd("C:/users/houee/AOBOX/MOOC_anado_GB/Données")
+ wine <- read.table("data_PCA_ExpertWine.csv",header=TRUE, sep=";", dec=".", row.names=1)
+```
+```{r eval=FALSE, echo=TRUE}
+ setwd("C:/users/houee/") # select the current directory 
+ wine <- read.table("data_PCA_ExpertWine.csv",header=TRUE, sep=";", dec=".", row.names=1)
+```
+
+```header=TRUE``` : indicates that the file contains the names of the variables
+
+```sep=";"``` : indicates the fields separator (usually ";" or "," for csv files)
+
+```row.names=1``` : indicates the column of the table which contains the row names
+
+It is important to check that the import is well done
+
+```{r}
+ summary(wine)
+```
+
+# Loading FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# PCA with supplementary variables
+```{r}
+res <- PCA(wine,quali.sup=1,quanti.sup=29:30,graph=FALSE)
+par(cex=0.8,cex.main=1,cex.lab=0.8,cex.axis=0.8) # change graphical parameters (font size)
+plot(res,choix="ind") # individuals factor map
+plot(res,choix="var") # variables factor map
+```
+
+# Summary of outputs 
+Outputs can be summarized with the function ```summary```.
+```{r}
+ summary(res, nbelements=Inf)  ## to print all the elements
+```
+
+# Bar chart of eigenvalues
+```{r}
+ barplot(res$eig[,1],main="Eigenvalues",names.arg=1:nrow(res$eig))
+```
+
+# Drawing wines according to the label 
+```{r}
+ plot(res,habillage="Label")
+```

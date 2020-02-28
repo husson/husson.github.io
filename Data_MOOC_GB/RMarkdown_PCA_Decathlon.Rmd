@@ -1,0 +1,144 @@
+---
+title: "Principal Component Analysis (PCA) with FactoMineR (decathlon dataset)"
+author: "François Husson & Magalie Houée-Bigot"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+```{r}
+
+```
+
+
+# Import data (data are imported from internet)
+
+```{r eval=FALSE}
+decathlon <- read.table("http://www.agrocampus-ouest.fr/math/RforStat/decathlon.csv", 
+      header=TRUE, sep=";", row.names=1, check.names=FALSE)
+```
+```{r echo=FALSE}
+decathlon <- read.table("http://www.agrocampus-ouest.fr/math/RforStat/decathlon.csv", 
+                        header=TRUE, sep=";", row.names=1, check.names=FALSE)
+```
+```header=TRUE``` : indicates that the file contains the names of the variables
+
+```sep=";"``` : indicates the fields separator (usually ";" or "," for csv files)
+
+```row.names=1``` : indicates the column of the table which contains the row names
+
+```check.names=FALSE``` : indicated that the names of the variables in the data frame are unchecked
+
+It is important to check that the import is well done
+
+```{r}
+summary(decathlon)
+```
+
+# Loading FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# PCA with only active elements as active
+```{r}
+res <- PCA(decathlon[,1:10])
+```
+
+Outputs can be summarized with the function ```summary```. 
+
+```{r eval=FALSE}
+summary(res)
+```
+
+Outputs are given for the first 2 dimensions (by default 3 dimensions are given).
+
+```{r}
+summary(res, ncp=2)
+```
+
+# PCA with supplementary variables
+```{r}
+res <- PCA(decathlon, quanti.sup=11:12, quali.sup=13)
+summary(res, ncp=2, nbelements=Inf)
+```
+In order to print the results in a file:
+```{r eval=FALSE}
+summary(res, nbelements=Inf, file="summaryResult.txt")
+```
+
+# Description of the dimensions
+```{r}
+dimdesc(res)
+dimdesc(res, proba=0.2) # change the significance threshold to characterize the dimension
+```
+
+# Graph of the individuals with a title and a smaller size for the labels
+```{r}
+plot(res, cex=0.8, invisible="quali", title="Graph of the individuals")
+```
+
+With many individuals and if the labels are not useful, one can suppress the labels with the argument label="none".
+
+```{r eval=FALSE}
+plot(res, cex=0.8, invisible="quali", label="none", title="Graph of the individuals")
+```
+
+# Drawing individuals according to the competition
+```{r}
+plot(res, cex=0.8, habillage="Competition")
+```
+
+We could have written:
+```{r eval=FALSE}
+plot(res, cex=0.8, habillage=13)
+```
+\newpage
+
+# Confidence ellipses around the categories
+```{r}
+plotellipses(res)
+```
+
+If several qualitative variables are available, there will be as many graphs as qualitative variables. And on each graph the confidence ellipses around the categories of a categorical variable.
+
+\newpage
+
+# Graph for dimensions 3 and 4
+```{r}
+plot(res, choix="ind", cex=0.8, habillage=13, title="Graph of the individuals", axes=3:4)
+plot(res, choix="var", title="Graph of the variables", axes=3:4)
+```
+
+\newpage
+
+# Selecting individuals
+
+```select="cos2 0.7"``` : select the individuals that have a quality of representation on the map greater than 0.7
+
+```select="cos2 5"``` : select the 5 individuals that have the best quality of representation on the map
+
+```select="contrib 5"``` : select the 5 individuals that contribute the most to the construction of the map
+
+```select=c("nom1","nom2")``` : select the individuals by their name
+
+```{r}
+plot(res, cex=0.8, habillage=13, select="cos2 0.7")
+plot(res, cex=0.8, habillage=13, select="contrib 5")
+plot(res, cex=0.8, habillage=13, select=c("Clay","Karpov"))
+```
+
+# Selecting variables
+```{r}
+plot(res, choix="var", select="contrib 5")
+```
+
+\newpage
+
+# Graph with different options
+```{r}
+plot(res, cex=0.8, habillage=13, select="cos2 0.7", title="Decathlon", 
+     cex.main=1.1, cex.axis=0.9, shadow=TRUE, auto="y")
+```
