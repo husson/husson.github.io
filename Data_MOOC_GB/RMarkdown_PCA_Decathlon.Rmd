@@ -1,6 +1,6 @@
 ---
 title: "Principal Component Analysis (PCA) with FactoMineR (decathlon dataset)"
-author: "François Husson & Magalie Houée-Bigot"
+author: "Francois Husson & Magalie Houee-Bigot"
 output:
   pdf_document:
     fig_height: 6
@@ -15,13 +15,9 @@ output:
 
 # Import data (data are imported from internet)
 
-```{r eval=FALSE}
+```{r}
 decathlon <- read.table("http://www.agrocampus-ouest.fr/math/RforStat/decathlon.csv", 
       header=TRUE, sep=";", row.names=1, check.names=FALSE)
-```
-```{r echo=FALSE}
-decathlon <- read.table("http://www.agrocampus-ouest.fr/math/RforStat/decathlon.csv", 
-                        header=TRUE, sep=";", row.names=1, check.names=FALSE)
 ```
 ```header=TRUE``` : indicates that the file contains the names of the variables
 
@@ -37,7 +33,13 @@ It is important to check that the import is well done
 summary(decathlon)
 ```
 
-# Loading FactoMineR
+# With the package Factoshiny
+```{r eval=FALSE}
+library(Factoshiny)
+res <- Factoshiny(decathlon)
+```
+
+# With the package FactoMineR
 ```{r}
 library(FactoMineR)
 ```
@@ -94,6 +96,11 @@ plot(res, cex=0.8, habillage="Competition")
 We could have written:
 ```{r eval=FALSE}
 plot(res, cex=0.8, habillage=13)
+```
+
+# Drawing individuals according to the quality of representation
+```{r}
+plot(res, cex=0.8, habillage="cos2")
 ```
 \newpage
 
