@@ -1,0 +1,118 @@
+---
+title: Analyse Factorielle Multiple (AFM) avec FactoMineR sur la description sensorielle
+  de 10 vins par 3 jurys
+author: "François Husson"
+output:
+  word_document: default
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+---
+
+
+# Importation du jeu de données
+
+```{r eval=FALSE}
+vins <- read.table("AnaDo_JeuDonnees_VinsJury.csv", 
+      header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
+```
+```{r echo=FALSE}
+vins <- read.table("C:/Users/husson/Documents/home/huss/Enseign/cours/Films/Mooc_anado/Donnees/AnaDo_JeuDonnees_VinsJury.csv", header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
+```
+```header=TRUE``` : précise que le nom des variables est présent
+
+```sep=";"``` : précise que le séparateur de colonnes est le point-virgule (fréquent dans les fichiers csv, pour une tabulation il faudrait écrire ```sep="\t"```)
+
+```dec="."``` : le séparateur de décimale est le point (parfois dans Excel on trouve la virgule)
+
+```row.names=1``` : précise que le nom des individus est dans la première colonne du tableau
+
+```check.names=FALSE``` : impose que le nom des colonnes soit pris tel que dans le fichier (sinon les espaces sont remplacés par des points et des X sont mis avant les nombres)
+
+Il est important de s'assurer que l'importation a bien été effectuée, et notamment que les variables quantitatives sont bien considérées comme quantitatives et les variables qualitatives bien considérées comme qualitatives
+
+```{r eval=FALSE}
+summary(vins)
+```
+
+# Chargement de FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# L'AFM sans groupe supplémentaire
+```{r}
+res <- MFA(vins[,2:58], group=c(27,15,15), type=rep("s",3), 
+           name.group=c("Expert","Etudiant","Conso"))
+```
+
+# L'AFM avec groupe supplémentaire
+```{r}
+res <- MFA(vins, group=c(1,27,15,15,60), type=c("n",rep("s",4)), num.group.sup=c(1,5),
+           name.group=c("Cépage","Expert","Conso","Etudiant","Préférence"),graph=FALSE)
+```
+
+On peut obtenir un résumé des principaux résultats en utilisant la fonction ```summary```. 
+
+```{r eval=FALSE}
+summary(res)
+```
+
+Nous demandons ici à avoir les résultats sur les 2 premières dimensions pour éviter d'avoir des tableaux trop grands (par défaut, la fonction retourne les résultats des 3 premières dimensions).
+
+```{r}
+summary(res, ncp=2)
+```
+
+# Description des dimensions
+```{r}
+dimdesc(res)
+```
+
+# Graphe des groupes de variables
+```{r}
+plot(res,choix="group", title="Graphe des groupes")
+```
+
+# Graphe des individus
+```{r}
+plot(res, title="Graphe des individus")
+```
+
+# Graphe des variables
+```{r}
+plot(res,choix="var", invisible="quanti.sup", title="Graphe des variables actives")
+```
+
+# Graphe avec une sélection de variables
+```{r}
+selection = c(grep("passion",rownames(res$quanti.var$coord),fixed=TRUE),
+    grep("Acide",rownames(res$quanti.var$coord),fixed=TRUE),
+    grep("Sucree",rownames(res$quanti.var$coord),fixed=TRUE))
+plot(res,choix="var",select=selection,invisible="quanti.sup")
+
+plot(res,choix="var", invisible="quanti", habillage="none", lab.var=FALSE, 
+     title="Graphe des variables supplémentaires")
+```
+
+# Graphe des points partiels
+```{r}
+plot(res,choix="ind", partial="all", title="Graphe des points partiels")
+```
+
+# Graphe des axes partiels
+```{r}
+plot(res,choix="axes", title="Graphe des axes partiels")
+plot(res, cex=0.8, invisible="ind", partial="all", title="Graphe des individus")
+```
+
+# Coloriage des individus en fonction de leur modalité
+```{r}
+plot(res,choix="ind",habillage="cepage", title="Graphe des individus")
+```
+
+On aurait pu écrire :
+```{r eval=FALSE}
+plot(res, cex=0.8, habillage=1)
+```

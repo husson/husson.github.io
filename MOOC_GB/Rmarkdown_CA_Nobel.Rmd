@@ -1,0 +1,56 @@
+---
+title: "Correspondance analysis (CA) with FactoMineR (Nobel prize dataset)"
+author: "Magalie Houee-Bigot"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Import data
+
+Upload the Nobel prize dataset on your computer. 
+
+```{r}
+Nobel <- read.table("https://husson.github.io/MOOC_GB/data_CA_NobelPrize_withMaths.csv/data_CA_NobelPrize_withMaths.csv", 
+           header=TRUE, sep=";", row.names=1, check.names=FALSE)
+summary(Nobel)
+```
+
+# With Factoshiny
+```{r eval=FALSE}
+library(Factoshiny)
+res <- Factoshiny(Nobel)
+```
+
+# Loading FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+
+#  Correspondence Analysis
+Active variables are the G8 countries and the Nobel prizes.
+```{r} 
+res.ca=CA(Nobel[1:8,1:6]) 
+```
+
+Outputs can be summarized with the function ```summary```.
+```{r} 
+summary(res.ca)
+```
+
+# Bar chart of eigenvalues
+```{r}         
+barplot(res.ca$eig[,2],main="Eigenvalues", names.arg=1:nrow(res.ca$eig))
+```
+
+# CA with supplementary elements
+```{r} 
+# Adding the Fields medal as supplementary element
+res.ca=CA(Nobel[1:8,], col.sup=7)
+```
+
+

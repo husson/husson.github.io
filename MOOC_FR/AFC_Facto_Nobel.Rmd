@@ -1,0 +1,56 @@
+---
+title: "Analyse des Correspondances (AFC) avec FactoMineR sur les données du cours"
+author: "François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+
+Script et sorties R de la vidéo du cours.
+
+
+# Chargement de FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# Importation du jeu de données depuis le site
+
+```{r eval=FALSE}
+Nobel = read.table("AnaDo_JeuDonnees_Nobel_avecMaths.csv", header=TRUE, sep=";", 
+      row.names=1, ,check.names=FALSE)
+summary(Nobel)
+```
+
+```{r echo=FALSE}
+Nobel <- read.table("C:/Users/houee/AOBOX/AnaDo_JeuDonnees_Nobel_avecMaths.csv", header=TRUE, row.names=1, sep=";", fileEncoding="latin1")
+summary(Nobel)
+```
+
+# Test du Chi²
+```{r}
+res.test.chi2 <- chisq.test(Nobel)
+res.test.chi2
+```
+
+# L'AFC : les sorties et le graphe par défaut
+```{r}
+res.ca=CA(Nobel[1:8,])
+summary(res.ca)
+barplot(res.ca$eig[,2],main="Valeurs propres", names.arg=1:nrow(res.ca$eig))
+```
+
+# Les graphiques des lignes et des colonnes séparés
+```{r}
+plot(res.ca, invisible="col",title="Représentation des lignes")
+plot(res.ca, invisible="row",title="Représentation des colonnes")
+```
+
+# AFC avec colonne supplémentaire
+```{r}
+res.ca=CA(Nobel, col.sup=7)
+```
+

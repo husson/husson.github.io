@@ -1,0 +1,162 @@
+---
+title: "Analyse des Correspondances Multiples (ACM) avec FactoMineR"
+author: "François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+
+Script et sorties R de la vidéo du didacticiel sur les données de consommation du thé.
+Le jeu de données ```the.csv``` est disponible sur le site Web : <http://factominer.free.fr/livre>.
+
+
+# Importation du jeu de données depuis le site
+```{r eval=FALSE}
+the <- read.table("http://factominer.free.fr/livre/the.csv", 
+                  header=TRUE, sep=";", fileEncoding="latin1")
+```
+
+```header=TRUE``` : précise que le nom des variables est présent
+
+```sep=";"``` : précise que le séparateur de colonnes est le point-virgule (fréquent dans les fichiers csv, pour une tabulation il faudrait écrire ```sep="\t"```)
+
+```{r echo=FALSE}
+the <- read.table("C:/Users/husson/Documents/home/huss/Enseign/cours/Films/Mooc_anado/Donnees/AnaDo_JeuDonnees_The.csv",header=TRUE,sep=";", fileEncoding="latin1")
+summary(the)
+```
+
+# Chargement de FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# L'ACM et les graphes par défaut
+```{r}
+res <- MCA(the, quanti.sup=22, quali.sup=c(19:21,23:36))
+```
+
+# Résumé des principaux résultats
+Pour éviter de surcharger les sorties, on a précisé dans la fonction ```summary.MCA```, appelée par ```summary```, que l'on veut les résultats sur les 8 (```nbelements=8```) premiers éléments (individus et modalités), et uniquement sur les 2 premières dimensions (```ncp=2```)
+
+```{r}
+summary(res, ncp=2, nbelements=8)    ## fonction summary.MCA
+```
+
+La fonction ```summary.MCA``` permet de précider le nombre de composantes avec ```ncp``` pour lequel les résultats sont fournis, et l'argument ```nbelements=Inf``` permet de préciser qu'on veut les résultats sur tous les individus.
+
+```{r eval=FALSE}
+summary(res, ncp=3, nbelements=Inf)
+```
+
+\newpage
+
+# Description des dimensions
+On peut décrire les dimensions de l'ACM avec la commande suivante. Par défaut, les 3 premières dimensions sont décrites.
+```{r eval=FALSE}
+dimdesc(res)
+```
+
+Pour éviter d'avoir trop de modalités, on ne décrit que les axes 1 et 2 et on conserve uniquement les modalités qui ont une probabilité critique inférieure à $10^{-5}$ au lieu de 0.05 par défaut.
+
+```{r}
+dimdesc(res, axes=c(1,2), proba=1e-05)
+```
+
+\newpage
+
+# Graphes en écrivant certains libellés et pas d'autres
+```{r}
+plot(res, label=c("var","quali.sup"), cex=0.7)
+```
+
+\newpage
+
+# Graphes en rendant invisible certains éléments
+Graphe avec les modalités actives et supplémentaires invisibles, et donc avec uniquement les individus :
+
+```{r}
+plot(res, invisible=c("var","quali.sup"), cex=0.7)
+```
+
+\newpage
+
+Graphe avec les individus et les modalités supplémentaires invisibles, et donc avec uniquement les modalités actives :
+```{r}
+plot(res, invisible=c("ind","quali.sup"), autoLab="y", cex=0.7,
+     title="Modalités actives")
+```
+
+\newpage
+
+Graphe avec les individus et les modalités actives invisibles, et donc avec uniquement les modalités supplémentaires :
+```{r}
+plot(res, invisible=c("ind","var"), autoLab="y", cex=0.7,
+     title="Modalités supplémentaires")
+```
+
+\newpage
+
+# Sélection de certaines modalites
+Les modalités peuvent être sélectionnées avec l'argument ```selectMod```.
+
+```selectMod="cos2 0.7"``` : sélectionne les modalités actives et supplémentaires qui ont, sur le plan tracé, une qualité de projection supérieure à 0.7
+
+```selectMod="cos2 5"``` : sélectionne les 5 modalités, 5 actives et 5 supplémentaires, qui ont la meilleure qualité de projection sur le plan tracé
+
+```selectMod="contrib 5"``` : sélectionne les 5 modalités (nécessairement actives) qui ont le plus contribué à la construction du plan tracé
+
+```selectMod="dist 5"``` : sélectionne les 5 modalités, 5 actives et ( supplémentaires) les plus loin de l'origine des axes
+
+
+```{r}
+plot(res, invisible="ind",autoLab="y",cex=0.7,selectMod="cos2 10")
+plot(res, invisible="ind",autoLab="y",cex=0.7,selectMod="contrib 20")
+```
+
+\newpage
+
+# Sélection des individus
+Pour les individus, on utilise l'argument ```select``` au lieu de ```selectMod``` exactement de la même façon que pour les modalités.
+```{r}
+plot(res, invisible=c("var","quali.sup"),autoLab="y",cex=0.7,select="cos2 20")
+```
+
+\newpage
+
+# Sélection des individus et des modalités
+On peut construire un graphe simultanée et sélectionner à la fois des individus avec ```select``` et des modalités avec ```selectMod```.
+```{r}
+plot(res, autoLab="y",cex=0.7, select="cos2 20", selectMod="cos2 10")
+```
+
+\newpage
+
+# Graphes des variables
+On peut construire le graphe des liaisons. Pour les variables qualitatives, la corrodnnée sur un axe est le rapport de corrélation au carré entre la variable qualitative et la dimension; pour les variables quantitatives supplémentaire, on calcule le coeeficient de corrélation au carré entre la dimension et la variable quantitative.
+
+On zoome ici sur les graphes en précisant les intervalles sur x et y avec ```xlim``` et ```ylim```.
+```{r}
+plot(res, choix="var",xlim=c(0,0.6),ylim=c(0,0.6))
+plot(res, choix="var",xlim=c(0,0.6),ylim=c(0,0.6),invisible=c("quali.sup","quanti.sup"))
+```
+
+\newpage
+
+# Graphes sur les axes 3 et 4
+```{r}
+plot(res,invisible=c("var","quali.sup"),cex=0.7,select="contrib 20",axes=3:4)
+plot(res, invisible="ind",autoLab="y",cex=0.7,selectMod="cos2 20",axes=3:4)
+```
+
+\newpage
+
+# Ellipses de confiance autour de modalités
+
+On peut construire des ellipses de confiance autour des modalités de chaque variable. Par défaut un graphe est construit par variable. On précise ici avec ```keepvar``` les variables pour lesquelles nous voulons un graphe.
+
+```{r}
+plotellipses(res,keepvar=c(14:17))
+```

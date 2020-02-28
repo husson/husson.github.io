@@ -1,0 +1,103 @@
+---
+title: Analyse des correspondances (AFC) avec FactoMineR sur le jeu de données du
+  didacticiel (naissances)
+author: "François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  word_document: default
+---
+
+
+# Importation du jeu de données
+```{r echo=FALSE}
+Naissance <- read.table("C:/Users/husson/Documents/home/huss/Enseign/cours/Films/Mooc_anado/Donnees/AnaDo_JeuDonnees_Naissances.csv", header=TRUE,sep=";", row.names=1, check.names=FALSE, fileEncoding="latin1")
+summary(Naissance)
+```
+
+```{r eval=FALSE}
+setwd("C:/Users/husson/Documents/")
+Naissance <- read.table("AnaDo_JeuDonnees_Naissances.csv", 
+        header=TRUE, sep=";", row.names=1, check.names=FALSE, fileEncoding="latin1")
+summary(Naissance)
+```
+
+```header=TRUE``` : précise que le nom des variables est présent
+
+```sep=";"``` : précise que le séparateur de colonnes est le point-virgule (fréquent dans les fichiers csv, pour une tabulation il faudrait écrire ```sep="\t"```)
+
+```row.names=1``` : précise que le nom des individus est dans la première colonne du tableau
+
+```check.names=FALSE``` : impose que le nom des colonnes soit pris tel que dans le fichier (sinon les espaces sont remplacés par des points et des X sont mis avant les nombres)
+
+\newpage
+
+# Chargement de FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# L'AFC et le graphe simultanée par défaut
+```{r}
+res <- CA(Naissance, row.sup=7:8, col.sup=9:10)
+```
+
+\newpage
+
+# Résumé des principaux résultats
+```{r}
+summary(res)
+```
+
+\newpage
+
+# Graphe de la représentation simultanée avec un titre et une taille de police plus petite : les libellés se chevauchent moins, le graphique est plus lisible
+```{r}
+plot(res, cex=0.7,title="Représentation simultanée")
+```
+
+\newpage
+
+# Description des dimensions
+```{r}
+dimdesc(res)
+```
+
+\newpage
+
+# Graphes avec différentes sélections de lignes et/ou colonnes
+
+On peut sélectionner certaines lignes ou certaines colonnes pour améliorer la lisibilité des graphes. Pour cela, deux arguments sont utilisés, un argument pour les lignes ```selectRow```, l'autre pour les colonnes ```selectCol```. Ces deux arguments fonctionnent selon le même principe. On décrit ici la sélection sur les lignes uniquement.
+
+```selectRow ="cos2 0.7"``` : sélectionne les lignes actives et supplémentaires qui ont, sur le plan tracé, une qualité de projection supérieure à 0.7
+
+```selectRow ="cos2 5"``` : sélectionne les 5 lignes actives et les 5 lignes supplémentaires  qui ont la meilleure qualité de projection sur le plan tracé
+
+```selectRow ="contrib 5"``` : sélectionne les 5 lignes (nécessairement actives) qui ont le plus contribué à la construction du plan tracé
+
+```selectRow =c("nom1","nom2")``` : sélectionne les lignes par leur nom
+
+```{r}
+plot(res, invisible=c("row.sup","col.sup"), cex=0.7, shadow=TRUE, title="Eléments actifs")
+plot(res, shadow=TRUE, cex=0.7, selectRow="cos2 0.7", selectCol="cos2 0.7")
+plot(res, shadow=TRUE, cex=0.7, selectRow="cos2 4", selectCol="cos2 3")
+plot(res, shadow=TRUE, cex=0.7, selectRow="contrib 4", selectCol="contrib 3")
+plot(res, shadow=TRUE, cex=0.7, selectRow=c("M?re - 20 ans"))
+```
+
+\newpage
+
+# Graphes sur les dimensions 1 et 3
+
+```{r}
+plot(res, shadow=TRUE, cex=0.7, axes=c(1,3), title="Représentation sur le plan 1-3")
+```
+
+\newpage
+
+# Classification sur les colonnes
+
+```{r}
+res.hcpc <- HCPC(res,cluster.CA="columns")
+```

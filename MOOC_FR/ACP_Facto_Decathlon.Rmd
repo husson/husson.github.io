@@ -1,0 +1,143 @@
+---
+title: "Analyse en composantes principales (ACP) avec FactoMineR sur les données décathlon"
+author: "François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+
+
+# Importation du jeu de données
+Vous pouvez importer le jeu de données après l'avoir sauvegardé sur votre ordinateur ou bien directement à partir su lien suivant  <http://www.agrocampus-ouest.fr/math/livreR/decathlon.csv>.
+
+```{r eval=FALSE}
+decathlon <- read.table("http://www.agrocampus-ouest.fr/math/livreR/decathlon.csv", 
+      header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
+```
+```{r echo=FALSE}
+decathlon <- read.table("C:/Users/husson/Documents/home/huss/Enseign/cours/Films/Mooc_anado/Donnees/AnaDo_JeuDonnees_Decathlon.csv", header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
+```
+```header=TRUE``` : précise que le nom des variables est présent
+
+```sep=";"``` : précise que le séparateur de colonnes est le point-virgule (fréquent dans les fichiers csv, pour une tabulation il faudrait écrire ```sep="\t"```)
+
+```dec="."``` : le séparateur de décimale est le point (parfois dans Excel on trouve la virgule)
+
+```row.names=1``` : précise que le nom des individus est dans la première colonne du tableau
+
+```check.names=FALSE``` : impose que le nom des colonnes soit pris tel que dans le fichier (sinon les espaces sont remplacés par des points et des X sont mis avant les nombres)
+
+Il est important de s'assurer que l'importation a bien été effectuée, et notamment que les variables quantitatives sont bien considérées comme quantitatives et les variables qualitatives bien considérées comme qualitatives
+
+```{r}
+summary(decathlon)
+```
+
+# Chargement de FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# L'ACP avec uniquement des éléments (lignes et variables) actifs
+```{r}
+res <- PCA(decathlon[,1:10])
+```
+
+On peut obtenir un résumé des principaux résultats en utilisant la fonction ```summary```. 
+
+```{r eval=FALSE}
+summary(res)
+```
+
+Nous demandons ici à avoir les résultats sur les 2 premières dimensions pour éviter d'avoir des tableaux trop grands (par défaut, la fonction retourne les résultats des 3 premières dimensions).
+
+```{r}
+summary(res, ncp=2)
+```
+
+# L'ACP avec des variables supplémentaires
+```{r}
+res <- PCA(decathlon, quanti.sup=11:12, quali.sup=13)
+summary(res, ncp=2, nbelements=Inf)
+```
+Pour imprimer les résultats dans un fichier :
+```{r eval=FALSE}
+summary(res, nbelements=Inf, file="essai.txt")
+```
+
+# Description des dimensions
+```{r}
+dimdesc(res)
+dimdesc(res, proba=0.2)
+```
+
+# Graphe des individus avec des libellés de police plus petite et avec un titre
+```{r}
+plot(res, cex=0.8, invisible="quali", title="Graphe des individus")
+```
+
+Si on a beaucoup d'individus et que les libellés des individus ne sont pas explicites (des numéros par exemple), on peut supprimer les noms des libellés tout en laissant les points avec l'argument label="none".
+
+```{r eval=FALSE}
+plot(res, cex=0.8, invisible="quali", label="none", title="Graphe des individus")
+```
+
+# Coloriage des individus en fonction de leur modalité
+```{r}
+plot(res, cex=0.8, habillage="Competition")
+```
+
+On aurait pu écrire :
+```{r eval=FALSE}
+plot(res, cex=0.8, habillage=13)
+```
+\newpage
+
+# Ellipses de confiance autour des modalités
+```{r}
+plotellipses(res)
+```
+
+Si on a plusieurs variables qualitatives, on aura autant de graphes que de variables qualitatives. Avec sur chaque graphe, les ellipses de confiance des modalités de la variable qualitative en question.
+
+\newpage
+
+# Graphes sur les dimensions 3 et 4
+```{r}
+plot(res, choix="ind", cex=0.8, habillage=13, title="Graphe des individus", axes=3:4)
+plot(res, choix="var", title="Graphe des variables", axes=3:4)
+```
+
+\newpage
+
+# Graphe avec sélection des individus
+
+```select="cos2 0.7"``` : sélectionne les individus qui ont, sur le plan tracé, une qualité de projection supérieure à 0.7
+
+```select="cos2 5"``` : sélectionne les 5 individus qui ont la meilleure  qualité de projection sur le plan tracé
+
+```select="contrib 5"``` : sélectionne les 5 individus qui ont le plus contribué à la construction du plan tracé
+
+```select=c("nom1","nom2")``` : sélectionne les individus par leur nom
+
+```{r}
+plot(res, cex=0.8, habillage=13, select="cos2 0.7")
+plot(res, cex=0.8, habillage=13, select="contrib 5")
+plot(res, cex=0.8, habillage=13, select=c("Clay","Karpov"))
+```
+
+# Graphe du cercle des corrélations avec sélection des variables
+```{r}
+plot(res, choix="var", select="contrib 5")
+```
+
+\newpage
+
+# Graphe avec sélection des individus, des tailles de police différentes pour les titres, des ombres sous les points
+```{r}
+plot(res, cex=0.8, habillage=13, select="cos2 0.7", title="Performances au décathlon", 
+     cex.main=1.1, cex.axis=0.9, shadow=TRUE, auto="y")
+```

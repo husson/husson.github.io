@@ -1,0 +1,108 @@
+---
+title: "Multiple Correspondence Analysis (MCA) with FactoMineR (tea dataset)"
+author: "Magalie Houée-Bigot & François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+
+
+# Import data 
+
+```{r}
+setwd("C:/Users/houee/Downloads") # select the working directory
+tea <- read.table("data_MCA_Tea.csv", header=TRUE, sep=";")
+```
+
+
+```header=TRUE``` : indicates that the file contains the names of the variables
+
+```sep=";"``` : indicates the fields separator (usually ";" or "," for csv files)
+
+It is important to check that the import is well done
+
+```{r}
+summary(tea)
+```
+
+# Loading FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# MCA
+```{r}
+res <- MCA(tea, quanti.sup=19, quali.sup=c(20:36))
+```
+
+Outputs can be summarized with the function ```summary```. 
+
+```{r eval=FALSE}
+summary(res, ncp=3, nbelements=Inf)    ## fonction summary.MCA
+```
+
+Outputs are given for the first 2 dimensions (by default 3 dimensions are given) and for the 5 first elements.
+
+```{r}
+summary(res, ncp=2, nbelements=5)
+```
+
+# Graph of the eigenvalues
+```{r}
+barplot(res$eig[,2],main="Eigenvalues", names.arg=1:nrow(res$eig))
+```
+
+# Graph with some labels
+```{r}
+plot(res, label=c("var","quali.sup"), cex=0.7)
+```
+
+# Graphs with selection of elements
+```{r}
+plot(res, invisible=c("var","quali.sup"), cex=0.7)
+plot(res, invisible=c("ind","quali.sup"),autoLab="y",cex=0.7,
+     title="Active categories")
+plot(res, invisible=c("ind","var"),autoLab="y",cex=0.7,
+     title="Supplementary categories")
+```
+
+# Selection of some categories
+```{r}
+plot(res, invisible="ind",autoLab="y",cex=0.7,selectMod="cos2 10")
+plot(res, invisible="ind",autoLab="y",cex=0.7,selectMod="contrib 20")
+```
+
+# Selection of some individuals
+```{r}
+plot(res, invisible=c("var","quali.sup"),autoLab="y",cex=0.7,select="cos2 20")
+```
+
+# Selection of some categories and some individuals
+```{r}
+plot(res, autoLab="y",cex=0.7, select="cos2 20", selectMod="cos2 10")
+```
+
+# Graphs of the variables
+```{r}
+plot(res, choix="var",xlim=c(0,0.6),ylim=c(0,0.6))
+plot(res, choix="var",xlim=c(0,0.6),ylim=c(0,0.6),invisible=c("quali.sup","quanti.sup"))
+```
+
+# Graphs on dimensions 3 and 4
+```{r}
+plot(res,invisible=c("var","quali.sup"),cex=0.7,select="contrib 20",axes=3:4)
+plot(res, invisible="ind",autoLab="y",cex=0.7,selectMod="cos2 20",axes=3:4)
+```
+
+# Confidence ellipses around the categories for the variables 14 to 17
+```{r}
+plotellipses(res,keepvar=c(14:17))
+```
+
+# Description of the dimensions
+```{r}
+dimdesc(res)
+```

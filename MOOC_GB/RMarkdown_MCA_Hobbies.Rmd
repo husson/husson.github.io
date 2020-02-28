@@ -1,0 +1,94 @@
+---
+title: "Multiple Correspondence Analysis (MCA) with FactoMineR (hobbies dataset)"
+author: "Magalie Houée-Bigot & François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+
+
+# Import data 
+
+```{r}
+setwd("C:/users/houee/Downloads") # select the working directory
+hobbies = read.table("data_MCA_Hobbies.csv", header=TRUE, sep=";")
+```
+
+```header=TRUE``` : indicates that the file contains the names of the variables
+
+```sep=";"``` : indicates the fields separator (usually ";" or "," for csv files)
+
+It is important to check that the import is well done
+
+```{r}
+summary(hobbies)
+```
+
+# Transform the TV variable as factor
+```{r}
+hobbies[,"TV"] = as.factor(hobbies[,"TV"])
+summary(hobbies[,"TV"])
+```
+
+# Loading FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# MCA
+```{r}
+res.mca <- MCA(hobbies,quali.sup=19:22,quanti.sup=23)
+```
+
+Outputs can be summarized with the function ```summary```. 
+
+```{r eval=FALSE}
+summary(res.mca)
+```
+
+Outputs are given for the first 2 dimensions (by default 3 dimensions are given).
+
+```{r}
+summary(res.mca, ncp=2)
+```
+
+# Graph of the eigenvalues
+```{r}
+barplot(res.mca$eig[,2],main="Eigenvalues", names.arg=1:nrow(res.mca$eig))
+```
+
+# Graphs of the individuals
+```{r}
+plot(res.mca,invisible=c("var","quali.sup"),cex=.5,label="none",
+     title="Graph of the individuals") 
+plot(res.mca,invisible=c("var","quali.sup"),cex=.5,label="none",
+     title="Graph of the individuals", habillage="Gardening") 
+```
+
+# Graphs of the categories
+```{r}
+plot(res.mca,invis=c("ind","quali.sup"),col.var=c(rep(c("black","red"),17),"black",rep("red",4)),
+     title="Graph of the active categories")
+plot(res.mca,invisible=c("ind","var"),hab="quali", 
+     palette=palette(c("blue","maroon","darkgreen","black","red")), 
+     title="Graph of the supplementary categories")
+```
+
+# Graphs of the variables
+```{r}
+plot(res.mca,choix="var",title="Graph of the variables")
+plot(res.mca,choix="quanti.sup",title="Graph of the continuous variables")
+```
+
+# Description of the dimensions
+```{r}
+dimdesc(res.mca)
+```
+
+# Confidence ellipses around the categories for the first 4 variables
+```{r}
+plotellipses(res.mca, cex=0.2, magnify=12, keepvar=1:4)
+```

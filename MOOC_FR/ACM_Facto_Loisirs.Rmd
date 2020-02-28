@@ -1,0 +1,59 @@
+---
+title: Multiple Correspondence Analysis (ACM) with FactoMineR (hobbies data)
+author: "François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  html_document: default
+  word_document: default
+---
+
+Script and outputs for the video of the course on the hobbies example.
+
+
+# Load FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# Reading the data from a file
+```{r echo=FALSE}
+data(hobbies)
+```
+```{r eval=FALSE}
+hobbies <- read.table("Data_MCA_hobbies.csv", header=TRUE,sep=";")
+```
+```{r}
+summary(hobbies)
+```
+
+# Converting the TV variable as a factor
+```{r}
+hobbies[,"TV"] = as.factor(hobbies[,"TV"])
+```
+
+# MCA
+```{r}
+res.mca <- MCA(hobbies,quali.sup=19:22,quanti.sup=23,graph=FALSE)
+```
+
+# Summarizing the results on the first 2 components
+
+```{r}
+summary(res.mca, ncp=2)
+```
+
+# Describing the dimensions
+```{r}
+dimdesc(res.mca, axes=1:2)
+```
+
+# Graphic representations
+```{r}
+plot(res.mca,invisible=c("var","quali.sup"),cex=.5,label="none") 
+plot(res.mca,invisible=c("ind","var"),hab="quali", palette=palette(c("blue","orange","darkgreen","black","red")))
+plot(res.mca,choix="var")
+plot(res.mca,choix="quanti.sup")
+barplot(res.mca$eig[,2],main="Eigenvalues", names.arg=1:nrow(res.mca$eig))
+```
