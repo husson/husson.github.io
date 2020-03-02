@@ -1,0 +1,93 @@
+---
+title: "Hierarchical ascendant clustering with FactoMineR (Temperature example)"
+author: "Magalie Houée-Bigot & François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  word_document: default
+---
+
+
+
+### Import data 
+```{r}
+setwd("C:/Users/houee/Downloads") # select the working directory 
+temperature <- read.table("data_clustering_Temperature.csv",
+        header=TRUE, sep=";", dec=".", row.names=1)
+```
+
+```header=TRUE``` : indicates that the file contains the names of the variables
+
+```sep=";"``` : indicates the fields separator (usually ";" or "," for csv files)
+
+```row.names=1``` : indicates the column of the table which contains the row names
+
+It is important to check that the import is well done
+
+
+```{r}
+summary(temperature)
+```
+
+# Loading FactoMineR
+```{r}
+library(FactoMineR)
+```
+
+# PCA
+```{r eval=FALSE}
+res <- PCA(temperature, ind.sup=24:35, quanti.sup=13:16,quali.sup=17, ncp=8)
+```
+```{r echo=FALSE}
+res <- PCA(temperature, ind.sup=24:35, quanti.sup=13:16,quali.sup=17, ncp=8,graph=FALSE)
+plot(res,cex=.7)
+plot(res,choix="var",cex=.7)
+```
+
+# Hierarchical ascendant clustering
+```{r echo=FALSE}
+res.hcpc <- HCPC(res,  graph=FALSE, nb.clust=-1)
+```
+
+```{r eval=FALSE}
+res.hcpc <- HCPC(res)
+```
+
+```{r echo=FALSE}
+plot(res.hcpc,choice="tree")
+```
+```{r echo=FALSE}
+plot(res.hcpc,choice="3D.map")
+```
+```{r echo=FALSE}
+plot(res.hcpc,choice="map",draw.tree=FALSE)
+```
+
+# Outputs
+```{r}
+names(res.hcpc)
+res.hcpc$data.clust
+res.hcpc$desc.var
+res.hcpc$desc.axes
+res.hcpc$desc.ind
+```
+
+# Hierarchical ascendant clustering without consolidation
+```{r echo=FALSE}
+res.hcpc <- HCPC(res, consol=FALSE, graph=FALSE)
+```
+
+```{r eval=FALSE}
+res.hcpc <- HCPC(res, consol=FALSE)
+```
+
+```{r echo=FALSE}
+plot(res.hcpc,choice="tree")
+```
+```{r echo=FALSE}
+plot(res.hcpc,choice="3D.map")
+```
+```{r echo=FALSE}
+plot(res.hcpc,choice="map",draw.tree=FALSE)
+```

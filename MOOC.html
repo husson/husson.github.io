@@ -326,7 +326,15 @@ Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
 
 <a name="AnaDoGB">
 <h1>Course on Exploratory Multivariate Data Analysis (in English)</h1>
-<p></a>This course is a complete course on Exploratory Multivariate Data Analysis.</p> 
+<p></a>This course is a complete course on Exploratory Multivariate Data Analysis. You will find courses on the following method:
+<ol>
+<li><a href="MOOC.html#PCAcourse">PCA - Principal Component Analysis</li>
+<li><a href="MOOC.html#CAcourse">CA - Correspondence Analysis</li>
+<li><a href="MOOC.html#MCAcourse">MCA - Muliple Correspondence Analysis</li>
+<li><a href="MOOC.html#clusteringcourse">Clustering</li>
+<li><a href="MOOC.html#MFAcourse">MFA - Multiple Factor Analysis</li>
+</ol>
+</p> 
 <a name="PCAcourse"></a>
 <h2>PCA - Principal Component Analysis</h2>
 <p style="text-align: justify;">PCA is a well known method for exploring and visualizing data. The function <strong><em>Factoshiny</em></strong> of the package <strong><em>Factoshiny</em> </strong>allows you to perform PCA in a really easy way. You can <span style="color: #0000ff;">include extras</span> <span style="color: #0000ff;">information</span> such as categorical variables, <span style="color: #0000ff;">manage missing data</span>, draw and <span style="color: #0000ff;">improve the graphs interactively</span>, have several numeric indicators as outputs, perform <span style="color: #0000ff;">clustering</span> on the PCA results, and even have an <span style="color: #0000ff;">automatic interpretation</span> of the results. Finally, the function returns the lines of code to parameterize the analysis and redo the graphs, which makes the analysis reproducible.</p>
@@ -346,8 +354,8 @@ Here are the <a href="https://husson.github.io/MOOC_GB/PCA_course_slides.pdf">sl
 <h4>Materials</h4>
 Here is the material used in the videos:
 <ul>
-	<li>Wines data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_ExpertWine.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Wine.Rmd">Rmarkdown</a>- the <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Wine.pdf">script with the outputs</a></li>
-	<li>Decathlon data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_Decathlon.csv">data set</a>- <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Decathlon.Rmd">Rmarkdown </a>- the <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Decathlon.pdf">script with the outputs</a></li>
+	<li>Wines data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_ExpertWine.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Wine.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Wine.pdf">script with the outputs</a></li>
+	<li>Decathlon data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_Decathlon.csv">data set</a> - <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Decathlon.Rmd">Rmarkdown </a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Decathlon.pdf">script with the outputs</a></li>
 </ul>
 <h4>Missing data</h4>
 And here is a <a href="https://youtu.be/OOM8_FH6_8o">video</a> that gives more information on the management of missing data.
@@ -403,14 +411,29 @@ Here is the material used in the videos:
 </ul>
 And here is a video that gives more information on the <a href="https://www.youtube.com/watch?v=uyIH1CtrfsU"><font color="brown">management of missing data in MCA</font></a>.
 
-<p></p>
-<h4>4. Clustering</h4>             <ol>
+<a name="clusteringcourse"></a>
+<h2>Clustering</h2>
+<p style="text-align: justify;">Correspondence Analysis is a method for exploring and visualizing contingency tables. It is particularly useful in text mining.</p>
+
+<h4>Implementation with R software</h4>
+See this <a href="https://www.youtube.com/watch?v=EJqYTDTJJug" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/clustering_facto_transcription.pdf">audio transcription</a> of this video:</p>
+<p><a href="https://www.youtube.com/watch?v=EJqYTDTJJug" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/clustering_img.jpg" alt="CLASSIFFacto" width="455" height="227" /></a></p>
+
+<h4>Course videos</h4>
+Theorectical and practical informations on Correspondence Analysis are available in these 4 course videos:
+<ol>
 <li><a href="https://www.youtube.com/watch?v=J-IddCBb-ZQ">Introduction</a></li>
 <li><a href="https://www.youtube.com/watch?v=Emi1eMvGEJQ">Example and how to choose the number of clusters</a></li>
 <li><a href="https://www.youtube.com/watch?v=qaE9D_kjhLk">The partitioning method K-means</a></li>
 <li><a href="https://www.youtube.com/watch?v=w-EGV6xExWw">Characterizing clusters</a></li>
-<li><a href="https://www.youtube.com/watch?v=EJqYTDTJJug"><font color="brown">Clustering with FactoMineR</font></a></li>
-</ol>             <ul>                 <li><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/digitalAssets/100463_clustering_course_slides.pdf">Slides on the clustering course</a></li>             </ul>
+</ol>
+Here are the <a href="https://husson.github.io/MOOC_GB/clustering_course_slides.pdf">slides</a> and the <a href="https://husson.github.io/MOOC_GB/clustering_course_transcription.pdf">audio transcription</a> of the course.</p>
+<h4>Materials</h4>
+Here is the material used in the videos:
+<ul>
+	<li>Temperature data: the <a href="https://husson.github.io/MOOC_GB/data_clustering_Temperature.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/Rmarkdown_clustering_Temperature.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/Rmarkdown_clustering_Temperature.pdf">script with the outputs</a></li>
+	<li>Decathlon data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_Decathlon.csv">data set</a> - <a href="https://husson.github.io/MOOC_GB/RMarkdown_clustering_Decathlon.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_clustering_Decathlon.pdf">script with the outputs</a></li>
+</ul>
 
 <a name="MFAcourse"></a>
 <h2>MFA - Multiple Factor Analysis</h2>
@@ -421,7 +444,7 @@ The groups of variables can be continuous, categorical or can be a contingency t
 
 <h4>Implementation with R software</h4>
 See this <a href="https://youtu.be/ffCM2RHccqk" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/MFA_facto_transcription.pdf">audio transcription</a> of this video:</p>
-<p><a href="https://youtu.be/ffCM2RHccqk" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/MFA_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
+<p><a href="https://youtu.be/ffCM2RHccqk" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/MFA_img.jpg" alt="MFAFacto" width="455" height="227" /></a></p>
 
 <h4>Course videos</h4>
 Theorectical and practical informations on Multiple Factor Analysis are available in these 4 course videos:
@@ -435,8 +458,8 @@ Here are the <a href="https://husson.github.io/MOOC_GB/MFA_course_slides.pdf">sl
 <h4>Materials</h4>
 Here is the material used in the videos:
 <ul>
-	<li>Sensory jurys data: the <a href="https://husson.github.io/MOOC_GB/data_MFA_WineJurys.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineJury.Rmd">Rmarkdown</a>- the <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineJury.pdf">script with the outputs</a></li>
-	<li>Sensory groups data: <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineSenso.Rmd">Rmarkdown </a>- the <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineSenso.pdf">script with the outputs</a></li>
+	<li>Sensory jurys data: the <a href="https://husson.github.io/MOOC_GB/data_MFA_WineJurys.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineJury.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineJury.pdf">script with the outputs</a></li>
+	<li>Sensory groups data: <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineSenso.Rmd">Rmarkdown </a> - the <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineSenso.pdf">script with the outputs</a></li>
 </ul>
 
 <h4>To conclude</h4>             <ul>
