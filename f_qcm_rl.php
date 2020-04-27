@@ -1,35 +1,3 @@
-<?php
-/*
-    QCM auto-corrigé version Réponses Longues (1 réponse par ligne)
-    -----------------------------------------
-    V 2.0
-   (Toutes les réponses (choix) sur la même ligne dans la version initiale)
-
-Ce script est une variante la 2 ème version d'un gestionnaire de qcm
-auto-corrigé en PHP.
-Vous pouvez l'utiliser librement, il vous suffira d'aller modifier les 3
-parties indiquées.
-Il est assez brut mais je n'ai pas voulu ajouter ici de fioritures afin
-qu'il reste facilement compréhensible.
-Il faudrait, en particulier ajouter des couleurs, fonds, écritures
-, etc...
-Vous pouvez l'utiliser et le modifier comme bon vous semblera.
-Tenez moi au courant d'éventuels problèmes et de vos idées ou besoins
-pour l'améliorer.
-© 2001/2004, Fleury, Jean Claude Meier
-
-Pensez à visiter périodiquement mon site :
-  PedagoJiC :  http://jc.meier/free.fr
-pour découvrir les nouvelles versions.
-
-    03/01/04  Version RL        VERSION Réponses Longues
-    Ajout du JavaScript qui empêche de revenir en arrière avec le bouton [<--]
-	
-05/03/12 
-nouvelle version du script non retour dans le HEAD
-remplacement de $HTTP_POST_VARS par $_POST
-*/	
-?>
 <html>
 <head>
 <!-- modifier ci-dessous le titre qui apparaît dans la barre du navigateur entre > et <   -->
