@@ -6,7 +6,7 @@ for (i in 1:3) donnees[,i] <- as.factor(donnees[,i])
 summary(donnees)
 
 ### Caracterisation des produits
-resdecat<-decat(sensochoc, formul="~Produit+Juge+Seance+Produit:Juge+Seance:Produit+Juge:Seance", firstvar = 5)
+resdecat<-decat(donnees, formul="~Produit+Juge+Seance+Produit:Juge+Seance:Produit+Juge:Seance", firstvar = 6)
 resdecat
 
 barrow(resdecat$tabT)

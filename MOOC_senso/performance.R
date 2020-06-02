@@ -6,17 +6,17 @@ for (i in 1:3) donnees[,i] <- as.factor(donnees[,i])
 summary(donnees)
 
 ### Evaluation de la performance du jury
-res <- panelperf(donnees, firstvar = 5, formul = "~Produit+Juge+Seance+Produit:Juge+Seance:Produit+Juge:Seance")
+res <- panelperf(donnees, firstvar = 6, formul = "~Produit+Juge+Seance+Produit:Juge+Seance:Produit+Juge:Seance")
 res
 # Tri des resultats par probabilites critiques croissantes de l'effet produit
 coltable(magicsort(res$p.value, sort.mat = res$p.value[,1], bycol =FALSE,method = "median"), main.title = "Performance du jury")
 
 ### Etude de l'interaction produit:seance (pour le descripteur collant)
 resinteract <- interact(donnees, col.p = 4, col.j = 2, firstvar = 17, lastvar=17)
-graphinter(sensochoc, col.p = 4, col.j = 2, firstvar = 17, lastvar = 17,numr = 1, numc = 1)
+graphinter(donnees, col.p = 4, col.j = 2, firstvar = 17, lastvar = 17,numr = 1, numc = 1)
 	
 ### Evaluation de la performance des juges ET du jury
-res<-paneliperf(donnees, formul = "~Produit+Juge+Seance+Produit:Juge+Seance:Produit+Juge:Seance",formul.j = "~Product", col.j = 1, firstvar = 5, synthesis = TRUE)
+res<-paneliperf(donnees, formul = "~Produit+Juge+Seance+Produit:Juge+Seance:Produit+Juge:Seance",formul.j = "~Product", col.j = 1, firstvar = 6, synthesis = TRUE)
 resprob<-magicsort(res$prob.ind, method = "median")
 coltable(resprob, level.lower = 0.05, level.upper = 1, main.title = "Proba critiques des tests F de l'effet produit (par juge)")
 hist(resprob,main="Histogramme des probabilites critiques",xlab="Probabilites critiques")
