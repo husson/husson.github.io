@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC analyse de données, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="../assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="../img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
+	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+<script language="JavaScript">
+<!--
+
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [2, 4, 4, 3, 2, 3, 4, 3, 4, 2];
+var numQues = 10;
+
+var answers = new Array(10);
+var answers_true = new Array(10);
+var answers_false = new Array(10);
+answers[0] = "q1.1";
+answers_true[0] = "Bravo. Le groupe génome a une première dimension extrêmement forte par rapport aux deux dimensions suivantes, et on peut dire qu'il est presque unidimensionnel. Son Lg doit donc être proche de 1. Le groupe CGH a quant à lui des valeurs propres associées aux dimensions 2 et 3 qui sont élevées comparativement à la 1ère valeur propre du groupe. C'est donc un groupe plus multidimensionnel qui a donc un Lg plus élevé.";
+answers_false[0] = "Non ! Le groupe génome a une première dimension extrêmement forte par rapport aux deux dimensions suivantes, et on peut dire qu'il est presque unidimensionnel. Son Lg doit donc être proche de 1. Le groupe CGH a quant à lui des valeurs propres associées aux dimensions 2 et 3 qui sont élevées comparativement à la 1ère valeur propre du groupe. C'est donc un groupe plus multidimensionnel qui a donc un Lg plus élevé.";
+answers[1] = "q2.2";
+answers_true[1] = "Bravo. Le groupe CGH a des coordonnées proches de 1 sur les dimensions 1 et 2, et donc les 2 premières dimensions de l'AFM sont présentes dans le groupe CGH. Ce n'est pas le cas pour le groupe génome car seule la première dimension de l'AFM est présente dans ce groupe génome. Les deux groupes n'ont donc pas les même dimensions communes puisque la dimension 2 de l'AFM est présente uniquement dans le groupe CGH.";
+answers_false[1] = "Non ! Le groupe CGH a des coordonnées proches de 1 sur les dimensions 1 et 2, et donc les 2 premières dimensions de l'AFM sont présentes dans le groupe CGH. Ce n'est pas le cas pour le groupe génome car seule la première dimension de l'AFM est présente dans ce groupe génome. Les deux groupes n'ont donc pas les même dimensions communes puisque la dimension 2 de l'AFM est présente uniquement dans le groupe CGH.";
+answers[2] = "q3.1, q3.2, q3.4";
+answers_true[2] = "Bravo. Les 2 groupes CGH et génome permettent de différencier les individus qui sont séparés sur la 1ère dimension de l'AFM car les coordonnées de ces groupes sont proches de 1 sur la 1ère dimension de l'AFM dans le graphe des groupes. Donc ces groupes différencient les individus ayant une tumeur GBM. De même, le groupe CGH permet de différencier les individus selon la 2ème dimension de l'AFM car la coordonnée du groupe CGH est proche de 1 sur la 2ème dimension de l'AFM dans le graphe des groupes. Ce n'est en revanche pas le cas pour le groupe génome.";
+answers_false[2] = "Non ! Les 2 groupes CGH et génome permettent de différencier les individus qui sont séparés sur la 1ère dimension de l'AFM car les coordonnées de ces groupes sont proches de 1 sur la 1ère dimension de l'AFM dans le graphe des groupes. Donc ces groupes différencient les individus ayant une tumeur GBM. De même, le groupe CGH permet de différencier les individus selon la 2ème dimension de l'AFM car la coordonnée du groupe CGH est proche de 1 sur la 2ème dimension de l'AFM dans le graphe des groupes. Ce n'est en revanche pas le cas pour le groupe génome.";
+answers[3] = "q4.1, q4.3";
+answers_true[3] = "Bravo. Les points partiels pour GBM sont très proches, ce qui montre que la description par les 2 groupes est homogène. Ce n'est pas vrai pour le type de tumeur O car les points partiels sont très éloignés. Les types de tumeur O et OA ont leurs points partiels du groupe génome très proches. Ces deux types de tumeur ne sont donc pas différenciées par rapport au groupe génome. En revanche, les points partiels de O et OA du groupe CGH sont bien séparés (par rapport à la 2ème dimension), le groupe CGH permet donc de différencier ces deux types de tumeur.";
+answers_false[3] = "Non ! Les points partiels pour GBM sont très proches, ce qui montre que la description par les 2 groupes est homogène. Ce n'est pas vrai pour le type de tumeur O car les points partiels sont très éloignés. Les types de tumeur O et OA ont leurs points partiels du groupe génome très proches. Ces deux types de tumeur ne sont donc pas différenciées par rapport au groupe génome. En revanche, les points partiels de O et OA du groupe CGH sont bien séparés (par rapport à la 2ème dimension), le groupe CGH permet donc de différencier ces deux types de tumeur.";
+answers[4] = "q5.2";
+answers_true[4] = "Bravo. Le groupe orange est très unidimensionnel, et ses variables sont liées uniquement à la 1ère dimension de l'AFM : il s'agit donc du groupe génome. Les variables du groupe bleu sont liées aux 2 premières dimensions de l'AFM et le groupe bleu est donc plus multidimensionnel. Il s'agit donc du groupe CGH.";
+answers_false[4] = "Non! Le groupe orange est très unidimensionnel, et ses variables sont liées uniquement à la 1ère dimension de l'AFM : il s'agit donc du groupe génome. Les variables du groupe bleu sont liées aux 2 premières dimensions de l'AFM et le groupe bleu est donc plus multidimensionnel. Il s'agit donc du groupe CGH.";
+answers[5] = "q6.1, q6.2";
+answers_true[5] = "Bravo ! Les graphes des individus et des variables s'interprètent comme en ACP et donc les individus ayant une tumeur GBM prennent de fortes valeurs pour les variables corrélées négativement avec la première dimension, et prennent de faibles valeurs pour les variables corrélées positivement avec la 1ère dimension.";
+answers_false[5] = "Non ! Les graphes des individus et des variables s'interprètent comme en ACP et donc les individus ayant une tumeur GBM prennent de fortes valeurs pour les variables corrélées négativement avec la première dimension, et prennent de faibles valeurs pour les variables corrélées positivement avec la 1ère dimension.";
+answers[6] = "q7.1, q7.4";
+answers_true[6] = "Bravo ! Ce graphe des axes partiels s'interprète comme un graphe des variables. On peut donc lire que la 1ère dimension du groupe génome est liée négativement à la 1ère dimension de l'AFM. Pour le groupe CGH, les dimensions 1 et 2 ne sont pas liées directement aux dimensions 1 et 2 de l'AFM mais les 2 premières dimensions du groupe CGH sont bien projetées sur le premier plan de l'AFM et donc la configuration moyenne de l'AFM est proche du graphe des individus dans l'ACP du groupe CGH.";
+answers_false[6] = "Non ! Ce graphe des axes partiels s'interprète comme un graphe des variables. On peut donc lire que la 1ère dimension du groupe génome est liée négativement à la 1ère dimension de l'AFM. Pour le groupe CGH, les dimensions 1 et 2 ne sont pas liées directement aux dimensions 1 et 2 de l'AFM mais les 2 premières dimensions du groupe CGH sont bien projetées sur le premier plan de l'AFM et donc la configuration moyenne de l'AFM est proche du graphe des individus dans l'ACP du groupe CGH.";
+answers[7] = "q8.1, q8.3";
+answers_true[7] = "Bravo ! Sur la première dimension, l'inertie inter est proche de l'inertie totale car le ratio est proche de 1, donc chaque individu a ses coordonnées partielles proches de sa coordonnée moyenne. Pour les dimensions 2 et 3, ce n'est pas le cas car l'intertie inter ne représente qu'environ 50% de l'inertie totale. Les individus ont donc des coordonnées partielles qui ne sont pas proches des coordonnées moyennes.";
+answers_false[7] = "Non ! Sur la première dimension, l'inertie inter est proche de l'inertie totale car le ratio est proche de 1, donc chaque individu a ses coordonnées partielles proches de sa coordonnée moyenne. Pour les dimensions 2 et 3, ce n'est pas le cas car l'intertie inter ne représente qu'environ 50% de l'inertie totale. Les individus ont donc des coordonnées partielles qui ne sont pas proches des coordonnées moyennes.";
+answers[8] = "q9.4";
+answers_true[8] = "Bravo ! Un groupe supplémentaire qui a une coordonnée proche de 1 sur la 1ère dimension de l'AFM a des variables très corrélées (positivement ou négativement) à la 1ère dimension de l'AFM. Mais il peut y avoir d'autres variables corrélées à la 2ème dimension par exemple car le groupe peut être multidimensionnel.";
+answers_false[8] = "Non ! Un groupe supplémentaire qui a une coordonnée proche de 1 sur la 1ère dimension de l'AFM a des variables très corrélées (positivement ou négativement) à la 1ère dimension de l'AFM. Mais il peut y avoir d'autres variables corrélées à la 2ème dimension par exemple car le groupe peut être multidimensionnel.";
+answers[9] = "q10.1, q10.2";
+answers_true[9] = "Bravo ! Là encore, les groupes supplémentaires s'interprètent comme les groupes actifs. Donc beaucoup de fonctions biologiques différencient par rapport à la 1ère dimension de l'AFM et différencient donc les patients atteints de la tumeur GBM des autres. Et les fonctions biologiques qui ont une coordonnée élevée sur la 2ème dimension permettent de différencier les individus selon les types de tumeur 0 et 0A.";
+answers_false[9] = "Non ! Là encore, les groupes supplémentaires s'interprètent comme les groupes actifs. Donc beaucoup de fonctions biologiques différencient par rapport à la 1ère dimension de l'AFM et différencient donc les patients atteints de la tumeur GBM des autres. Et les fonctions biologiques qui ont une coordonnée élevée sur la 2ème dimension permettent de différencier les individus selon les types de tumeur 0 et 0A.";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="../index.html" title="">Home</a></li>
+<li><a href="../research.html" title="">Research</a></li>
+<li><a href="../packages.html" title="">Packages</a></li>
+<li><a href="../teaching.html" title="">Teaching</a></li>
+<li><a href="../MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="../books.html" title="">Books</a></li>
+<li><a href="../tutorials.html" title="">Tutorials</a></li>
+<li><a href="../data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2>Links</h2>
+<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a></p>
+</div>
+		</div>
+		<div id="content">
+<form name="quiz">
+<h1> Exercice. </h1>
+<p>Quarante-cinq patients atteints d'une tumeur au cerveau sont classés selon le type de tumeur dont ils sont atteints : oligodendrogliome (O), astrocytome (A), mixed oligo-astrocytome (OA) et glioblastome (GBM), ce dernier étant le cancer de grade le plus élevé. Chaque tumeur a été analysée à deux niveaux différents : au niveau du génome (génome) et au niveau du transcriptome (CGH). Nous ne détaillons pas ici comment sont réalisées ces deux analyses du point de vue biologique car cela est assez complexe et ce n'est pas utile pour répondre aux questions de l'exercice.
+Le tableau correspondant aux mesures sur le génome contient 356 variables tandis que le tableau CGH en contient 68. La variable qualitative correspondant au type de tumeur est également notée.<br>
+On construit l'AFM en mettant en actif le groupe de 356 variables sur le génome et le groupe de 68 variables sur CGH. La variable correspondant au type de tumeur est mise seule dans un groupe supplémentaire.
+</p>
+<p style="background-color: #FDE5E4;">
+<b>Q1) Les 3 premières valeurs propres du groupe CGH sont 13, 11, 6 tandis que les 3 premières valeurs propres du groupe génome sont 163, 36, 22.<br>
+Un des groupes a un Lg de 2.506 tandis que l'autre groupe a un Lg de 1.098. Quel groupe a un Lg de 2.506 ?</b><br>
+<input type="radio" name="q1" value="q1.1">le groupe CGH<br>
+<input type="radio" name="q1" value="q1.2">le groupe génome<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #F5ECFB;">
+<b>Q2) On donne le graphe des groupes de l'AFM.
+<br><img src="./gene_group.jpeg" alt="Graphe des groupes" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="300"/>
+<br>A partir de ce graphe, on peut dire que</b><br>
+<input type="checkbox" name="q2" value="q2.1">les deux groupes de variables différencient les individus exactement de la même façon<br>
+<input type="checkbox" name="q2" value="q2.2">les deux premières dimensions de l'AFM sont présentes dans le groupe CGH<br>
+<input type="checkbox" name="q2" value="q2.3">les deux premières dimensions de l'AFM sont présentes dans le groupe génome<br>
+<input type="checkbox" name="q2" value="q2.4">le groupe génome ne peut avoir qu'une seule dimension et ne peut pas être lié à la dimension 3 de l'AFM<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #FDE5E4;">
+<b>Q3) On donne le graphe des individus de l'AFM.
+<br><img src="./gene_ind.jpeg" alt="Graphe des individus" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="400"/>
+<br>A partir du graphe des individus et du graphe des groupes, on peut dire que
+</b><br>
+<input type="checkbox" name="q3" value="q3.1">le groupe génome permet de différencier les individus qui ont une tumeur de type GBM, comme le fait la 1ère dimension de l'AFM<br>
+<input type="checkbox" name="q3" value="q3.2">le groupe CGH permet de différencier les individus qui ont une tumeur de type GBM, comme le fait la 1ère dimension de l'AFM<br>
+<input type="checkbox" name="q3" value="q3.3">le groupe génome permet de différencier les individus qui ont une tumeur de type A ou OA des autres individus, comme le fait la 2ème dimension de l'AFM<br>
+<input type="checkbox" name="q3" value="q3.4">le groupe CGH permet de différencier les individus ayant une tumeur de type A ou OA des autres individus, comme le fait la 2ème dimension de l'AFM<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q4)On donne le graphe des modalités (i.e. des types de tumeur) avec leurs points partiels.
+<br><img src="./gene_quali.jpeg" alt="Graphe des modalités" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="400"/>
+<br>A partir de ce graphe et en considérant que la projection sur le plan représente bien les différences dans l'espace, on peut dire que
+</b><br>
+<input type="checkbox" name="q4" value="q4.1">le type de tumeur GBM est décrit de façon très homogène par les 2 groupes de variables<br>
+<input type="checkbox" name="q4" value="q4.2">le type de tumeur O est décrit de façon très homogène par les 2 groupes de variables<br>
+<input type="checkbox" name="q4" value="q4.3">les types de tumeur O et OA sont mieux différenciés par les données du groupe CGH que du groupe génome<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q5)On donne le graphe des variables.
+<br><img src="./gene_var.jpeg" alt="Graphe des variables" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="300"/>
+</b><br>
+<input type="radio" name="q5" value="q5.1">les variables du groupe orange correspondent aux variables du groupe CGH<br>
+<input type="radio" name="q5" value="q5.2">les variables du groupe bleu correspondent aux variables du groupe CGH<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q6) A partir du graphe des variables et du graphe des individus, on peut dire que </b><br>
+<input type="checkbox" name="q6" value="q6.1">les individus ayant une tumeur de type GBM prennent de fortes valeurs pour les gènes qui sont projetés sur la gauche du graphe<br>
+<input type="checkbox" name="q6" value="q6.2">les individus ayant une tumeur de type GBM prennent de faibles valeurs pour les gènes qui sont projetés sur la droite du graphe<br>
+<input type="checkbox" name="q6" value="q6.3">les individus ayant une tumeur de type GBM prennent de faibles valeurs pour les gènes qui sont projetés sur la gauche du graphe<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #FDE5E4;">
+<b>Q7)On donne le graphe des axes partiels avec la projection des 3 premières dimensions de chaque groupe.
+<br><img src="./gene_axes.jpeg" alt="Graphe des axes partiels" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="400"/>
+<br>A partir de ce graphe, on peut dire </b><br>
+<input type="checkbox" name="q7" value="q7.1">la première dimension du groupe génome est très liée (négativement) à la première dimension de l'AFM<br>
+<input type="checkbox" name="q7" value="q7.2">la première dimension du groupe CGH est très liée à la première dimension de l'AFM<br>
+<input type="checkbox" name="q7" value="q7.3">le graphe des individus de l'ACP sur les données du groupe CGH n'a aucune structure commune avec la configuration moyenne des points de l'AFM<br>
+<input type="checkbox" name="q7" value="q7.4">le graphe des individus de l'ACP sur les données du groupe CGH a une structure commune proche de la configuration moyenne des points de l'AFM (mais à une rotation près)<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q8) On donne, dimension par dimension, le ratio de l'inertie inter sur l'inertie totale des points partiels.  
+<br><img src="./gene_ratioinertie.jpg" alt="Ratio de l'inertie inter sur totale" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="350"/>
+<br>A partir de ces ratios, on peut dire que</b><br>
+<input type="checkbox" name="q8" value="q8.1">chaque individu a ses coordonnées partielles (relativement) proches de sa coordonnée moyenne sur la première dimension<br>
+<input type="checkbox" name="q8" value="q8.2">la moitié des individus a ses coordonnées partielles proches de sa coordonnée moyenne sur la 2ème dimension<br>
+<input type="checkbox" name="q8" value="q8.3">pour la dimension 3, certains individus ont leurs coordonnées partielles relativement éloignées<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #FDE5E4;">
+<b>Q9)Une information supplémentaire peut être apportée ici : elle concerne les fonctions biologiques dans lesquelles les gènes sont impliqués. Une fonction biologique peut être vue comme un groupe de gènes (i.e. un groupe de variables). Un même gène peut appartenir à différentes fonctions biologiques.
+<br>On considère chaque fonction biologique comme un groupe de variables supplémentaire. On reprend donc le tableau précédent auquel on ajoute les gènes impliqués dans chaque fonction biologique (voir le tableau ci-dessous).
+<br><img src="./gene_AFM_tab4.jpg" alt="Graphe des fonction s biologiques" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="700"/>
+<br>Chaque fonction biologique est un groupe de variables qui sera pris comme élément supplémentaire dans l'AFM (ceci évite qu'un gène impliqué dans une fonction contribue plusieurs fois à la construction des dimensions de l'AFM). Les fonctions biologiques qui ont une coordonnée élevée sur la dimension 1 sont constituées</b><br>
+<input type="checkbox" name="q9" value="q9.1">exclusivement de variables corrélées positivement à la 1ère dimension de l'AFM<br>
+<input type="checkbox" name="q9" value="q9.2">exclusivement de variables corrélées négativement à la 1ère dimension de l'AFM<br>
+<input type="checkbox" name="q9" value="q9.3">exclusivement de variables corrélées positivement ou négativement à la 1ère dimension de l'AFM<br>
+<input type="checkbox" name="q9" value="q9.4">de variables corrélées positivement ou négativement à la 1ère dimension de l'AFM<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q10) Au niveau de l'interprétation,  
+<br><img src="./gene_group_sup.jpg" alt="Graphe des fonction s biologiques" type="saveimage" target="[object Object]" preventdefault="function (){i.isDefaultPrevented=n}" stoppropagation="function (){i.isPropagationStopped=n}" stopimmediatepropagation="function (){i.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="300"/>
+</b><br>
+<input type="checkbox" name="q10" value="q10.1">de nombreuses fonctions biologiques ont une forte coordonnée sur l'axe 1, ce qui signifie que de nombreuses fonctions sont atteintes pour les GBM par rapport aux autres types de tumeurs<br>
+<input type="checkbox" name="q10" value="q10.2">on peut trier les fonctions selon leur coordonnée sur le deuxième axe, permettant ainsi de savoir quelles sont les fonctions qui sont différemment touchées entre les types de tumeurs O et OA<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="10" cols="40"></textarea>
+</form>
+
+
+</div>
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professeur en statistique<br> <p>husson[at]agrocampus-ouest.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Department of Statistics and Computer Science</a></h2> <p> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

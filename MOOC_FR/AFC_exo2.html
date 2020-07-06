@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC analyse de données, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="../assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="../img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
+	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+<script language="JavaScript">
+<!--
+
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [4, 3, 4, 6, 6, 4, 5];
+var numQues = 7;
+
+var answers = new Array(7);
+var answers_true = new Array(7);
+var answers_false = new Array(7);
+answers[0] = "q1.1, q1.3, q1.4";
+answers_true[0] = "Bravo.";
+answers_false[0] = "Seule la 2ème problématique ne peut pas être abordée car nous n'avons pas les données d'Amérique du Nord.";
+answers[1] = "q2.1";
+answers_true[1] = "Bravo";
+answers_false[1] = "Non !\n Donnees = read.table('https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_UEemploi.csv', header=TRUE,sep=';', row.names=1, check.names=FALSE, fileEncoding='latin1')\nsummary(Donnees)\nlibrary(FactoMineR)\nres = CA(Donnees)\nsummary(res)\nplot(res, cex=0.8)";
+answers[2] = "q3.2, q3.3";
+answers_true[2] = "Bravo. Le test du Chi2 montre qu'il existe une liaison significative entre les pays et les branches. Ces liaisons ne sont pas très fortes car les valeurs propres sont bien inférieures à 1. Comme aucune valeur propre n'est égale à 1, il n'y a pas d'association exclusive entre une branche et un pays.";
+answers_false[2] = "Le test du Chi2 montre qu'il existe une liaison significative entre les pays et les branches. Ces liaisons ne sont pas très fortes car les valeurs propres sont bien inférieures à 1. Comme aucune valeur propre n'est égale à 1, il n'y a pas d'association exclusive entre une branche et un pays. ";
+answers[3] = "q4.2";
+answers_true[3] = "Bravo";
+answers_false[3] = "Sur le plan 1-2, l'Autriche est le pays le plus proche du centre de gravité du nuage. De plus, sur l'axe 3 la coordonnée de l'Autriche est très faible. Comme les 3 premiers axes expliquent près de 90 % de l'inertie totale, on peut affirmer que l'Autriche est très proche du centre du nuage dans l'espace global.";
+answers[4] = "q5.3";
+answers_true[4] = "Bravo.";
+answers_false[4] = "Attention, ici on ne peut pas lire les contributions directement sur le graphe car les pays n'ont pas le même poids. Il faut donc lire la contribution dans le tableau des individus et voir que l'Italie contribue à 35.57 % à la construction de l'axe 2.\nsummary(res,nbelements=Inf)";
+answers[5] = "q6.3";
+answers_true[5] = "Bravo.";
+answers_false[5] = "Allemagne et hébergement et restauration sont deux points superposés mais cela ne signifie pas qu'en Allemagne le pourcentage ou le nombre d'emploi est le plus élevé. Ce n'est pas la proximité des points qui importe, mais plutôt la direction (par exemple, en Bulgarie il y a une sur-représentation des agriculteurs car la Bulgarie est du côté de l'agriculture). Si on reprend le tableau de données, on voit que c'est au Royaume-Uni que le nombre d'emplois dans l'hébergement et la restauration est le plus élevé. Et si on calcule le pourcentage d'emploi dans l'hébergement et la restauration, on voit que c'est à Chypre que ce pourcentage est le plus élevé.\nDonnees/rowSums(Donnees)";
+answers[6] = "q7.1, q7.2, q7.3, q7.5";
+answers_true[6] = "Bravo.";
+answers_false[6] = "Essayez-encore.";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="../index.html" title="">Home</a></li>
+<li><a href="../research.html" title="">Research</a></li>
+<li><a href="../packages.html" title="">Packages</a></li>
+<li><a href="../teaching.html" title="">Teaching</a></li>
+<li><a href="../MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="../books.html" title="">Books</a></li>
+<li><a href="../tutorials.html" title="">Tutorials</a></li>
+<li><a href="../data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2>Links</h2>
+<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a></p>
+</div>
+		</div>
+		<div id="content">
+<h1> Exercice d'analyse des correspondances : emploi dans l'UE</h1>
+
+On s'intéresse à la répartition des emplois par branche dans les pays de l'Union Européenne. 
+A partir des données d'<a href="http://ec.europa.eu/eurostat/fr/data/database" target="[object Object]">Eurostat</a>, on a construit un tableau de données croisant en lignes les 29 pays de l'UE et en colonnes 16 branches d'emplois. Dans une case de ce tableau, on retrouve le nombre d'emplois pour un pays et une branche d'emplois.
+Les branches d'emplois sont les suivantes : Agriculture (incluant sylviculture et pêche), Industrie (sauf construction), Construction, Commerce, Transports, Hébergement et restauration, Information et communication, Finance et assurance, Immobilier, Sciences et technique, Services administratifs,  Administration publique, Enseignement, Santé, Arts et spectacles, Autres.
+Le jeu de données est disponible dans <a href="./AnaDo_JeuDonnees_UEemploi.csv" target="[object Object]">le fichier suivant</a>. 
+Importer le jeu de données (pour ceux qui travaillent sous Mac ou linux, penser à utiliser l'argument fileEncoding="latin1" lors de l'importation) puis mettre en oeuvre l'analyse pour répondre aux questions suivantes.
+
+<form name="quiz">
+<p style="background-color: #FDE5E4;">
+<b>Q1) Parmi les problématiques suivantes, cocher celles qui peuvent être abordées grâce à une Analyse Factorielle des Correspondances (AFC) appliquée à ce tableau.</b><br>
+<input type="checkbox" name="q1" value="q1.1">Certains pays de l'UE ont-ils des profils d'emploi très particuliers ?<br>
+<input type="checkbox" name="q1" value="q1.2">La répartition des emplois par branche dans l'Union Européenne est-elle très homogène d'un pays à l'autre comparée à la répartition en Amérique du Nord ?<br>
+<input type="checkbox" name="q1" value="q1.3">Y a-t-il des pourcentages d'emplois dans certaines branches particulièrement élevés pour certains pays ?<br>
+<input type="checkbox" name="q1" value="q1.4">Certaines branches d'emplois sont-elles spécifiques à certains pays ?<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #F5ECFB;">
+<b>Q2) Combien vaut la première valeur propre (écriture décimale avec 3 chiffres après la virgule) ?</b><br>
+<input type="checkbox" name="q2" value="q2.1">0.098<br>
+<input type="checkbox" name="q2" value="q2.2">0.8<br>
+<input type="checkbox" name="q2" value="q2.3">1<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #FDE5E4;">
+<b>Q3) Les inerties obtenues sur les deux premières dimensions montrent (cocher la ou les affirmations vraies) </b><br>
+<input type="checkbox" name="q3" value="q3.1">qu'il y a de très fortes associations, presque exclusives entre les pays et les branches<br>
+<input type="checkbox" name="q3" value="q3.2">qu'il existe des associations entre pays et branches mais que ces liaisons sont faibles<br>
+<input type="checkbox" name="q3" value="q3.3">qu'aucune branche n'est exclusive à un pays<br>
+<input type="checkbox" name="q3" value="q3.4">qu'il y a au moins une branche exclusive à un pays<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q4) Parmi les pays suivants, quel est celui qui a un profil d'emploi proche de l'ensemble de l'UE ?</b><br>
+<input type="radio" name="q4" value="q4.1">Allemagne<br>
+<input type="radio" name="q4" value="q4.2">Autriche<br>
+<input type="radio" name="q4" value="q4.3">France<br>
+<input type="radio" name="q4" value="q4.4">Italie<br>
+<input type="radio" name="q4" value="q4.5">Roumanie<br>
+<input type="radio" name="q4" value="q4.6">Pays-Bas<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q5) Parmi les pays suivants, quel est celui qui contribue le plus à la construction de l'axe 2 ?</b><br>
+<input type="checkbox" name="q5" value="q5.1">Autriche<br>
+<input type="checkbox" name="q5" value="q5.2">France<br>
+<input type="checkbox" name="q5" value="q5.3">Italie<br>
+<input type="checkbox" name="q5" value="q5.4">Norvège<br>
+<input type="checkbox" name="q5" value="q5.5">Roumanie<br>
+<input type="checkbox" name="q5" value="q5.6">Pays-Bas<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q6) Parmi les affirmations suivantes, cocher celle(s) qui sont vraie(s) :</b><br>
+<input type="checkbox" name="q6" value="q6.1">L'Allemagne est le pays où le nombre d'emplois dans l'hébergement et la restauration est le plus élevé<br>
+<input type="checkbox" name="q6" value="q6.2">L'Allemagne est le pays où le pourcentage d'emplois dans l'hébergement et la restauration est le plus élevé<br>
+<input type="checkbox" name="q6" value="q6.3">En Roumanie, l'agriculture a une place très importante comparé aux autres pays<br>
+<input type="checkbox" name="q6" value="q6.4">En Roumanie, on trouve presque exclusivement des agriculteurs<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q7) Parmi les affirmations suivantes, cocher celle(s) qui sont vraie(s) :</b><br>
+<input type="checkbox" name="q7" value="q7.1">Les pays scandinaves (Suède, Norvège, Finlande et Danemark) ont des répartitions de leurs emplois dans les différentes branches assez proches<br>
+<input type="checkbox" name="q7" value="q7.2">Il y a une sur-représentation des emplois dans le domaine de la santé dans les pays scandinaves (Suède, Norvège, Finlande et Danemark)<br>
+<input type="checkbox" name="q7" value="q7.3">Il y a une sur-représentation des emplois dans le domaine Autres dans les pays méditerranéens suivants : Grèce, Espagne, Italie, Chypre<br>
+<input type="checkbox" name="q7" value="q7.4">La position de l'Autriche étant proche du centre de gravité du nuage, il y a peu d'emplois en Autriche<br>
+<input type="checkbox" name="q7" value="q7.5">La Bulgarie est un pays où les agriculteurs sont sur-représentés<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q8) Vous pouvez analyser le jeu de données et notament interpréter plus en détail les dimensions factorielles.</b><br>
+<p>
+
+
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="7" cols="40"></textarea>
+</form>
+
+
+</div>
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professeur en statistique<br> <p>husson[at]agrocampus-ouest.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Department of Statistics and Computer Science</a></h2> <p> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC analyse de données, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="../assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="../img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
+	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+<script language="JavaScript">
+<!--
+
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [4, 5, 5, 4, 4, 5, 5];
+var numQues = 7;
+
+var answers = new Array(7);
+var answers_true = new Array(7);
+var answers_false = new Array(7);
+answers[0] = "q1.3";
+answers_true[0] = "Bravo. Les groupes de variables sont définis dans la problématique, tous sont actifs et les variables étant dans des unités différentes, il est nécessaire de standardiser les variables dans chaque groupe.\n\nVivreMieux = read.table('C:/Users/husson/Downloads/AnaDo_JeuDonnees_VivreMieux.csv', header=TRUE, sep=';', quote='\', check.names=FALSE, row.names=1, fileEncoding='latin1')\nsummary(VivreMieux)\nlibrary(FactoMineR)\ngroupe=c(5,5,3,6,3)\nnom.groupe=c('Bien-être matériel', 'Emploi', 'Satisfaction', 'Santé et sécurité', 'Enseignement')\nres.afm = MFA(VivreMieux, group=groupe, type=rep('s',5), name.group=nom.groupe, graph=FALSE)\nsummary(res.afm)";
+answers_false[0] = "Non ! Les groupes de variables sont définis dans la problématique, tous sont actifs et les variables étant dans des unités différentes, il est nécessaire de standardiser les variables dans chaque groupe.\n\nVivreMieux = read.table('C:/Users/husson/Downloads/AnaDo_JeuDonnees_VivreMieux.csv', header=TRUE, sep=';', quote='\', check.names=FALSE, row.names=1, fileEncoding='latin1')\nsummary(VivreMieux)\nlibrary(FactoMineR)\ngroupe=c(5,5,3,6,3)\nnom.groupe=c('Bien-être matériel', 'Emploi', 'Satisfaction', 'Santé et sécurité', 'Enseignement')\nres.afm = MFA(VivreMieux, group=groupe, type=rep('s',5), name.group=nom.groupe, graph=FALSE)\nsummary(res.afm)";
+answers[1] = "q2.3";
+answers_true[1] = "Bravo. Il faut ici trouver le RV le plus élevé (0.5556) dans la matrice des RV entre groupes :\nres.afm$group$RV";
+answers_false[1] = "Non ! Il faut ici trouver le RV le plus élevé (0.5556) dans la matrice des RV entre groupes :\nres.afm$group$RV";
+answers[2] = "q3.2";
+answers_true[2] = "Bravo. On peut ici soit lire le graphe des groupes (les coordonnées sont directement proportionnelles à la contribution) soit lire la contribution \nres.afm$group$contrib";
+answers_false[2] = "Non ! On peut ici soit lire le graphe des groupes (les coordonnées sont directement proportionnelles à la contribution) soit lire la contribution \nres.afm$group$contrib";
+answers[3] = "q4.1, q4.2, q4.3";
+answers_true[3] = "Bravo. L'Italie et la Pologne n'ont pas le même comportement sur tous les groupes d'indicateurs. Pour s'en convaincre, on peut construire le graphe des points partiels de ces deux pays :\nplot(res.afm, partial=c('Italie','Pologne'), hab='group', cex=.7)</span>";
+answers_false[3] = "Non ! L'Italie et la Pologne n'ont pas le même comportement sur tous les groupes d'indicateurs. Pour s'en convaincre, on peut construire le graphe des points partiels de ces deux pays :\nplot(res.afm, partial=c('Italie','Pologne'), hab='group', cex=.7)</span>";
+answers[4] = "q5.1, q5.4";
+answers_true[4] = "Bravo.";
+answers_false[4] = "Non";
+answers[5] = "q6.1, q6.2, q6.5";
+answers_true[5] = "Bravo ! On peut construire le graphe :\nplot(res.afm,partial='all', hab='group', cex=.7, palette = palette(c('black', 'transparent', 'transparent', 'blue', 'transparent', 'transparent')), ylim=c(-4,4))</span>\nTout pays ayant son point partiel de Satisfaction plus à droite que son point moyen est plus satisfait qu'attendu (car les variables de Satisfaction sont corrélées positivement à la première dimension).";
+answers_false[5] = "Non ! On peut construire le graphe :\nplot(res.afm,partial='all', hab='group', cex=.7, palette = palette(c('black', 'transparent', 'transparent', 'blue', 'transparent', 'transparent')), ylim=c(-4,4))</span>\nTout pays ayant son point partiel de Satisfaction plus à droite que son point moyen est plus satisfait qu'attendu (car les variables de Satisfaction sont corrélées positivement à la première dimension).";
+answers[6] = "q7.1, q7.3, q7.4, q7.5";
+answers_true[6] = "Bravo ! Il faut ici construire le graphe des axes partiels :\nplot(res.afm,hab='group',cex=0.8,choix='axes')";
+answers_false[6] = "Non ! Il faut ici construire le graphe des axes partiels :\nplot(res.afm,hab='group',cex=0.8,choix='axes')";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="../index.html" title="">Home</a></li>
+<li><a href="../research.html" title="">Research</a></li>
+<li><a href="../packages.html" title="">Packages</a></li>
+<li><a href="../teaching.html" title="">Teaching</a></li>
+<li><a href="../MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="../books.html" title="">Books</a></li>
+<li><a href="../tutorials.html" title="">Tutorials</a></li>
+<li><a href="../data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2>Links</h2>
+<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a></p>
+</div>
+		</div>
+		<div id="content">
+<form name="quiz">
+<h1> Exercice sur ordinateur.</h1>
+Le jeu de données suivant concerne des données fournies par l'OCDE sur des <i>indicateurs de vivre mieux</i> (voir le <a href="http://stats.oecd.org/Index.aspx?DataSetCode=BLI">site de l'OCDE</a>). Pour les 34 pays de l'OCDE, plus la Russie et le Brésil, on donne 22 indicateurs qui peuvent être répartis dans 5 grands domaines permettant de mesurer le "vivre mieux" :
+<ul>
+<li>Bien-être matériel : Logements sans équipements sanitaires de base, Coût du logement, Nombre de pièces par personne, Revenu disponible des ménages, Patrimoine financier des ménages</li>
+<li>Emploi : Taux d'emploi, Sécurité de l'emploi, Taux de chômage de longue durée, Revenus moyens d'activité, Horaires de travail lourds</li>
+<li>Satisfaction : Qualité du réseau social, Satisfaction à l'égard de la vie, Temps consacré aux loisirs et à soi</li>
+<li>Santé et sécurité : Pollution atmosphérique, Qualité de l'eau, Espérance de vie, Auto-évaluation de l'état de santé, Taux d'agression, Taux d'homicides</li>
+<li>Enseignement : Niveau d'instruction, Compétences des élèves, Années de scolarité</li>
+</ul>
+Les données sont disponibles dans <a href="./AnaDo_JeuDonnees_VivreMieux.csv" target="[object Object]">le fichier suivant</a>. Pour plus de détails sur les variables, vous pouvez voir la définition (en anglais) fournie par l'OCDE (<a href="/static/AnaDo_JeuDonnees_VivreMieux.pdf" target="[object Object]">voir le fichier descriptif</a>).
+<br>On souhaite comparer le vivre mieux des 36 pays en prenant en compte l'ensemble des 5 grands domaines de mesures du vivre mieux.
+<br>Pour ceux qui travaillent sous Mac ou linux, penser à utiliser l'argument fileEncoding="latin1" lors de l'importation. Utiliser aussi les arguments quote="\"" (pour que les apostrophes soient lues normalement) et check.names=FALSE (pour éviter que les espaces soient remplacés par des points dans les libellés de variables).
+
+<p style="background-color: #FDE5E4;">
+<b>Q1) Après avoir réfléchi à la définition des groupes de variables, au choix du statut de chaque groupe (actif ou supplémentaire) et à la réduction ou non des données dans chacun des groupes, donner le pourcentage d'inertie du premier plan de l'Analyse Factorielle Multiple que vous aurez construite (nombre entre 0 et 100 sans le signe %).</b><br>
+<input type="radio" name="q1" value="q1.1">35.18<br>
+<input type="radio" name="q1" value="q1.2">42.12<br>
+<input type="radio" name="q1" value="q1.3">51.24<br>
+<input type="radio" name="q1" value="q1.4">72.18<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #F5ECFB;">
+<b>Q2) Quels sont les deux groupes de variables les plus liés ?</b><br>
+<input type="radio" name="q2" value="q2.1">Enseignement - Satisfaction<br>
+<input type="radio" name="q2" value="q2.2">Enseignement - Bien-être matériel<br>
+<input type="radio" name="q2" value="q2.3">Bien-être matériel - Santé et sécurité<br>
+<input type="radio" name="q2" value="q2.4">Enseignement - Santé et sécurité<br>
+<input type="radio" name="q2" value="q2.5">Bien-être matériel - Emploi<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #FDE5E4;">
+<b>Q3) Quel groupe contribue le plus à la construction de la deuxième dimension de l'AFM ?</b><br>
+<input type="radio" name="q3" value="q3.1">Bien-être matériel<br>
+<input type="radio" name="q3" value="q3.2">Emploi<br>
+<input type="radio" name="q3" value="q3.3">Satisfaction<br>
+<input type="radio" name="q3" value="q3.4">Santé et sécurite<br>
+<input type="radio" name="q3" value="q3.5">Enseignement<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q4) Parmi les affirmations suivantes, cocher celles qui sont vraies (vous pourrez vous aider des graphes des individus et des variables) :</b><br>
+<input type="checkbox" name="q4" value="q4.1">Espagne et Grèce ont une forte sécurité de l'emploi et un fort taux de chômage de longue durée<br>
+<input type="checkbox" name="q4" value="q4.2">Le premier axe sépare à droite des pays (comme le Danemark) où la qualité de vie est très bonne à des pays, situés à gauche du graphe comme le Brésil, où la qualité de vie est moins bonne.<br>
+<input type="checkbox" name="q4" value="q4.3">La France est un pays moyen pour l'ensemble des indicateurs de cette enquête sur le vivre mieux<br>
+<input type="checkbox" name="q4" value="q4.4">La Pologne et l'Italie, proches sur le graphe des individus, ont le même comportement sur l'ensemble des groupes de variables<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q5) Construire le graphe des points partiels en représentant uniquement les points partiels de la France et de l'Autriche. En vous aidant également du graphe des variables, cocher, parmi les affirmations suivantes, celles qui sont vraies :</b><br>
+<input type="checkbox" name="q5" value="q5.1">Concernant le Bien-être matériel, les indicateurs de la France et de l'Autriche sont proches<br>
+<input type="checkbox" name="q5" value="q5.2">Concernant l'Emploi, les indicateurs de la France et de l'Autriche sont proches<br>
+<input type="checkbox" name="q5" value="q5.3">Les indicateurs concernant l'Enseignement sont très bons pour la France<br>
+<input type="checkbox" name="q5" value="q5.4">La position de la France est homogène (par rapport aux autres pays) pour les indicateurs de Satisfaction et d'Emploi<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q6) En jouant sur la palette de couleurs, on peut ne représenter que les points partiels d'un seul groupe. Il suffit pour cela de choisir la couleur "transparent" pour les autres groupes (la couleur "black" correspondant à la couleur du point moyen). Par exemple, si on veut colorier les points partiels du 1er groupe en rouge, on écrira :
+<br><span style="font-family: 'courier new', courier;">plot(res.afm,partial="all", hab="group", cex=.7, palette = palette(c("black", "red", "transparent", "transparent", "transparent", "transparent")), ylim=c(-4,4))</span>
+<br>Représenter uniquement les points partiels du groupe de satisfaction pour tous les pays et cocher, parmi les affirmations suivantes, celles qui sont vraies :
+</b><br>
+<input type="checkbox" name="q6" value="q6.1">Le Danemark est un pays où les gens sont globalement satisfaits<br>
+<input type="checkbox" name="q6" value="q6.2">Les Coréens sont moins satisfaits qu'on ne pourrait le penser à partir des indicateurs de leur qualité de vie (Emploi, Santé, Bien-être matériel et Enseignement)<br>
+<input type="checkbox" name="q6" value="q6.3">Les Espagnols sont moins satisfaits qu'on ne pourrait le penser à partir des indicateurs de leur qualité de vie (Emploi, Santé, Bien-être matériel et Enseignement)<br>
+<input type="checkbox" name="q6" value="q6.4">Les Coréens sont globalement plus satisfaits que les Brésiliens<br>
+<input type="checkbox" name="q6" value="q6.5">Les Israëliens ont globalement le même niveau de satisfaction que les Américains<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q7) Si on réalisait une ACP pour chaque groupe de variables, quels seraient les groupes pour lesquels la première dimension de l'ACP aurait une corrélation positive et supérieure à 0.5 avec la première dimension de l'AFM ?</b><br>
+<input type="checkbox" name="q7" value="q7.1">Bien-être matériel<br>
+<input type="checkbox" name="q7" value="q7.2">Emploi<br>
+<input type="checkbox" name="q7" value="q7.3">Satisfaction<br>
+<input type="checkbox" name="q7" value="q7.4">Santé et sécurité<br>
+<input type="checkbox" name="q7" value="q7.5">Enseignement<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+
+<p style="background-color: #F5ECFB;">
+<b>Q8) Interpréter.
+Il n'y a pas ici de correction à cette question.
+</p>
+<p>
+
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="8" cols="40"></textarea>
+</form>
+
+
+</div>
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professeur en statistique<br> <p>husson[at]agrocampus-ouest.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Department of Statistics and Computer Science</a></h2> <p> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

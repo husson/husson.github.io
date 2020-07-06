@@ -157,12 +157,12 @@ $(window).load(function() {
 </ul>
 		</div>
 
-		<div id="aside">
+<div id="aside">
 <div class="article">
 <h2>Links</h2>
 <p><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/" target="_blank">Department of Statistics<br> and Computer Science</a><br><br><a href="http://factominer.free.fr"><img height="24" src="./img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="./img/missMDA.png"></a><br><br> <a href="http://sensominer.free.fr/" style="background-color: rgb(255, 255, 255);"><img height="20" alt="" src="./img/sensominer.png"></a><br><br><a href="https://irmar.univ-rennes1.fr/" target="_blank"><img height="40" alt="" src="./img/irmar.png"></a><br><br>  <a href="http://www.agrocampus-ouest.fr/" target="_blank"><img height="40" alt="" src="./img/logo_AO.gif"></a></p>
-</div>
-		</div>
+</div></div>
+
 		<div id="content">
 <h1>3 MOOCs</h1>
 2 MOOCS in French and 1 MOOC in English<ul>
@@ -180,6 +180,51 @@ Ce cours complet est un module qui nécessite environ 30h d'apprentissage.</p> <
 
 <a name="coursACP"></a>
 <h2>ACP - Analyse en Composantes Principales</h2>
+<p style="text-align: justify;">L'ACP est une méthode bien connue pour explorer et visualiser un tableau de données avec des variables quantitatives.
+Nous verrons comment visualiser/synthétiser le tableau, mais aussi comment utiliser des variables supplémentaires (quantitatives et qualitatives) pour aider à interpréter les résultats.
+
+<h4>Vidéos de cours</h4>
+Trois vidéos de cours et des quiz associés permettent de comprendre la méthode. Le <a href="./MOOC_FR/ACP_cours_slides.pdf">diaporama</a> et la <a href="./MOOC_FR/ACP_cours_Transcription.pdf">transcription audio</a> du cours sont également disponibles.
+<table>
+<tr><td align="center">Données - problématiques</td>
+<td align="center">Etude des individus et des variables</td>
+<td align="center">Aides à l'interprétation</td>
+</tr>
+<tr><td align="center"><a href="https://www.youtube.com/watch?v=KrNbyM925wI"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP1.jpg" alt="PCAFacto" width="225" height="113" /></a> </td>
+<td align="center"><a href="https://youtu.be/twuP1Na0COE"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP2.jpg" alt="PCAFacto" width="225" height="113" /></a> </td>
+<td align="center"><a href="https://youtu.be/D0fiLfSDY38"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP3.jpg" alt="PCAFacto" width="225" height="113" /></a> </td></tr>
+<tr><td align="center"><a href="MOOC_FR/ACP_quiz1.html">Quizz 1</a></td>
+<td align="center"><a href="MOOC_FR/ACP_quiz2.html">Quizz 2</a></td>
+<td align="center"><a href="MOOC_FR/ACP_quiz3.html">Quizz 3</a></td>
+</tr>
+</table>
+
+<h4>Mise en oeuvre avec le logiciel R (FactoMineR et Factoshiny)</h4>
+La fonction <strong><em>Factoshiny</em></strong> du package <strong><em>Factoshiny</em> </strong> permet de faire une ACP simplement et d'<span style="color: #0000ff;">inclure des informations supplémentaires</span> comme des variables qualitatives, <span style="color: #0000ff;">gérer les données manquantes</span>, dessiner des graphes et les <span style="color: #0000ff;">améliorer de façon interactive</span>, récupérer des indicateurs numériques, faire <span style="color: #0000ff;">une classification</span> sur les résultats de l'ACP, et même avoir <span style="color: #0000ff;">une interprétation autmoatique des résultats</span>. 
+Finalement, la fonction retourne les lignes de code permettant de retrouver toute l'analyse et de reconstruire les graphes à l'identique, ce qui rend l'analyse reproductible.</p>
+Voir la <a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener">vidéo</a> et la <a href="./MOOC_FR/ACP_Facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
+
+<p><a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP_img.jpg" alt="PCAFacto" width="225" height="113" /></a></p>
+
+<h4>Exercices</h4>
+<ol>
+<li><a href="./MOOC_FR/ACP_exo1.html">Exercice sur table</a></li>
+<li><a href="./MOOC_FR/ACP_exo2.html">Exercice sur ordinateur</a></li>
+</ol>
+<h4>Matériel</h4>
+Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
+<ul>
+	<li>Données Températures : le <a href="./MOOC_FR/AnaDo_JeuDonnees_TemperatFrance.csv">jeu de données</a> - <a href="./MOOC_FR/ACP_Facto_TemperatFrance.Rmd">Rmarkdown </a> - le <a href="./MOOC_FR/ACP_Facto_TemperatFrance.pdf">script avec les sorties</a></li>
+	<li>Données Décathlon : le <a href="./MOOC_FR/AnaDo_JeuDonnees_Decathlon.csv">jeu de données</a> - <a href="./MOOC_FR/ACP_Facto_Decathlon.Rmd">Rmarkdown</a> - le <a href="./MOOC_FR/ACP_Facto_Decathlon.pdf">script avec les sorties</a></li>
+</ul>
+<h4>Données manquantes</h4>
+Et voici deux vidéos très courtes qui donnent plus d'informations sur la 
+<table><tr><td>gestion des données manquantes</td><td>et</td><td> la la construction de zones de confiance</td></tr>
+<tr><td><a href="https://youtu.be/bdD9P3fGb70"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP_NA.jpg" alt="PCAFacto" width="225" height="113" /></a></td><td> </td><td><a href="https://youtu.be/Fk_DHFheSps"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP_NA2.jpg" alt="PCAFacto" width="225" height="113" /></a></td></tr>
+
+</tr></table>
+
+<h2>ACP - Analyse en Composantes Principales</h2>
 <p style="text-align: justify;">L'ACP est une méthode bien connue pour explorer et visualiser un tableau de données. 
 La fonction <strong><em>Factoshiny</em></strong> du package <strong><em>Factoshiny</em> </strong> permet de faire une ACP très simplement.
 Vous pouvez  <span style="color: #0000ff;">inclure des informations supplémentaires</span> comme des variables qualitatives, <span style="color: #0000ff;">gérer les données manquantes</span>, dessiner des graphes et les <span style="color: #0000ff;">améliorer de façon interactive</span>, récupérer des indicateurs numériques, faire <span style="color: #0000ff;">une classification</span> sur les résultats de l'ACP, et même avoir <span style="color: #0000ff;">une interprétation autmoatique des résultats</span>. 
@@ -191,11 +236,16 @@ Voir la <a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener">vi
 <p><a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_FR/ACP_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
 
 <h4>Vidéos de cours</h4>
-Informations théoriques et pratiques de l'ACP disponibles via 3 vidéos de cours:
+Informations théoriques et pratiques de l'ACP disponibles via 3 vidéos de cours :
 <ol>
-<li><a href="https://www.youtube.com/watch?v=KrNbyM925wI">Données - problématiques</a></li>
-<li><a href="https://youtu.be/twuP1Na0COE">Etude des individus et des variables&nbsp;</a></li>
-<li><a href="https://youtu.be/D0fiLfSDY38">Aides à l'interprétation&nbsp;</a></li>
+<li><a href="https://www.youtube.com/watch?v=KrNbyM925wI">Données - problématiques</a> - <a href="MOOC_FR/ACP_quiz1.html">Quizz</a></li>
+<li><a href="https://youtu.be/twuP1Na0COE">Etude des individus et des variables&nbsp;</a> - <a href="MOOC_FR/ACP_quiz2.html">Quizz</a></li>
+<li><a href="https://youtu.be/D0fiLfSDY38">Aides à l'interprétation&nbsp;</a> - <a href="MOOC_FR/ACP_quiz3.html">Quizz</a></li>
+</ol>
+Exercices :
+<ol>
+<li><a href="MOOC_FR/ACP_exo1.html">Exercice sur table</a></li>
+<li><a href="MOOC_FR/ACP_exo2.html">Exercice sur ordinateur</a></li>
 </ol>
 Voici le <a href="https://husson.github.io/MOOC_FR/ACP_cours_slides.pdf">diaporama</a> et la <a href="https://husson.github.io/MOOC_FR/ACP_cours_Transcription.pdf">transcription audio</a> du cours.</p>
 <h4>Matériel</h4>
@@ -555,6 +605,7 @@ Recueil de données chocolat : <a href="https://docs.google.com/forms/d/e/1FAIpQ
 <li><a href="https://www.youtube.com/watch?v=KEvxJmNYp34">Cours</a></li>                 
 <li><a href="https://www.youtube.com/watch?v=xlJppahGm2g"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>         </tr>     </tbody> </table><p></p>
   		</div>
+		
 <div id="footer">
 <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
 <div class="inline-block-2">
