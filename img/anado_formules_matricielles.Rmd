@@ -1,0 +1,196 @@
+---
+title: "Analyse de données"
+author: "François Husson"
+date: "25/08/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r cars}
+library(FactoMineR)
+data(iris)
+X <- as.matrix(iris[1:10,1:4])
+```
+ Centrage de la matrice :
+```{r}
+X <- sweep(X,2,apply(X,2,mean),FUN="-")
+n <- nrow(X)
+summary(X)
+```
+
+## SVD et diagonalisation
+
+Corrélation et calcul matriciel (attention, X est bien centré)
+```{r}
+COV <- cov(X) * (n-1) / n
+round(((t(X)%*%X) / n) - COV , 8)
+```
+
+```{r}
+diagCOV <- eigen(t(X)%*%X)
+diagPS <- eigen(X%*%t(X))
+SVD <- svd(X)
+```
+
+Les valeurs prores sont identiques et égales au carré des valeurs singulières
+```{r}
+L1 <- diagCOV$values
+L2 <- diagPS$values
+L1
+L2
+SVD$d^2
+```
+
+```{r}
+U <- diagPS$vectors
+V <- diagCOV$vectors
+round(t(U)%*%U,8)
+round(U%*%t(U),8)
+round(t(V)%*%V,8)
+round(V%*%t(V),8)
+```
+
+Lien entre les vecteurs propres et les résultats de la svd
+```{r}
+SVD$u[,1:4]/U[,1:4]
+SVD$v[,1:4]/V[,1:4]
+```
+
+```{r}
+round(t(SVD$u)%*%SVD$u,8)
+round(SVD$u%*%t(SVD$u),8)  ## ici ce n'est plus diagonale car on restreint au vp non nulles
+round(t(SVD$v)%*%SVD$v,8)
+round(SVD$v%*%t(SVD$v),8)
+```
+
+## Reconstitution des données
+```{r}
+print(sum((X - SVD$u[,1,drop=FALSE]%*%SVD$d[1]%*%t(SVD$v[,1,drop=FALSE]))^2))  # attention, pour diag Lambda quand 1 seule valeur
+for (j in 2:ncol(X)) print(sum((X - SVD$u[,1:j,drop=FALSE]%*%diag(SVD$d[1:j])%*%t(SVD$v[,1:j,drop=FALSE]))^2))
+```
+
+## L'ACP non normée
+```{r}
+pca <- PCA(X,scale=F,gr=F)
+
+round(pca$eig[,1] - (SVD$d^2/n), 10)
+
+coordVar <- SVD$v %*% diag(SVD$d) / sqrt(n)
+coordVar[,1:4]/ pca$var$coord
+
+coordInd <- SVD$u %*% diag(SVD$d)
+coordInd[,1:4]/ pca$ind$coord
+
+round(X%*%SVD$v - SVD$u%*%diag(SVD$d), 8)
+round(SVD$v%*%diag(SVD$d) - t(X)%*%SVD$u, 8)
+
+round(X%*%SVD$v%*%diag(1/SVD$d) - SVD$u,8)
+round(t(X)%*%SVD$u%*%diag(1/SVD$d) - SVD$v,8)
+```
+
+## L'ACP normée
+```{r}
+M <- diag(1/(apply(X,2,var)*(n-1)/n)) ## métrique pour normer
+Poids <- diag(rep(1/n,n))
+
+diagPS <- eigen(X%*%M%*%t(X))
+round(diagPS$vectors%*%t(diagPS$vectors), 8)
+round(t(diagPS$vectors)%*%diagPS$vectors, 8)
+
+SVD <- svd(X %*% M^(0.5))
+pca <- PCA(X,gr=F)
+
+round(pca$eig[,1] - diagPS$values[1:4]/n, 10)
+round(pca$eig[,1] - SVD$d^2/n, 10)
+
+
+coordInd <- diagPS$vectors[,1:4] %*% diag(sqrt(diagPS$values[1:4]))
+coordInd/ pca$ind$coord
+
+diagCOV <- eigen(t(X)%*%X%*%M)
+#diagCOV$vectors%*%M%*%t(diagCOV$vectors)
+#t(diagCOV$vectors)%*%M%*%diagCOV$vectors
+
+round(pca$eig[,1] - diagCOV$values, 10)
+
+coordVar <- (M^0.5%*%t(X)%*%diagPS$vectors)[,1:4] / sqrt(n)
+coordVar/pca$var$coord
+
+coordVar2 <- diagCOV$vectors[,1:4] %*% diag(sqrt(diagCOV$values[1:4]))
+coordVar2/ pca$var$coord
+
+
+
+coordVar <- SVD$v %*% diag(SVD$d) / sqrt(n)
+coordVar[,1:5]/ pca$var$coord
+
+coordInd <- SVD$u %*% diag(SVD$d)
+coordInd[,1:5]/ pca$ind$coord
+
+round(X%*%SVD$v - SVD$u%*%diag(SVD$d), 8)
+round(SVD$v%*%diag(SVD$d) - t(X)%*%SVD$u, 8)
+
+X%*%SVD$v%*%diag(1/SVD$d) - SVD$u
+t(X)%*%SVD$u%*%diag(1/SVD$d) - SVD$v
+```
+
+
+## AFC comme svd
+```{r}
+data(children)
+X <- as.matrix(children[1:8,1:5])
+ca <- CA(X, graph=FALSE)
+
+P = X/sum(X)
+r = apply(P,1,sum)
+c = apply(P,2,sum)
+invDr=diag(1/r)
+invDc=diag(1/c)
+
+S = invDr^0.5%*%(P-r%*%t(c))%*%invDc^0.5
+res <- svd(S)
+F <- invDr^0.5%*%res$u[,1:4]%*%diag(res$d[1:4])
+F/ca$row$coord
+
+G <- invDc^0.5%*%res$v[,1:4]%*%diag(res$d[1:4])
+G/ca$col$coord
+```
+
+## ACM comme une SVD pondérée
+
+```{r}
+library(FactoMineR)
+data(tea)
+X <- tea[,10:18]
+n <- nrow(X)
+Z <- tab.disjonctif(X)
+M <- diag(n/apply(Z,2,sum))
+Z <- scale(Z, scale=FALSE)
+N <- diag(rep(1/n,n))
+U <- eigen(Z%*%M%*%t(Z)%*%N)
+V <- eigen(t(Z)%*%N%*%Z%*%M)
+aa <- MCA(X,graph=FALSE)
+
+aa$eig[1:6,1] * ncol(X) / U$val[1:6]
+
+sweep(U$vect[,1:4],2,sqrt(U$val[1:4]),FUN="*")/aa$ind$coord[,1:4]*sqrt(n/ncol(X))
+```
+
+## AFC et ACM
+```{r}
+data(tea)
+don <- tea[,c(14,18)]
+mca <- MCA(don)
+ca <- CA(table(don))
+I <- nrow(table(don))
+J <- ncol(table(don))
+ncp <- min(5,I-1,J-1)
+
+sweep(mca$var$coord[1:I,1:ncp],2,sqrt(mca$eig[1:ncp,1]),FUN="/")/sweep(ca$row$coord[,1:ncp],2,sqrt(ca$eig[1:ncp,1]),FUN="/")
+sweep(mca$var$coord[(I+1):(I+J),1:ncp],2,sqrt(mca$eig[1:ncp,1]),FUN="/")/sweep(ca$col$coord[,1:ncp],2,sqrt(ca$eig[1:ncp,1]),FUN="/")
+```
+
