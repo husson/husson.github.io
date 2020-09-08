@@ -1,0 +1,19 @@
+Faire un cours de 15 min sur une des méthodes suivantes (ou une autre méthode). 
+Pour la présentation : définir la problématique, donner les principes généraux, donner donner les règles d'interprétation,
+donner les lignes de code permettant de mettre en oeuvre la méthode, mettre en oeuvre sur un exemple et interpréter, comparer avec une méthode plus classique
+
+Projets possibles : 
+- (multidimensional scaling) MDS
+- Construction d'ellipses de confiance en AFC
+- Analyse canonique des corrélations (canonical correspondence analysis)
+- analyse canonique généralisée
+- statis
+- General Procrustes Analysis
+- AFMTC
+- dual multiple factor analysis
+- CA-Galt
+- multi-level simultaneous component analysis : Multilevel component analysis - Marieke E. Timmerman
+
+Il est aussi possible de proposer une très belle application.
+Attention : il faut que l'application soit originale (évolution temporelle, recueil particulier, visualisation spatiale, etc.)
+* Application de données textuelles dans le temps
