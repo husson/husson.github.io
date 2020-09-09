@@ -1,3 +1,19 @@
+---
+title: "Analyse de données"
+author: "François Husson"
+date: "25/08/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## AFC
+
+```{r}
 library(FactoMineR)
 don=read.table("https://husson.github.io/img/litterature.csv",header=TRUE,row.names=1,sep=";",check.names=FALSE,quote="\"")
 resCA=CA(don,quanti.sup=1,quali.sup=2:3)
@@ -5,14 +21,18 @@ ellipseCA(resCA,ellipse="row",invisible="col")
 
 plot(resCA,invis=c("col","quali"), hab=2,title="",palette=palette(c("black","green3","blue","darkred","orange")))
 plot(resCA,invis=c("col","quali"), hab=3,title="",palette=palette(c("black","darkred","orange","lightblue","blue","green3","magenta")))
+```
 
-### classif
+## classif
+```{r}
 res.hcpc = HCPC(resCA,nb.clust=-1,graph=FALSE,consol=FALSE)
 resCA=CA(res.hcpc$data.clust,quanti.sup=1,quali.sup=c(2:3,ncol(don)+1))
 plot(res.hcpc,choice="tree",palette=palette(c("black","green3","blue","darkred","orange","red","grey","magenta")))
 plot(resCA,invis=c("col","quali"), hab=ncol(don)+1,palette=palette(c("yellow","black","green3","blue","darkred","orange","red","grey","magenta")))
+```
 
-
+## AFC avec mots caractéristiques
+```{r}
 oo = descfreq(res.hcpc$data.clust[,-c(1:3,ncol(res.hcpc$data.clust))],res.hcpc$data.clust$clust,proba=0.15)
 liste=NULL
 don2 = t(don[,-c(1:3)])
@@ -25,3 +45,4 @@ for (k in 1:nlevels(res.hcpc$data.clust$clust)) {
 
 newCA=CA(don2,quali.sup=1,graph=FALSE)
 plot(newCA,invis=c("quali"),selectRow=liste,hab=1,cex=0.7,autoLab="no",unselect=1,title="",palette=palette(c("darkred","red","orange","green3","grey","black","blue","magenta","transparent")))
+```
