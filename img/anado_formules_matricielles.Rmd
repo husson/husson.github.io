@@ -73,73 +73,39 @@ print(sum((X - SVD$u[,1,drop=FALSE]%*%SVD$d[1]%*%t(SVD$v[,1,drop=FALSE]))^2))  #
 for (j in 2:ncol(X)) print(sum((X - SVD$u[,1:j,drop=FALSE]%*%diag(SVD$d[1:j])%*%t(SVD$v[,1:j,drop=FALSE]))^2))
 ```
 
-## L'ACP non normée
-```{r}
-pca <- PCA(X,scale=F,gr=F)
-
-round(pca$eig[,1] - (SVD$d^2/n), 10)
-
-coordVar <- SVD$v %*% diag(SVD$d) / sqrt(n)
-coordVar[,1:4]/ pca$var$coord
-
-coordInd <- SVD$u %*% diag(SVD$d)
-coordInd[,1:4]/ pca$ind$coord
-
-round(X%*%SVD$v - SVD$u%*%diag(SVD$d), 8)
-round(SVD$v%*%diag(SVD$d) - t(X)%*%SVD$u, 8)
-
-round(X%*%SVD$v%*%diag(1/SVD$d) - SVD$u,8)
-round(t(X)%*%SVD$u%*%diag(1/SVD$d) - SVD$v,8)
-```
-
 ## L'ACP normée
 ```{r}
+data(iris)
+X <- as.matrix(iris[1:10,1:4])
+X <- scale(X,scale=FALSE)
+n <- nrow(X)
 M <- diag(1/(apply(X,2,var)*(n-1)/n)) ## métrique pour normer
-Poids <- diag(rep(1/n,n))
+N <- diag(rep(1/n,n))
 
-diagPS <- eigen(X%*%M%*%t(X))
-round(diagPS$vectors%*%t(diagPS$vectors), 8)
-round(t(diagPS$vectors)%*%diagPS$vectors, 8)
+diagPS <- eigen(X%*%M%*%t(X)%*%N)
+round(diagPS$vectors%*%t(diagPS$vectors), 8) ## U'U=Id
+round(t(diagPS$vectors)%*%diagPS$vectors, 8) ## UU'=Id
 
-SVD <- svd(X %*% M^(0.5))
+SVD <- svd(N^0.5%*%X %*% M^(0.5))
+SVD$u/diagPS$vectors[,1:4]
+
 pca <- PCA(X,gr=F)
 
-round(pca$eig[,1] - diagPS$values[1:4]/n, 10)
-round(pca$eig[,1] - SVD$d^2/n, 10)
+pca$eig[,1] ; diagPS$values[1:4]; SVD$d^2
 
+coordInd <- SVD$u[,1:4] %*% diag(SVD$d)
+coordInd*sqrt(n)/ pca$ind$coord
+coordInd2 <- N^0.5%*%X%*%M^0.5%*%SVD$v
+coordInd2 / pca$ind$coord
 
-coordInd <- diagPS$vectors[,1:4] %*% diag(sqrt(diagPS$values[1:4]))
-coordInd/ pca$ind$coord
+coordVar <- SVD$v %*% diag(SVD$d) 
+coordVar[,1:4]/ pca$var$coord
 
-diagCOV <- eigen(t(X)%*%X%*%M)
-#diagCOV$vectors%*%M%*%t(diagCOV$vectors)
-#t(diagCOV$vectors)%*%M%*%diagCOV$vectors
-
-round(pca$eig[,1] - diagCOV$values, 10)
-
-coordVar <- (M^0.5%*%t(X)%*%diagPS$vectors)[,1:4] / sqrt(n)
-coordVar/pca$var$coord
-
-coordVar2 <- diagCOV$vectors[,1:4] %*% diag(sqrt(diagCOV$values[1:4]))
-coordVar2/ pca$var$coord
-
-
-
-coordVar <- SVD$v %*% diag(SVD$d) / sqrt(n)
-coordVar[,1:5]/ pca$var$coord
-
-coordInd <- SVD$u %*% diag(SVD$d)
-coordInd[,1:5]/ pca$ind$coord
-
-round(X%*%SVD$v - SVD$u%*%diag(SVD$d), 8)
-round(SVD$v%*%diag(SVD$d) - t(X)%*%SVD$u, 8)
-
-X%*%SVD$v%*%diag(1/SVD$d) - SVD$u
-t(X)%*%SVD$u%*%diag(1/SVD$d) - SVD$v
+coordVar2 <- (M^0.5%*%t(X)%*%N^0.5%*%SVD$u)
+coordVar2[,1:4]/pca$var$coord
 ```
 
-
-## AFC comme svd
+## AFC comme une svd particulière
 ```{r}
 data(children)
 X <- as.matrix(children[1:8,1:5])
@@ -173,11 +139,15 @@ Z <- scale(Z, scale=FALSE)
 N <- diag(rep(1/n,n))
 U <- eigen(Z%*%M%*%t(Z)%*%N)
 V <- eigen(t(Z)%*%N%*%Z%*%M)
-aa <- MCA(X,graph=FALSE)
 
-aa$eig[1:6,1] * ncol(X) / U$val[1:6]
+S <- svd(N^0.5 %*% Z%*%invDsigma^0.5 / ncol(X))
 
-sweep(U$vect[,1:4],2,sqrt(U$val[1:4]),FUN="*")/aa$ind$coord[,1:4]*sqrt(n/ncol(X))
+mca <- MCA(X,graph=FALSE)
+
+mca$eig[1:6,1] * ncol(X) / U$val[1:6]
+U$vect[,1:4]%*%diag(sqrt(U$val[1:4]))/mca$ind$coord[,1:4]*sqrt(n/ncol(X)) # F = ZMV = U Lambda
+M%*%V$vect[,1:4]%*%diag(sqrt(U$val[1:4]))/mca$var$coord[,1:4] #G = MV Lambda
+
 ```
 
 ## AFC et ACM
