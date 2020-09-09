@@ -1,5 +1,5 @@
 ---
-title: "Analyse de données"
+title: "Calculs matriciels en analyse de données"
 author: "François Husson"
 date: "25/08/2020"
 output: html_document
@@ -10,21 +10,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r cars}
+```{r}
 library(FactoMineR)
 data(iris)
 X <- as.matrix(iris[1:10,1:4])
 ```
  Centrage de la matrice :
 ```{r}
-X <- sweep(X,2,apply(X,2,mean),FUN="-")
+X <- sweep(X,2,apply(X,2,mean),FUN="-")  # ou X <- scale(X,scale=FALSE)
 n <- nrow(X)
 summary(X)
 ```
 
 ## SVD et diagonalisation
 
-Corrélation et calcul matriciel (attention, X est bien centré)
+Corrélation et calcul matriciel (attention, X doit bien être centrée)
 ```{r}
 COV <- cov(X) * (n-1) / n
 round(((t(X)%*%X) / n) - COV , 8)
