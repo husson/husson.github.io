@@ -14,6 +14,7 @@ Projets possibles :
 - Rotation des axes en ACP et ACM
 - AFMTC
 - dual multiple factor analysis
+- Analyse de co-inertie (Antoine)
 
 Il est aussi possible de proposer une très belle application.
 Attention : il faut que l'application soit originale (évolution temporelle, recueil particulier, visualisation spatiale, etc.)

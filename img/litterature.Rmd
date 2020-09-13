@@ -3,6 +3,8 @@ title: "Analyse de données"
 author: "François Husson"
 date: "25/08/2020"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +22,7 @@ resCA=CA(don,quanti.sup=1,quali.sup=2:3)
 ellipseCA(resCA,ellipse="row",invisible="col")
 
 plot(resCA,invis=c("col","quali"), hab=2,title="",palette=palette(c("black","green3","blue","darkred","orange")))
-plot(resCA,invis=c("col","quali"), hab=3,title="",palette=palette(c("black","darkred","orange","lightblue","blue","green3","magenta")))
+plot(resCA,invis=c("col","quali"), hab=3,title="",palette=palette(c("black","darkred","orange","lightblue","blue","green3","red")))
 ```
 
 ## classif

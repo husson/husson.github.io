@@ -1,5 +1,5 @@
 ---
-  title: "Calculs matriciels en analyse de données"
+  title: "Projections en analyse factorielle"
 author: "François Husson"
 date: "25/08/2020"
 output: html_document
@@ -16,7 +16,7 @@ x1=rnorm(20)
 x2=0.5*x1+0.1*rnorm(20)
 X=cbind(x1,x2)
 X=scale(X,scale=F)
-plot(X, asp=1)    ## graphe orthonormé
+plot(X, asp=1, pch=20, cex=1.5)    ## graphe orthonormé
 abline(h=0,lty=2)
 abline(v=0,lty=2)
 ```
@@ -25,14 +25,14 @@ abline(v=0,lty=2)
 ```{r}
 S=svd(X)
 S$v
-lines(c(0,S$v[1,1]),y=c(0,S$v[2,1])) # 1er vecteur propre
+lines(c(0,S$v[1,1]),y=c(0,S$v[2,1]),lwd=2) # 1er vecteur propre
 sum(S$v[,1]^2)
 ```
 
 ```{r}
 X1_hat <- (S$u[,1]*S$d[1])%*%t(S$v[,1,drop=FALSE])
 X1_hat
-points(X1_hat,col="red")
+points(X1_hat,col="red",pch=20,cex=1.5)
 ```
 
 ## Si on regarde le point en bas à gauche, sa coordonnée sur la 1ère composante principale de l'ACP : Estimer ses coordonnées sur la 1ère dimension de l'ACP. Faire l'ACP non normée sur X et vérifier.
@@ -52,7 +52,7 @@ lines(c(0,S$v[1,2]),y=c(0,S$v[2,2]),col="blue")
 ## Et si on modifie les vp ??
 ```{r}
 valP=S$d
-points(S$u%*%diag(valP)%*%t(S$v),col="blue")
+points(S$u%*%diag(valP)%*%t(S$v),col="green",pch=20)
 ```
 
 ## Et si on modifie les vp ??
