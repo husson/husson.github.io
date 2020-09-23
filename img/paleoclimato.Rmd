@@ -1,0 +1,152 @@
+---
+title: "Paléoclimatologie"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- ```{r, eval=FALSE, echo=FALSE} -->
+<!-- install.packages("~/Bureau/bioindic_4.0.7.tar.gz", repos = NULL, type = "source") -->
+<!-- if (!require(fields)) install.packages("fields") -->
+<!-- if (!require(spam)) install.packages("spam") -->
+<!-- if (!require(maps)) install.packages("maps") -->
+<!-- library(bioindic) -->
+<!-- data(ss700bm) -->
+<!-- data(ss700po) -->
+<!-- data(ss700cl) -->
+<!-- data(ss700co) -->
+<!-- ss700 <- cbind.data.frame(ss700po[,-1],ss700cl[,-1],ss700co[,-1],ss700bm) -->
+<!-- rownames(ss700)<-tolower(ss700po[,1]) -->
+<!-- colnames(ss700)<-tolower(colnames(ss700)) -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- data(fospop) -->
+<!-- colnames(fospop)<-tolower(colnames(fospop)) -->
+<!-- rownames(don)[701:828] <- paste0("BP",rownames(don)[701:828]) -->
+<!-- write.table(don,file="paleo_climato.csv",sep=";",col.names=TRUE,row.names=TRUE) -->
+<!-- ``` -->
+
+# Description des données
+
+On s'intéresse ici à des données de paléoclimatologie, i.e. la science qui étudie les climats passés et leurs variations.
+Le jeu de données croise 700 prélevés qui mesurent le pourcentage de pollens de 31 espèces d'arbres. Ces relevés ont été effectués récemment (lors de ce siècle). A l'endroit où les prélèvements ont été effectués (latitude, longitude et altitude du lieu sont connus), nous disposons des relevés de variables climatiques : MTCO, température moyenne du mois le plus froid (mean temperature of the coldest month); MTWA, température moyenne du mois le plus chaud (mean temperature of the warmest month); GDD5, the growing degree-days (i.e. the sum of daily temperatures) above 5°C; E_PE, the ratio of actual evapotranspiration to potential evapotranspiration; PANN, précipitation annuelle; TANN, température moyenne annuelle.
+
+Les 700 relevés proviennent de 9 biomes (i.e. macroécosystème) différents : COCO (cool conifer forest), COMX (cool mixed forest), COST (cool steppes), HODE (hot desert), TEDE (temperate deciduous forest), TUND (tundra), WAMX (warm mixed broad-leaved forest), WAST (warm steppes), XERO (xerophytic scrubs).
+
+Le jeu de données comporte également les relevés d'une même carotte située au Lac de Rotsee (en Suisse, latitude 47.07 et longitude 8.3147 et à 419m d'altitude). Sur cette carotte, on peut différencier, siècle par siècle, le pourcentage de chacun des 31 pollens. Ces échantillons remontent à 128 siècles et sont notés BPxx pour Before Present xx siècles : BP15 il y a 15 siècles (ceci est approximatif, la datation avant le présent est donnée dans la colonne age). Pour ces données, on ne dispose pas du biome, ni bien entendu du climat. L'objectif est justement d'essayer de prédire le climat au cours des siècles passés à partir de la composition en les différents pollens.
+
+
+```{r}
+paleo <- read.table("https://husson.github.io/img/paleo_climato.csv", header=TRUE, 
+                    sep=";", row.names=1)
+paleo <- cbind.data.frame(paleo,present=as.factor(c(rep("Present",700),rep("Passe",128))))
+```
+
+## Carte des températures
+```{r, fig.width=12,fig.height=6}
+library(leaflet)
+pal <- colorNumeric(palette=c(low="blue",high="red"),domain=paleo[1:700,"tann"])
+m <- leaflet() %>% addTiles() %>% addCircles(paleo[1:700,"long"],paleo[1:700,"lati"],color=pal(paleo[1:700,"tann"]),fillOpacity=1,opacity=1) %>% 
+addCircles(8.3147,47.07028,color="black",fillOpacity=1,opacity=1) %>% 
+addPopups(8.3147,47.07028,"Lac Rotsee")
+m
+```
+
+## ACP sur présent
+```{r, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
+library(FactoMineR)
+res.pca <- PCA(paleo[1:700,1:41], quanti.sup=32:40, quali.sup=41)
+plot(res.pca,hab=41,label="quali",cex=0.8)
+plot(res.pca,choix="var",cex=0.8)
+res.hcpc <- HCPC(res.pca,nb.clust=7)
+classe <- res.hcpc$data.clust$clust
+res.hcpc$desc.var
+library(leaflet)
+pal <- colorFactor(
+  palette = c('red', 'blue', 'green', 'purple', 'orange','cyan','brown'),
+  domain = classe
+)
+m <- leaflet() %>% addTiles() %>% addCircles(paleo[,"long"],paleo[,"lati"],color=pal(classe),fillOpacity=1,opacity=1)
+m
+```
+
+## ACP sur passé
+```{r, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
+library(FactoMineR)
+selection <- paleo[701:828,which(sapply(paleo[701:828,1:31],sd)!=0)]
+rownames(selection)=1:128
+res.pca <- PCA(selection,graph=FALSE)
+plot(res.pca,cex=0.7,autoLab="y")
+plot(res.pca,choix="var",cex=0.7,autoLab="y")
+dimdesc(res.pca)
+res.hcpc <- HCPC(res.pca, nb.clust=6)
+```
+## ACP avec passé en supplémentaire
+```{r acp_bioclimato, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
+library(FactoMineR)
+res.pca <- PCA(paleo,ind.sup=701:828, quanti.sup=c(32:40,42), quali.sup=c(41,43))
+plot(res.pca,hab=41,label="quali",cex=0.8)
+plot(res.pca,choix="var",cex=0.8)
+```
+
+## AFM sur tous les pollens actuels
+
+On enlève les données du biome, de l'âge et du présent.
+```{r}
+res.mfa <- MFA(paleo[1:700,-(42:43)],group=c(31,6,3,1), type=c("s","s","s","n"),name.group=c("pollen","climat","lieu","biome"),num.group.sup=3:4,graph=FALSE)
+plot(res.mfa,hab=41,lab.ind=FALSE,cex=0.8)
+plot(res.mfa,choix="var",cex=0.8)
+plot(res.mfa,hab=41,lab.ind=FALSE,cex=0.8,partial="all",invisible="ind")
+```
+
+## AFM sur tous les pollens actuels avec projection du passé en supplémentaire
+
+```{r}
+res.mfa <- MFA(paleo[,-(41:43)],group=c(31,6,3),ind.sup=701:828, type=c("s","s","s"),name.group=c("pollen","climat","lieu"),num.group.sup=3,graph=FALSE)
+plot(res.mfa,lab.ind=FALSE,partial="all",invisible="ind")
+```
+Il faut en fait visualiser les points partiels du pollent uniquement, et ceux-ci sont 2 fois plus loin du barycentre que le point moyen (car le point partiel du climat est exactement au barycentre).
+
+## AFM en ne prenant que les pollens présents dans le passé
+
+```{r}
+don <- paleo[1:700,1:31]
+aux <- don[,which(sapply(paleo[701:828,1:31],sd)!=0)]
+aux <- sweep(aux,1,rowSums(aux),FUN="/")
+don <- cbind.data.frame(aux,paleo[1:700,32:41])
+res.mfa <- MFA(don,group=c(ncol(aux),6,3,1), type=c("s","s","s","n"),num.group.sup=3:4,graph=FALSE)
+plot(res.mfa, habillage=33, lab.ind=FALSE,cex=0.8)
+plot(res.mfa,choix="var",cex=0.8)
+```
+## Régression multiple
+
+```{r reg_bioclimato}
+library(FactoMineR)
+mod <- RegBest(paleo[1:700,"tann"],paleo[1:700,1:31],nbest=1)
+mod$summary
+mod$best
+```
+
+## Analyse de variance
+
+```{r}
+library(FactoMineR)
+mod <- AovSum(tann ~ biome,data=paleo[1:700,])
+mod
+```
+
+## Effet de latitude, longitude et altitude sur la température annuelle
+```{r}
+reg <- lm(paleo[1:700,"tann"]~ paleo[1:700,"long"]+paleo[1:700,"lati"]+paleo[1:700,"alti"]+I(paleo[1:700,"long"]**2)+I(paleo[1:700,"lati"]**2)+I(paleo[1:700,"alti"]**2))
+summary(reg)
+residu <- residuals(reg)
+library(leaflet)
+pal <- colorNumeric(palette=c(low="blue",high="red"),domain=residu)
+m <- leaflet() %>% addTiles() %>% addCircles(paleo[1:700,"long"],paleo[1:700,"lati"],color=pal(residu),fillOpacity=1,opacity=1)
+m
+```
+
