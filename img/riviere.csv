@@ -1,4 +1,4 @@
-Stations;Riviere/Affluent;Lieu;ph;cond;CaCO3;dure;HCO3;Cl;mes;mo;NO3;NH4
+Stations;RiviereOuAffluent;Lieu;ph;cond;CaCO3;dure;HCO3;Cl;mes;mo;NO3;NH4
 1;Riviere;amont;7.8;193;120;150;120;7.5;3.4;0.37;1.56;0
 2;Riviere;amont;7.8;232;140;160;140;10;5.4;0.35;1.1;0
 2.1;Affluent;amont;7.9;213;145;160;140;7.5;3.8;0.5;0.88;0
