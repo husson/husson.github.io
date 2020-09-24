@@ -56,7 +56,11 @@ addPopups(8.3147,47.07028,"Lac Rotsee")
 m
 ```
 
-## ACP sur présent
+## Quelques analyses pas vraiment utiles
+
+On va plutôt faire des ACP que des AFC car on a des pourcentages et non des valeurs. Les lignes ont toutes le même poids, mais dans une AFC on donnerait plus de poids aux colonnes qui ont des effectifs élevés, donc pour les essences qui sont plus fréquentes (un peu comme si on faisait une ACP non normée).
+
+### ACP sur données du présent
 ```{r, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
 library(FactoMineR)
 res.pca <- PCA(paleo[1:700,1:41], quanti.sup=32:40, quali.sup=41)
@@ -74,7 +78,7 @@ m <- leaflet() %>% addTiles() %>% addCircles(paleo[,"long"],paleo[,"lati"],color
 m
 ```
 
-## ACP sur passé
+### ACP sur données du passé
 ```{r, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
 library(FactoMineR)
 selection <- paleo[701:828,which(sapply(paleo[701:828,1:31],sd)!=0)]
@@ -85,7 +89,7 @@ plot(res.pca,choix="var",cex=0.7,autoLab="y")
 dimdesc(res.pca)
 res.hcpc <- HCPC(res.pca, nb.clust=6)
 ```
-## ACP avec passé en supplémentaire
+### ACP avec passé en supplémentaire
 ```{r acp_bioclimato, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
 library(FactoMineR)
 res.pca <- PCA(paleo,ind.sup=701:828, quanti.sup=c(32:40,42), quali.sup=c(41,43))
@@ -122,31 +126,3 @@ res.mfa <- MFA(don,group=c(ncol(aux),6,3,1), type=c("s","s","s","n"),num.group.s
 plot(res.mfa, habillage=33, lab.ind=FALSE,cex=0.8)
 plot(res.mfa,choix="var",cex=0.8)
 ```
-## Régression multiple
-
-```{r reg_bioclimato}
-library(FactoMineR)
-mod <- RegBest(paleo[1:700,"tann"],paleo[1:700,1:31],nbest=1)
-mod$summary
-mod$best
-```
-
-## Analyse de variance
-
-```{r}
-library(FactoMineR)
-mod <- AovSum(tann ~ biome,data=paleo[1:700,])
-mod
-```
-
-## Effet de latitude, longitude et altitude sur la température annuelle
-```{r}
-reg <- lm(paleo[1:700,"tann"]~ paleo[1:700,"long"]+paleo[1:700,"lati"]+paleo[1:700,"alti"]+I(paleo[1:700,"long"]**2)+I(paleo[1:700,"lati"]**2)+I(paleo[1:700,"alti"]**2))
-summary(reg)
-residu <- residuals(reg)
-library(leaflet)
-pal <- colorNumeric(palette=c(low="blue",high="red"),domain=residu)
-m <- leaflet() %>% addTiles() %>% addCircles(paleo[1:700,"long"],paleo[1:700,"lati"],color=pal(residu),fillOpacity=1,opacity=1)
-m
-```
-
