@@ -50,9 +50,10 @@ paleo <- cbind.data.frame(paleo,present=as.factor(c(rep("Present",700),rep("Pass
 ```{r, fig.width=12,fig.height=6}
 library(leaflet)
 pal <- colorNumeric(palette=c(low="blue",high="red"),domain=paleo[1:700,"tann"])
-m <- leaflet() %>% addTiles() %>% addCircles(paleo[1:700,"long"],paleo[1:700,"lati"],color=pal(paleo[1:700,"tann"]),fillOpacity=1,opacity=1) %>% 
-addCircles(8.3147,47.07028,color="black",fillOpacity=1,opacity=1) %>% 
-addPopups(8.3147,47.07028,"Lac Rotsee")
+m <- leaflet() %>% addTiles() %>% 
+  addCircles(paleo[1:700,"long"],paleo[1:700,"lati"],color=pal(paleo[1:700,"tann"]),fillOpacity=1,opacity=1) %>%
+  addCircles(8.3147,47.07028,color="black",fillOpacity=1,opacity=1) %>%
+  addPopups(8.3147,47.07028,"Lac Rotsee")
 m
 ```
 
@@ -89,6 +90,20 @@ plot(res.pca,choix="var",cex=0.7,autoLab="y")
 dimdesc(res.pca)
 res.hcpc <- HCPC(res.pca, nb.clust=6)
 ```
+
+### ACP sur données du passé, présent en supp
+```{r, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
+library(FactoMineR)
+selection <- paleo[,which(sapply(paleo[701:828,1:31],sd)!=0)]
+rownames(selection)[701:828]=1:128
+res.pca <- PCA(selection,graph=FALSE,ind.sup=1:700)
+plot(res.pca,cex=0.7,autoLab="y",invisible="ind.sup")
+plot(res.pca,cex=0.7,autoLab="y",label="ind")
+plot(res.pca,choix="var",cex=0.7,autoLab="y")
+res.hcpc <- HCPC(res.pca, nb.clust=6)
+```
+
+
 ### ACP avec passé en supplémentaire
 ```{r acp_bioclimato, fig.height=8,fig.width=8, out.width=c('48%', '48%'), fig.show='hold'}
 library(FactoMineR)
