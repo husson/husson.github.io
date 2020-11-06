@@ -1,0 +1,85 @@
+---
+title: "Classification avec FactoMineR"
+author: "François Husson"
+output:
+  pdf_document:
+    fig_height: 6
+    keep_tex: yes
+  word_document: default
+---
+
+# Importation des données
+```{r eval=FALSE}
+decathlon <- read.table("http://www.agrocampus-ouest.fr/math/livreR/decathlon.csv", 
+    header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
+summary(decathlon)
+```
+```{r echo=FALSE}
+decathlon <- read.table("C:/Users/husson/Documents/home/huss/Enseign/cours/Films/Mooc_anado/Donnees/AnaDo_JeuDonnees_Decathlon.csv", header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
+summary(decathlon)
+```
+
+# Chargement du package
+```{r}
+library(FactoMineR)
+```
+
+\newpage
+
+# Construction de l'analyse en composantes principales
+```{r eval=FALSE}
+res <- PCA(decathlon, quanti.sup=11:12, quali.sup=13, ncp=Inf)
+```
+```{r echo=FALSE}
+res <- PCA(decathlon, quanti.sup=11:12, quali.sup=13,graph=FALSE,ncp=Inf)
+plot(res,cex=.7)
+```
+```{r echo=FALSE}
+plot(res,choi="var",cex=.7)
+```
+```{r}
+res$eig
+res <- PCA(decathlon, quanti.sup=11:12, quali.sup=13, ncp=8, graph=FALSE)
+```
+
+\newpage
+
+# Construction de la classification ascendante hiérarchique
+```{r echo=FALSE}
+res.hcpc <- HCPC(res, kk=Inf, min=3, max=10, consol=TRUE, graph=FALSE)
+```
+
+```{r eval=FALSE}
+res.hcpc <- HCPC(res, kk=Inf, min=3, max=10, consol=TRUE)
+```
+
+```{r echo=FALSE}
+plot(res.hcpc, choice="tree")
+```
+```{r echo=FALSE}
+plot(res.hcpc, choice="3D.map")
+```
+```{r echo=FALSE}
+plot(res.hcpc, choice="map",draw.tree=FALSE)
+```
+```{r}
+plot(res.hcpc, axes=3:4)
+```
+
+# Résultats de la classification
+```{r}
+names(res.hcpc)
+res.hcpc$call$t
+res.hcpc$data.clust
+res.hcpc$desc.var
+res.hcpc$desc.axes
+```
+# Construction de l'arbre sur le plan 1-3
+```{r}
+plot(res.hcpc,axes=c(1,3))
+```
+
+# Description des classes par les individus
+```{r}
+res.hcpc$desc.ind
+```
