@@ -164,216 +164,29 @@ $(window).load(function() {
 </div></div>
 
 		<div id="content">
-<h1>3 MOOCs</h1>
-2 MOOCS in French and 1 MOOC in English<ul>
+<h1>4 MOOCs</h1>
+3 MOOCS in French and 1 MOOC in English<ul>
 <li><a href="./MOOC_AnaDo/index.html">MOOC d'analyse de données</a> (in French)</li>
-<li><a href="MOOC.html#Plan">MOOC de Planification expérimentale (in French)</a></li>
-<li><a href="MOOC.html#Senso">MOOC de sensométrie (in French)</a></li>
-<li><a href="MOOC.html#AnaDoGB">MOOC Exploratory Multivariate Data Analysis (in English)</a></li>
+<li><a href="./MOOC_plan/index.html">MOOC de Planification expérimentale</a> (in French)</li>
+<li><a href="./MOOC_senso/index.html">MOOC de sensométrie</a> (in French)</li>
+<li><a href="./MOOC.html#AnaDoGB">MOOC Exploratory Multivariate Data Analysis</a> (in English)</li>
 </ul>
 <a name="AnaDo"></a>
 <h1>MOOC d'analyse de données (in French)</h1>
-<p>MOOC (Massive Open Online Course) disponible sur la plateforme FUN et suivi par plus de 32 000 personnes sur 6 sessions (1ère session en 2015).
+<p>MOOC (Massive Open Online Course) disponible sur la plateforme FUN et suivi par plus de 38 000 personnes (1 session par an depuis 2015).
 Les sessions sont jouées en férvier-mars tous les ans, vous pourrez vous inscrire sur <a href="https://www.fun-mooc.fr/">FUN</a>.<br>
-Notez que des allusions à des quiz ou exercices sont données, mais ceux-ci sont uniquement disponibles dans le MOOC joué sur FUN.<br>
-Ce cours complet est un module qui nécessite environ 30h d'apprentissage.</p> <p></p>
+Ce cours complet est un module qui nécessite environ 32h d'apprentissage.
+<br><a href="./MOOC_AnaDo/index.html">MOOC d'analyse de données</a></p> <p></p>
 
-<!-- <a name="coursACP"></a>
-<h2>ACP - Analyse en Composantes Principales</h2>
-<p style="text-align: justify;">L'ACP est une méthode bien connue pour explorer et visualiser un tableau de données avec des variables quantitatives.
-Nous verrons comment visualiser/synthétiser le tableau, mais aussi comment utiliser des variables supplémentaires (quantitatives et qualitatives) pour aider à interpréter les résultats.
+<a name="Plan"></a>
+<h1>MOOC de plan d'expériences (in French)</h1>
+<p>Ce cours complet correspond à un module de master 1 de 28h.
+<br><a href="./MOOC_plan/index.html">MOOC de Planification expérimentale</a></p> <p></p>
 
-<h4>Vidéos de cours</h4>
-Trois vidéos de cours et des quiz associés permettent de comprendre la méthode. Le <a href="./MOOC_FR/ACP_cours_slides.pdf">diaporama</a> et la <a href="./MOOC_FR/ACP_cours_Transcription.pdf">transcription audio</a> du cours sont également disponibles.
-<table>
-<tr><td align="center">Données - problématiques</td>
-<td align="center">Etude des individus et des variables</td>
-<td align="center">Aides à l'interprétation</td>
-</tr>
-<tr><td align="center"><a href="https://www.youtube.com/watch?v=KrNbyM925wI"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP1.jpg" alt="PCAFacto" width="225" height="113" /></a> </td>
-<td align="center"><a href="https://youtu.be/twuP1Na0COE"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP2.jpg" alt="PCAFacto" width="225" height="113" /></a> </td>
-<td align="center"><a href="https://youtu.be/D0fiLfSDY38"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP3.jpg" alt="PCAFacto" width="225" height="113" /></a> </td></tr>
-<tr><td align="center"><a href="MOOC_FR/ACP_quiz1.html">Quizz 1</a></td>
-<td align="center"><a href="MOOC_FR/ACP_quiz2.html">Quizz 2</a></td>
-<td align="center"><a href="MOOC_FR/ACP_quiz3.html">Quizz 3</a></td>
-</tr>
-</table>
-
-<h4>Mise en oeuvre avec le logiciel R (FactoMineR et Factoshiny)</h4>
-La fonction <strong><em>Factoshiny</em></strong> du package <strong><em>Factoshiny</em> </strong> permet de faire une ACP simplement et d'<span style="color: #0000ff;">inclure des informations supplémentaires</span> comme des variables qualitatives, <span style="color: #0000ff;">gérer les données manquantes</span>, dessiner des graphes et les <span style="color: #0000ff;">améliorer de façon interactive</span>, récupérer des indicateurs numériques, faire <span style="color: #0000ff;">une classification</span> sur les résultats de l'ACP, et même avoir <span style="color: #0000ff;">une interprétation autmoatique des résultats</span>. 
-Finalement, la fonction retourne les lignes de code permettant de retrouver toute l'analyse et de reconstruire les graphes à l'identique, ce qui rend l'analyse reproductible.</p>
-Voir la <a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener">vidéo</a> et la <a href="./MOOC_FR/ACP_Facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
-
-<p><a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP_img.jpg" alt="PCAFacto" width="225" height="113" /></a></p>
-
-<h4>Exercices</h4>
-<ol>
-<li><a href="./MOOC_FR/ACP_exo1.html">Exercice sur table</a></li>
-<li><a href="./MOOC_FR/ACP_exo2.html">Exercice sur ordinateur</a></li>
-</ol>
-<h4>Matériel</h4>
-Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
-<ul>
-	<li>Données Températures : le <a href="./MOOC_FR/AnaDo_JeuDonnees_TemperatFrance.csv">jeu de données</a> - <a href="./MOOC_FR/ACP_Facto_TemperatFrance.Rmd">Rmarkdown </a> - le <a href="./MOOC_FR/ACP_Facto_TemperatFrance.pdf">script avec les sorties</a></li>
-	<li>Données Décathlon : le <a href="./MOOC_FR/AnaDo_JeuDonnees_Decathlon.csv">jeu de données</a> - <a href="./MOOC_FR/ACP_Facto_Decathlon.Rmd">Rmarkdown</a> - le <a href="./MOOC_FR/ACP_Facto_Decathlon.pdf">script avec les sorties</a></li>
-</ul>
-<h4>Données manquantes</h4>
-Et voici deux vidéos très courtes qui donnent plus d'informations sur la 
-<table><tr><td>gestion des données manquantes</td><td>et</td><td> la la construction de zones de confiance</td></tr>
-<tr><td><a href="https://youtu.be/bdD9P3fGb70"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP_NA.jpg" alt="PCAFacto" width="225" height="113" /></a></td><td> </td><td><a href="https://youtu.be/Fk_DHFheSps"><img class="alignnone size-full wp-image-559" src="./MOOC_FR/ACP_NA2.jpg" alt="PCAFacto" width="225" height="113" /></a></td></tr>
-
-</tr></table>
-
-<h2>ACP - Analyse en Composantes Principales</h2>
-<p style="text-align: justify;">L'ACP est une méthode bien connue pour explorer et visualiser un tableau de données. 
-La fonction <strong><em>Factoshiny</em></strong> du package <strong><em>Factoshiny</em> </strong> permet de faire une ACP très simplement.
-Vous pouvez  <span style="color: #0000ff;">inclure des informations supplémentaires</span> comme des variables qualitatives, <span style="color: #0000ff;">gérer les données manquantes</span>, dessiner des graphes et les <span style="color: #0000ff;">améliorer de façon interactive</span>, récupérer des indicateurs numériques, faire <span style="color: #0000ff;">une classification</span> sur les résultats de l'ACP, et même avoir <span style="color: #0000ff;">une interprétation autmoatique des résultats</span>. 
-Finalement, la fonction retourne les lignes de code permettant de retrouver toute l'analyse et de reconstruire les graphes à l'identique, ce qui rend l'analyse reproductible.</p>
-
-<h4>Implémentation avec le logiciel R </h4>
-Voir la <a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener">vidéo</a> et la <a href="https://husson.github.io/MOOC_FR/ACP_Facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
-
-<p><a href="https://youtu.be/i-mEyUa9U5k" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_FR/ACP_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
-
-<h4>Vidéos de cours</h4>
-Informations théoriques et pratiques de l'ACP disponibles via 3 vidéos de cours :
-<ol>
-<li><a href="https://www.youtube.com/watch?v=KrNbyM925wI">Données - problématiques</a> - <a href="MOOC_FR/ACP_quiz1.html">Quizz</a></li>
-<li><a href="https://youtu.be/twuP1Na0COE">Etude des individus et des variables&nbsp;</a> - <a href="MOOC_FR/ACP_quiz2.html">Quizz</a></li>
-<li><a href="https://youtu.be/D0fiLfSDY38">Aides à l'interprétation&nbsp;</a> - <a href="MOOC_FR/ACP_quiz3.html">Quizz</a></li>
-</ol>
-Exercices :
-<ol>
-<li><a href="MOOC_FR/ACP_exo1.html">Exercice sur table</a></li>
-<li><a href="MOOC_FR/ACP_exo2.html">Exercice sur ordinateur</a></li>
-</ol>
-Voici le <a href="https://husson.github.io/MOOC_FR/ACP_cours_slides.pdf">diaporama</a> et la <a href="https://husson.github.io/MOOC_FR/ACP_cours_Transcription.pdf">transcription audio</a> du cours.</p>
-<h4>Matériel</h4>
-Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
-<ul>
-	<li>Données Températures : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_TemperatFrance.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/ACP_Facto_TemperatFrance.Rmd">Rmarkdown </a> - le <a href="https://husson.github.io/MOOC_FR/ACP_Facto_TemperatFrance.pdf">script avec les sorties</a></li>
-	<li>Données Décathlon : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_Decathlon.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/ACP_Facto_Decathlon.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/ACP_Facto_Decathlon.pdf">script avec les sorties</a></li>
-</ul>
-<h4>Données manquantes</h4>
-Et voici deux vidéos très courtes qui donnent plus d'informations sur la <a href="https://youtu.be/bdD9P3fGb70">gestion des données manquantes</a>, et la <a href="https://youtu.be/Fk_DHFheSps">la construction de zones de confiance</a>.
-
-
-<a name="coursAFC"></a>
-<h2>AFC - Analyse des correspondances</h2>
-<p style="text-align: justify;">L'analyse des ocrrespondances est la méthode employée pour visualiser des tableaux de contingence, i.e. les tableaux sur lesquels les tests du chi2 peuvent être réalisés.
-L'AFC est souvent employée en analyse textuelle, sur des tableaux croisant les auteurs ou les textes, avec les mots.</p>
-
-<h4>Implémentation avec le logiciel R </h4>
-Voir la <a href="https://youtu.be/Ucg3x9vCtZU" target="_blank" rel="noopener">vidéo</a> et la <a href="https://husson.github.io/MOOC_FR/AFC_facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
-<p><a href="https://youtu.be/Ucg3x9vCtZU" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_FR/AFC_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
-
-<h4>Vidéos de cours</h4>
-Informations théoriques et pratiques de l'ACP disponibles via 3 vidéos de cours:
-<ol>
-<li><a href="https://youtu.be/B2mAeRRBunk">Visualisation des nuages de lignes et de colonnes&nbsp;</a></li>
-<li><a href="https://youtu.be/QgASpH8zVo4">Inertie et pourcentage d'inertie&nbsp;</a></li>
-<li><a href="https://youtu.be/EL88lwm-Kkc">Représentation simultanée&nbsp;</a></li>
-<li><a href="https://youtu.be/clXIk0bE8dc">Aides à l'interprétation&nbsp;</a></li>
-<li><a href="https://youtu.be/W1my-DEoPZ0">Etude de cas : analyse textuelle&nbsp;</a></li></ol>
-</ol>
-Voici le <a href="https://husson.github.io/MOOC_FR/AFC_cours_slides.pdf">diaporama</a> et la <a href="https://husson.github.io/MOOC_FR/AFC_cours_Transcription.pdf">transcription audio</a> du cours.</p>
-<h4>Matériel</h4>
-Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
-<ul>
-	<li>Données Nobel : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_Nobel_avecMaths.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/AFC_Facto_Nobel.Rmd">Rmarkdown </a> - le <a href="https://husson.github.io/MOOC_FR/AFC_Facto_Nobel.pdf">script avec les sorties</a></li>
-	<li>Données Naissances : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_Naissances.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/AFC_Facto_Naissances.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/AFC_Facto_Naissances.pdf">script avec les sorties</a></li>
-</ul>
-
-<a name="coursACM"></a>
-<h2>ACM - Analyse des Correspondances Multiples</h2>
-<p style="text-align: justify;">L'ACM est une méthode qui permet d'explorer et visualiser un tableau de données de variables qualitatives. Cette méthode est donc typiquement utilisée pour analyser des questionnaires. 
-La fonction <strong><em>Factoshiny</em></strong> du package <strong><em>Factoshiny</em> </strong> permet de faire une ACM simplement.
-Vous pouvez  <span style="color: #0000ff;">inclure des informations supplémentaires</span> comme des variables qualitatives, <span style="color: #0000ff;">gérer les données manquantes</span>, dessiner des graphes et les <span style="color: #0000ff;">améliorer de façon interactive</span>, récupérer des indicateurs numériques, faire <span style="color: #0000ff;">une classification</span> sur les résultats de l'ACM, et même avoir <span style="color: #0000ff;">une interprétation autmoatique des résultats</span>. 
-Finalement, la fonction retourne les lignes de code permettant de retrouver toute l'analyse et de reconstruire les graphes à l'identique, ce qui rend l'analyse reproductible.</p>
-
-<h4>Implémentation avec le logiciel R </h4>
-Voir la <a href="https://youtu.be/mUKz4L2ZsuY" target="_blank" rel="noopener">vidéo</a> et la <a href="https://husson.github.io/MOOC_FR/ACM_Facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
-
-<p><a href="https://youtu.be/mUKz4L2ZsuY" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_FR/ACM_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
-
-<h4>Vidéos de cours</h4>
-Informations théoriques et pratiques de l'ACM disponibles via 4 vidéos de cours:
-<ol>
-<li><a href="https://www.youtube.com/watch?v=C_JhUZtrPsc">Données - problématiques</a></li>
-<li><a href="https://www.youtube.com/watch?v=S7ojPthc0bE">Etude des individus</a></li>
-<li><a href="https://www.youtube.com/watch?v=liWN3V7RkZc">Etude des modalités</a></li>
-<li><a href="https://www.youtube.com/watch?v=lt9F2Iumzxs">Aides à l'interprétation</a></li>
-</ol>
-Voici le <a href="https://husson.github.io/MOOC_FR/ACM_cours_slides.pdf">diaporama</a> et la <a href="https://husson.github.io/MOOC_FR/ACM_cours_Transcription.pdf">transcription audio</a> du cours.</p>
-<h4>Matériel</h4>
-Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
-<ul>
-	<li>Données Loisirs : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_Loisirs.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/ACM_Facto_Loisirs.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/ACM_Facto_Loisirs.pdf">script avec les sorties</a></li>
-	<li>Données Thé : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_The.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/ACM_Facto_The.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/ACM_Facto_The.pdf">script avec les sorties</a></li>
-</ul>
-<h4>Données manquantes</h4>
-Et voici une vidéo qui donne plus d'informations sur la <a href="https://www.youtube.com/watch?v=4F2C11hcvMM">gestion des données manquantes en ACM</a>.
-
-<a name="coursCAH"></a>
-<h2>CAH - Classification Ascendante Hiérarchique</h2>
-<p style="text-align: justify;">La classification ascendante hiérarchique a pour but d'organiser des individus statistiques en fonction de leur ressemblance, soit par un arbre hiérarchique, soit par la constitution de classes d'individus.
-
-La fonction <strong><em>Factoshiny</em></strong> du package <strong><em>Factoshiny</em> </strong> permet de faire simplement de construire un arbre hiérarchique entre individus, de construire des groupes d'individus, mais aussi d'inerpréter ces classes d'individus.
-
-<h4>Implémentation avec le logiciel R </h4>
-Voir la <a href="https://youtu.be/6AqPc_kZQ0g" target="_blank" rel="noopener">vidéo</a> et la <a href="https://husson.github.io/MOOC_FR/CLASSIF_Facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
-
-<p><a href="https://youtu.be/6AqPc_kZQ0g" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_FR/classif_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
-
-<h4>Vidéos de cours</h4>
-Informations théoriques et pratiques de l'ACP disponibles via 4 vidéos de cours:
-<ol>
-<li><a href="https://www.youtube.com/watch?v=SE_4dLh5vXY">Classification ascendante hiérarchique</a></li>
-<li><a href="https://www.youtube.com/watch?v=3XVoGXVG1mo">Exemple et choix du nombre de classes</a></li>
-<li><a href="https://www.youtube.com/watch?v=3VLGFOMj8oI">Méthode de partitionnement et complémentarité avec la CAH</a></li>
-<li><a href="https://www.youtube.com/watch?v=S-vfGS-VTDI">Caractérisation des classes d'individus</a></li>
-</ol>
-Voici le <a href="https://husson.github.io/MOOC_FR/CLASSIF_cours_slides.pdf">diaporama</a> et la <a href="https://husson.github.io/MOOC_FR/CLASSIF_cours_Transcription.pdf">transcription audio</a> du cours.</p>
-<h4>Matériel</h4>
-Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
-<ul>
-	<li>Données Températures : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_TemperatFrance.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/CLASSIF_Facto_TemperatFrance.Rmd">Rmarkdown </a> - le <a href="https://husson.github.io/MOOC_FR/CLASSIF_Facto_TemperatFrance.pdf">script avec les sorties</a></li>
-	<li>Données Décathlon : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_Decathlon.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/CLASSIF_Facto_Decathlon.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/CLASSIF_Facto_Decathlon.pdf">script avec les sorties</a></li>
-</ul>
-<h4>Caractérisation des classe</h4>
-Et voici une vidéo qui montre comment <a href="https://youtu.be/JAsvTf-8cXo">caractériser les classes</a>.
-
-
-<a name="coursAFM"></a>
-<h2>AFM - Analyse Factorielle Multiple</h2>
-<p style="text-align: justify;">L'AFM est une méthode qui prend en compte plusieurs groupes de variables, permettant de comparer les individus statistiques du point de vue de l'ensemble de ces groupes, et du point de vue spécifique de chaque groupe.</p>
-
-<h4>Implémentation avec le logiciel R </h4>
-Voir la <a href="https://youtu.be/g0lM2qQ4lvs" target="_blank" rel="noopener">vidéo</a> et la <a href="https://husson.github.io/MOOC_FR/AFM_Facto_Transcription.pdf">transcription de l'audio</a> de cette vidéo:</p>
-
-<p><a href="https://youtu.be/g0lM2qQ4lvs" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_FR/AFM_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
-
-<h4>Vidéos de cours</h4>
-Informations théoriques et pratiques de l'ACP disponibles via 4 vidéos de cours:
-<ol>
-<li><a href="https://www.youtube.com/watch?v=1U-s8u1rcpo">Données - problématiques</a></li>
-<li><a href="https://www.youtube.com/watch?v=u8SA8d8h6MU">Equilibre et ACP globale</a></li>
-<li><a href="https://www.youtube.com/watch?v=abQllkEfIeM">Etude des groupes de variables</a></li>
-<li><a href="https://www.youtube.com/watch?v=g8aOwlsgk2U">Compléments (données qualitatives, fréquences, aides à l'interprétation)</a></li>
-</ol>
-Voici le <a href="https://husson.github.io/MOOC_FR/AFM_cours_slides.pdf">diaporama</a> et la <a href="https://husson.github.io/MOOC_FR/AFM_cours_Transcription.pdf">transcription audio</a> du cours.</p>
-<h4>Matériel</h4>
-Voici le matériel utilisé dans les vidéos de cours et du tutoriel:
-<ul>
-	<li>Données Vins jurys : le <a href="https://husson.github.io/MOOC_FR/AnaDo_JeuDonnees_VinsJury.csv">jeu de données</a> - <a href="https://husson.github.io/MOOC_FR/AFM_Facto_VinsJury.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/AFM_Facto_VinsJury.pdf">script avec les sorties</a></li>
-	<li>Données Vins senso : <a href="https://husson.github.io/MOOC_FR/AFM_Facto_VinsSenso.Rmd">Rmarkdown</a> - le <a href="https://husson.github.io/MOOC_FR/AFM_Facto_VinsSenso.pdf">script avec les sorties</a></li>
-</ul>
-
-<h2>Pour conclure : démarche en analyse de données</h2>
-<ul><li><a href="https://www.youtube.com/watch?v=UrS00sOpeec">Démarche en analyse de données</a>&nbsp;&nbsp;</li>
-<li><a href="./img/demarche_slides.pdf">Diaporama correspondant à cette vidéo</a></li>
-             </ul></td>         </tr>     </tbody> </table><p></p>
--->
+<a name="Senso"></a>
+<h1>MOOC de sensométrie (in French)</h1>
+<p>Ce cours complet correspond à un module de master 1 de 28h.
+<br><a href="./MOOC_senso/index.html">MOOC de sensométrie</a></p> <p></p>
 
 <a name="AnaDoGB">
 <h1>Course on Exploratory Multivariate Data Analysis (in English)</h1>
@@ -526,84 +339,6 @@ Here is the material used in the videos:
 <li><a href="https://youtu.be/666OzkmvYbs">Data analysis methods summary</a>&nbsp;&nbsp;</li>
 <li><a href="https://husson.github.io/MOOC_GB/Summary_slide2.pdf">Slides on this video</a></li>
 </ul>
-
-<a name="Plan"></a>
-<h2> Cours de planification expérimentale</h2>
-Ce cours de planification expérimentale a pour objectif de vous rendre autonome dans la construction et l'analyse de plans d'expériences classiques. 
-Combien faire d'expériences ? Quelles expériences effectuer ? Quelles sont les qualités d'un plan d'expériences ? Quelle modélisation est possible avec un plan d'expériences ? Peut-on construire une surface de réponse ? 
-
-A l'issue de ce module, vous saurez répondre à ces questions que les variables mises en jeu soient de nature qualitative, quantitative, ou encore mixte. 
-Une importance est accordée à la faisabilité et aux contraintes pratiques du plan d'expériences. 
-Citons, par exemple, la gestion du maximum de produits qu'un juge peut évaluer lors d'une évaluation sensorielle, le nombre maximum de traitements que peut subir un animal, la prise en compte d'un effet bloc (effet parcelle ou effet animal), la prise en compte d'un effet bordure dans un champs, etc.
-
-<h4> Les plans fractionnaires</h4>
-On s'intéresse ici aux plans pour étudier des variables qualitatives à 2 modalités. Ces plans simples sont à la base de la compréhension des plans d'expériences.
-
-<ul>         
-<li>Comment choisir des expériences à réaliser pour étudier simultanément plusieurs facteurs. Ce petit exercice vous propose de construire un plan pour étudier 4 facteurs à 2 modalités en 8 essais seulement. 
-Facile, non ? A voir. 
-Ferez-vous aussi bien que le meilleur plan possible ?
-
-<ul>
-<p><a href="https://youtu.be/WVmz15Gop2A" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./MOOC_plan/exo_plan.jpg" alt="plan_fra" width="227" height="113" /></a></p>
-<a href="./img/planfra_4facteurs.xlsx">Exercice d'introduction aux plans fractionnaires</a></li>      
-<p><a href="https://youtu.be/OW4DvkEMFLM" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./MOOC_plan/plan_fra.jpg" alt="plan_fra" width="227" height="113" /></a></p>
-<li>Cours sur les plans fractionnaires : <a href="./MOOC_plan/plan_fra.pdf">diaporama</a>, <a href="./MOOC_plan/plan_fra4.pdf">version 4 pages</a>, <a href="https://youtu.be/OW4DvkEMFLM">vidéo (49')</a></li>         
-<li>TD sur les plans fractionnaires <a href="./MOOC_plan/TD_plan_fra.pdf">énoncé</a> - <a href="./MOOC_plan/corrige_plan_fra.pdf">corrigé</a></li>
-</ul>
-
-<h4> Les plans continus</h4>
-Les plans continus sont adaptés pour choisir des expériences lorsqu'on étudie des variables quantitatives. On parle aussi de plans pour surface de réponse.
-<ul>
-<p><a href="https://youtu.be/7ycvxAjf1FI" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./MOOC_plan/plan_con.jpg" alt="plan_fra" width="227" height="113" /></a></p>
-<li><a href="./img/plan_CC.xlsx">Exercice d'introduction aux plans continus</a></li>         
-<li>Cours sur les plans continus : <a href="./MOOC_plan/transp_plan_con.pdf">diaporama</a>, <a href="./MOOC_plan/transp_plan_con4.pdf">version 4 pages</a></li>
-<li>TD sur les plans continus <a href="./MOOC_plan/TD_plan_con.pdf">énoncé</a> - <a href="./MOOC_plan/corrige_plan_con.pdf">corrigé</a></li>
-</ul>
-
-<h4> Les plans avancés : plans mixtes, plans optimaux</h4>
-<ul>
-<p><a href="https://youtu.be/lgGfurTctbU" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./MOOC_plan/plan_opt.png" alt="plan_fra" width="227" height="113" /></a></p>
-<li>Cours pour plan avancés (plus de 2 modalités, plans optimaux) : <a href="./MOOC_plan/transp_plan_quali_PlusDe2Mod.pdf">diaporama</a>, <a href="./MOOC_plan/transp_plan_quali_PlusDe2Mod_4pages.pdf">version 4 pages</a></li>
-<li>TD sur les plans avancés <a href="./MOOC_plan/TD_plan_ava.pdf">énoncé</a> - <a href="./MOOC_plan/corrige_plan_ava.pdf">corrigé</a></li>
-<li>TD sur les plans optimaux <a href="./MOOC_plan/TD_plan_opt.pdf">énoncé</a> - <a href="./MOOC_plan/corrige_plan_opt.pdf">corrigé</a></li>
-</ul>
-
-<h4> Fonctions et packages sous R</h4>
-<ul>
-<li>Récapitulatif des <a href="./MOOC_plan/codeRplan.pdf">fonctions et packages R</a></li>
-<li>Récapitulatif des <a href="./MOOC_plan/TD_enonce_corrige_plan.pdf">énoncés et corrigés</a> des TD</li>
-</ul>
-<h4> Recueil d'exercices sur les plans</h4>
-<a href="./MOOC_plan/Recueil exos plans expériences.pdf">Recueil d'exercices</a><br>
-Les exercices présents dans ce recueil couvrent l'ensemble du cours de plan. Ces exercices ont été construits par les étudiants de l’Institut Agro (Rennes) dans le cadre d’un module de planification expérimentale en juin 2020.
-Ils sont le résultat de leur apprentissage sur ce cours, mais aussi de leur expérience acquise lors de stage. Certains exercices sont issus d’un contexte réel, avec des données réelles, d’autres exercices sont le fruit de leur imagination.
-
-<a name="Senso"></a>
-<h1>MOOC de sensométrie (in French)</h1>
-Cet ensemble de vidéos propose un cours de sensométrie.<br>
-Recueil de données chocolat : <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaZJXQZLMEe-MZy7qNjS232giGtIkXkG3RBK2USU4WDFRNDg/viewform?usp=sf_link">fiche descriptive</a>
-<table width="711" height="423">     <tbody>         
-<tr>             <td><h4>1. Introduction</h4>             <ol>                 <li><a href="https://www.youtube.com/watch?v=jBZj235cNoI">Introduction à la sensométrie</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=A4VyjBGD9vY">Plans d'expériences en analyse sensorielle</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=hUgrGU4KRlc"><font color="brown">Installation de R et SensoMineR</font></a></li>                 
-<li><a href="https://www.youtube.com/watch?v=NODQFUE037s"><font color="brown">Importation de données</font></a></li>                 
-<li><a href="https://www.youtube.com/watch?v=XGm5ETNyUOc"><font color="brown">Plans d'expériences avec SensoMineR</font></a></li></ol></td>
-<td><h4>2. Caractérisation de produits</h4>             <ol>                 
-<li><a href="https://www.youtube.com/watch?v=8u_gST4thWs">Présentation du jeu de données chocolat</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=_XeBfUnfPx0">Modèle d'analyse de variance en sensométrie</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=pUd9wIsLymk">Caractérisation de produits</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=GPbff0Q84R0"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li></ol></td></tr>
-<tr><td><h4>3. Evaluation de la performance d'un jury</h4>             <ol>                 
-<li><a href="https://www.youtube.com/watch?v=xOqxXdOtIz8">Cours</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=Ac2meh0QEjE"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>             <td><h4>4. Construction d'un espace produits</h4>             <ol>                 
-<li><a href="https://www.youtube.com/watch?v=y-95zZqyRic">Cours</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=GPbff0Q84R0"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>         </tr>         
-<tr>             <td><h4>5. Cartographie des préférences</h4>             <ol>                 
-<li><a href="https://www.youtube.com/watch?v=awFCi6nfJ64">Cours</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=lOn6C0HDMdI"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>             <td><h4>6. Analyser des données de catégorisation</h4>             <ol>                 
-<li><a href="https://www.youtube.com/watch?v=KEvxJmNYp34">Cours</a></li>                 
-<li><a href="https://www.youtube.com/watch?v=xlJppahGm2g"><font color="brown">Mise en oeuvre avec SensoMineR</font></a></li>             </ol></td>         </tr>     </tbody> </table><p></p>
   		</div>
 		
 <div id="footer">
