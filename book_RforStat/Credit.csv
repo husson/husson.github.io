@@ -1,0 +1,67 @@
+Loan;Deposit;Unpaid;Insurance;Debt load;Family;Children;Accommodation;Profession;Title;Age
+Renovation;no_deposit;Unp_0;DI;Debt_1;Common-law;Child_0;Lodged by the family;Manual Labourer;Mr.;50
+Renovation;no_deposit;Unp_0;No insurance;Debt_2;Married;Child_0;Home owner;Technician;Mr.;40
+Car;Deposit;Unp_0;DI;Debt_3;Married;Child_1;First-time buyers;Technician;Mr.;30
+Renovation;no_deposit;Unp_0;Senior;Debt_2;Widower;Child_0;Home owner;Retired;Mr.;60
+Scooter;Deposit;Unp_3 and +;DI;Debt_4;Common-law;Child_0;Lodged by the employer;Management;Mr.;20
+Renovation;no_deposit;Unp_0;Senior;Debt_3;Married;Child_0;Home owner;Retired;Mr.;60
+Renovation;Deposit;Unp_0;Senior;Debt_2;Widower;Child_0;Home owner;Retired;Mrs.;60
+Renovation;Deposit;Unp_0;No insurance;Debt_2;Widower;Child_0;Home owner;Retired;Mrs.;60
+Furnishings;Deposit;Unp_0;No insurance;Debt_1;Common-law;Child_0;Lodged by the employer;Manual Labourer;Mr.;40
+Renovation;Deposit;Unp_0;Senior;Debt_2;Married;Child_0;Home owner;Retired;Mr.;60
+Car;Deposit;Unp_0;TPD;Debt_3;Common-law;Child_0;Tenant;Manual Labourer;Miss;20
+Furnishings;no_deposit;Unp_0;DI;Debt_3;Common-law;Child_0;Tenant;Technician;Mr.;40
+Car;Deposit;Unp_0;DI;Debt_4;Common-law;Child_2;Tenant;Technician;Mr.;30
+Furnishings;no_deposit;Unp_0;DI;Debt_3;Common-law;Child_1;Home owner;Technician;Mr.;50
+Furnishings;no_deposit;Unp_0;Senior;Debt_2;Divorcee;Child_0;Home owner;Retired;Mr.;60
+Furnishings;no_deposit;Unp_0;TPD;Debt_3;Single;Child_0;Tenant;Manual Labourer;Mr.;40
+Car;Deposit;Unp_0;DI;Debt_1;Married;Child_1;Home owner;Senior management;Mr.;50
+Renovation;no_deposit;Unp_3 and +;No insurance;Debt_4;Married;Child_2;First-time buyers;Management;Mr.;50
+Furnishings;no_deposit;Unp_3 and +;DI;Debt_1;Single;Child_0;Lodged by the family;Technician;Mr.;30
+Furnishings;no_deposit;Unp_3 and +;TPD;Debt_2;Single;Child_0;Tenant;Management;Miss;30
+Car;Deposit;Unp_3 and +;No insurance;Debt_3;Widower;Child_0;Home owner;Manual Labourer;Mr.;40
+Renovation;Deposit;Unp_0;No insurance;Debt_1;Married;Child_0;Home owner;Retired;Mrs.;60
+Renovation;no_deposit;Unp_0;DI;Debt_1;Single;Child_0;Home owner;Management;Mr.;50
+Renovation;Deposit;Unp_0;DI;Debt_3;Married;Child_2;Home owner;Technician;Mr.;30
+Furnishings;Deposit;Unp_0;DI;Debt_3;Married;Child_2;Home owner;Management;Mr.;50
+Furnishings;Deposit;Unp_0;DI;Debt_4;Married;Child_3;First-time buyers;Senior management;Mr.;30
+Renovation;no_deposit;Unp_3 and +;DI;Debt_4;Single;Child_3;Home owner;Management;Mr.;40
+Furnishings;Deposit;Unp_0;Senior;Debt_1;Married;Child_0;Home owner;Retired;Mr.;60
+Motorbike;Deposit;Unp_0;TPD;Debt_1;Single;Child_0;Tenant;Technician;Mr.;30
+Scooter;Deposit;Unp_1_ou_2;DI;Debt_4;Married;Child_3;Tenant;Technician;Mr.;20
+Motorbike;no_deposit;Unp_1_ou_2;DI;Debt_3;Single;Child_0;Tenant;Manual Labourer;Mr.;30
+Car;Deposit;Unp_0;DI;Debt_3;Married;Child_2;First-time buyers;Senior management;Mr.;40
+Renovation;Deposit;Unp_1_ou_2;Senior;Debt_3;Common-law;Child_0;Tenant;Retired;Mr.;60
+Motorbike;Deposit;Unp_0;DI;Debt_2;Married;Child_1;Home owner;Management;Mr.;50
+Scooter;Deposit;Unp_0;DI;Debt_3;Common-law;Child_1;Tenant;Senior management;Miss;30
+Renovation;no_deposit;Unp_0;Senior;Debt_1;Widower;Child_1;Home owner;Retired;Mr.;60
+Car;no_deposit;Unp_0;DI;Debt_1;Single;Child_0;Tenant;Technician;Mr.;20
+Car;Deposit;Unp_0;No insurance;Debt_1;Single;Child_0;Lodged by the family;Technician;Mr.;30
+Motorbike;no_deposit;Unp_0;DI;Debt_3;Married;Child_2;First-time buyers;Management;Mr.;40
+Motorbike;Deposit;Unp_0;No insurance;Debt_2;Single;Child_0;Home owner;Management;Mr.;30
+Car;no_deposit;Unp_3 and +;TPD;Debt_2;Single;Child_0;Lodged by the family;Senior management;Mr.;30
+Furnishings;no_deposit;Unp_0;No insurance;Debt_3;Married;Child_2;Home owner;Technician;Mr.;50
+Car;Deposit;Unp_3 and +;TPD;Debt_4;Divorcee;Child_0;Tenant;Manual Labourer;Mr.;20
+Furnishings;Deposit;Unp_0;DI;Debt_3;Common-law;Child_0;Tenant;Management;Mr.;30
+Car;Deposit;Unp_3 and +;Senior;Debt_2;Married;Child_0;Tenant;Retired;Mr.;60
+Renovation;no_deposit;Unp_0;No insurance;Debt_2;Married;Child_0;Home owner;Management;Mr.;50
+Motorbike;Deposit;Unp_0;DI;Debt_4;Married;Child_2;Home owner;Senior management;Mr.;50
+Motorbike;no_deposit;Unp_3 and +;DI;Debt_4;Common-law;Child_2;Tenant;Technician;Mr.;40
+Scooter;Deposit;Unp_0;DI;Debt_3;Divorcee;Child_1;Tenant;Management;Mrs.;20
+Furnishings;no_deposit;Unp_3 and +;TPD;Debt_2;Single;Child_0;Tenant;Manual Labourer;Miss;20
+Car;Deposit;Unp_0;DI;Debt_4;Married;Child_3;Tenant;Technician;Mr.;30
+Car;Deposit;Unp_3 and +;TPD;Debt_1;Common-law;Child_0;Lodged by the family;Technician;Mr.;20
+Sidecar;no_deposit;Unp_0;No insurance;Debt_1;Single;Child_0;Lodged by the employer;Management;Mr.;30
+Car;Deposit;Unp_0;No insurance;Debt_1;Single;Child_0;Home owner;Technician;Mr.;50
+Renovation;no_deposit;Unp_1_ou_2;DI;Debt_3;Single;Child_4;Home owner;Senior management;Mr.;50
+Car;Deposit;Unp_1_ou_2;DI;Debt_4;Married;Child_4;Tenant;Senior management;Mr.;30
+Car;no_deposit;Unp_0;TPD;Debt_4;Married;Child_3;First-time buyers;Management;Mrs.;30
+Scooter;Deposit;Unp_3 and +;DI;Debt_1;Single;Child_0;Lodged by the family;Technician;Mr.;20
+Furnishings;no_deposit;Unp_0;DI;Debt_1;Married;Child_2;Home owner;Management;Mr.;50
+Furnishings;no_deposit;Unp_3 and +;TPD;Debt_1;Single;Child_0;Tenant;Manual Labourer;Miss;30
+Motorbike;Deposit;Unp_1_ou_2;TPD;Debt_3;Widower;Child_2;Home owner;Management;Mrs.;30
+Furnishings;no_deposit;Unp_0;TPD;Debt_1;Divorcee;Child_0;Tenant;Management;Mrs.;30
+Furnishings;no_deposit;Unp_3 and +;DI;Debt_2;Common-law;Child_0;Tenant;Manual Labourer;Mr.;40
+Renovation;no_deposit;Unp_3 and +;DI;Debt_4;Divorcee;Child_3;Home owner;Manual Labourer;Mrs.;30
+Car;Deposit;Unp_1_ou_2;TPD;Debt_4;Married;Child_1;Tenant;Technician;Mr.;20
+Renovation;no_deposit;Unp_1_ou_2;Senior;Debt_2;Married;Child_0;Home owner;Retired;Mr.;60
