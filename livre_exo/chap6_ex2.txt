@@ -1,0 +1,7 @@
+Compote <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap6_ex2.csv", header = TRUE, sep=";")
+for (i in 1:2) Compote[,i] <- as.factor(Compote[,i])
+
+library(FactoMineR)
+AovSum(Note ~ Produit, data = Compote)
+
+AovSum(Note ~ Produit + Juge, data = Compote)

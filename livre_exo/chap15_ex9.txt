@@ -1,0 +1,6 @@
+Bac <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex9.csv", header = TRUE, sep=";")
+
+library(FactoMineR)
+round(cor(Bac[,1:12]),2)
+res <- PCA(Bac, quali.sup = 1)  
+summary(res)

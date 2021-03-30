@@ -1,0 +1,10 @@
+Crème <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap6_ex3.csv", header = TRUE, sep=";")
+Crème[,1] <- as.factor(Crème[,1])
+Crème[,2]<-relevel(Crème[,2],"J+5")
+t.test(Viscosité ~ Date, data = Crème, var.equal = TRUE)
+
+library(FactoMineR)
+AovSum(Viscosité ~ Date, data = Crème)
+
+t.test(Viscosité ~ Date, data = Crème, var.equal = TRUE, paired = TRUE)
+AovSum(Viscosité ~ Date + Lot, data = Crème)

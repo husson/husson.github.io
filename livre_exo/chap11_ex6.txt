@@ -1,0 +1,10 @@
+Senso <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap11_ex6.csv", header = TRUE, sep=";")
+
+for (i in 1:2) Senso[,i] <- as.factor(Senso[,i])
+
+library(FactoMineR)
+AovSum(Note ~ Jour + Chocolat + Chocolat:Jour, data = Senso)
+
+AovSum(Note ~ Jour + Chocolat, data = Senso)
+
+by(Senso[,"Note"],Senso[,"Chocolat"],mean)

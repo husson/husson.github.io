@@ -1,0 +1,4 @@
+Acidité <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap4_ex3.csv", header = TRUE, sep=";")
+by(Acidité[,"Note"],Acidité[,"Jury"],var)
+
+var.test(Note ~ Jury, data = Acidité) 

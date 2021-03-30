@@ -1,0 +1,5 @@
+donnees <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap5_ex5.csv", header = TRUE, sep=";")
+
+donnees[,"Insecticide"] <- as.factor(donnees[,"Insecticide"])
+library(FactoMineR)
+AovSum(Nb.chenilles ~ Insecticide, data = donnees)

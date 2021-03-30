@@ -1,0 +1,13 @@
+Blé <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap6_ex5.csv", header = TRUE, sep=";")
+
+## Question 2
+summary(aov(Rendement ~ Variété + Bloc, data = Blé))
+## ou 
+library(FactoMineR)
+AovSum(Rendement ~ Variété + Bloc, data = Blé)
+
+## Question 4
+summary(aov(Rendement ~ Variété , data = Blé))
+## ou 
+library(FactoMineR)
+AovSum(Rendement ~ Variété , data = Blé)

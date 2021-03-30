@@ -1,0 +1,6 @@
+Trisomie <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap6_ex4.csv", header = TRUE, sep=";")
+
+Trisomie[,1] <- Trisomie(Crème[,1])
+
+library(FactoMineR)
+AovSum(Augmentation ~ Traitement + Psychologue, data = Trisomie)

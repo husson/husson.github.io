@@ -1,0 +1,5 @@
+Acidité <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap6_ex1.csv", header = TRUE, sep=";")
+for (i in 1:2) Acidité[,i] <- as.factor(Acidité[,i])
+
+library(FactoMineR)
+AovSum(Note ~ café + juge, data = Acidité)

@@ -1,0 +1,7 @@
+Cidre <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap5_ex4.csv", header = TRUE, sep=";")
+
+t.test(S.Amère ~ Type, data = Cidre, var.equal=TRUE)
+
+library(FactoMineR)
+AovSum(S.Amère ~ Type, data = Cidre)
+

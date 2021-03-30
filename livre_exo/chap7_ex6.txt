@@ -1,0 +1,3 @@
+Vote <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap7_ex6.csv", header = TRUE, sep=";",row.names=1)
+
+chisq.test(Vote)

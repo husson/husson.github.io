@@ -1,0 +1,6 @@
+Fromages <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex6.csv", header = TRUE, sep=";",row.names=1)
+
+library(FactoMineR)
+cor(Fromages)
+res <- PCA(Fromages, quanti.sup=ncol(Fromages))
+summary(res)

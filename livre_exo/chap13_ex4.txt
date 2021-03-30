@@ -1,0 +1,6 @@
+Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap13_ex4.csv", header = TRUE, sep=";",row.names=1)
+for (i in 1:4) Plan[,i] <- as.factor(Plan[,i])
+
+X <- model.matrix(~ V1+V2+V3+V4, Plan, contrasts = "contr.sum")
+t(X)%*%X
+solve(t(X)%*%X)

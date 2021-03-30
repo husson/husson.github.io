@@ -1,0 +1,6 @@
+Jambon <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex7.csv", header = TRUE, sep=";",row.names=1)
+
+summary(lm(Appréciation ~ . , data=Jambon))
+
+library(FactoMineR)
+RegBest(y = Jambon[,15], x = Jambon[,-15])

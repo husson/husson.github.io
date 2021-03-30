@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>François Husson - Books</title>
+	<!--<meta name="Keywords" content="books"/>-->
+  <meta name="keywords" content="Husson, R, package, book, R for statistics, Exploratory Multivariate Data Analysis using R, FactoMineR, analyse de donn&eacute;es avec R" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="./assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="./img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="./img/fh_ico.ico" type="image/x-icon">
+	
+	<!-- Google API's -->
+<script type="text/javascript" src="./assets/jsapi"></script>
+<script language="Javascript" type="text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="./assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+	<script type="text/javascript" src="./assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+</head>
+
+<body>
+		<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="index.html" title="">Home</a></li>
+<li><a href="research.html" title="">Research</a></li>
+<li><a href="packages.html" title="">Packages</a></li>
+<li><a href="teaching.html" title="">Teaching</a></li>
+<li><a href="MOOC.html" title="">MOOC</a></li>
+<li><a href="books.html" title="" class="current">Books</a></li>
+<li><a href="tutorials.html" title="">Tutorials</a></li>
+<li><a href="data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2>Links</h2>
+<p><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/" target="_blank">Department of Statistics<br> and Computer Science</a><br><br><a href="http://factominer.free.fr"><img height="24" src="./img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="./img/missMDA.png"></a><br><br> <a href="http://sensominer.free.fr/" style="background-color: rgb(255, 255, 255);"><img height="20" alt="" src="./img/sensominer.png"></a><br><br><a href="https://irmar.univ-rennes1.fr/" target="_blank"><img height="40" alt="" src="./img/irmar.png"></a><br><br>  <a href="http://www.agrocampus-ouest.fr/" target="_blank"><img height="40" alt="" src="./img/logo_AO.gif"></a></p>
+</div>
+		</div>
+		<div id="content">
+<table>
+<tr><td><img width="146" alt="" src="./img/livre_exo.jpg"></a>&nbsp;&nbsp;&nbsp;</td><td>    </td>
+<td><h2><em>Statistique générale pour utilisateurs : exercices et corrigés.</em> (2013)<br>F. Husson & J. Pagès. 2ème édition augmentée.</h2>
+<a href="img/AvantPropos_StatUtilisateursExo_2_Ed-2.pdf">Avant-propos</a><br>
+<a href="img/Sommaire_StatUtilisateursExo_2_Ed.pdf">Sommaire</a><br>
+<a href="#4couv">4ème de couverture</a><br>
+<a href="#DonStatGene">Scripts et jeux de données</a><br>
+<a href="img/AvantPropos_StatUtilisateursExo_2_Ed-2.pdf">Avant-propos</a><br>
+<a href="http://www.pur-editions.fr/detail.php?idOuv=826">Commander</a>
+</td>
+</tr>
+</table>
+
+<a name="4couv"></a>
+<h3>4ème de couverture</h3>
+Fruit de la grande expérience d’enseignement des auteurs à Agrocampus Rennes, cet ouvrage d’exercices corrigés complète le livre Statistiques générales pour utilisateurs. 1-Méthodologie. Une série d’exercices, dont la grande majorité correspond à des applications réelles, permet de s’approprier chaque méthode statistique utile aux praticiens ; statistique descriptive, estimation, tests de comparaison de moyennes et de variances, analyse de variance, régression simple et multiple, test du chi-2, plans d’expérience, analyse en composantes principales. Des exercices d’approfondissement, comme l’analyse de la covariance ou l’analyse de variance hiérarchique, sont également proposés. Les corrections, méticuleuses et bien argumentées, ainsi que les sorties de logiciels statistiques sont de réels supports pour le lecteur ; étudiants d’école d’ingénieurs, d’IUT ou BTS ou de l’Université dans les filières des sciences de la vie, sciences sociales, sciences économiques, etc.
+Dans cette nouvelle édition, de nombreux exercices sur les plans d'expérience ont été ajoutés. En particulier, un chapitre complet étudie des plans pour facteurs quantitatifs (prolongement du chapitre 14 du cours).
+<br><br>
+
+<a name="DonStatGene"></a>
+<h2>Les jeux de données et scripts du livre</h2>
+<p><a href="livre_exo/don.zip">Ensemble des jeux de donn&eacute;es et lignes de code</a></p> <ul>     <li>Chapitre 1. Description d'une s&eacute;rie num&eacute;rique     <ul>         <li><a href="livre_exo/chap1_ex2.csv">Donn&eacute;es</a> de l'exercice 1.2 et 1.3. Statistiques descriptives<a href="livre_exo/chap1_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap1_ex3.csv">Donn&eacute;es</a> de l'exercice 1.3. Centrage et r&eacute;duction<a href="livre_exo/chap1_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap1_ex4.csv">Donn&eacute;es</a> de l'exercice 1.4. Petite s&eacute;rie d'effectifs</li>
+<li><a href="livre_exo/chap1_ex5.csv">Donn&eacute;es</a> de l'exercice 1.5. Effet du regroupement des donn&eacute;es en classes<a href="livre_exo/chap1_ex5.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap1_ex6.csv">Donn&eacute;es</a> de l'exercice 1.6. Robustesse de la m&eacute;diane aux donn&eacute;es extr&ecirc;mes<a href="livre_exo/chap1_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap1_ex7.csv">Donn&eacute;es</a> de l'exercice 1.7. Stabilit&eacute; de la m&eacute;diane pour des donn&eacute;es quantitatives discr&egrave;tes</li>
+<li><a href="livre_exo/chap1_ex8.csv">Donn&eacute;es</a> de l'exercice 1.8. Comparaison de la taille de femmes de deux g&eacute;n&eacute;rations diff&eacute;rentes</li>     </ul></li>     <li>Chapitre 2. Estimation - Intervalles de confiance     <ul>         <li><a href="livre_exo/chap2_ex3.csv">Donn&eacute;es</a> de l'exercice 2.3. Construction d'intervalles de confiance d'une moyenne et d'une variance<a href="livre_exo/chap2_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap2_ex4.csv">Donn&eacute;es</a> de l'exercice 2.4. Construction d'un intervalle de confiance d'un total<a href="livre_exo/chap2_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap2_ex5.csv">Donn&eacute;es</a> de l'exercice 2.5. Calcul de la taille d'&eacute;chantillon pour une pr&eacute;cision donn&eacute;e</li>
+<li>Exercice 2.10. Etude de la loi de la moyenne &agrave; partir de simulations<a href="livre_exo/chap2_ex10.txt"> (script R)</a></li>
+<li>Exercice 2.11. Estimation du risque de premi&egrave;re esp&egrave;ce par simulations<a href="livre_exo/chap2_ex11.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 3. Comparaison de deux moyennes     <ul>         <li><a href="livre_exo/chap3_ex4.csv">Donn&eacute;es</a> de l'exercice 3.4. Test d'&eacute;galit&eacute; de deux moyennes<a href="livre_exo/chap3_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap3_ex6.csv">Donn&eacute;es</a> de l'exercice 3.6. Test d'&eacute;galit&eacute; de moyennes dans deux sous-populations: comparaison des poids de poulpes m&acirc;les et femelles<a href="livre_exo/chap3_ex56txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 4. Comparaison de deux variances     <ul>         <li><a href="livre_exo/chap4_ex1.csv">Donn&eacute;es</a> de l'exercice 4.1. Comparaison de variances<a href="livre_exo/chap4_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap4_ex2.csv">Donn&eacute;es</a> de l'exercice 4.2. Test de conformit&eacute; d'une variance</li>
+<li><a href="livre_exo/chap4_ex3.csv">Donn&eacute;es</a> de l'exercice 4.3. Comparaison de la reproductibilit&eacute; des juges de deux jurys<a href="livre_exo/chap4_ex3.txt"> (script R)</a></li>
+<li>Exercice 4.4. Test de comparaison de variances : simulation sur ordinateur<a href="livre_exo/chap4_ex4.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 5. Analyse de variance &agrave; un facteur     <ul>         <li><a href="livre_exo/chap5_ex2.csv">Donn&eacute;es</a> de l'exercice 5.2. Test de d&eacute;gustation de bi&egrave;res<a href="livre_exo/chap5_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap5_ex3.csv">Donn&eacute;es</a> de l'exercice 5.3. Etude de transports routiers longues dur&eacute;es de veaux<a href="livre_exo/chap5_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap5_ex4.csv">Donn&eacute;es</a> de l'exercice 5.4. Puissance d'un test de comparaison de 2 populations<a href="livre_exo/chap5_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap5_ex5.csv">Donn&eacute;es</a> de l'exercice 5.5. De l'analyse de la variance &agrave; la comparaison multiple de moyennes<a href="livre_exo/chap5_ex5.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 6. Analyse de variance &agrave; deux facteurs     <ul>         <li><a href="livre_exo/chap6_ex1.csv">Donn&eacute;es</a> de l'exercice 6.1. Comparaison de l'acidit&eacute; de trois caf&eacute;s<a href="livre_exo/chap6_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap6_ex2.csv">Donn&eacute;es</a> de l'exercice 6.2. Pr&eacute;f&eacute;rence sur six compotes<a href="livre_exo/chap6_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap6_ex3.csv">Donn&eacute;es</a> de l'exercice 6.3. Evolution de la viscosit&eacute; de cr&egrave;me liquide dans le temps<a href="livre_exo/chap6_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap6_ex4.csv">Donn&eacute;es</a> de l'exercice 6.4. Evaluation d'un nouveau traitement pour la trisomie<a href="livre_exo/chap6_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap6_ex5.csv">Donn&eacute;es</a> de l'exercice 6.5. Prise en compte de l'effet bloc<a href="livre_exo/chap6_ex5.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 7. Tests fond&eacute;s sur le chi2     <ul>         <li>Exercice 7.1. Pr&eacute;f&eacute;rences entre cinq chocolats noirs<a href="livre_exo/chap7_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap7_ex5.csv">Donn&eacute;es</a> de l'exercice 7.5. Effet de l'environnement familial sur le choix de fumer<a href="livre_exo/chap7_ex5.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap7_ex6.csv">Donn&eacute;es</a> de l'exercice 7.6. Liaison et causalit&eacute;<a href="livre_exo/chap7_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap7_ex7.csv">Donn&eacute;es</a> de l'exercice 7.7. Test d'ajustement &agrave; une loi de Poisson<a href="livre_exo/chap7_ex7.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap7_ex8.csv">Donn&eacute;es</a> de l'exercice 7.8. Analyse de donn&eacute;es textuelles<a href="livre_exo/chap7_ex8.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 8. Liaisons entre deux variables quantitatives     <ul>         <li><a href="livre_exo/chap8_ex1.csv">Donn&eacute;es</a> de l'exercice 8.1. Intervalle de confiance d'un coefficient de corr&eacute;lation<a href="livre_exo/chap8_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap8_ex3.csv">Donn&eacute;es</a> de l'exercice 8.3. Stabilit&eacute; du coefficient de corr&eacute;lation et coefficient de corr&eacute;lation de Spearman<a href="livre_exo/chap8_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap8_ex4.csv">Donn&eacute;es</a> de l'exercice 8.4. Effet de l'&acirc;ge sur le temps libre<a href="livre_exo/chap8_ex4.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 9. R&eacute;gression simple     <ul>         <li><a href="livre_exo/chap9_ex3.csv">Donn&eacute;es</a> de l'exercice 9.3. Prix d'un appartement en fonction de sa superficie<a href="livre_exo/chap9_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex4.csv">Donn&eacute;es</a> de l'exercice 9.4. Thermodynamique - &eacute;quation des gaz parfaits<a href="livre_exo/chap9_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex5.csv">Donn&eacute;es</a> de l'exercice 9.5. Mise en culture de bact&eacute;ries<a href="livre_exo/chap9_ex5.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex6.csv">Donn&eacute;es</a> de l'exercice 9.6. Pr&eacute;diction du poids &eacute;visc&eacute;r&eacute; d'un poulpe<a href="livre_exo/chap9_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex7.csv">Donn&eacute;es</a> de l'exercice 9.7. Calcul de la r&eacute;sistance d'une diode<a href="livre_exo/chap9_ex7.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex8.csv">Donn&eacute;es</a> de l'exercice 9.8. Etalonnage d'un appareil de mesures de la quantit&eacute; d'ADN<a href="livre_exo/chap9_ex8.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex9.csv">Donn&eacute;es</a> de l'exercice 9.9. Effet du sexe sur le lien entre l'appr&eacute;ciation d'un jus d'orange et la perception de sa saveur sucr&eacute;e<a href="livre_exo/chap9_ex9.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex10.csv">Donn&eacute;es</a> de l'exercice 9.10. Mod&eacute;lisation du d&eacute;p&ocirc;t de prot&eacute;ines<a href="livre_exo/chap9_ex10.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap9_ex11.csv">Donn&eacute;es</a> de l'exercice 9.11. Influence du sexe sur la relation entre le poids &eacute;visc&eacute;r&eacute; et le poids non &eacute;visc&eacute;r&eacute; de poulpes<a href="livre_exo/chap9_ex11.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 10. R&eacute;gression multiple     <ul>         <li><a href="livre_exo/chap10_ex1.csv">Donn&eacute;es</a> de l'exercice 10.1. Lien entre la taille d'une fille et la taille de ses parents<a href="livre_exo/chap10_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex2.csv">Donn&eacute;es</a> de l'exercice 10.2 Etude de l'appr&eacute;ciation de cocktails de jus de fruits en fonction de leurs saveurs fondamentales et de leur caract&egrave;re pulpeux<a href="livre_exo/chap10_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex6.csv">Donn&eacute;es</a> de l'exercice 10.6 S&eacute;lection de variables dans un mod&egrave;le de r&eacute;gression<a href="livre_exo/chap10_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex7.csv">Donn&eacute;es</a> de l'exercice 10.7. Pr&eacute;diction de l'appr&eacute;ciation d'un jambon &agrave; partir de sa description sensorielle<a href="livre_exo/chap10_ex7.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex8.csv">Donn&eacute;es</a> de l'exercice 10.8. Pr&eacute;diction du maximum d'ozone &agrave; Rennes<a href="livre_exo/chap10_ex8.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex9.csv">Donn&eacute;es</a> de l'exercice 10.9. Mesure de l'acidit&eacute; totale de cocktails de fruits<a href="livre_exo/chap10_ex9.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex10.csv">Donn&eacute;es</a> de l'exercice 10.10. Recherche d'un optimum<a href="livre_exo/chap10_ex10.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap10_ex12.csv">Donn&eacute;es</a> de l'exercice 10.12. D&eacute;tection d'effet quadratique<a href="livre_exo/chap10_ex12.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 11. Analyse de variance &agrave; deux facteurs avec r&eacute;p&eacute;titions     <ul>         <li><a href="livre_exo/chap11_ex4.csv">Donn&eacute;es</a> de l'exercice 11.4. Comparaison de trois vari&eacute;t&eacute;s de bl&eacute; en fonction de deux doses d'azote<a href="livre_exo/chap11_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap11_ex6.csv">Donn&eacute;es</a> de l'exercice 11.6. Analyse sensorielle de trois chocolats - donn&eacute;es d&eacute;s&eacute;quilibr&eacute;es<a href="livre_exo/chap11_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap11_ex8.csv">Donn&eacute;es</a> de l'exercice 11.8. Analyse sensorielle de six chocolats noirs<a href="livre_exo/chap11_ex8.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 12. Analyse d'un plan complet avec facteurs ayant deux modalit&eacute;s     <ul>         <li><a href="livre_exo/chap12_ex2.csv">Donn&eacute;es</a> de l'exercice 12.2. Construction d'un plan complet 2^3<a href="livre_exo/chap12_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap12_ex3.csv">Donn&eacute;es</a> de l'exercice 12.3. D&eacute;pouillement d'un plan d'exp&eacute;riences pour 2 facteurs<a href="livre_exo/chap12_ex3.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 13. Introduction &agrave; la pratique des plans fractionnaires     <ul>         <li><a href="livre_exo/chap13_ex1.csv">Donn&eacute;es</a> de l'exercice 13.1. Confusion dans un plan d'exp&eacute;riences 2^(3-1)<a href="livre_exo/chap13_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex2.csv">Donn&eacute;es</a> de l'exercice 13.2. D&eacute;pouillement dans un plan d'exp&eacute;riences 2^(3-1)<a href="livre_exo/chap13_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex4.csv">Donn&eacute;es</a> de l'exercice 13.4. Construction d'un plan d'exp&eacute;riences pour 4 facteurs<a href="livre_exo/chap13_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex5.csv">Donn&eacute;es</a> de l'exercice 13.5. D&eacute;pouillement d'un plan d'exp&eacute;riences pour 4 facteurs<a href="livre_exo/chap13_ex5.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex6.csv">Donn&eacute;es</a> de l'exercice 13.6. D&eacute;pouillement manuel d'un plan 2^(4-1)<a href="livre_exo/chap13_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex8.csv">Donn&eacute;es</a> de l'exercice 13.8. D&eacute;pouillement manuel d'un plan 2^(5-2)<a href="livre_exo/chap13_ex8.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex20.csv">Donn&eacute;es</a> de l'exercice 13.20. D&eacute;pouillement d'un carr&eacute; latin pour trois facteurs ayant chacun trois modalit&eacute;s<a href="livre_exo/chap13_ex20.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap13_ex21.csv">Donn&eacute;es</a> de l'exercice 13.21. Construction d'un carr&eacute; latin pour trois facteurs &agrave; trois modalit&eacute;s<a href="livre_exo/chap13_ex21.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 14. Plan pour facteurs quantitatifs     <ul>         <li><a href="livre_exo/chap14_ex1.csv">Donn&eacute;es</a> de l'exercice 14.1. Plan pour deux facteurs quantitatifs : un process de d&eacute;shydratation de la pomme de terre<a href="livre_exo/chap14_ex1.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex2.csv">Donn&eacute;es</a> de l'exercice 14.2. D&eacute;termination d'un optimum : la r&eacute;action de Maillard<a href="livre_exo/chap14_ex2.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex3.csv">Donn&eacute;es</a> de l'exercice 14.3. Erreur pure et erreur d'ajustement<a href="livre_exo/chap14_ex3.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex4.csv">Donn&eacute;es</a> de l'exercice 14.4. Plan de Doehlert pour deux facteurs : une bonne galette bretonne<a href="livre_exo/chap14_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex5.csv">Donn&eacute;es</a> de l'exercice 14.5. Plan de Doehlert pour trois facteurs : fabrication de p&acirc;te &agrave; brioche<a href="livre_exo/chap14_ex5.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex6.csv">Donn&eacute;es</a> de l'exercice 14.6. Evaluation simultan&eacute;e de l'amertume et de l'astringence<a href="livre_exo/chap14_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex8.csv">Donn&eacute;es</a> de l'exercice 14.8. Plan pour cinq facteurs quantitatifs (texture de yaourt &agrave; boire)<a href="livre_exo/chap14_ex8.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex9.csv">Donn&eacute;es</a> de l'exercice 14.9. Viscosit&eacute; chez les cr&egrave;mes<a href="livre_exo/chap14_ex9.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap14_ex10.csv">Donn&eacute;es</a> de l'exercice 14.10. Analyse par ACP de plusieurs variables r&eacute;ponses<a href="livre_exo/chap14_ex10.txt"> (script R)</a></li>     </ul></li>     <li>Chapitre 15. Analyse en Composantes Principales (ACP)     <ul>         <li><a href="livre_exo/chap15_ex4.csv">Donn&eacute;es</a> de l'exercice 15.4. Profils pluviom&eacute;triques de 34 villes fran&ccedil;aises<a href="livre_exo/chap15_ex4.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap15_ex5.csv">Donn&eacute;es</a> de l'exercice 15.5. Evaluation sensorielle de 8 eaux min&eacute;rales gazeuses<a href="livre_exo/chap15_ex5.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap15_ex6.csv">Donn&eacute;es</a> de l'exercice 15.6. Analyse nutritionnelle de 25 fromages<a href="livre_exo/chap15_ex6.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap15_ex7.csv">Donn&eacute;es</a> de l'exercice 15.7. Analyse des performances au d&eacute;cathlon<a href="livre_exo/chap15_ex7.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap15_ex8.csv">Donn&eacute;es</a> de l'exercice 15.8. Notes de 909 &eacute;l&egrave;ves de terminale scientifique<a href="livre_exo/chap15_ex8.txt"> (script R)</a></li>
+<li><a href="livre_exo/chap15_ex9.csv">Donn&eacute;es</a> de l'exercice 15.9. Inflation et ch&ocirc;mage<a href="livre_exo/chap15_ex9.txt"> (script R)</a></li>     </ul></li> </ul>
+		</div>
+</div>
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professor in Statistics<br> <p>husson[at]agrocampus-ouest.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Youtube</a> - <a href="https://francoishusson.wordpress.com/">Blog</a> - <a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Department of Statistics and Computer Science</a></h2> <p> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

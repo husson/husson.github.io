@@ -1,0 +1,11 @@
+Cocktail <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex2.csv", header = TRUE, sep=";",row.names=1)
+
+round(cor(Cocktail),2)
+
+anova(lm(Appréciation ~ . , data=Cocktail))
+
+summary(lm(Appréciation ~ . , data=Cocktail))
+
+CocktailCR <- as.data.frame(scale(Cocktail))
+summary(lm(Appréciation ~ . , data=CocktailCR))
+

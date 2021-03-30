@@ -1,0 +1,12 @@
+Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex8.csv", header = TRUE, sep=";",row.names=1)
+
+X <- model.matrix(~ F1+F2+F3+F4+F5+I(F1^2)+I(F2^2)+I(F3^2)+I(F4^2)+I(F5^2), Plan)
+round(X,3)
+round(cor(X),3)
+round(solve(t(X)%*%X),3)
+
+## Avec toutes les interactions :
+X <- model.matrix(~ F1+F2+F3+F4+F5+I(F1^2)+I(F2^2)+I(F3^2)+I(F4^2)+I(F5^2)+I(F1*F2)+I(F1*F3)+I(F1*F4)+I(F1*F5)+I(F2*F3)+I(F2*F4)+I(F2*F5)+I(F3*F4)+I(F3*F5)+I(F4*F5), Plan)
+round(X,3)
+round(cor(X),3)
+round(solve(t(X)%*%X),3)   ### Il y a une erreur car il est impossible d'inverser

@@ -1,0 +1,11 @@
+Don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap5_ex3.csv", header = TRUE, sep=";")
+boxplot(Temps~Traitement , data=Don)
+
+var.test(Temps~Traitement,data=Don,subset=(Traitement!="B"))
+
+summary(aov(Temps~Traitement , data=Don))
+
+## ou
+
+library(FactoMineR)
+AovSum(Temps~Traitement , data=Don)

@@ -1,0 +1,6 @@
+Poulpe <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap4_ex1.csv", header = TRUE, sep=";")
+by(Don[,"Poids"],Don[,"Sexe"],var)
+
+var.test(Poids ~ Sexe, data = Poulpe) 
+
+1 / var.test(Poids ~ Sexe, data = Poulpe)$statistic   ## On retrouve bien la même valeur de Fobs si on calcule la plus grande variance sur la plus petite

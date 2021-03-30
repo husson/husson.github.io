@@ -1,0 +1,5 @@
+Poulpe <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex11.csv", header = TRUE, sep=";")
+
+summary(lm(PdsEviscéré~-1 + PdsNonEviscéré,data=Poulpe,subset=(Sexe=="M")))
+summary(lm(PdsEviscéré~-1 + PdsNonEviscéré,data=Poulpe,subset=(Sexe=="F")))
+

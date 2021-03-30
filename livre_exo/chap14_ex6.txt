@@ -1,0 +1,5 @@
+Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex6.csv", header = TRUE, sep=";",row.names=1)
+
+summary(lm(Amertume~Caféine + Alun + I(Caféine^2) + I(Alun^2) + I(Caféine*Alun),data = Données))
+
+summary(lm(Astringence~Caféine + Alun + I(Caféine^2) + I(Alun^2) + I(Caféine*Alun),data = Données))

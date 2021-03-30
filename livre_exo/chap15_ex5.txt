@@ -1,0 +1,6 @@
+Eaux <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex5.csv", header = TRUE, sep=";",row.names=1)
+
+cor(Eaux)
+library(FactoMineR)
+res <- PCA(Eaux, quanti.sup = 12)
+summary(res)

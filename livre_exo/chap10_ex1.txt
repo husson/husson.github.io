@@ -1,0 +1,7 @@
+Taille <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex1.csv", header = TRUE, sep=";")
+
+round(cor(Taille),5)
+
+summary(lm(Fille ~ Père, data = Taille))
+summary(lm(Fille ~ Mère, data = Taille))
+summary(lm(Fille ~ Père + Mère, data = Taille))

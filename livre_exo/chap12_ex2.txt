@@ -1,0 +1,7 @@
+Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap12_ex2.csv", header = TRUE, sep=";")
+for (i in 1:3) Plan[,i] <- as.factor(Plan[,i])
+summary(aov(Y ~ A + B + C, data=Plan))
+
+X <- model.matrix(~ A+B+C, Plan, contrasts = "contr.sum")
+t(X)%*%X
+solve(t(X)%*%X)

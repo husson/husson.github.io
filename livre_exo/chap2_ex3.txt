@@ -1,0 +1,4 @@
+Qte.alcool <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap2_ex3.csv",header=TRUE,sep=";",row.names=1)
+
+## Question 1.b
+t.test(Qte.alcool)

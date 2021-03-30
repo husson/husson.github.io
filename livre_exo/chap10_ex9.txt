@@ -1,0 +1,7 @@
+don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex9.csv", header = TRUE, sep=";",row.names=1)
+
+données <- cbind.data.frame(Acidité = as.vector(as.matrix(don[1:15,1:2])), Cocktail = as.factor(rep(rownames(don)[1:15],2)))
+summary(aov(Acidité ~ Cocktail,data=données))
+
+données2 <- cbind.data.frame(Acidité = apply(don[,1:2],1,mean), don[,3:6])
+summary(lm(Acidité ~ -1+Orange+Banane+Mangue+Citron,data=données2[1:15,]))

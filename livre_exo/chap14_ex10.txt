@@ -1,0 +1,9 @@
+Crèmes <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex10.csv", header = TRUE, sep=";",row.names=1)
+
+Crèmes <- cbind.data.frame(Crèmes[,1:2],Text1²=I(Crèmes[,1]^2),Text2²=I(Crèmes[,2]^2),Text1_Text2=I(Crèmes[,1]*Crèmes[,2]),Crèmes)
+for (i in 6:7) Crèmes[,i]=as.factor(Crèmes[,i])
+levels(Crèmes[,6]) <- paste("Text1=",levels(Crèmes[,6]),sep="")
+levels(Crèmes[,7]) <- paste("Text2=",levels(Crèmes[,7]),sep="")
+
+library(FactoMineR)
+PCA(Crèmes, quali.sup=6:7,quanti.sup = 1:5)

@@ -1,0 +1,8 @@
+Don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap3_ex4.csv", header = TRUE, sep=";")
+by(Don[,"Distance"],Don[,"Sexe"],mean)
+by(Don[,"Distance"],Don[,"Sexe"],sd)
+
+## Question 2 et 3
+by(Don[,"Distance"],Don[,"Sexe"],t.test,mu=12,conf.level=0.80)
+by(Don[,"Distance"],Don[,"Sexe"],t.test,mu=12,conf.level=0.95)
+by(Don[,"Distance"],Don[,"Sexe"],t.test,mu=12,conf.level=0.99)

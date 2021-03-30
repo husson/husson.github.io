@@ -1,0 +1,8 @@
+don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex3.csv", header = TRUE, sep=";")
+
+## Question 2
+cor(don)
+cor.test(don[,1],don[,2])
+
+## Question 3
+plot(temps.libre~age, data=don)

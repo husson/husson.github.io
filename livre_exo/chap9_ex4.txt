@@ -1,0 +1,4 @@
+Gaz <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex4.csv", header = TRUE, sep=";")
+
+plot(Température ~ Pression, data = Gaz)
+summary(lm(Température ~ Pression, data = Gaz))

@@ -1,0 +1,7 @@
+Orange <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex9.csv", header = TRUE, sep=";")
+
+summary(lm(Appréciation ~Sucrée,data=Orange,subset=Sexe=="F"))
+summary(lm(Appréciation ~Sucrée,data=Orange,subset=Sexe=="H"))
+
+library(FactoMineR)
+AovSum(Appréciation ~Sucrée+Sexe+Sucrée:Sexe,data=Orange)

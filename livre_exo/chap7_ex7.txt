@@ -1,0 +1,17 @@
+Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap7_ex7.csv",header=TRUE,sep=";")
+
+lambda <- sum(Données[,1]*Données[,2]) / sum(Données[,2])
+
+Theo <- dpois(0:8,lambda)*sum(Données[,2])
+Données <- cbind.data.frame(Données,Theo=Theo)
+
+## regroupement des dernières classes
+Données[5,2] <- sum(Données[5:9,2])
+Données[5,3] <- sum(Données[5:9,3])
+Données <- Données[1:5,]
+
+(contribution <- (Données[,2]-Données[,3])^2/Données[,3])
+(chi <- sum(contribution))
+pchisq(chi,4,lower.tail=FALSE)
+
+

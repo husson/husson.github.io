@@ -1,0 +1,15 @@
+Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex4.csv", header = TRUE, sep=";",row.names=1)
+
+X <- model.matrix(~ X1+X2+I(X1^2)+I(X2^2)+I(X1*X2), Plan)
+X
+t(X)%*%X
+cor(X)
+solve(t(X)%*%X)
+
+## Question 5 : (ajout de 2 points au centre)
+Plan2 <- Plan[c(1,1,1:7),]
+X <- model.matrix(~ X1+X2+I(X1^2)+I(X2^2)+I(X1*X2), Plan2)
+X
+t(X)%*%X
+cor(X)
+solve(t(X)%*%X)

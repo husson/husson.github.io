@@ -1,0 +1,23 @@
+Fumeur <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap7_ex5.csv", header = TRUE, sep=";",row.names=1)
+
+## question 1
+chisq.test(Fumeur[,1:2], correct = FALSE)  ## Donne le test (l'argument correct permet d'avoir le test brut, sans correction)
+chisq.test(Fumeur[,1:2])$expected  ## Donne les valeurs sous l'hypothèse d'indépendance
+
+## question 2
+chisq.test(Fumeur[,3:6])           ## Donne le test
+chisq.test(Fumeur[,3:6])$expected  ## Donne les valeurs sous l'hypothèse d'indépendance
+
+## question 3
+don <- matrix(apply(Fumeur[,3:6],2,sum),ncol=2,byrow=T)
+rownames(don) <- c("Père fumeur","Père non fumeur")
+colnames(don) <- c("Mère fumeuse","Mère non fumeuse")
+chisq.test(don, correct = FALSE)           ## Donne le test (l'argument correct permet d'avoir le test brut, sans correction)
+chisq.test(don, correct = FALSE)$expected  ## Donne les valeurs sous l'hypothèse d'indépendance
+
+## question 4
+don <- matrix(c(Fumeur[,2],sum(Fumeur[,c(3,5)]),sum(Fumeur[,c(4,6)])),ncol=2,byrow=T)
+rownames(don) <- c("Filles","Mères")
+colnames(don) <- c("Fumeur","Non fumeur")
+chisq.test(don, correct = FALSE)           ## Donne le test (l'argument correct permet d'avoir le test brut, sans correction)
+chisq.test(don, correct = FALSE)$expected  ## Donne les valeurs sous l'hypothèse d'indépendance

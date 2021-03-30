@@ -1,0 +1,5 @@
+Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap1_ex6.csv", header = TRUE, sep=";")
+mean(Données[,2])
+median(Données[,2])
+mean(Données[-20,2])    ## on enlève l'élève 20
+median(Données[-20,2])  ## on enlève l'élève 20

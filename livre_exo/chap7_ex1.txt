@@ -1,0 +1,11 @@
+Chocolat <- c(7,5,5,4,9)
+names(Chocolat) <- c("Excellence","Amère","Amazonie","Pâtissier","Supérieur")
+
+## Question 3
+Théo <- rep(mean(Chocolat),length(Chocolat))
+
+Chi <- sum((Théo - Chocolat)^2/Théo)
+pchisq(Chi, df=4, lower.tail=FALSE)
+
+## Question 4
+pchisq(Chi*10, df=4, lower.tail=FALSE)

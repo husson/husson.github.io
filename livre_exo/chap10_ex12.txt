@@ -1,0 +1,18 @@
+don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex12.csv", header = TRUE, sep=";")
+
+for (i in (4:nrow(don))) {
+   print(don[i,"Temp"])
+   print(summary(lm(Energie~Temp+I(Temp^2),data=don,subset=1:i))$coef) 
+}
+
+summary(lm(Energie~Temp,data=don,subset=don[,"Temp"]<=33))
+
+for (i in (nrow(don)-3):1) {
+  print(don[i,"Temp"])
+  print(summary(lm(Energie~Temp+I(Temp^2),data=don, subset=i:nrow(don)))$coef)
+}
+
+summary(lm(Energie~Temp,data=don,subset=don[,"Temp"]>=51))
+
+
+summary(lm(Energie~Temp+I(Temp^2)+I(Temp^3),data=don,subset=(don[,"Temp"]>=33)&(don[,"Temp"]<=51)))

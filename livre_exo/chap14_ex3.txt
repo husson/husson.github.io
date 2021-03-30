@@ -1,0 +1,11 @@
+Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex3.csv", header = TRUE, sep=";",row.names=1)
+
+# modèle sans interaction
+res <- lm(Y ~ X1 + X2 + I(X1^2) + I(X2^2), data = Plan)
+anova(res)[5,]
+## question 2 
+CM_pure <- var(Plan[5:8,3])
+
+## Question 3
+CM_ajust <- (anova(res)[5,2] - CM_pure*3) / 4
+pf( CM_ajust/CM_pure,4,3,lower.tail=FALSE)

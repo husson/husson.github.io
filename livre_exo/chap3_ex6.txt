@@ -1,0 +1,7 @@
+Poulpe <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap3_ex6.csv", header = TRUE, sep=";")
+by(Don[,"Poids"],Don[,"Sexe"],mean)
+
+t.test(Poids ~ Sexe, data = Poulpe, var.equal=TRUE)  # en supposant l'égalité de variances
+
+t.test(Poids ~ Sexe, data = Poulpe, var.equal=FALSE)  # sans l'hypothèse d'égalité de variances
+

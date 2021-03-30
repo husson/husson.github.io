@@ -1,0 +1,7 @@
+Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap1_ex5.csv", header = TRUE, sep=";")
+mean(Données[,2])
+var(Données[,2])
+median(Données[,2])
+diff(range(Données[,2]))
+quantile(Données[,2],0.75)-quantile(Données[,2],0.25)  ## le logiciel calcul un peu différemment les quartiles.
+

@@ -1,0 +1,15 @@
+x = matrix (0,100,6)
+x[,1] = rnorm(100,mean=5,sd=1)       # Simulation de 100 individus
+                                     #  issus d'une loi N(5,1)
+x[,2] = rnorm(100,mean=5.2,sd=1)
+x[,3] = rnorm(100,mean=5.5,sd=1)
+x[,4] = rnorm(100,mean=6,sd=1)
+x[,5] = rnorm(100,mean=7,sd=1)
+x[,6] = rnorm(100,mean=8,sd=1)
+
+for (i in 2:6) {                             # début de la boucle
+  a10 = t.test(x[1:10,1],x[1:10,i])$p.value  # proba critique du test t
+  a30 = t.test(x[1:30,1],x[1:30,i])$p.value  #
+ a100 = t.test(x[ ,1],x[,i])$p.value         #
+ print(paste(a10,a30,a100))                  # écriture des résultats
+}                                            # fin de la boucle

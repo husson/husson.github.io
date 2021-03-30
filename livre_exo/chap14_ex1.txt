@@ -1,0 +1,11 @@
+Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex1.csv", header = TRUE, sep=";",row.names=1)
+
+Plan[,1] <- (Plan[,1]-20)/10
+Plan[,2] <- (Plan[,2]-45)/15
+
+Plan
+
+X <- model.matrix(~ T1+T2+I(T1*T2)+I(T1^2)+I(T2^2), Plan)
+t(X)%*%X
+cor(X)
+solve(t(X)%*%X)

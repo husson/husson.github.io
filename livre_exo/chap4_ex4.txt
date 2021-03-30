@@ -1,0 +1,25 @@
+x = matrix (0,100,6)
+x[,1] = rnorm(100,mean=0,sd=1)
+x[,2] = rnorm(100,mean=0,sd=1.1)
+x[,3] = rnorm(100,mean=0,sd=1.2)
+x[,4] = rnorm(100,mean=0,sd=1.5)
+x[,5] = rnorm(100,mean=0,sd=2)
+x[,6] = rnorm(100,mean=0,sd=4)
+for (i in 2:6) {
+  a10 = var.test(x[1:10,1],x[1:10,i])$p.value
+  a30 = var.test(x[1:30,1],x[1:30,i])$p.value
+  a100 = var.test(x[ ,1],x[,i])$p.value
+  print(paste(a10,a30,a100))
+}
+
+
+a10=a30=a100=0
+x = matrix (0,100,6)
+for (i in 1:10000){
+  x[,1] = rnorm(100,mean=0,sd=1)
+  x[,2] = rnorm(100,mean=0,sd=2)
+  if (var.test(x[1:10,1],x[1:10,2])$p.value <0.05) a10 = a10+1
+  if (var.test(x[1:30,1],x[1:30,2])$p.value <0.05) a30 = a30+1
+  if (var.test(x[ ,1],x[,2])$p.value < 0.05) a100 = a100+1
+}
+print(paste(a10,a30,a100))

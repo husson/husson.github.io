@@ -1,0 +1,3 @@
+Porcs <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex10.csv", header = TRUE, sep=";")
+
+summary(lm(Gains ~Ingestions,data=Porcs))

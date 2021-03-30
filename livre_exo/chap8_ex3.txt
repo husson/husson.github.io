@@ -1,0 +1,8 @@
+don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap8_ex3.csv", header = TRUE, sep=";",row.names=1)
+
+plot(y~x, data=don)
+cor(don$y,don$x)
+cor.test(don$y,don$x)
+
+cor(don$y,don$x,method="spearman")
+cor.test(don$y,don$x,method="spearman")

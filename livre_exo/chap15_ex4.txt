@@ -1,0 +1,8 @@
+Pluvio <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex4.csv", header = TRUE, sep=";",row.names=1)
+colnames(Pluvio)[19] <- "% de mai à août"
+
+cor(Pluvio)
+
+library(FactoMineR)
+res <- PCA(Pluvio, quanti.sup = 13:ncol(Pluvio))
+summary(res)

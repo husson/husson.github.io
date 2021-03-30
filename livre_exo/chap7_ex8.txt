@@ -1,0 +1,7 @@
+Textuelle <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap7_ex8.csv", header = TRUE, sep=";",row.names=1)
+
+## Question 2
+res <- chisq.test(Textuelle)
+
+## Question 3
+round(res$residuals^2,3)

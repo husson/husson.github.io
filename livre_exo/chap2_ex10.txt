@@ -1,0 +1,28 @@
+aa=matrix(rnorm(47000,0,1),ncol=47)  # Loi Normale
+hist(aa[,1],xlim=c(-3,3),breaks=30,axes=F)
+hist(apply(aa[,1:2],1,mean),xlim=c(-3,3),breaks=30,axes=F)
+hist(apply(aa[,3:7],1,mean),xlim=c(-3,3),breaks=30,axes=F)
+hist(apply(aa[,8:17],1,mean),xlim=c(-3,3),breaks=30,axes=F)
+hist(apply(aa[,18:47],1,mean),xlim=c(-3,3),breaks=30,axes=F)
+
+aa=matrix(runif(47000,-1,1),ncol=47)    # Loi Uniforme
+hist(aa[,1],xlim=c(-1,1),breaks=30,axes=F)
+hist(apply(aa[,1:2],1,mean),xlim=c(-1,1),breaks=30,axes=F)
+hist(apply(aa[,3:7],1,mean),xlim=c(-1,1),breaks=30,axes=F)
+hist(apply(aa[,8:17],1,mean),xlim=c(-1,1),breaks=30,axes=F)
+hist(apply(aa[,18:47],1,mean),xlim=c(-1,1),breaks=30,axes=F)
+
+aa=matrix(rchisq(47000,5),ncol=47)      # Loi chi2 à 5 ddl
+hist(aa[,1],xlim=c(0,15),breaks=30,axes=F)
+hist(apply(aa[,1:2],1,mean),xlim=c(0,15),breaks=30,axes=F)
+hist(apply(aa[,3:7],1,mean),xlim=c(0,15),breaks=30,axes=F)
+hist(apply(aa[,8:17],1,mean),xlim=c(0,15),breaks=30,axes=F)
+hist(apply(aa[,18:47],1,mean),xlim=c(0,15),breaks=30,axes=F)
+
+bb=matrix(rnorm(47000,0,1),ncol=47)   # Loi dissymétrique
+aa=replace(bb,bb<0,4-abs(bb))
+hist(aa[,1],xlim=c(0,4),breaks=30,axes=F)
+hist(apply(aa[,1:2],1,mean),xlim=c(0,4),breaks=30,axes=F)
+hist(apply(aa[,3:7],1,mean),xlim=c(0,4),breaks=30,axes=F)
+hist(apply(aa[,8:17],1,mean),xlim=c(0,4),breaks=30,axes=F)
+hist(apply(aa[,18:47],1,mean),xlim=c(0,4),breaks=30,axes=F)

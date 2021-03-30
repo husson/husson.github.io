@@ -1,0 +1,5 @@
+Blé <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap11_ex4.csv", header = TRUE, sep=";")
+
+Blé[,"Dose"] <- as.factor(Blé[,"Dose"])
+
+summary(aov(Rendement ~ Variété + Dose + Variété:Dose,data=Blé))

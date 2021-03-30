@@ -1,0 +1,11 @@
+Senso <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap11_ex8.csv", header = TRUE, sep=";")
+
+for (i in 1:6) Senso[,i] <- as.factor(Senso[,i])
+
+tab <- matrix(NA, nrow = ncol(Senso)-6, ncol=6)
+for (i in 7:ncol(Senso)){
+ tab[i-6,] <- summary(aov(Senso[,i] ~ Produit + Juge + Séance + Produit:Juge + Juge:Séance + Produit:Séance, data = Senso))[[1]][1:6,5]
+}
+colnames(tab) <- c("Produit","Juge","Séance","Produit:Juge","Juge:Séance","Produit:Séance")
+rownames(tab) <- colnames(Senso)[7:ncol(Senso)]
+tab

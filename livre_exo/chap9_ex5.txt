@@ -1,0 +1,7 @@
+don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex5.csv", header = TRUE, sep=";")
+
+plot(Nb.bactéries ~ Temps, data = don)
+
+plot(log(don$Nb.bactéries) ~ Temps, data = don)
+summary(lm(log(don$Nb.bactéries) ~ Temps, data=don))
+

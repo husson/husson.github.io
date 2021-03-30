@@ -1,0 +1,3 @@
+Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap2_ex4.csv", header = TRUE, sep=";")
+ech <- Données[c(34,66,06,80,65),2]  ## on prend les 5 départements du corrigé
+t.test(ech)   ## L'intervalle fournit n'est pas le bon car il ne prend pas en compte le fait que la population est de taille finie

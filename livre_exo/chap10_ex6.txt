@@ -1,0 +1,39 @@
+Cocktail <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex6.csv", header = TRUE, sep=";",row.names=1)
+
+Tab.aov <- anova(lm(Appréciation ~ Acide + Pulpeux + Amer + Sucre , data=Cocktail))
+SCEM <- sum(Tab.aov[-nrow(Tab.aov),2])
+ddlR <- Tab.aov[nrow(Tab.aov),1]
+SCER <- Tab.aov[nrow(Tab.aov),2]
+CMR <- Tab.aov[nrow(Tab.aov),3]
+F <- (SCEM/(15-ddlR)) / CMR
+Proba <- pf ( F,15-Tab.aov[nrow(Tab.aov),1],ddlR,lower.tail=FALSE)
+paste(round(SCEM,5),round(F,3),round(Proba,5),round(SCER,3),ddlR,round(CMR,3))
+
+Tab.aov <- anova(lm(Appréciation ~ Acide + Pulpeux + Amer , data=Cocktail))
+SCEM <- sum(Tab.aov[-nrow(Tab.aov),2])
+ddlR <- Tab.aov[nrow(Tab.aov),1]
+SCER <- Tab.aov[nrow(Tab.aov),2]
+CMR <- Tab.aov[nrow(Tab.aov),3]
+F <- (SCEM/(15-ddlR)) / CMR
+Proba <- pf ( F,15-Tab.aov[nrow(Tab.aov),1],ddlR,lower.tail=FALSE)
+paste(round(SCEM,5),round(F,3),round(Proba,5),round(SCER,3),ddlR,round(CMR,3))
+
+Tab.aov <- anova(lm(Appréciation ~ Acide + Pulpeux , data=Cocktail))
+SCEM <- sum(Tab.aov[-nrow(Tab.aov),2])
+ddlR <- Tab.aov[nrow(Tab.aov),1]
+SCER <- Tab.aov[nrow(Tab.aov),2]
+CMR <- Tab.aov[nrow(Tab.aov),3]
+F <- (SCEM/(15-ddlR)) / CMR
+Proba <- pf ( F,15-Tab.aov[nrow(Tab.aov),1],ddlR,lower.tail=FALSE)
+paste(round(SCEM,5),round(F,3),round(Proba,5),round(SCER,3),ddlR,round(CMR,3))
+
+Tab.aov <- anova(lm(Appréciation ~ Acide , data=Cocktail))
+SCEM <- sum(Tab.aov[-nrow(Tab.aov),2])
+ddlR <- Tab.aov[nrow(Tab.aov),1]
+SCER <- Tab.aov[nrow(Tab.aov),2]
+CMR <- Tab.aov[nrow(Tab.aov),3]
+F <- (SCEM/(15-ddlR)) / CMR
+Proba <- pf ( F,15-Tab.aov[nrow(Tab.aov),1],ddlR,lower.tail=FALSE)
+paste(round(SCEM,5),round(F,3),round(Proba,5),round(SCER,3),ddlR,round(CMR,3))
+
+pf ((5.337-5.259)/(4-1)  /  (5.259/11),3,11, lower.tail=FALSE)

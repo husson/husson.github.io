@@ -1,0 +1,5 @@
+ADN <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex8.csv", header = TRUE, sep=";")
+
+plot(Qte.ADN ~ Nb.cycles, data = ADN)
+plot(log(Qte.ADN) ~ Nb.cycles, data = ADN)
+summary(lm(log(Qte.ADN) ~ Nb.cycles, data = ADN))

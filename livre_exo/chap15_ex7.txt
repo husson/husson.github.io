@@ -1,0 +1,11 @@
+decathlon <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex7.csv", header = TRUE, sep=";",row.names=1)
+
+colnames(decathlon)[c(1,5,6,10)]=c("100m","400m","110mHaies","1500m")
+library(FactoMineR)
+round(cor(decathlon[,1:12]),2)
+res <- PCA(decathlon, quanti.sup=11:12, quali.sup = 13, graph = TRUE)  ## Les graphes sont faits ensuite
+summary(res)
+plot(res, habillage = 13)
+plot(res, choix = "var")
+plot(res, habillage = 13, axes = 3:4)
+plot(res, choix = "var", axes = 3:4)

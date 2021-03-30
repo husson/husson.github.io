@@ -1,0 +1,6 @@
+chomage <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex8.csv", header = TRUE, sep=";",row.names=1)
+
+library(FactoMineR)
+round(cor(chomage),2)
+res <- PCA(chomage, quanti.sup=8:14,ind.sup=19:20)
+summary(res)
