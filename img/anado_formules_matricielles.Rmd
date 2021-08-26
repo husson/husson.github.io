@@ -139,6 +139,7 @@ Z <- scale(Z, scale=FALSE)
 N <- diag(rep(1/n,n))
 U <- eigen(Z%*%M%*%t(Z)%*%N)
 V <- eigen(t(Z)%*%N%*%Z%*%M)
+invDsigma <- solve(M)
 
 S <- svd(N^0.5 %*% Z%*%invDsigma^0.5 / ncol(X))
 

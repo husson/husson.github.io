@@ -1,0 +1,62 @@
+---
+title: "R Notebook"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Importation d'une image
+```{r}
+library(raster)
+library(rgdal)
+photo <- as.matrix(raster("https://husson.github.io/img/Lena.png"))
+dim(photo)
+n <- nrow(photo)
+p <- ncol(photo)
+```
+
+# SVD sur l'image
+```{r}
+photo.svd <- svd(photo)
+# UDV
+u <- photo.svd$u
+d <- photo.svd$d
+v <- photo.svd$v
+
+```
+
+# Reconstitution de l'image selon différents rangs retenus
+```{r}
+par(mar=c(0,0,2,0),mfrow=c(2,3),xaxt="n",yaxt="n")
+image(photo, col = grey(seq(0, 1, length = 256)),asp=1)
+title(paste("Original, 100%"),cex.main=.9)
+r=1 ; image((u[,1]*d[1])%*%t(v[,1]), col = grey(seq(0, 1, length = 256)),asp=1)
+title(paste("r=",r, ", ",round(((n+1+p)*r)/(n*p)*100,1),"%"),cex.main=0.9)
+for (r in c(10, 20, 50, 100)){
+  image(u[,1:r]%*%diag(d[1:r])%*%t(v[,1:r]), col = grey(seq(0, 1, length = 256)),asp=1)
+  title(paste("r=",r, ", ",round(((n+1+p)*r)/(n*p)*100,1),"%"),cex.main=0.9)
+}
+```
+
+# Eigenfaces
+```{r}
+photo <- as.matrix(raster("https://husson.github.io/img/Love_DS.png"))
+```
+
+# Débruitage d'e l'une image selon différents rangs retenus
+```{r}
+photo <- as.matrix(raster("https://husson.github.io/img/Love_DS.png"))
+photo.svd <- svd(photo)
+# UDV
+u <- photo.svd$u
+d <- photo.svd$d
+v <- photo.svd$v
+
+par(mar=c(1,1,2,1),mfrow=c(3,2),xaxt="n",yaxt="n")
+image(photo, col = grey(seq(0, 1, length = 256)),asp=1)
+title(paste("Original, 100%"),cex.main=.9)
+for (r in c(20,50, 70,100, 200)){
+  image(u[,1:r]%*%diag(d[1:r])%*%t(v[,1:r]), col = grey(seq(0, 1, length = 256)))
+  title(paste("r=",r, ", ",round(((n+1+p)*r)/(n*p)*100,1),"%"),cex.main=0.9)
+}
+```
