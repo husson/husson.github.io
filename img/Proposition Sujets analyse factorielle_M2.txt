@@ -3,7 +3,6 @@ Pour la présentation : définir la problématique, donner les principes génér
 donner les lignes de code permettant de mettre en oeuvre la méthode, mettre en oeuvre sur un exemple et interpréter, comparer avec une méthode plus classique
 
 Projets possibles : 
-- (multidimensional scaling) MDS
 - Construction d'ellipses de confiance en AFC
 - Analyse canonique des corrélations (canonical correspondence analysis)
 - Analyse canonique généralisée
@@ -11,10 +10,12 @@ Projets possibles :
 - General Procrustes Analysis
 - CA-Galt
 - multi-level simultaneous component analysis : Multilevel component analysis - Marieke E. Timmerman
-- Rotation des axes en ACP et ACM
 - AFMTC
 - dual multiple factor analysis
-- Analyse de co-inertie (Antoine)
+- Analyse de co-inertie
+- (multidimensional scaling) MDS
+- ACP robuste
+- randomized SVD 
 
 Il est aussi possible de proposer une très belle application.
 Attention : il faut que l'application soit originale (évolution temporelle, recueil particulier, visualisation spatiale, etc.)
