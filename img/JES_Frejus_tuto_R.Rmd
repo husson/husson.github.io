@@ -1,0 +1,166 @@
+---
+title: "Tutoriel Journées d'étude en statistique - F. Husson"
+output:
+  html_document:
+    df_print: paged
+editor_options:
+  chunk_output_type: inline
+---
+
+## Importation des données ozone
+
+```{r}
+ozone <- read.table("http://factominer.free.fr/missMDA/ozoneNA.csv",header=TRUE,sep=",",row.names=1)
+WindDirection <- ozone[,12]
+don <- ozone[,1:11]           #### Sélection des variables quanti
+```
+
+## Visualisation du dispositif de données manquantes
+### Visualisation univariée
+
+```{r}
+library(VIM)
+aggr(don)
+aggr(don,only.miss=TRUE,sortVar=TRUE)
+res <- summary(aggr(don,prop=TRUE,combined=TRUE))$combinations
+res[rev(order(res[,2])),]
+
+matrixplot(don,sortby=2)
+marginplot(don[,c("T9","maxO3")])
+```
+ 
+### Visualisation multivariée de la matrice de présence-absence
+
+Création d'un matrice de présence absence avec "o" pour observé et "m" pour manquant
+
+```{r}
+mis.ind <- matrix("o",nrow=nrow(don),ncol=ncol(don))
+mis.ind[is.na(don)] <- "m"
+dimnames(mis.ind) <- dimnames(don)
+mis.ind
+```
+
+ACM pour visualiser les associations
+```{r}
+library(FactoMineR)
+resMCA <- MCA(mis.ind)
+plot(resMCA,invis="ind",title="MCA graph of the categories")
+```
+
+## Imputation simple par ACP 
+```{r}
+library(missMDA)
+```
+
+### Estimation du nombre de composantes
+```{r}
+nb <- estim_ncpPCA(don) 
+plot(0:5,nb$criterion,xlab="dim",ylab="MSEP")
+```
+
+### Imputation par ACP
+```{r}
+res.comp <- imputePCA(don,ncp=nb$ncp)
+res.comp$completeObs
+```
+
+### Visualisation de distribution observé - imputé
+```{r}
+indvar="T9"
+indNA=which(is.na(don[,indvar]))
+plot(density(res.comp$completeObs[indNA,indvar]),main="Observed and imputed values for T9",xlab="T9")
+lines(density(res.comp$completeObs[which(!((1:nrow(don))%in%indNA)),indvar]),col="red")
+legend("topleft",text.col=c("black","red"),legend=c("Observed values","Imputations"))
+```
+
+### ACP sur le tableau complété
+```{r}
+imp <- cbind.data.frame(res.comp$completeObs, WindDirection)
+res.pca <- PCA(imp,quanti.sup=1,quali.sup=12)
+plot(res.pca, hab=12, lab="quali")
+plot(res.pca, choix="var")
+```
+
+
+## Et avec Factoshiny
+```{r, eval=FALSE}
+library(Factoshiny)
+Factoshiny(ozone)
+```
+
+## Imputation multiple
+### Avec Amelia - modèle joint
+
+```{r}
+library(Amelia)
+res.amelia <- amelia(don,m=100,p2s=0)
+```
+### Avec mice - modèles conditionnels
+```{r}
+library(mice)
+res.mice <- mice(don,m=100,defaultMethod="norm") # variabilité des paramètres de régression obtenue par bootstrap
+
+res.mice <- mice(don,m=100,defaultMethod="rf") # forêts aléatoires
+```
+
+### avec missMDA - ACP
+```{r}
+library(missMDA)
+res.MIPCA <- MIPCA(don,ncp=2)
+```
+
+
+### Vérification et visualisation de l'imputation
+```{r}
+plot(res.amelia)
+par(mfrow=c(1,1))
+compare.density(res.amelia, var="T12")
+overimpute(res.amelia, var="maxO3")
+# visualisation par ACP 
+plot(res.MIPCA,choice= "ind.supp"); plot(res.MIPCA,choice="var")
+```
+
+
+### Concaténer les résultats 
+```{r}
+lm.mice.out <- with(res.mice, lm(maxO3 ~ T9+T12+T15+Ne9+Ne12+Ne15+Vx9+Vx12+Vx15+maxO3v))
+pool.mice <- pool(lm.mice.out)
+resultmice <- summary(pool.mice)
+```
+
+# Exemple en ACM 
+
+```{r}
+library(missMDA)
+data(vnf)
+```
+
+## ACM en créant une modalité NA pour toute variable ayant au moins une donnée manquante
+```{r}
+res1 <- MCA(vnf)
+```
+
+## Imputation par ACM puis ACM
+```{r}
+ncp <- estim_ncpMCA(vnf)
+res.impute <- imputeMCA(vnf, ncp=4)
+## res.impute$completeObs     # Tableau complété
+res.mca <- MCA(vnf, tab.disj = res.impute$tab.disj)
+```
+
+# Exemple en AFDM
+## Imputation par AFDM puis AFDM
+```{r}
+library(missMDA)
+ozone <- read.table("http://factominer.free.fr/missMDA/ozoneNA.csv",header=TRUE,sep=",",row.names=1)
+nb <- estim_ncpFAMD(ozone) ## tps de calcul long
+res.imp <- imputeFAMD(ozone, ncp = nb$ncp)
+res.famd <- FAMD(ozone, ,tab.disj = res.imp$tab.disj)
+```
+
+## Imputation par forêts aléatoires
+```{r}
+library(missForest)
+missForest(ozone)
+```
+
