@@ -10,7 +10,7 @@ editor_options:
 ## Importation des données ozone
 
 ```{r}
-ozone <- read.table("http://factominer.free.fr/missMDA/ozoneNA.csv",header=TRUE,sep=",",row.names=1)
+ozone <- read.table("http://factominer.free.fr/missMDA/ozoneNA.csv",header=TRUE,sep=",",row.names=1,stringsAsFactors = TRUE)
 WindDirection <- ozone[,12]
 don <- ozone[,1:11]           #### Sélection des variables quanti
 ```
@@ -44,7 +44,7 @@ ACM pour visualiser les associations
 ```{r}
 library(FactoMineR)
 resMCA <- MCA(mis.ind)
-plot(resMCA,invis="ind",title="MCA graph of the categories")
+plot(resMCA,invis="ind",title="Graphe des modalités")
 ```
 
 ## Imputation simple par ACP 
@@ -77,7 +77,7 @@ legend("topleft",text.col=c("black","red"),legend=c("Observed values","Imputatio
 ```{r}
 imp <- cbind.data.frame(res.comp$completeObs, WindDirection)
 res.pca <- PCA(imp,quanti.sup=1,quali.sup=12)
-plot(res.pca, hab=12, lab="quali")
+plot(res.pca, habillage=12, label="quali")
 plot(res.pca, choix="var")
 ```
 
@@ -89,12 +89,6 @@ Factoshiny(ozone)
 ```
 
 ## Imputation multiple
-### Avec Amelia - modèle joint
-
-```{r}
-library(Amelia)
-res.amelia <- amelia(don,m=100,p2s=0)
-```
 ### Avec mice - modèles conditionnels
 ```{r}
 library(mice)
@@ -123,9 +117,11 @@ plot(res.MIPCA,choice= "ind.supp"); plot(res.MIPCA,choice="var")
 
 ### Concaténer les résultats 
 ```{r}
-lm.mice.out <- with(res.mice, lm(maxO3 ~ T9+T12+T15+Ne9+Ne12+Ne15+Vx9+Vx12+Vx15+maxO3v))
-pool.mice <- pool(lm.mice.out)
-resultmice <- summary(pool.mice)
+require(mice)
+imp<-prelim(res.mi=res.MIPCA,X=ozone[,1:11])
+fit <- with(data=imp,exp=lm(maxO3~T9+T12+T15+Ne9+Ne12+Vx9+Vx12+Vx15+maxO3v))
+res.pool<-pool(fit)
+summary(res.pool)
 ```
 
 # Exemple en ACM 
@@ -162,5 +158,15 @@ res.famd <- FAMD(ozone, ,tab.disj = res.imp$tab.disj)
 ```{r}
 library(missForest)
 missForest(ozone)
+```
+
+```{r}
+Ecolo <- read.csv("http://factominer.free.fr/missMDA/ecological.csv", header = TRUE, sep=";",dec=",",stringsAsFactors = TRUE)
+
+## Delete species with only missing values for contiuous variables
+ind <- which(rowSums(is.na(Ecolo[,-1])) == 6)
+biome <- Ecolo[-ind,1]    ### Keep a categorical variable
+Ecolo <- Ecolo[-ind,-1]   ### Select continuous variables
+
 ```
 
