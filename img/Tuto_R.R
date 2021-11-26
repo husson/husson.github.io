@@ -99,3 +99,7 @@ table(prev.valid,valid$type)
 ## calcul du taux de mauvais classement
 mean(prev.valid!=valid$type)
 
+###
+decathlon <- read.table("https://r-stat-sc-donnees.github.io/decathlon.csv",
+               header=TRUE, sep=";", row.names=1, stringsAsFactors = TRUE)
+summary(decathlon)
