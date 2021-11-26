@@ -2,12 +2,12 @@
 ### Jourées d'Hammamet - F. Husson
 
 ## Importation des données
-Temperature <- read.table("Temp_Tunisie.csv",header=TRUE,sep=";",dec=",",row.names=1,fileEncoding="latin1",stringsAsFactors = TRUE)
+Temperature <- read.table("https://husson.github.io/img/Temp_Tunisie.csv",header=TRUE,sep=";",dec=",",row.names=1,fileEncoding="latin1",stringsAsFactors = TRUE)
 
 # Ligne suivante pour installer le package FactoMineR (à installer 1 seule fois)
 # install.packages("FactoMineR")
 library(FactoMineR)
-resACP <- PCA(Temperature[,-16],quanti.sup=13:14,quali.sup=15)
+resACP <- PCA(Temperature,quanti.sup=13:14,quali.sup=15)
 
 plot(resACP,invisible="quali",title="Graphe des individus")
 plot(resACP,hab=15,title="Graphe des individus et variable région")
@@ -57,6 +57,14 @@ table(pred,test$y)
 ## calcul du taux de mauvais classement
 mean(pred!=test$y)
 
+## Courbe ROC
+score<-data.frame(large=predict(arbre1,newdata=test)[,2], fin=predict(arbre1,newdata=test)[,2],obs=test$y)
+library(plotROC)
+library(tidyr)
+library(ggplot2)
+df.roc <- score %>% gather(key=methode,value=score,large,fin)
+ggplot(df.roc)+aes(d=obs,m=score,color=methode)+ geom_roc()+theme_classic()
+
 ## Construction de l'arbre complet (pas utile)
 arbre_complet <- rpart(y~., data=app,cp=0,minsplit=2)
 visTree(arbre_complet)
@@ -64,7 +72,7 @@ visTree(arbre_complet)
 
 #### Forêt aléatoire
 library(randomForest)
-spam <- read.table("spam.csv",header=TRUE,sep=";",stringsAsFactors = TRUE)
+spam <- read.table("https://husson.github.io/img/spam.csv",header=TRUE,sep=";",stringsAsFactors = TRUE)
 set.seed(5678)
 perm <- sample(4601,3000)
 app <- spam[perm,]
