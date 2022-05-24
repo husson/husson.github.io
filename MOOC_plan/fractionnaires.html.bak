@@ -2,9 +2,9 @@
 <!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<title>F. Husson - Plan continus</title>
+	<title>F. Husson - Plan fractionnaires</title>
 	<!--<meta name="Keywords" content=""/>-->
-  <meta name="keywords" content="Husson, R, MOOC de statistique, MOOC plan, plans continus, surface de réponse, plans pour surface de réponse, statistique, plan d'expériences, planification expérimentale" />
+  <meta name="keywords" content="Husson, R, MOOC de statistique, MOOC plan, plans fractionnaires, statistique, plan d'expériences, planification expérimentale" />
   <meta name="robots" content="index, follow, noarchive" />
 
 	
@@ -170,30 +170,32 @@ $(window).load(function() {
 
 		<div id="content">
 <a name="Plan"></a>
-<h2>Les plans continus ou plans à surface de réponse</h2>
-
-Les plans continus sont adaptés pour choisir des expériences lorsqu'on étudie des variables quantitatives. On parle aussi de plans pour surface de réponse.
+<h2>Les plans fractionnaires</h2>
+On s'intéresse ici aux plans pour étudier des variables qualitatives à 2 modalités. Ces plans simples sont à la base de la compréhension des plans d'expériences.
 
 <h3> Exercice introductif</h3>
 
-Comment choisir des expériences à réaliser pour étudier l'effet de 2 variables quantitatives sur une variable réponse Y ? L'objectif est de trouver le couple (x1, x2) qui maximise Y.
+Comment choisir des expériences à réaliser pour étudier simultanément plusieurs facteurs ? Ce petit exercice vous propose de construire un plan pour étudier 4 facteurs à 2 modalités en 8 essais seulement. 
+Facile, non ? A voir. 
 Ferez-vous aussi bien que le meilleur plan possible ?
 
-<p>Feuille Excel permettant de faire l'exercice proposé : <a href="../img/plan_CC.xlsx">Exercice d'introduction aux plans continus</a>   
+<p>Cette vidéo de 6' présente un petit exercice introductif.
+<br><a href="https://youtu.be/WVmz15Gop2A" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./exo_plan.jpg" alt="plan_fra" width="454" height="226" /></a></p>
+<p>Feuille Excel permettant de faire l'exercice proposé : <a href="../img/planfra_4facteurs.xlsx">Exercice d'introduction aux plans fractionnaires</a></p>
 
-<h3> Cours sur les plans pour surface de réponse</h3>
-Cette vidéo de cours donne la démarche pour construire des plans continus ou plan pour surface de réponse.
+<h3> Cours sur les plans fractionnaires</h3>
+Cette vidéo de cours donne la démarche pour construire des plans fractionnaires pour étudier des facteurs à 2 niveaux en peu d'essais.
 
-<p><a href="https://youtu.be/7ycvxAjf1FI" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./plan_con.jpg" alt="plan_fra" width="454" height="226" /></a></p>
+<p><a href="https://youtu.be/OW4DvkEMFLM" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./plan_fra.jpg" alt="plan_fra" width="454" height="226" /></a></p>
 
-<br><p>Cours sur les plans continus ou plans à surface de réponse : <a href="./transp_plan_con.pdf">diaporama</a>, <a href="./transp_plan_con4.pdf">version 4 pages</a></p>
+<br><p>Cours sur les plans fractionnaires : <a href="./plan_fra.pdf">diaporama</a>, <a href="./plan_fra4.pdf">version 4 pages</a>, <a href="https://youtu.be/OW4DvkEMFLM">vidéo (49')</a></p>
 
-<h3> Exercices sur les plans continus ou plans à surface de réponse</h3>
+<h3> Exercices sur les plans fractionnaires</h3>
 
-<p>TD sur les plans continus ou plans à surface de réponse <a href="./TD_plan_con.pdf">énoncé</a> - <a href="./corrige_plan_con.pdf">corrigé</a></p>
 <!-- 
-<p>TD sur les plans continus ou plans à surface de réponse <a href="./TD_plan_con.pdf">énoncé</a></p>
+<p>TD sur les plans fractionnaires <a href="./TD_plan_fra.pdf">énoncé</a> - <a href="./corrige_plan_fra.pdf">corrigé</a></p>
 -->
+<p>TD sur les plans fractionnaires <a href="./TD_plan_fra.pdf">énoncé</a> </p>
 </div>
 
   		</div>

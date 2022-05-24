@@ -4,7 +4,7 @@
 <script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<title>F. Husson - Plan continus</title>
 	<!--<meta name="Keywords" content=""/>-->
-  <meta name="keywords" content="Husson, R, MOOC de statistique, MOOC plan, plans continus, surface de réponse, plans pour surface de réponse, statistique, plan d'expériences, planification expérimentale" />
+  <meta name="keywords" content="Husson, R, MOOC de statistique, MOOC plan, plans optimaux, surface de réponse, plans pour surface de réponse, statistique, plan d'expériences, planification expérimentale" />
   <meta name="robots" content="index, follow, noarchive" />
 
 	
@@ -170,30 +170,23 @@ $(window).load(function() {
 
 		<div id="content">
 <a name="Plan"></a>
-<h2>Les plans continus ou plans à surface de réponse</h2>
+<h2>Les plans optimaux</h2>
 
-Les plans continus sont adaptés pour choisir des expériences lorsqu'on étudie des variables quantitatives. On parle aussi de plans pour surface de réponse.
+Les plans optimaux sont adaptés pour choisir des expériences lorsque les plans classiques ne sont pas possibles en raison de contraintes pratiques fortes, ou alors parce que le plan classique contiendrait trop d'essais, ou quand on veut étudiaer des variables quantitatives et d'autres qualitatives, etc.
 
-<h3> Exercice introductif</h3>
+<h3> Cours sur les plans optimaux</h3>
+Cette vidéo de cours donne la démarche pour construire des plans optimaux. Le cours sur les plan optimaux commence à l'instant 29'22.
 
-Comment choisir des expériences à réaliser pour étudier l'effet de 2 variables quantitatives sur une variable réponse Y ? L'objectif est de trouver le couple (x1, x2) qui maximise Y.
-Ferez-vous aussi bien que le meilleur plan possible ?
+<p><a href="https://youtu.be/lgGfurTctbU?t=1762" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./plan_opt.png" alt="plan_fra" width="454" height="226" /></a></p>
 
-<p>Feuille Excel permettant de faire l'exercice proposé : <a href="../img/plan_CC.xlsx">Exercice d'introduction aux plans continus</a>   
+<br><p>Cours sur les plans optimaux : <a href="./transp_plan_opt.pdf">diaporama</a>, <a href="./transp_plan_opt_4pages.pdf">version 4 pages</a></p>
 
-<h3> Cours sur les plans pour surface de réponse</h3>
-Cette vidéo de cours donne la démarche pour construire des plans continus ou plan pour surface de réponse.
+<h3> Exercices sur les plans optimaux</h3>
 
-<p><a href="https://youtu.be/7ycvxAjf1FI" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./plan_con.jpg" alt="plan_fra" width="454" height="226" /></a></p>
-
-<br><p>Cours sur les plans continus ou plans à surface de réponse : <a href="./transp_plan_con.pdf">diaporama</a>, <a href="./transp_plan_con4.pdf">version 4 pages</a></p>
-
-<h3> Exercices sur les plans continus ou plans à surface de réponse</h3>
-
-<p>TD sur les plans continus ou plans à surface de réponse <a href="./TD_plan_con.pdf">énoncé</a> - <a href="./corrige_plan_con.pdf">corrigé</a></p>
 <!-- 
-<p>TD sur les plans continus ou plans à surface de réponse <a href="./TD_plan_con.pdf">énoncé</a></p>
+<p>TD sur les plans optimaux <a href="./TD_plan_opt.pdf">énoncé</a> - <a href="./corrige_plan_opt.pdf">corrigé</a></p>
 -->
+<p>TD sur les plans optimaux <a href="./TD_plan_opt.pdf">énoncé</a> </p>
 </div>
 
   		</div>

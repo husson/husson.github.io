@@ -4,7 +4,7 @@
 <script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<title>F. Husson - Plan continus</title>
 	<!--<meta name="Keywords" content=""/>-->
-  <meta name="keywords" content="Husson, R, MOOC de statistique, MOOC plan, plans continus, surface de réponse, plans pour surface de réponse, statistique, plan d'expériences, planification expérimentale" />
+  <meta name="keywords" content="Husson, R, MOOC de statistique, MOOC plan, plans optimaux, surface de réponse, plans pour surface de réponse, statistique, plan d'expériences, planification expérimentale" />
   <meta name="robots" content="index, follow, noarchive" />
 
 	
@@ -170,30 +170,26 @@ $(window).load(function() {
 
 		<div id="content">
 <a name="Plan"></a>
-<h2>Les plans continus ou plans à surface de réponse</h2>
+<h2>Les plans pour variables qualitatives à plus de 2 modalités, et les plans mixtes</h2>
 
-Les plans continus sont adaptés pour choisir des expériences lorsqu'on étudie des variables quantitatives. On parle aussi de plans pour surface de réponse.
+Les plans en carré latins, les plans gréco-latin, etc. sont des plans où l'on étudie des variables qualitatives à plus de 2 modalités. Le nombre de modalités doit être le même pour toutes les variables.
+Quand le nombre de modalités n'est pas le même ou quand on souhaite étudier des variables quantitatives et des variables qualitatives, des plans sont également possibles. La démarche pour les construire est proposée ici.
 
-<h3> Exercice introductif</h3>
+<h3>Plans avec des variables qualitatives à plus de 2 modalités, plans mixtes</h3>
+Cette vidéo de cours donne la démarche pour construire les carrés latins, les carrés gréco-latins, mais plus généralement des plans avec des variables qualitatives à plus de 2 modalités.
+La vidéo peut être arrêté à 29'22 car la suite traite de la section suivante sur les plans optimaux.
 
-Comment choisir des expériences à réaliser pour étudier l'effet de 2 variables quantitatives sur une variable réponse Y ? L'objectif est de trouver le couple (x1, x2) qui maximise Y.
-Ferez-vous aussi bien que le meilleur plan possible ?
+<p><a href="https://youtu.be/lgGfurTctbU" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./plan_opt.png" alt="plan_fra" width="454" height="226" /></a></p>
 
-<p>Feuille Excel permettant de faire l'exercice proposé : <a href="../img/plan_CC.xlsx">Exercice d'introduction aux plans continus</a>   
+<br><p>Vidéo de cours : <a href="./diapo_plan_quali_PlusDe2Mod.pdf">diaporama</a>, <a href="./diapo_plan_quali_PlusDe2Mod_4pages.pdf">version 4 pages</a></p>
 
-<h3> Cours sur les plans pour surface de réponse</h3>
-Cette vidéo de cours donne la démarche pour construire des plans continus ou plan pour surface de réponse.
+<h3> Exercices sur les plans optimaux</h3>
 
-<p><a href="https://youtu.be/7ycvxAjf1FI" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="./plan_con.jpg" alt="plan_fra" width="454" height="226" /></a></p>
-
-<br><p>Cours sur les plans continus ou plans à surface de réponse : <a href="./transp_plan_con.pdf">diaporama</a>, <a href="./transp_plan_con4.pdf">version 4 pages</a></p>
-
-<h3> Exercices sur les plans continus ou plans à surface de réponse</h3>
-
-<p>TD sur les plans continus ou plans à surface de réponse <a href="./TD_plan_con.pdf">énoncé</a> - <a href="./corrige_plan_con.pdf">corrigé</a></p>
 <!-- 
-<p>TD sur les plans continus ou plans à surface de réponse <a href="./TD_plan_con.pdf">énoncé</a></p>
+<p><li>TD sur les plans avancés <a href="./TD_plan_ava.pdf">énoncé</a> - <a href="./corrige_plan_ava.pdf">corrigé</a></li>
 -->
+<p><li>TD sur les plans avancés <a href="./TD_plan_ava.pdf">énoncé</a> </li>
+</p>
 </div>
 
   		</div>
