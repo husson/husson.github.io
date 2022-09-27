@@ -128,7 +128,7 @@ plot(res.mfa,hab=41,lab.ind=FALSE,cex=0.8,partial="all",invisible="ind")
 res.mfa <- MFA(paleo[,-(41:43)],group=c(31,6,3),ind.sup=701:828, type=c("s","s","s"),name.group=c("pollen","climat","lieu"),num.group.sup=3,graph=FALSE)
 plot(res.mfa,lab.ind=FALSE,partial="all",invisible="ind")
 ```
-Il faut en fait visualiser les points partiels du pollent uniquement, et ceux-ci sont 2 fois plus loin du barycentre que le point moyen (car le point partiel du climat est exactement au barycentre).
+Il faut en fait visualiser les points partiels du pollen uniquement, et ceux-ci sont 2 fois plus loin du barycentre que le point moyen (car le point partiel du climat est exactement au barycentre).
 
 ## AFM en ne prenant que les pollens présents dans le passé
 
