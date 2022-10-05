@@ -1,4 +1,4 @@
-don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap8_ex3.csv", header = TRUE, sep=";",row.names=1)
+don <- read.table("https://husson.github.io/livre_exo/chap8_ex3.csv", header = TRUE, sep=";",row.names=1)
 
 plot(y~x, data=don)
 cor(don$y,don$x)

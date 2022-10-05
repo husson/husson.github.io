@@ -1,4 +1,4 @@
-Cidre <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap1_ex2.csv", header = TRUE, sep=";")
+Cidre <- read.table("https://husson.github.io/livre_exo/chap1_ex2.csv", header = TRUE, sep=";")
 pH <- Cidre[,1]
 mean(pH)
 median(pH)

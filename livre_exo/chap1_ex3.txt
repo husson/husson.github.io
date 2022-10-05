@@ -1,3 +1,3 @@
-Cidre <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap1_ex3.csv", header = TRUE, sep=";")
+Cidre <- read.table("https://husson.github.io/livre_exo/chap1_ex3.csv", header = TRUE, sep=";")
 scale(Cidre, scale = FALSE)   ## centrage
 scale(Cidre) * sqrt(21/20)   ## centrage - réduction

@@ -1,4 +1,4 @@
-Taille <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex1.csv", header = TRUE, sep=";")
+Taille <- read.table("https://husson.github.io/livre_exo/chap10_ex1.csv", header = TRUE, sep=";")
 
 round(cor(Taille),5)
 

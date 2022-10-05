@@ -1,4 +1,4 @@
-Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap7_ex7.csv",header=TRUE,sep=";")
+Données <- read.table("https://husson.github.io/livre_exo/chap7_ex7.csv",header=TRUE,sep=";")
 
 lambda <- sum(Données[,1]*Données[,2]) / sum(Données[,2])
 

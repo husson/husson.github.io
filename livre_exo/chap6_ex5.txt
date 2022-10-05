@@ -1,4 +1,4 @@
-Blé <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap6_ex5.csv", header = TRUE, sep=";")
+Blé <- read.table("https://husson.github.io/livre_exo/chap6_ex5.csv", header = TRUE, sep=";")
 
 ## Question 2
 summary(aov(Rendement ~ Variété + Bloc, data = Blé))

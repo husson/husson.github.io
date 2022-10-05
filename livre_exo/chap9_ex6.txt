@@ -1,4 +1,4 @@
-Poulpe <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex6.csv", header = TRUE, sep=";")
+Poulpe <- read.table("https://husson.github.io/livre_exo/chap9_ex6.csv", header = TRUE, sep=";")
 
 summary(lm(Pds.éviscéré ~ Pds.non.éviscéré , data=Poulpe))
 

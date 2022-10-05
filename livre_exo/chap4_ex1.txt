@@ -1,4 +1,4 @@
-Poulpe <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap4_ex1.csv", header = TRUE, sep=";")
+Poulpe <- read.table("https://husson.github.io/livre_exo/chap4_ex1.csv", header = TRUE, sep=";")
 by(Don[,"Poids"],Don[,"Sexe"],var)
 
 var.test(Poids ~ Sexe, data = Poulpe) 

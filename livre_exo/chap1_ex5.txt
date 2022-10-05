@@ -1,4 +1,4 @@
-Données <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap1_ex5.csv", header = TRUE, sep=";")
+Données <- read.table("https://husson.github.io/livre_exo/chap1_ex5.csv", header = TRUE, sep=";")
 mean(Données[,2])
 var(Données[,2])
 median(Données[,2])

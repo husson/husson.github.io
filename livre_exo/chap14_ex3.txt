@@ -1,4 +1,4 @@
-Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex3.csv", header = TRUE, sep=";",row.names=1)
+Plan <- read.table("https://husson.github.io/livre_exo/chap14_ex3.csv", header = TRUE, sep=";",row.names=1)
 
 # modèle sans interaction
 res <- lm(Y ~ X1 + X2 + I(X1^2) + I(X2^2), data = Plan)

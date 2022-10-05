@@ -1,4 +1,4 @@
-Cocktail <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex2.csv", header = TRUE, sep=";",row.names=1)
+Cocktail <- read.table("https://husson.github.io/livre_exo/chap10_ex2.csv", header = TRUE, sep=";",row.names=1)
 
 round(cor(Cocktail),2)
 

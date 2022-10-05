@@ -1,4 +1,4 @@
-Plan <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap14_ex8.csv", header = TRUE, sep=";",row.names=1)
+Plan <- read.table("https://husson.github.io/livre_exo/chap14_ex8.csv", header = TRUE, sep=";",row.names=1)
 
 X <- model.matrix(~ F1+F2+F3+F4+F5+I(F1^2)+I(F2^2)+I(F3^2)+I(F4^2)+I(F5^2), Plan)
 round(X,3)

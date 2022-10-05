@@ -1,4 +1,4 @@
-Jambon <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap10_ex7.csv", header = TRUE, sep=";",row.names=1)
+Jambon <- read.table("https://husson.github.io/livre_exo/chap10_ex7.csv", header = TRUE, sep=";",row.names=1)
 
 summary(lm(Appréciation ~ . , data=Jambon))
 

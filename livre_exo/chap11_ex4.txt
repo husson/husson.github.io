@@ -1,4 +1,4 @@
-Blé <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap11_ex4.csv", header = TRUE, sep=";")
+Blé <- read.table("https://husson.github.io/livre_exo/chap11_ex4.csv", header = TRUE, sep=";")
 
 Blé[,"Dose"] <- as.factor(Blé[,"Dose"])
 

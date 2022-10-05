@@ -1,4 +1,4 @@
-Senso <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap11_ex8.csv", header = TRUE, sep=";")
+Senso <- read.table("https://husson.github.io/livre_exo/chap11_ex8.csv", header = TRUE, sep=";")
 
 for (i in 1:6) Senso[,i] <- as.factor(Senso[,i])
 

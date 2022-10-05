@@ -1,4 +1,4 @@
-Don <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap5_ex3.csv", header = TRUE, sep=";")
+Don <- read.table("https://husson.github.io/livre_exo/chap5_ex3.csv", header = TRUE, sep=";")
 boxplot(Temps~Traitement , data=Don)
 
 var.test(Temps~Traitement,data=Don,subset=(Traitement!="B"))

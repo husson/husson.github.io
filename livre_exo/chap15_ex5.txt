@@ -1,4 +1,4 @@
-Eaux <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex5.csv", header = TRUE, sep=";",row.names=1)
+Eaux <- read.table("https://husson.github.io/livre_exo/chap15_ex5.csv", header = TRUE, sep=";",row.names=1)
 
 cor(Eaux)
 library(FactoMineR)

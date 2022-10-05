@@ -1,4 +1,4 @@
-Bac <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap15_ex9.csv", header = TRUE, sep=";")
+Bac <- read.table("https://husson.github.io/livre_exo/chap15_ex9.csv", header = TRUE, sep=";")
 
 library(FactoMineR)
 round(cor(Bac[,1:12]),2)

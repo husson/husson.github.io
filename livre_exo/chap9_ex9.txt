@@ -1,4 +1,4 @@
-Orange <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap9_ex9.csv", header = TRUE, sep=";")
+Orange <- read.table("https://husson.github.io/livre_exo/chap9_ex9.csv", header = TRUE, sep=";")
 
 summary(lm(Appréciation ~Sucrée,data=Orange,subset=Sexe=="F"))
 summary(lm(Appréciation ~Sucrée,data=Orange,subset=Sexe=="H"))

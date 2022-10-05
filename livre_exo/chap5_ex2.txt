@@ -1,4 +1,4 @@
-Acidité <- read.table("http://www.agrocampus-ouest.fr/math/husson/StatUtilisateurExo/chap5_ex2.csv", header = TRUE, sep=";")
+Acidité <- read.table("https://husson.github.io/livre_exo/chap5_ex2.csv", header = TRUE, sep=";")
 Acidité[,"Bière"] <- as.factor(Acidité[,"Bière"])
 boxplot(Note~Bière , data=Acidité, ylab="Note d'acidité",xlab="Bière")
 summary(aov(Note~Bière,data=Acidité))
