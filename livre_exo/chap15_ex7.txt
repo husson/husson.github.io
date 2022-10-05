@@ -1,4 +1,4 @@
-decathlon <- read.table("https://husson.github.io/livre_exo/chap15_ex7.csv", header = TRUE, sep=";",row.names=1)
+decathlon <- read.table("https://husson.github.io/livre_exo/chap15_ex7.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1", stringsAsFactors = TRUE)
 
 colnames(decathlon)[c(1,5,6,10)]=c("100m","400m","110mHaies","1500m")
 library(FactoMineR)

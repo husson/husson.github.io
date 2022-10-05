@@ -1,4 +1,4 @@
-Compote <- read.table("https://husson.github.io/livre_exo/chap6_ex2.csv", header = TRUE, sep=";")
+Compote <- read.table("https://husson.github.io/livre_exo/chap6_ex2.csv", header = TRUE, sep=";", encoding = "latin1", stringsAsFactors = TRUE)
 for (i in 1:2) Compote[,i] <- as.factor(Compote[,i])
 
 library(FactoMineR)

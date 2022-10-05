@@ -1,4 +1,4 @@
-Plan <- read.table("https://husson.github.io/livre_exo/chap14_ex1.csv", header = TRUE, sep=";",row.names=1)
+Plan <- read.table("https://husson.github.io/livre_exo/chap14_ex1.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 Plan[,1] <- (Plan[,1]-20)/10
 Plan[,2] <- (Plan[,2]-45)/15

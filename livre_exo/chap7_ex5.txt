@@ -1,4 +1,4 @@
-Fumeur <- read.table("https://husson.github.io/livre_exo/chap7_ex5.csv", header = TRUE, sep=";",row.names=1)
+Fumeur <- read.table("https://husson.github.io/livre_exo/chap7_ex5.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 ## question 1
 chisq.test(Fumeur[,1:2], correct = FALSE)  ## Donne le test (l'argument correct permet d'avoir le test brut, sans correction)

@@ -1,4 +1,4 @@
-Qte.alcool <- read.table("https://husson.github.io/livre_exo/chap2_ex3.csv",header=TRUE,sep=";",row.names=1)
+Qte.alcool <- read.table("https://husson.github.io/livre_exo/chap2_ex3.csv",header=TRUE,sep=";",row.names=1, encoding = "latin1")
 
 ## Question 1.b
 t.test(Qte.alcool)

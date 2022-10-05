@@ -1,4 +1,4 @@
-don <- read.table("https://husson.github.io/livre_exo/chap9_ex3.csv", header = TRUE, sep=";")
+don <- read.table("https://husson.github.io/livre_exo/chap9_ex3.csv", header = TRUE, sep=";", encoding = "latin1")
 
 ## Question 2
 cor(don)

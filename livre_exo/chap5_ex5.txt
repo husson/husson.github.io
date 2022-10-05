@@ -1,4 +1,4 @@
-donnees <- read.table("https://husson.github.io/livre_exo/chap5_ex5.csv", header = TRUE, sep=";")
+donnees <- read.table("https://husson.github.io/livre_exo/chap5_ex5.csv", header = TRUE, sep=";", encoding = "latin1")
 
 donnees[,"Insecticide"] <- as.factor(donnees[,"Insecticide"])
 library(FactoMineR)

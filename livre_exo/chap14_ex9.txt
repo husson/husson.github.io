@@ -1,4 +1,4 @@
-Crèmes <- read.table("https://husson.github.io/livre_exo/chap14_ex9.csv", header = TRUE, sep=";",row.names=1)
+Crèmes <- read.table("https://husson.github.io/livre_exo/chap14_ex9.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 X <- model.matrix(~ Text1 + Text2 + I(Text1^2) + I(Text2^2) + I(Text1*Text2), Crèmes)
 round(X,3)

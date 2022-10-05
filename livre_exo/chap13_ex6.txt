@@ -1,4 +1,4 @@
-Plan <- read.table("https://husson.github.io/livre_exo/chap13_ex6.csv", header = TRUE, sep=";",row.names=1)
+Plan <- read.table("https://husson.github.io/livre_exo/chap13_ex6.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 for (i in 1:4) Plan[,i] <- as.factor(Plan[,i])
 
 X <- model.matrix(~ F1+F2+F3+F4, Plan, contrasts = "contr.sum")

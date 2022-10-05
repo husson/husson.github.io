@@ -1,4 +1,4 @@
-don <- read.table("https://husson.github.io/livre_exo/chap10_ex12.csv", header = TRUE, sep=";")
+don <- read.table("https://husson.github.io/livre_exo/chap10_ex12.csv", header = TRUE, sep=";", encoding = "latin1")
 
 for (i in (4:nrow(don))) {
    print(don[i,"Temp"])

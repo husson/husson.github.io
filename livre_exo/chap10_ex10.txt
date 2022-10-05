@@ -1,3 +1,3 @@
-Optimum <- read.table("https://husson.github.io/livre_exo/chap10_ex10.csv", header = TRUE, sep=";",row.names=1)
+Optimum <- read.table("https://husson.github.io/livre_exo/chap10_ex10.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 summary(lm(Y~tn + Tn + I(tn^2) + I(Tn^2),data=Optimum))

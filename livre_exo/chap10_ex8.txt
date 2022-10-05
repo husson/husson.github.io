@@ -1,4 +1,4 @@
-Ozone <- read.table("https://husson.github.io/livre_exo/chap10_ex8.csv", header = TRUE, sep=";",row.names=1)
+Ozone <- read.table("https://husson.github.io/livre_exo/chap10_ex8.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 summary(lm(Max.ozone~ . ,data=Ozone))
 

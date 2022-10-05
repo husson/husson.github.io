@@ -1,4 +1,4 @@
-Textuelle <- read.table("https://husson.github.io/livre_exo/chap7_ex8.csv", header = TRUE, sep=";",row.names=1)
+Textuelle <- read.table("https://husson.github.io/livre_exo/chap7_ex8.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 ## Question 2
 res <- chisq.test(Textuelle)

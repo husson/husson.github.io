@@ -1,4 +1,4 @@
-Acidité <- read.table("https://husson.github.io/livre_exo/chap6_ex1.csv", header = TRUE, sep=";")
+Acidité <- read.table("https://husson.github.io/livre_exo/chap6_ex1.csv", header = TRUE, sep=";", encoding = "latin1")
 for (i in 1:2) Acidité[,i] <- as.factor(Acidité[,i])
 
 library(FactoMineR)

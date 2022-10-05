@@ -1,4 +1,4 @@
-Gaz <- read.table("https://husson.github.io/livre_exo/chap9_ex4.csv", header = TRUE, sep=";")
+Gaz <- read.table("https://husson.github.io/livre_exo/chap9_ex4.csv", header = TRUE, sep=";", encoding = "latin1")
 
 plot(Température ~ Pression, data = Gaz)
 summary(lm(Température ~ Pression, data = Gaz))

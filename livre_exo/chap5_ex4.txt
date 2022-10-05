@@ -1,4 +1,4 @@
-Cidre <- read.table("https://husson.github.io/livre_exo/chap5_ex4.csv", header = TRUE, sep=";")
+Cidre <- read.table("https://husson.github.io/livre_exo/chap5_ex4.csv", header = TRUE, sep=";", encoding = "latin1", stringsAsFactors = TRUE)
 
 t.test(S.Amère ~ Type, data = Cidre, var.equal=TRUE)
 

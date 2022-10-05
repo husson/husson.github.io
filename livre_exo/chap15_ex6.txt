@@ -1,4 +1,4 @@
-Fromages <- read.table("https://husson.github.io/livre_exo/chap15_ex6.csv", header = TRUE, sep=";",row.names=1)
+Fromages <- read.table("https://husson.github.io/livre_exo/chap15_ex6.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 library(FactoMineR)
 cor(Fromages)

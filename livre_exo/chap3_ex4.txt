@@ -1,4 +1,4 @@
-Don <- read.table("https://husson.github.io/livre_exo/chap3_ex4.csv", header = TRUE, sep=";")
+Don <- read.table("https://husson.github.io/livre_exo/chap3_ex4.csv", header = TRUE, sep=";", encoding = "latin1", stringsAsFactors = TRUE)
 by(Don[,"Distance"],Don[,"Sexe"],mean)
 by(Don[,"Distance"],Don[,"Sexe"],sd)
 

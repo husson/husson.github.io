@@ -1,3 +1,3 @@
-Porcs <- read.table("https://husson.github.io/livre_exo/chap9_ex10.csv", header = TRUE, sep=";")
+Porcs <- read.table("https://husson.github.io/livre_exo/chap9_ex10.csv", header = TRUE, sep=";", encoding = "latin1")
 
 summary(lm(Gains ~Ingestions,data=Porcs))

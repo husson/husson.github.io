@@ -1,4 +1,4 @@
-Cocktail <- read.table("https://husson.github.io/livre_exo/chap10_ex6.csv", header = TRUE, sep=";",row.names=1)
+Cocktail <- read.table("https://husson.github.io/livre_exo/chap10_ex6.csv", header = TRUE, sep=";",row.names=1, encoding = "latin1")
 
 Tab.aov <- anova(lm(Appréciation ~ Acide + Pulpeux + Amer + Sucre , data=Cocktail))
 SCEM <- sum(Tab.aov[-nrow(Tab.aov),2])
