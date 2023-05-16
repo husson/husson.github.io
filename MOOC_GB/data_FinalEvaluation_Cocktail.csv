@@ -1,4 +1,4 @@
-Produit;odor.intensity;strongness;sweet;acidity;bitterness;odor.orange;odor.banana;odor.mango;odor.lemon;persistence;pulp;thickness;%ORANGE;%BANANE;%MANGUE;%CITRON;pH;Total acidity;Dry extract;Citric acid;Acid L-Malic;Sucrose;Fructose;Glucose;Protein material;Vitamin C;Food coloring
+Produit;odor.intensity;strongness;sweet;acidity;bitterness;odor.orange;odor.banana;odor.mango;odor.lemon;persistence;pulp;thickness;%Orange;%Banana;%Mango;%Lemon;pH;Total.acidity;Dry.extract;Citric.acid;Acid.L-Malic;Sucrose;Fructose;Glucose;Protein;Vitamin.C;Food.coloring
 MCb*;5.583333;6.958333;6.208333;7.083333;2;3.75;3.043478;5.958333;6.25;6.75;2.541667;6.083333;20;20;50;10;2.9;0.138;127.4;2.54;0.39;42;13.6;8;2.98;153.2;Yes
 Mb;5.434783;5.875;7.75;3.291667;1.541667;3.25;5.208333;3.541667;4.173913;6;2.26087;6.75;20;30;50;0;3.5;0.052;142.6;2.73;0.42;86;24.6;25.2;2.3;190.6;No
 BCm;6.166667;6.083333;7.208333;4.375;1.791667;3.208333;7.541667;3.291667;3.708333;6.090909;2.583333;7.083333;20;50;20;10;3;0.133;126.5;2.19;0.42;25.1;12.5;13.3;3.36;194.2;No

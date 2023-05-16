@@ -239,10 +239,15 @@ function getReponse(form) {
 
 		<div id="aside">
 <div class="article">
-<h2>Links</h2>
-<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a></p>
+<h2>Liens</h2>
+<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a><br><br><a href="http://factominer.free.fr/livre/"><img height="125" alt="Livre Analyse de données" src="./anado2_petit.jpg"></a></p>
 </div>
 		</div>
+<div id="bside">
+<div class="article">
+<h2>Plan</h2>
+<p><a href="index.html"><font color="grey">Introduction</font></a><br><br><a href="ACP.html"><b><font color="grey">Analyse en Composantes Principales</font></b></a><br><br><a href="AFC.html"><font color="grey">Analyse des correspondances</font></a><br><br> <a href="ACM.html"><font color="grey">Analyse des correspondances multiples</font></a><br><br> <a href="classif.html"><font color="grey">Classification</font></a><br><br><a href="AFM.html"><font color="black"><strong>Analyse Factorielle Multiple</strong></font></a><br><br><a href="conclu.html"><font color="grey">Pour conclure</font></a><br><br><font color="grey"><a href="https://groups.google.com/g/cours-sur-lanalyse-de-donnes"><font color="grey">Forum</font></a></font></p>
+</div></div>
 		<div id="content">
 <form name="quiz">
 <h1> Exercice sur ordinateur.</h1>
@@ -254,12 +259,12 @@ Le jeu de données suivant concerne des données fournies par l'OCDE sur des <i>
 <li>Santé et sécurité : Pollution atmosphérique, Qualité de l'eau, Espérance de vie, Auto-évaluation de l'état de santé, Taux d'agression, Taux d'homicides</li>
 <li>Enseignement : Niveau d'instruction, Compétences des élèves, Années de scolarité</li>
 </ul>
-Les données sont disponibles dans <a href="./AnaDo_JeuDonnees_VivreMieux.csv" target="[object Object]">le fichier suivant</a>. Pour plus de détails sur les variables, vous pouvez voir la définition (en anglais) fournie par l'OCDE (<a href="/static/AnaDo_JeuDonnees_VivreMieux.pdf" target="[object Object]">voir le fichier descriptif</a>).
+Les données sont disponibles dans <a href="./AnaDo_JeuDonnees_VivreMieux.csv" target="[object Object]">le fichier suivant</a>. Pour plus de détails sur les variables, vous pouvez voir la définition (en anglais) fournie par l'OCDE (<a href="./AnaDo_JeuDonnees_VivreMieux.pdf" target="[object Object]">voir le fichier descriptif</a>).
 <br>On souhaite comparer le vivre mieux des 36 pays en prenant en compte l'ensemble des 5 grands domaines de mesures du vivre mieux.
 <br>Pour ceux qui travaillent sous Mac ou linux, penser à utiliser l'argument fileEncoding="latin1" lors de l'importation. Utiliser aussi les arguments quote="\"" (pour que les apostrophes soient lues normalement) et check.names=FALSE (pour éviter que les espaces soient remplacés par des points dans les libellés de variables).
 
 <p style="background-color: #FDE5E4;">
-<b>Q1) Après avoir réfléchi à la définition des groupes de variables, au choix du statut de chaque groupe (actif ou supplémentaire) et à la réduction ou non des données dans chacun des groupes, donner le pourcentage d'inertie du premier plan de l'Analyse Factorielle Multiple que vous aurez construite (nombre entre 0 et 100 sans le signe %).</b><br>
+<b>Q1) Après avoir réfléchi à la définition des groupes de variables, au choix du statut de chaque groupe (actif ou supplémentaire) et à la réduction ou non des données dans chacun des groupes, donner le pourcentage d'inertie du premier plan de l'Analyse Factorielle Multiple que vous aurez construite.</b><br>
 <input type="radio" name="q1" value="q1.1">35.18<br>
 <input type="radio" name="q1" value="q1.2">42.12<br>
 <input type="radio" name="q1" value="q1.3">51.24<br>

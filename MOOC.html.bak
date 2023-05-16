@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC analyse de données, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="./assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="./assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="./img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="./img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="./assets/jsapi"></script>
+<script language="Javascript" type="text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="./assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+	<script type="text/javascript" src="./assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="./assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+</head>
+
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="index.html" title="">Home</a></li>
+<li><a href="research.html" title="">Research</a></li>
+<li><a href="packages.html" title="">Packages</a></li>
+<li><a href="teaching.html" title="">Teaching</a></li>
+<li><a href="MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="books.html" title="">Books</a></li>
+<li><a href="tutorials.html" title="">Tutorials</a></li>
+<li><a href="data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+<div id="aside">
+<div class="article">
+<h2>Links</h2>
+<p><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/" target="_blank">Department of Statistics<br> and Computer Science</a><br><br><a href="http://factominer.free.fr"><img height="24" src="./img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="./img/missMDA.png"></a><br><br> <a href="http://sensominer.free.fr/" style="background-color: rgb(255, 255, 255);"><img height="20" alt="" src="./img/sensominer.png"></a><br><br><a href="https://irmar.univ-rennes1.fr/" target="_blank"><img height="40" alt="" src="./img/irmar.png"></a><br><br>  <a href="http://www.agrocampus-ouest.fr/" target="_blank"><img height="40" alt="" src="./img/logo_AO.gif"></a></p>
+</div></div>
+
+		<div id="content">
+<h1>4 MOOCs</h1>
+3 MOOCS in French and 1 MOOC in English<ul>
+<li><a href="./MOOC_AnaDo/index.html">MOOC d'analyse de données</a> (in French)</li>
+<li><a href="./MOOC_plan/index.html">MOOC de Planification expérimentale</a> (in French)</li>
+<li><a href="./MOOC_senso/index.html">MOOC de sensométrie</a> (in French)</li>
+<li><a href="./MOOC.html#AnaDoGB">MOOC Exploratory Multivariate Data Analysis</a> (in English)</li>
+</ul>
+<a name="AnaDo"></a>
+<h1>MOOC d'analyse de données (in French)</h1>
+<p>MOOC (Massive Open Online Course) disponible sur la plateforme FUN et suivi par plus de 38 000 personnes (1 session par an depuis 2015).
+Les sessions sont jouées en férvier-mars tous les ans, vous pourrez vous inscrire sur <a href="https://www.fun-mooc.fr/">FUN</a>.<br>
+Ce cours complet est un module qui nécessite environ 32h d'apprentissage.
+<br><a href="./MOOC_AnaDo/index.html">MOOC d'analyse de données</a></p> <p></p>
+
+<a name="Plan"></a>
+<h1>MOOC de plan d'expériences (in French)</h1>
+<p>Ce cours complet correspond à un module de master 1 de 28h.
+<br><a href="./MOOC_plan/index.html">MOOC de Planification expérimentale</a></p> <p></p>
+
+<a name="Senso"></a>
+<h1>MOOC de sensométrie (in French)</h1>
+<p>Ce cours complet correspond à un module de master 1 de 28h.
+<br><a href="./MOOC_senso/index.html">MOOC de sensométrie</a></p> <p></p>
+
+<a name="AnaDoGB"></a>
+<h1>Course on Exploratory Multivariate Data Analysis (in English)</h1>
+<h3>What you will learn</h3>
+<p>At the end of this course, you will be able to:</p>
+
+<ul>
+<li>how to summarise and synthesise datasets using simple graphs
+</li><li>how to use visualization methods adapted to multidimensional exploratory analysis
+</li><li>how to interpret the results of a factor analysis and a classification;
+</li><li>how to ecognise the method adapted to the exploration of a dataset according to the nature and structure of the variables;
+</li><li>how to analyse the responses to a survey;
+</li><li>how to perform a textmining
+</li><li>how to implement factorial and classification methods on the free software R
+</li><li>In summary, you will be able to implement and interpret multidimensional exploratory analyses.
+</li>
+
+<h3>Description</h3>
+<p>Exploratory multivariate data analysis is studied and teached in a French-way since a long time in France. This course focuses on four essential and basic methods, those with the largest potential in terms of applications: principal component analysis (PCA) when variables are quantitative, correspondence analysis (CA) and multiple correspondence analysis (MCA) when variables are categorical and clustering. An extension to Multiple Factor Analysis (MFA) will give you the opportunity to analyse more complex dataset that are structured by groups.
+<br>
+We hope that with this course, the participant will be fully equipped (theory, examples, software) to confront multivariate real-life data.
+</p>
+<h3>Format</h3>
+<p>This course is application-oriented; formalism and mathematics writing have been reduced as much as possible while examples and intuition have been emphasized and the numerous exercises done with FactoMineR (a package of the free R software) will make the participant efficient and reliable face to data analysis.
+</p>
+
+<h3>Prerequisites</h3>
+<p>This course will be held in English. It has been designed for scientists whose aim is not to become statisticians but who feel the need to analyze the data themselves. It is therefore addressed to practitioners who are confronted with the analysis of data in marketing, surveys, ecology, biology, geography, etc.
+
+<br>
+An undergraduate level is quite sufficient to capture all the concepts introduced. 
+<br>
+Basic knowledges in statistics are necessary, such as: correlation coefficient, chi-squared test, one-way ANOVA.
+<br>
+On the sofware side, an introduction to the R language is sufficient, at least at first.
+<br>
+This course is a complete course on Exploratory Multivariate Data Analysis. You will find courses on the following method:
+</p>
+
+<ol>
+<li><a href="MOOC.html#PCAcourse">PCA - Principal Component Analysis</li>
+<li><a href="MOOC.html#CAcourse">CA - Correspondence Analysis</li>
+<li><a href="MOOC.html#MCAcourse">MCA - Muliple Correspondence Analysis</li>
+<li><a href="MOOC.html#clusteringcourse">Clustering</li>
+<li><a href="MOOC.html#MFAcourse">MFA - Multiple Factor Analysis</li>
+</ol>
+</p> 
+<a name="PCAcourse"></a>
+<h2>PCA - Principal Component Analysis</h2>
+<p style="text-align: justify;">PCA is a well known method for exploring and visualizing data. The function <strong><em>Factoshiny</em></strong> of the package <strong><em>Factoshiny</em> </strong>allows you to perform PCA in a really easy way. You can <span style="color: #0000ff;">include extras</span> <span style="color: #0000ff;">information</span> such as categorical variables, <span style="color: #0000ff;">manage missing data</span>, draw and <span style="color: #0000ff;">improve the graphs interactively</span>, have several numeric indicators as outputs, perform <span style="color: #0000ff;">clustering</span> on the PCA results, and even have an <span style="color: #0000ff;">automatic interpretation</span> of the results. Finally, the function returns the lines of code to parameterize the analysis and redo the graphs, which makes the analysis reproducible.</p>
+
+<h4>Implementation with R software</h4>
+See this <a href="https://youtu.be/6y0NDDQcIXo" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/PCA_factoshiny_transcription.pdf">audio transcription</a> of this video:</p>
+<p><a href="https://youtu.be/6y0NDDQcIXo" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/PCA_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
+
+<h4>Course videos</h4>
+Theorectical and practical informations on PCA are available in these 3 course videos:
+<ol>
+	<li><a href="https://www.youtube.com/watch?v=IuSbb3nq4aI">Data - practicalities</a></li>
+	<li><a href="https://www.youtube.com/watch?v=msGKYXVdMxc">Studying individuals and variables</a></li>
+	<li><a href="https://www.youtube.com/watch?v=BOanMaBiN2w">Interpretation aids</a></li>
+</ol>
+Here are the <a href="https://husson.github.io/MOOC_GB/PCA_course_slides.pdf">slides</a> and the <a href="https://husson.github.io/MOOC_GB/PCA_course_transcription.pdf">audio transcription</a> of the course.</p>
+<h4>Materials</h4>
+Here is the material used in the videos:
+<ul>
+	<li>Wines data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_ExpertWine.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Wine.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Wine.pdf">script with the outputs</a></li>
+	<li>Decathlon data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_Decathlon.csv">data set</a> - <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Decathlon.Rmd">Rmarkdown </a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_PCA_Decathlon.pdf">script with the outputs</a></li>
+</ul>
+<h4>Missing data</h4>
+And here is a <a href="https://youtu.be/OOM8_FH6_8o">video</a> that gives more information on the management of missing data.
+
+<a name="CAcourse"></a>
+<h2>CA - Correspondence Analysis</h2>
+<p style="text-align: justify;">Correspondence Analysis is a method for exploring and visualizing contingency tables. It is particularly useful in text mining.</p>
+
+<h4>Implementation with R software</h4>
+See this <a href="https://youtu.be/2P-u8XlFFoc" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/CA_facto_transcription.pdf">audio transcription</a> of this video:</p>
+<p><a href="https://youtu.be/2P-u8XlFFoc" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/CA_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
+
+<h4>Course videos</h4>
+Theorectical and practical informations on Correspondence Analysis are available in these 6 course videos:
+<ol>
+<li><a href="https://www.youtube.com/watch?v=Z5Lo1hvZ9fA">Introduction</a></li>
+<li><a href="https://www.youtube.com/watch?v=VVYPQKG7jfw">Visualizing the row and column clouds</a></li>
+<li><a href="https://www.youtube.com/watch?v=ffZb9wAiElk">Inertia and percentage of inertia</a></li>
+<li><a href="https://www.youtube.com/watch?v=3-zxmzZZTIQ">Simultaneous representation</a></li>
+<li><a href="https://www.youtube.com/watch?v=Jg9IXaAi98w">Interpretation aids</a></li>
+<li><a href="https://www.youtube.com/watch?v=62N0JMf5hOs"><font color="brown">Text mining with correspondence analysis</font></a></li>
+</ol>
+Here are the <a href="https://husson.github.io/MOOC_GB/CA_course_slides.pdf">slides</a> and the <a href="https://husson.github.io/MOOC_GB/CA_course_transcription.pdf">audio transcription</a> of the course.</p>
+<h4>Materials</h4>
+Here is the material used in the videos:
+<ul>
+	<li>Nobel data: the <a href="https://husson.github.io/MOOC_GB/data_CA_NobelPrize_withMaths.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/Rmarkdown_CA_Nobel.Rmd">Rmarkdown</a>- the <a href="https://husson.github.io/MOOC_GB/Rmarkdown_CA_Nobel.pdf">script with the outputs</a></li>
+	<li>Birth data: the <a href="https://husson.github.io/MOOC_GB/data_CA_Birth.csv">data set</a>- <a href="https://husson.github.io/MOOC_GB/Rmarkdown_CA_Birth.Rmd">Rmarkdown </a>- the <a href="https://husson.github.io/MOOC_GB/Rmarkdown_CA_Birth.pdf">script with the outputs</a></li>
+</ul>
+
+<a name="MCAcourse"></a>
+<h2>MCA - Multiple Correspondence Analysis</h2>
+<p style="text-align: justify;">Multiple Correspondence Analysis is a method for exploring and visualizing datasets with categorical variables. 
+Usually, datasets obtained from a survey or a questionnaire.</p>
+
+<h4>Implementation with R software</h4>
+See this <a href="https://youtu.be/0z30RDikYaw" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/MCA_facto_transcription.pdf">audio transcription</a> of this video:</p>
+<p><a href="https://youtu.be/0z30RDikYaw" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/MCA_img.jpg" alt="PCAFacto" width="455" height="227" /></a></p>
+
+<h4>Course videos</h4>
+Theorectical and practical informations on Multiple Correspondence Analysis are available in these 4 course videos:
+<ol>
+<li><a href="https://www.youtube.com/watch?v=gZ_7WWEVlTg">Data - issues</a></li>
+<li><a href="https://www.youtube.com/watch?v=b4kRAt4mkB8">Visualizing the point cloud of individuals</a></li>
+<li><a href="https://www.youtube.com/watch?v=OZW1KrKO5Ac">Visualizing the cloud of categories</a></li>
+<li><a href="https://www.youtube.com/watch?v=wTCuThGiy4w">Interpretation aids</a></li>
+</ol>
+Here are the <a href="https://husson.github.io/MOOC_GB/MCA_course_slides.pdf">slides</a> and the <a href="https://husson.github.io/MOOC_GB/MCA_course_transcription.pdf">audio transcription</a> of the course.</p>
+<h4>Materials</h4>
+Here is the material used in the videos:
+<ul>
+	<li>Hobbies data: the <a href="https://husson.github.io/MOOC_GB/data_MCA_Hobbies.csv">data set</a>- <a href="https://husson.github.io/MOOC_GB/RMarkdown_MCA_Hobbies.Rmd">Rmarkdown </a>- the <a href="https://husson.github.io/MOOC_GB/RMarkdown_MCA_Hobbies.pdf">script with the outputs</a></li>
+	<li>Tea data: the <a href="https://husson.github.io/MOOC_GB/data_MCA_Tea.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/RMarkdown_MCA_Tea.Rmd">Rmarkdown</a>- the <a href="https://husson.github.io/MOOC_GB/RMarkdown_MCA_Tea.pdf">script with the outputs</a></li>
+</ul>
+And here is a video that gives more information on the <a href="https://www.youtube.com/watch?v=uyIH1CtrfsU"><font color="brown">management of missing data in MCA</font></a>.
+
+<a name="clusteringcourse"></a>
+<h2>Clustering</h2>
+<p style="text-align: justify;">
+Clustering is a method that proposes to construct a hierarcchical tree, to draw a partition of individuals, and to describe and characterize the clusters done.</p>
+<p>This video answers the following questions:
+How to perform clustering and draw a hierarchical tree? How you can make a partition?
+How can we describe and characterize the clusters?
+How to make a partition with lots of individuals?
+How to combine Kmeans and clustering?
+And how considering categorical variables or contingency tables?</p>
+</p>
+
+<h4>Implementation with R software</h4>
+See this <a href="https://youtu.be/pmFCosCzRN8" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/clustering_facto_transcription.pdf">audio transcription</a> of this video:</p>
+<p><a href="https://youtu.be/pmFCosCzRN8" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/clustering_img.jpg" alt="CLASSIFFacto" width="455" height="227" /></a></p>
+
+<h4>Course videos</h4>
+Theorectical and practical informations on clustering are available in these 4 course videos:
+<ol>
+<li><a href="https://www.youtube.com/watch?v=J-IddCBb-ZQ">Introduction</a></li>
+<li><a href="https://www.youtube.com/watch?v=Emi1eMvGEJQ">Example and how to choose the number of clusters</a></li>
+<li><a href="https://www.youtube.com/watch?v=qaE9D_kjhLk">The partitioning method K-means</a></li>
+<li><a href="https://www.youtube.com/watch?v=w-EGV6xExWw">Characterizing clusters</a></li>
+</ol>
+Here are the <a href="https://husson.github.io/MOOC_GB/clustering_course_slides.pdf">slides</a> and the <a href="https://husson.github.io/MOOC_GB/clustering_course_transcription.pdf">audio transcription</a> of the course.</p>
+<h4>Materials</h4>
+Here is the material used in the videos:
+<ul>
+	<li>Temperature data: the <a href="https://husson.github.io/MOOC_GB/data_clustering_Temperature.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/RMarkdown_clustering_Temperature.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_clustering_Temperature.pdf">script with the outputs</a></li>
+	<li>Decathlon data: the <a href="https://husson.github.io/MOOC_GB/data_PCA_Decathlon.csv">data set</a> - <a href="https://husson.github.io/MOOC_GB/RMarkdown_clustering_Decathlon.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/RMarkdown_clustering_Decathlon.pdf">script with the outputs</a></li>
+</ul>
+
+<a name="MFAcourse"></a>
+<h2>MFA - Multiple Factor Analysis</h2>
+<p style="text-align: justify;">Multiple facrtor analysis deals with dataset where variables are organized in groups. Typically, from data coming from different sources of variables. The method highlights a common structure of all the groups, and the specificity of each group.
+It allows to compare the results of several PCAs or MCAs in a unique frame of reference.
+The groups of variables can be continuous, categorical or can be a contingency table.  
+</p>
+
+<h4>Implementation with R software</h4>
+See this <a href="https://youtu.be/ffCM2RHccqk" target="_blank" rel="noopener">video</a> and the <a href="https://husson.github.io/MOOC_GB/MFA_facto_transcription.pdf">audio transcription</a> of this video:</p>
+<p><a href="https://youtu.be/ffCM2RHccqk" target="_blank" rel="noopener"><img class="alignnone size-full wp-image-559" src="https://husson.github.io/MOOC_GB/MFA_img.jpg" alt="MFAFacto" width="455" height="227" /></a></p>
+
+<h4>Course videos</h4>
+Theorectical and practical informations on Multiple Factor Analysis are available in these 4 course videos:
+<ol>
+<li><a href="https://youtu.be/MOl0Aw1TTFE">Introduction</a></li>
+<li><a href="https://youtu.be/kGSjHD3yG84">Weighting and global PCA</a></li>
+<li><a href="https://youtu.be/OVtNX6Or1FI">Study of the groups of variables</a></li>
+<li><a href="https://youtu.be/Vumu7OoFHdA">Complements: qualitative groups, frenquency tables</a></li>
+</ol>
+Here are the <a href="https://husson.github.io/MOOC_GB/MFA_course_slides.pdf">slides</a> and the <a href="https://husson.github.io/MOOC_GB/MFA_course_transcription.pdf">audio transcription</a> of the course.</p>
+<h4>Materials</h4>
+Here is the material used in the videos:
+<ul>
+	<li>Sensory jurys data: the <a href="https://husson.github.io/MOOC_GB/data_MFA_WineJurys.csv">data set</a>  -  <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineJury.Rmd">Rmarkdown</a> - the <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineJury.pdf">script with the outputs</a></li>
+	<li>Sensory groups data: <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineSenso.Rmd">Rmarkdown </a> - the <a href="https://husson.github.io/MOOC_GB/MFA_Facto_WineSenso.pdf">script with the outputs</a></li>
+</ul>
+
+<h4>To conclude</h4>             <ul>
+<li><a href="https://youtu.be/666OzkmvYbs">Data analysis methods summary</a>&nbsp;&nbsp;</li>
+<li><a href="https://husson.github.io/MOOC_GB/Summary_slide2.pdf">Slides on this video</a></li>
+</ul>
+  		</div>
+		
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professeur en statistique<br> <p>husson[at]agrocampus-ouest.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Department of Statistics and Computer Science</a></h2> <p> Agrocampus Ouest<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

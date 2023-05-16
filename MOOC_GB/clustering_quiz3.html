@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)http://math.agrocampus-ouest.fr/infoglueDeliverLive/membres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC analyse de données, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="../assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="../img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
+	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+<script language="JavaScript">
+<!--
+
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [3, 3, 4, 3, 4];
+var numQues = 5;
+
+var answers = new Array(5);
+var answers_true = new Array(5);
+var answers_false = new Array(5);
+answers[0] = "q1.2, q1.3";
+answers_true[0] = "Congratulations!";
+answers_false[0] = "Oh no !!";
+answers[1] = "q2.2";
+answers_true[1] = "Congratulations! It is indeed recommended to run K-means several times, as it may converge to local minima";
+answers_false[1] = "Oh no !! It is indeed recommended to run K-means several times, as it may converge to local minima";
+answers[2] = "q3.1, q3.3, q3.4";
+answers_true[2] = "Congratulations! Running K-means using the clusters obtained from a cut in the hierarchical tree can lead to more stable clusters.";
+answers_false[2] = "Oh no !! Running K-means using the clusters obtained from a cut in the hierarchical tree can lead to more stable clusters.";
+answers[3] = "q4.2, q4.3";
+answers_true[3] = "Congratulations! ";
+answers_false[3] = "Oh no !! ";
+answers[4] = "q5.2, q5.3, q5.4";
+answers_true[4] = "Congratulations! ";
+answers_false[4] = "Oh no !! ";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="../index.html" title="">Home</a></li>
+<li><a href="../research.html" title="">Research</a></li>
+<li><a href="../packages.html" title="">Packages</a></li>
+<li><a href="../teaching.html" title="">Teaching</a></li>
+<li><a href="../MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="../books.html" title="">Books</a></li>
+<li><a href="../tutorials.html" title="">Tutorials</a></li>
+<li><a href="../data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+		<div id="aside">
+<div class="article">
+<h2>Links</h2>
+<p><a href="../index.html">F. Husson website</a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a><br><br><a href="http://factominer.free.fr/book/"><img height="75" alt="Book Exploratory Multivariate Analysis Using R" src="./book.jpg"></a></p>
+</div>
+		</div>
+		<div id="bside">
+<div class="article">
+<h2>Outline</h2>
+<p><a href="index.html"><font color="grey">Introduction</font></a><br><br><a href="PCA.html"><b><font color="grey">Principal Component Analysis</font></b></a><br><br><a href="CA.html"><font color="grey">Correspondence Analysis</font></a><br><br> <a href="MCA.html"><font color="grey">Multiple Correspondence Analysis</font></a><br><br> <a href="clustering.html"><font color="black"><strong>Clustering</strong></font></a><br><br><a href="MFA.html"><font color="grey">Multiple Factor Analysis</font></a><br><br><a href="conclu.html"><font color="grey">To conclude</font></a><br><br><font color="grey"><a href="https://groups.google.com/g/exploratory-multivariate-analysis-course"><font color="grey">Forum</font></a></font></p>
+</div></div>
+
+		<div id="content">
+<h1> Quiz 3 on hierarchical clustering</h1>
+
+
+<form name="quiz">
+  <p>For each question, tick the correct answer or answers.</p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q1) The K-means algorithm</b><br>
+<input type="checkbox" name="q1" value="q1.1">allows us to determine the number of clusters<br>
+<input type="checkbox" name="q1" value="q1.2">is iterative<br>
+<input type="checkbox" name="q1" value="q1.3">requires the number of clusters to be defined<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #F5ECFB;">
+<b>Q2) The K-means algorithm</b>
+<br>
+<input type="checkbox" name="q2" value="q2.1">always leads to the same solution on the same data set<br>
+<input type="checkbox" name="q2" value="q2.2">can be launched with several starting conditions in order to find the best solution<br>
+<input type="checkbox" name="q2" value="q2.3">always gives the solution which minimizes the between-class inertia divided by the total inertia<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+
+<p style="background-color: #FDE5E4;">
+<b>Q3) Using hierarchical clustering and K-means together.
+</b><br>
+<input type="checkbox" name="q3" value="q3.1">The clusters obtained by making a cut in the hierarchical tree can be used to initialize the K-means algorithm<br>
+<input type="checkbox" name="q3" value="q3.2">The K-means algorithm determines the number of clusters at which to cut the hierarchical tree<br>
+<input type="checkbox" name="q3" value="q3.3">We can use hierarchical clustering to determine a number of clusters with which to run K-means<br>
+<input type="checkbox" name="q3" value="q3.4">The K-means algorithm can be used to robustify the clustering obtained using hierarchical clustering<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
+<p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q4) High-dimensional data.
+</b><br>
+<input type="checkbox" name="q4" value="q4.1">When there are many individuals, we can run a hierarchical clustering before doing K-means<br>
+<input type="checkbox" name="q4" value="q4.2">When there are many individuals, we can first group individuals together using K-means, then run hierarchical clustering<br>
+<input type="checkbox" name="q4" value="q4.3">When there are many variables, we can run a factor analysis and retain the first factor dimensions, with which we can then run a clustering algorithm<br>
+<textarea name="t1" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+<p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q5) Factor analysis and clustering. Running a clustering algorithm on the first factor dimensions rather than the original data
+</b><br>
+<input type="checkbox" name="q5" value="q5.1">corresponds to deleting information from some variables<br>
+<input type="checkbox" name="q5" value="q5.2">removes noise contained in later dimensions<br>
+<input type="checkbox" name="q5" value="q5.3">gives a more stable clustering<br>
+<input type="checkbox" name="q5" value="q5.4">gives a general view of the information via the clustering, and a more detailed view via the factor analysis<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+<p>
+
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Reset">
+<input type="button" value="Answer" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Correct answers:<br>
+<textarea name="solutions" wrap="virtual" rows="5" cols="40"></textarea>
+</form>
+
+</div>
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professor in statistics<br> <p>husson[at]agrocampus-ouest.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Youtube channel</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2><a href="http://math.agrocampus-ouest.fr/infoglueDeliverLive/">Department of Statistics and Computer Science</a></h2> <p> Institut Agro<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
