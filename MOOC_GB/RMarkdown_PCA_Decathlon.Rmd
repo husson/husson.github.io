@@ -16,7 +16,7 @@ output:
 # Import data (data are imported from internet)
 
 ```{r}
-decathlon <- read.table("http://www.agrocampus-ouest.fr/math/RforStat/decathlon.csv", 
+decathlon <- read.table("https://www.institut-agro-rennes-angers.fr/math/RforStat/decathlon.csv", 
       header=TRUE, sep=";", row.names=1, check.names=FALSE)
 ```
 ```header=TRUE``` : indicates that the file contains the names of the variables

@@ -10,7 +10,7 @@ output:
 
 # Importation des données
 ```{r eval=FALSE}
-decathlon <- read.table("http://www.agrocampus-ouest.fr/math/livreR/decathlon.csv", 
+decathlon <- read.table("https://www.institut-agro-rennes-angers.fr/math/livreR/decathlon.csv", 
     header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE, fileEncoding="latin1")
 summary(decathlon)
 ```

@@ -11,7 +11,7 @@ output:
 ### Import data (data are imported from internet)
 
 ```{r}
-decathlon <- read.table("http://www.agrocampus-ouest.fr/math/RforStat/decathlon.csv", 
+decathlon <- read.table("https://www.institut-agro-rennes-angers.fr/math/RforStat/decathlon.csv", 
    header=TRUE, sep=";",dec=".", row.names=1, check.names=FALSE)
 ```
 
