@@ -117,6 +117,7 @@ plot(res.pca,choix="var",cex=0.8)
 On enlève les données du biome, de l'âge et du présent.
 ```{r}
 res.mfa <- MFA(paleo[1:700,-(42:43)],group=c(31,6,3,1), type=c("s","s","s","n"),name.group=c("pollen","climat","lieu","biome"),num.group.sup=3:4,graph=FALSE)
+plot(res.mfa,choix="group")
 plot(res.mfa,hab=41,lab.ind=FALSE,cex=0.8)
 plot(res.mfa,choix="var",cex=0.8)
 plot(res.mfa,hab=41,lab.ind=FALSE,cex=0.8,partial="all",invisible="ind")
@@ -125,7 +126,7 @@ plot(res.mfa,hab=41,lab.ind=FALSE,cex=0.8,partial="all",invisible="ind")
 ## AFM sur tous les pollens actuels avec projection du passé en supplémentaire
 
 ```{r}
-res.mfa <- MFA(paleo[,-(41:43)],group=c(31,6,3),ind.sup=701:828, type=c("s","s","s"),name.group=c("pollen","climat","lieu"),num.group.sup=3,graph=FALSE)
+res.mfa <- MFA(paleo[,-(41:43)],group=c(31,6,3),ind.sup=701:828, type=c("s","s","s"),name.group=c("pollen","climat","lieu"),num.group.sup=3)
 plot(res.mfa,lab.ind=FALSE,partial="all",invisible="ind")
 ```
 Il faut en fait visualiser les points partiels du pollen uniquement, et ceux-ci sont 2 fois plus loin du barycentre que le point moyen (car le point partiel du climat est exactement au barycentre).
