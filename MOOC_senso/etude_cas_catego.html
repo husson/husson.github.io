@@ -165,13 +165,13 @@ $(window).load(function() {
 <div id="bside">
 <div class="article">
 <h2>Plan</h2>
-<p><a href="index.html"><font color="black"><strong>Présentation MOOC</strong></font></a><br>
+<p><a href="index.html"><font color="grey">Présentation MOOC</font></a><br>
 <p><a href="intro.html"><font color="grey">Introduction</font></a><br>
-<br><a href="plan.html"><b><font color="grey">Planification d'expériences</font></b></a><br>
+<br><a href="plan.html"><font color="grey">Planification d'expériences</font></a><br>
 <br><a href="caract.html"><font color="grey">Caractérisation de produits</font></a><br>
-<br> <a href="perf.html"><font color="grey">Evaluation de la performance d'un jury</font></a><br>
+<br> <a href="perf.html"><font color="black">Evaluation de la performance d'un jury</font></a><br>
 <br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
-<br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
+<br><a href="catego.html"><strong><font color="grey">Analyse de données de catégorisation</font></strong></a><br>
 <br><a href="carto.html"><font color="grey">Cartographie des préférences</font></a><br>
 <br><a href="eval.html"><font color="grey">Evaluation finale</font></a><br>
 <br><font color="grey"><a href="https://groups.google.com/g/cours-de-sensometrie"><font color="grey">Forum</font></a></font><br>
@@ -180,41 +180,34 @@ $(window).load(function() {
 </div></div>
 
 		<div id="content">
-<a name="Senso"></a>
-<h2>Présentation de ce cours en ligne de sensométrie</h2>
+<a name="Catego"></a>
+<h2>Etude de cas sur les données de catégorisation</h2>
+<p style="text-align: justify;">A vous de jouer !</p>
 
-<p>L'évaluation sensorielle de produits est un élément stratégique du développement de nouveaux produits alimentaires, mais également de bien d'autres domaines (cosmétique, sport, automobile, etc.). 
-Elle vise à caractériser les produits à la fois du point de vue de leurs propriétés organoleptiques et du point de vue des préférences qu'ils suscitent auprès des consommateurs. 
-De ce fait, elle est à la croisée des chemins entre la R&D et le marketing.</p>
-<p>Les évaluations sensorielles nécessitent toujours de volumineux recueils de données et la statistique est l'outil majeur d'analyse de telles données.
-Conçu en vue des applications, ce cours donne une large place aux exemples et à la mise en œuvre logicielle par SensoMineR.</p>
+<h4>Description du jeu de données :</h4>
 
-<h4>Objectif</h4>
-L'objectif de ce "MOOC" est de rendre les participants autonomes dans la mise en place d'une analyse senorielle, du recueil des données jusqu'au traitement des données recueillies, permettant ainsi de caractériser des produits,
-d'évaluer la performance d'un jury sensoriel, et de relier les préférences des consommateurs à la description sensorielle grâce à la mise en place de cartographie des préférences.
+<p>Une évaluation sensorielle a été organisée pour caractériser 12 jus d'orange.Les données sont disponibles dans <a href="https://husson.github.io/img/orange10-11.zip">le fichier zip suivant</a>.</p>
 
-<h4>Conseils avant de commencer</h4>
+Les 12 jus d'orange sont présentés dans le fichier nom_orange1011.xls.
+
+Un jury constitué de 59 étudiants, a évalué chacun de ces 12 jus d'orange lors d'une épreuve de catégorisation (voir catego_orange.csv).
+
+Un second jury, constitué de 12 étudiants (entraînés), a évalué chacun des 12 jus d'orange lors de 2 séances de dégustation selon un liste de 9 descripteurs (voir  QDA_orange1011.csv). Les descripteurs sont les suivants : intensité de la couleur, intensité de l'odeur, intensité d'attaque, saveur sucrée, saveur acide, saveur amère, pulpeux, typicité du goût orange.
+Les notes varient entre 0 et 10; une note de 0 signifie que l'odeur ou la saveur évaluée est extrêmement faible et une note de 10 signifie qu'elle est très importante.
+
+
+<h4>Questions :</h4>
+
 <ul>
-<li>Visionnez les films en haute définition et en plein écran et imprimez le diaporama pour pouvoir prendre des notes.</li>
-<li>Le "MOOC" est organisé en séquences, chaque séquence correspondant à une problématique sensorielle. La séquence finale est une séquence d'évaluation.</li>
-</ul>
+<li>Analyser les données de catégorisation et décrire chacun des produits.
+</li><li>Comparer la description des jus d'orange obtenu par catégorisation et la description obtenue par le recueil de données classique de type QDA.
+</li></ul>
 
-<h4>Organisation d'une séquence de cours</h4>
-Dans chaque séquence vous trouverez les rubriques suivantes :
-<ul>
-<li>un film qui présente la méthodologie statistique et l'illustre à partir d'un exemple</li>
-<li>un quiz qui propose une série de questions simples vous permettant de vérifier que le cours est compris</li>
-<li>une rubrique mise en oeuvre avec SensoMineR pour reproduire les analyses effectuées dans le cours</li>
-<li>une étude de cas vous permet de mettre en oeuvre la méthodologie sur un nouveau jeu de données</li>
-</ul>
-
-<h4>A qui s'adresse ce MOOC ?</h4>
-Ce MOOC a été conçu pour ceux qui, sans être statisticiens, sont amenés. 
-
-
-<h4>Pré-requis</h4>
-Des connaissances de base en statistique sont nécessaires : analyse de variance avec interaction (partie 2 et 3), ACP (partie 4), régression (partie 5) et ACM (partie 6). 
-<br>Enfin, une initiation au langage R est suffisante pour la mise en œuvre concrète des méthodes.
+<h4>Complément : importation de données dans R</h4>
+<table>
+<tr><td align="center" valign="middle"><a href="https://www.youtube.com/watch?v=NODQFUE037s"><img class="alignnone size-full wp-image-559" src="./import_senso_moodle.jpg" alt="PCAFacto" height="120" /></a></td></tr>
+</tr>
+</table>
 
 </div>
 

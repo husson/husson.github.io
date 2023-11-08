@@ -165,56 +165,62 @@ $(window).load(function() {
 <div id="bside">
 <div class="article">
 <h2>Plan</h2>
-<p><a href="index.html"><font color="black"><strong>Présentation MOOC</strong></font></a><br>
+<p><a href="index.html"><font color="grey">Présentation MOOC</font></a><br>
 <p><a href="intro.html"><font color="grey">Introduction</font></a><br>
-<br><a href="plan.html"><b><font color="grey">Planification d'expériences</font></b></a><br>
+<br><a href="plan.html"><font color="grey">Planification d'expériences</font></a><br>
 <br><a href="caract.html"><font color="grey">Caractérisation de produits</font></a><br>
 <br> <a href="perf.html"><font color="grey">Evaluation de la performance d'un jury</font></a><br>
 <br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
 <br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
 <br><a href="carto.html"><font color="grey">Cartographie des préférences</font></a><br>
-<br><a href="eval.html"><font color="grey">Evaluation finale</font></a><br>
+<br><a href="eval.html"><strong><font color="black">Evaluation finale</font></strong></a><br>
 <br><font color="grey"><a href="https://groups.google.com/g/cours-de-sensometrie"><font color="grey">Forum</font></a></font><br>
 <br><a href="conclu.html"><font color="grey">Compléments</font></a><br>
 </p>
 </div></div>
 
 		<div id="content">
-<a name="Senso"></a>
-<h2>Présentation de ce cours en ligne de sensométrie</h2>
+<a name="Carto"></a>
+<h2>Evaluation finale</h2>
+<p style="text-align: justify;">A vous de jouer sur un exercice complet. Les questions sont données à titre indicatif pour vous aider à étudier le jeu de données.</p>
 
-<p>L'évaluation sensorielle de produits est un élément stratégique du développement de nouveaux produits alimentaires, mais également de bien d'autres domaines (cosmétique, sport, automobile, etc.). 
-Elle vise à caractériser les produits à la fois du point de vue de leurs propriétés organoleptiques et du point de vue des préférences qu'ils suscitent auprès des consommateurs. 
-De ce fait, elle est à la croisée des chemins entre la R&D et le marketing.</p>
-<p>Les évaluations sensorielles nécessitent toujours de volumineux recueils de données et la statistique est l'outil majeur d'analyse de telles données.
-Conçu en vue des applications, ce cours donne une large place aux exemples et à la mise en œuvre logicielle par SensoMineR.</p>
+<h4>Description des jeux de données :</h4>
 
-<h4>Objectif</h4>
-L'objectif de ce "MOOC" est de rendre les participants autonomes dans la mise en place d'une analyse senorielle, du recueil des données jusqu'au traitement des données recueillies, permettant ainsi de caractériser des produits,
-d'évaluer la performance d'un jury sensoriel, et de relier les préférences des consommateurs à la description sensorielle grâce à la mise en place de cartographie des préférences.
+<p>Une vaste étude sensorielle cross-culturelle a été mise en place entre la France et le Pakistan. Pour cela, 8 biscuits (4 biscuits fabriqués au Pakistan et 4 biscuit Français) ont été évalués. Toutes les données sont disponibles dans <a href="https://husson.github.io/img/biscuit.zip">le fichier suivant</a>.</p>
 
-<h4>Conseils avant de commencer</h4>
+<p>Vous trouverez les biscuits testés (nom_biscuit.doc).</p>
+
+<p>Deux évaluations sensorielles ont alors été organisées pour caractériser ces biscuits (2 en France et une au Pakistan) et deux évaluations hédoniques ont été organisées (une en France et une au Pakistan).</p>
+
+<p>Un jury constitué de 12 étudiants Français (entraînés) a évalué chacun des 8 biscuits lors de 2 séances de dégustation selon un liste de 23 descripteurs (QDA_francais.csv). Les descripteurs sont les suivants : Vcouleur, Vépaisseur, Ooeuf, Olait, Obeurre, Ovanille, Ocaramel, Ocitron, Tdurcroq (dureté croquant), Tfriabilité, Tgranusabl (granuleux, sableux), Tfarineux, Tcraqcroust (craquant, croustillant), Tpâteux, Tfondant, Gsalé, Gsucré, Goeuf, Glait, Gbeurre, Gvanille, Gcaramel, Gcitron. Le "V" signifie que c'est un descripteur de vision, "O" que c'est un descripteur d'odeur, "T" un descripteur de texture et "G" que c'est un descripteur du goût.<br>
+Un second jury, constitué de 11 juges Pakistanais, a évalué chacun des 8 biscuits une seule fois selon une liste de 16 descripteurs (QDA_pak.csv).<br>
+Les notes varient entre 0 et 10; une note de 0 signifie que l'odeur ou la saveur évaluée est extrêmement faible et une note de 10 signifie qu'elle est très importante.<br>
+Par ailleurs, un premier jury de 150 consommateurs Français (hedo_biscuit_francais.csv) et un second jury de 144 consommateurs Pakistanais (hedo_biscuit_pak.csv) a donné une note d'appréciation pour chaque biscuit allant de 0 (je n'aime pas du tout ce biscuit) à 10 (j'aime beaucoup ce biscuit). Le numéro du juge est précédé de la "F" quand le juge est Français et "P" quand le juge est Pakistanais.</p>
+
+
+<h4>Questions :</h4>
+
+<p>Pour chaque jury sensoriel, vous pouvez :
 <ul>
-<li>Visionnez les films en haute définition et en plein écran et imprimez le diaporama pour pouvoir prendre des notes.</li>
-<li>Le "MOOC" est organisé en séquences, chaque séquence correspondant à une problématique sensorielle. La séquence finale est une séquence d'évaluation.</li>
+<li>déterminer les descripteurs qui permettent de décrire l'ensemble des produits
+</li><li>caractériser chaque biscuit
+</li><li>comment caractériser globalement les biscuits français, puis les biscuits pakistanais
 </ul>
+Vous pouvez ensuite comparer les descriptions faites par les experts et par le jury étudiant puis la description faite par les Français et les Pakistanais.</p>
 
-<h4>Organisation d'une séquence de cours</h4>
-Dans chaque séquence vous trouverez les rubriques suivantes :
-<ul>
-<li>un film qui présente la méthodologie statistique et l'illustre à partir d'un exemple</li>
-<li>un quiz qui propose une série de questions simples vous permettant de vérifier que le cours est compris</li>
-<li>une rubrique mise en oeuvre avec SensoMineR pour reproduire les analyses effectuées dans le cours</li>
-<li>une étude de cas vous permet de mettre en oeuvre la méthodologie sur un nouveau jeu de données</li>
-</ul>
+<p>A partir des données de chaque jury, construire un espace produit et interpréter les résultats. Interpréter les graphes des individus (graphe des biscuits) et des variables (les descripteurs).<br>
+Comment interprétez-vous la taille des ellipses des biscuits ?<br>
+Comment interprétez-vous les différents nuages de points représentant la variabilité sur la position d'une variable ?<br>
+Comparer les espaces produits des Pakistanais et des Français.</p>
 
-<h4>A qui s'adresse ce MOOC ?</h4>
-Ce MOOC a été conçu pour ceux qui, sans être statisticiens, sont amenés. 
+<p>Evaluer globalement la répétabilité et la reproductibilité du jury Français. Pourquoi n'est-il pas possible d'évaluer la répétabilité du jury Pakistanais ?<br>
+Evaluer la performance individuelle (capacité à discriminer les produits et consensus avec le jury) des juges Français. Pourquoi n'est-il pas possible d'évaluer la performance individuelle des juges Pakistanais ?</p>
 
-
-<h4>Pré-requis</h4>
-Des connaissances de base en statistique sont nécessaires : analyse de variance avec interaction (partie 2 et 3), ACP (partie 4), régression (partie 5) et ACM (partie 6). 
-<br>Enfin, une initiation au langage R est suffisante pour la mise en œuvre concrète des méthodes.
+<p>Considérer les données recueillies au Pakistan (données sensorielles et hédoniques).<br>
+Faire une cartographie interne et commenter les résultats.<br>
+Faire une cartographie externe en utilisant un modèle vectoriel puis un modèle quadratique.<br>
+Refaire la même analyse avec les données des Français.<br>
+Comparer les cartes de préférences.</p>
 
 </div>
 
