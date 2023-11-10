@@ -23,14 +23,14 @@
 	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
 
 	<!-- Google API's -->
-<script type="text/javascript" src="./assets/jsapi"></script>
-<script language="Javascript" type="text/javascript">
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
 	//<![CDATA[
 	google.load("jquery", "1.5.1");
 	google.load("jqueryui", "1.8.11");
 	google.load("swfobject", "2.2");
 	//]]>
-</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
 	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
 	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
 	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
@@ -131,7 +131,7 @@ $(window).load(function() {
 	#content div.fancy-dialog { display: none; }
 </style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="../assets/js"></script>
+<script async="" src="./assets/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -140,8 +140,80 @@ $(window).load(function() {
   gtag('config', 'UA-113893701-1');
 </script>
 	
-</head>
+<script language="JavaScript">
+<!--
 
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [6, 6, 5, 5];
+var numQues = 4;
+
+var answers = new Array(4);
+var answers_true = new Array(4);
+var answers_false = new Array(4);
+
+answers[0] = "q1.2, q1.3, q1.4, q1.5, q1.6";
+answers_true[0] = "Bravo";
+answers_false[0] = "Essayez encore !";
+answers[1] = "q2.1, q2.2, q2.3, q2.4, q2.5, q2.6";
+answers_true[1] = "Bravo";
+answers_false[1] = "Essayez encore !";
+answers[2] = "q3.2, q3.5";
+answers_true[2] = "Bravo";
+answers_false[2] = "Essayez encore !";
+answers[3] = "q4.2, q4.3, q4.5";
+answers_true[3] = "Bravo";
+answers_false[3] = "Essayez encore !";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
 <body>
 <div id="nav">
 <h1 style="margin-top:-5px;">François Husson</h1>
@@ -172,60 +244,70 @@ $(window).load(function() {
 <br> <a href="perf.html"><font color="grey">Evaluation de la performance d'un jury</font></a><br>
 <br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
 <br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
-<br><a href="carto.html"><font color="grey">Cartographie des préférences</font></a><br>
-<br><a href="eval.html"><strong><font color="black">Evaluation finale</font></strong></a><br>
+<br><a href="carto.html"><font color="black"><strong>Cartographie des préférences</strong></font></a><br>
 <br><font color="grey"><a href="https://groups.google.com/g/cours-de-sensometrie"><font color="grey">Forum</font></a></font><br>
 <br><a href="conclu.html"><font color="grey">Compléments</font></a><br>
 </p>
 </div></div>
 
 		<div id="content">
-<a name="Carto"></a>
-<h2>Evaluation finale</h2>
-<p style="text-align: justify;">A vous de jouer sur un exercice complet. Les questions sont données à titre indicatif pour vous aider à étudier le jeu de données.</p>
+<a name="Caracterisation"></a>
+<h1>Quiz sur la performance des juges</h1>
+Pour toutes les questions, cocher la ou les affirmations vraies.<br>
 
-<h4>Description des jeux de données :</h4>
+<form name="quiz">
+<p style="background-color: #FDE5E4;">
+<b>Q1) Vrai / faux</b><br>
+<input type="checkbox" name="q1" value="q1.1">Une carte des produits selon deux ingrédients pourrait être utilisée comme base pour la carte des préférences<br>
+<input type="checkbox" name="q1" value="q1.2">La carte sensorielle sert à positionner les produits avant de construire une carte des préférences<br>
+<input type="checkbox" name="q1" value="q1.3">S'il y a un effet premier (note supérieure pour le premier produit dégusté) cela aura un impact sur les estimations des coefficients des modèles de régression<br>
+<input type="checkbox" name="q1" value="q1.4">Une carte obtenue par catégorisation peut être utilisée comme base pour faire une carte des préférences<br>
+<input type="checkbox" name="q1" value="q1.5">Si un juge met la même note pour tous les produits, il ne pourra pas être utilisé pour construire la carte des préférences<br>
+<input type="checkbox" name="q1" value="q1.6">Il faut au moins 6 produits pour construire une carte des préférences avec un modèle quadratique<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
-<p>Une vaste étude sensorielle cross-culturelle a été mise en place entre la France et le Pakistan. Pour cela, 8 biscuits (4 biscuits fabriqués au Pakistan et 4 biscuit Français) ont été évalués. Toutes les données sont disponibles dans <a href="https://husson.github.io/img/biscuit.zip">le fichier suivant</a>.</p>
+<p style="background-color: #F5ECFB;">
+<b>Q2) Vrai / faux</b><br>
+<input type="checkbox" name="q2" value="q2.1">Le modèle vectoriel ne permet pas de prendre en compte des effets non linéaires des préférences<br>
+<input type="checkbox" name="q2" value="q2.2">Deux produits proches sur la carte sensorielle doivent être appréciés de façon équivalente car sinon les modèles seront très instables<br>
+<input type="checkbox" name="q2" value="q2.3">Pour chaque juge, on construit un modèle qui explique ses préférences en fonction de la position des produits sur la carte sensorielle<br>
+<input type="checkbox" name="q2" value="q2.4">Plus les produits sont répartis de façon uniforme sur la carte sensorielle, plus la carte des préférences sera stable<br>
+<input type="checkbox" name="q2" value="q2.5">Si les préférences ne sont pas liées à la description sensorielle, il est inutile de construire une carte des préférences<br>
+<input type="checkbox" name="q2" value="q2.6">On peut segmenter le panel de consommateurs en classes homogènes<br>
+<textarea name="t2" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-<p>Vous trouverez les biscuits testés (nom_biscuit.doc).</p>
+<p style="background-color: #FDE5E4;">
+<b>Q3) Lors de l'évaluation hédonique, si des classes de consommateurs peuvent être construites,</b><br>
+<input type="checkbox" name="q3" value="q3.1">on peut caractériser les classes de consommateurs par les produits les plus appréciés dans chaque classe<br>
+<input type="checkbox" name="q3" value="q3.2">on ne peut pas caractériser les classes par des données descriptives (âge sexe, etc.) sur les consommateurs<br>
+<input type="checkbox" name="q3" value="q3.3">on ne peut pas construire une seule carte des préférences<br>
+<input type="checkbox" name="q3" value="q3.4">on utilisera des cartes sensorielles des produits différentes pour représenter les préférences<br>
+<input type="checkbox" name="q3" value="q3.5">on peut calculer la moyenne des notes des produits pour tous les individus d'une classe<br>
+<textarea name="t3" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
-<p>Deux évaluations sensorielles ont alors été organisées pour caractériser ces biscuits (2 en France et une au Pakistan) et deux évaluations hédoniques ont été organisées (une en France et une au Pakistan).</p>
+<p style="background-color: #F5ECFB;">
+<b>Q4) La carte des préférences</b><br>
+<input type="checkbox" name="q4" value="q4.1">somme les prédictions de la note d'appréciation de chaque individu (un modèle de prédiction étant construit par individu)<br>
+<input type="checkbox" name="q4" value="q4.2">cumule les zones d'appréciation supérieures à la moyenne pour chaque individu (un modèle de prédiction étant construit par individu)<br>
+<input type="checkbox" name="q4" value="q4.3">nécessite de construire un modèle de régression pour chaque consommateur<br>
+<input type="checkbox" name="q4" value="q4.4">est construite à partir de la moyenne des notes par produit<br>
+<input type="checkbox" name="q4" value="q4.5">utilise les coordonnées des produits sur un plan qui peut être obtenu par ACP ou par ACM<br>
+<textarea name="t4" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-<p>Un jury constitué de 12 étudiants Français (entraînés) a évalué chacun des 8 biscuits lors de 2 séances de dégustation selon un liste de 23 descripteurs (QDA_francais.csv). Les descripteurs sont les suivants : Vcouleur, Vépaisseur, Ooeuf, Olait, Obeurre, Ovanille, Ocaramel, Ocitron, Tdurcroq (dureté croquant), Tfriabilité, Tgranusabl (granuleux, sableux), Tfarineux, Tcraqcroust (craquant, croustillant), Tpâteux, Tfondant, Gsalé, Gsucré, Goeuf, Glait, Gbeurre, Gvanille, Gcaramel, Gcitron. Le "V" signifie que c'est un descripteur de vision, "O" que c'est un descripteur d'odeur, "T" un descripteur de texture et "G" que c'est un descripteur du goût.<br>
-Un second jury, constitué de 11 juges Pakistanais, a évalué chacun des 8 biscuits une seule fois selon une liste de 16 descripteurs (QDA_pak.csv).<br>
-Les notes varient entre 0 et 10; une note de 0 signifie que l'odeur ou la saveur évaluée est extrêmement faible et une note de 10 signifie qu'elle est très importante.<br>
-Par ailleurs, un premier jury de 150 consommateurs Français (hedo_biscuit_francais.csv) et un second jury de 144 consommateurs Pakistanais (hedo_biscuit_pak.csv) a donné une note d'appréciation pour chaque biscuit allant de 0 (je n'aime pas du tout ce biscuit) à 10 (j'aime beaucoup ce biscuit). Le numéro du juge est précédé de la "F" quand le juge est Français et "P" quand le juge est Pakistanais.</p>
 
-
-<h4>Questions :</h4>
-
-<p>Pour chaque jury sensoriel, vous pouvez :
-<ul>
-<li>déterminer les descripteurs qui permettent de décrire l'ensemble des produits
-</li><li>caractériser chaque biscuit
-</li><li>comment caractériser globalement les biscuits français, puis les biscuits pakistanais
-</ul>
-Vous pouvez ensuite comparer les descriptions faites par les experts et par le jury étudiant puis la description faite par les Français et les Pakistanais.</p>
-
-<p>A partir des données de chaque jury, construire un espace produit et interpréter les résultats. Interpréter les graphes des individus (graphe des biscuits) et des variables (les descripteurs).<br>
-Comment interprétez-vous la taille des ellipses des biscuits ?<br>
-Comment interprétez-vous les différents nuages de points représentant la variabilité sur la position d'une variable ?<br>
-Comparer les espaces produits des Pakistanais et des Français.</p>
-
-<p>Evaluer globalement la répétabilité et la reproductibilité du jury Français. Pourquoi n'est-il pas possible d'évaluer la répétabilité du jury Pakistanais ?<br>
-Evaluer la performance individuelle (capacité à discriminer les produits et consensus avec le jury) des juges Français. Pourquoi n'est-il pas possible d'évaluer la performance individuelle des juges Pakistanais ?</p>
-
-<p>Considérer les données recueillies au Pakistan (données sensorielles et hédoniques).<br>
-Faire une cartographie interne et commenter les résultats.<br>
-Faire une cartographie externe en utilisant un modèle vectoriel puis un modèle quadratique.<br>
-Refaire la même analyse avec les données des Français.<br>
-Comparer les cartes de préférences.</p>
-
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="5" cols="40"></textarea>
+</form>
 </div>
 
-  		</div>
-		
 <div id="footer">
 <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
 <div class="inline-block-2">
@@ -243,5 +325,3 @@ Professeur en statistique<br> <p>francois.husson[at]institut-agro.fr<br>Tel : +3
 <!--[if IE]>
 </div>
 <![endif]-->
-
-<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

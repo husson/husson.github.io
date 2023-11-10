@@ -23,14 +23,14 @@
 	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
 
 	<!-- Google API's -->
-<script type="text/javascript" src="./assets/jsapi"></script>
-<script language="Javascript" type="text/javascript">
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
 	//<![CDATA[
 	google.load("jquery", "1.5.1");
 	google.load("jqueryui", "1.8.11");
 	google.load("swfobject", "2.2");
 	//]]>
-</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
 	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
 	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
 	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
@@ -131,7 +131,7 @@ $(window).load(function() {
 	#content div.fancy-dialog { display: none; }
 </style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="../assets/js"></script>
+<script async="" src="./assets/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -140,8 +140,82 @@ $(window).load(function() {
   gtag('config', 'UA-113893701-1');
 </script>
 	
-</head>
+<script language="JavaScript">
+<!--
 
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [6,6,6,6,6];
+var numQues = 5;
+
+var answers = new Array(5);
+var answers_true = new Array(5);
+var answers_false = new Array(5);
+answers[0] = "q1.5, q1.6";
+answers_true[0] = "Bravo";
+answers_false[0] = "Essayez encore !";
+answers[1] = "q2.2, q2.3";
+answers_true[1] = "Bravo";
+answers_false[1] = "Essayez encore !";
+answers[2] = "q3.1, q3.2, q3.6";
+answers_true[2] = "Bravo.";
+answers_false[2] = "";
+answers[3] = "q4.2, q4.3";
+answers_true[3] = "Bravo";
+answers_false[3] = "Essayez encore !";
+answers[4] = "q5.1, q5.6";
+answers_true[4] = "Bravo";
+answers_false[4] = "Essayez encore !";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
 <body>
 <div id="nav">
 <h1 style="margin-top:-5px;">François Husson</h1>
@@ -168,8 +242,8 @@ $(window).load(function() {
 <p><a href="index.html"><font color="grey">Présentation MOOC</font></a><br>
 <p><a href="intro.html"><font color="grey">Introduction</font></a><br>
 <br><a href="plan.html"><font color="grey">Planification d'expériences</font></a><br>
-<br><a href="caract.html"><font color="grey">Caractérisation de produits</font></a><br>
-<br> <a href="perf.html"><strong><font color="black">Evaluation de la performance d'un jury</font></strong></a><br>
+<br><a href="caract.html"><strong><font color="black">Caractérisation de produits</strong></font></a><br>
+<br> <a href="perf.html"><font color="grey">Evaluation de la performance d'un jury</font></a><br>
 <br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
 <br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
 <br><a href="carto.html"><font color="grey">Cartographie des préférences</font></a><br>
@@ -179,40 +253,79 @@ $(window).load(function() {
 </div></div>
 
 		<div id="content">
-<a name="Performance"></a>
-<h2>Etude de cas pour évaluer la performance d'un jury et de ses juges</h2>
-<p style="text-align: justify;">A vous de jouer !</p>
+<a name="Caracterisation"></a>
+<h1>Quiz 2 sur la caractérisation de produits</h1>
+Pour toutes les questions, cocher la ou les affirmations vraies.<br>
 
-<h4>Description du jeu de données :</h4>
+<form name="quiz">
 
-<p>Trois évaluations sensorielles ont été organisées pour caractériser 10 vins blancs du Val de Loire. L'ensemble des données est disponible dans <a href="https://husson.github.io/img/vins.zip">le fichier zip suivant</a>.</p>
+<p style="background-color: #F5ECFB;">
+<b>Q1) Lors de la caractérisation de produits par un ensemble de descripteurs :</b><br>
+<input type="checkbox" name="q1" value="q1.1">on construit un modèle où la variable produit est expliquée en fonction de tous les descripteurs<br>
+<input type="checkbox" name="q1" value="q1.2">chaque produit est toujours caractéristique d'au moins un descripteur<br>
+<input type="checkbox" name="q1" value="q1.3">un produit ne peut pas être caractéristique pour tous les descripteurs<br>
+<input type="checkbox" name="q1" value="q1.4">chaque descripteur permet toujours de décrire au moins un produit<br>
+<input type="checkbox" name="q1" value="q1.5">si les notes d'un produit pour un descripteur sont significativement inférieures à la moyenne des notes tout produit confondu, alors ce descripteur caractérise ce produit<br>
+<input type="checkbox" name="q1" value="q1.6">un produit seul peut être caractéristique d'un descripteur<br>
+<textarea name="t3" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-Les 10 vins sont présentés dans le fichier noms_vins.doc. Il s'agit de 5 Touraine du cépage Sauvignon (les vins numérotés de 1 à 5) et 5 Vouvray du cépage Chenin (les vins de 6 à 10).<br>
-Les 10 vins sont présentés dans le fichier noms_vins.doc. Il s'agit de 5 Touraine du cépage Sauvignon (les vins numérotés de 1 à 5) et 5 Vouvray du cépage Chenin (les vins de 6 à 10).<br>
-Un jury de 10 oenologues a évalué chaque vin une seule fois selon une liste de 39 descripteurs (QDA_vins_pro.csv).<br>
-Un jury de 11 étudiants a évalué chaque vin 2 fois selon une liste de 15 descripteurs (QDA_vins_jury1.csv).<br>
-Un jury de 12 étudiants a évalué chaque vin 3 fois selon une liste de 15 descripteurs (QDA_vins_jury2.Ccsv).<br>
-Les notes varient entre 0 et 10; une note de 0 signifie que l'odeur ou la saveur évaluée est extrêmement faible et une note de 10 signifie qu'elle est très importante.
+<p style="background-color: #FDE5E4;">
+<b>Q2) Lors de la caractérisation de produits :</b><br>
+<input type="checkbox" name="q2" value="q2.1">un test F est utilisé pour voir globalement l'effet simultané de tous les descripteurs sur la variable produit<br>
+<input type="checkbox" name="q2" value="q2.2">un test F de l'effet produit signifie qu'au moins un produit prend des valeurs significativement différentes pour le descripteur étudié<br>
+<input type="checkbox" name="q2" value="q2.3">un test F de Fisher est construit par descripteur<br>
+<input type="checkbox" name="q2" value="q2.4">si la probabilité critique du test de Fisher de l'effet produit est inférieure à 5% alors le descripteur ne permet pas de décrire les produits<br>
+<input type="checkbox" name="q2" value="q2.5">si la probabilité critique du test de Fisher de l'effet produit est inférieure à 5% alors le descripteur caractérise chaque produit<br>
+<input type="checkbox" name="q2" value="q2.6">il faut que la probabilité critique du test F de l'effet produit et celle du test F de l'interaction produit:juge soient inférieures à 5% pour pouvoir interpréter un effet produit<br>
+<textarea name="t2" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
-<h4>Questions :</h4>
+<p style="background-color: #F5ECFB;">
+<b>Q3) Lors de la caractérisation de produits :</b><br>
+<input type="checkbox" name="q3" value="q3.1">des tests T de Student sont utilisés pour caractériser chaque produit<br>
+<input type="checkbox" name="q3" value="q3.2">pour un descripteur, on construit autant de test T qu'il y a de produits<br>
+<input type="checkbox" name="q3" value="q3.3">les tests T de Student sont construits avec un modèle qui ne contient que l'effet produit<br>
+<input type="checkbox" name="q3" value="q3.4">si le coefficient alpha_i d'un produit est grand alors il est significatif<br>
+<input type="checkbox" name="q3" value="q3.5">si le coefficient alpha_i d'un produit pour la saveur sucrée n'est pas significativement différent de 0 alors le produit n'a pas de saveur sucrée<br>
+<input type="checkbox" name="q3" value="q3.6">les tests T sont utiles seulement si le test F est significatif<br>
+<textarea name="t3" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-<ul>
-<li>Evaluer globalement la répétabilité de chaque jury étudiant. Pourquoi n'est-il pas possible d'évaluer la répétabilité du jury expert ?
-</li><li>Evaluer la reproductibilité de chaque jury étudiant.
-</li><li>Evaluer la performance individuelle (capacité à discriminer les produits et consensus avec le jury) des juges de chaque jury étudiant.
-</li><li>Pourquoi n'est-il pas possible d'évaluer la performance individuelle (capacité à discriminer les produits et consensus avec le jury) des juges du jury expert ?
-</li></ul>
+<p style="background-color: #F5ECFB;">
+<b>Q4) Lors d'une évaluation sensorielle de 10 chocolats noirs, des analyses de variances ont été construites par descripteur avec comme effets, l'effet produit, l'effet juge (considéré comme aléatoire), et l'interaction produit:juge. Les probabilités critiques sont représentées dans le graphe ci-dessous.</b><br>
+<img width="50%" src="./decat_Ftest_choc.jpeg" alt="">
+<br>
+<input type="checkbox" name="q4" value="q4.1">il y a un fort effet pour l'odeur de lait<br>
+<input type="checkbox" name="q4" value="q4.2">les juges ne perçoivent pas de différence entre les chocolats pour l'odeur de lait<br>
+<input type="checkbox" name="q4" value="q4.3">les juges perçoivent certains chocolats comme plus amer, ou moins amers, que d'autres<br>
+<input type="checkbox" name="q4" value="q4.4">l'acidité des chocolats est très faible<br>
+<input type="checkbox" name="q4" value="q4.5">les juges n'apprécient pas l'amertume des chocolats<br>
+<input type="checkbox" name="q4" value="q4.6">l'interaction produit:juge est nécessairement non significative pour l'acidité<br>
+<textarea name="t4" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-<h4>Complément : importation de données dans R</h4>
-<table>
-<tr><td align="center" valign="middle"><a href="https://www.youtube.com/watch?v=NODQFUE037s"><img class="alignnone size-full wp-image-559" src="./import_senso_moodle.jpg" alt="PCAFacto" height="120" /></a></td></tr>
-</tr>
-</table>
+<p style="background-color: #FDE5E4;">
+<b>Q5) Lors d'une évaluation sensorielle de 10 chocolats noirs, des analyses de variances ont été construites par descripteur avec comme effets, l'effet produit, l'effet juge (considéré comme aléatoire), et l'interaction produit:juge. Les probabilités critiques sont représentées dans le graphe ci-dessous.</b><br>
+<img width="100%" src="./decat_Ttest_choc.jpeg" alt=""><br>
+<input type="checkbox" name="q5" value="q5.1">le chocolat Valrhona 85% est peu sucré, avec un faible arôme de lait mais une forte odeur de cacao<br>
+<input type="checkbox" name="q5" value="q5.2">les chocolats de la marque Valrhona ont tous les mêmes caractéristiques<br>
+<input type="checkbox" name="q5" value="q5.3">le chocolat Valrhona 85% a une odeur de lait significativement plus faible que la moyenne<br>
+<input type="checkbox" name="q5" value="q5.4">le descripteur sucré et le descripteur acide sont corrélés positivement<br>
+<input type="checkbox" name="q5" value="q5.5">la saveur sucrée ne discrimine pas les chocolats<br>
+<input type="checkbox" name="q5" value="q5.6">la saveur sucrée et l'arôme de lait sont deux descripteurs très corrélés<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="5" cols="40"></textarea>
+</form>
 </div>
 
-  		</div>
-		
 <div id="footer">
 <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
 <div class="inline-block-2">
@@ -230,5 +343,3 @@ Professeur en statistique<br> <p>francois.husson[at]institut-agro.fr<br>Tel : +3
 <!--[if IE]>
 </div>
 <![endif]-->
-
-<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

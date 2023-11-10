@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)https://math.institut-agro-rennes-angers.fr/frmembres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC senso</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC sensmoétrie, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie, sensorielle" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="../assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="../img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
+	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+<script language="JavaScript">
+<!--
+
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [6, 6, 6, 6, 6];
+var numQues = 5;
+
+var answers = new Array(5);
+var answers_true = new Array(5);
+var answers_false = new Array(5);
+answers[0] = "q1.3, q1.5";
+answers_true[0] = "Bravo";
+answers_false[0] = "Non !";
+answers[1] = "q2.1, q2.5";
+answers_true[1] = "Bravo";
+answers_false[1] = "Essayez encore !";
+answers[2] = "q3.2, q3.4";
+answers_true[2] = "Bravo.";
+answers_false[2] = "";
+answers[3] = "q4.2, q4.5";
+answers_true[3] = "Bravo";
+answers_false[3] = "Essayez encore !";
+answers[4] = "q5.3, q5.6";
+answers_true[4] = "Bravo";
+answers_false[4] = "Essayez encore !";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="../index.html" title="">Home</a></li>
+<li><a href="../research.html" title="">Research</a></li>
+<li><a href="../packages.html" title="">Packages</a></li>
+<li><a href="../teaching.html" title="">Teaching</a></li>
+<li><a href="../MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="../books.html" title="">Books</a></li>
+<li><a href="../tutorials.html" title="">Tutorials</a></li>
+<li><a href="../data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+<div id="aside">
+<div class="article">
+<h2>Liens</h2>
+<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://sensominer.free.fr"><img height="24" src="../img/sensominer.png" alt=""></a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a><br><br> <a href="../MOOC_AnaDo/index.html">MOOC analyse de données</a><br><br><a href="http://factominer.free.fr/livre/"><img height="75" alt="Livre Analyse de données" src="./anado2_petit.jpg"></a><a href="https://r-stat-sc-donnees.github.io/">   <img height="75" alt="Livre R pour la statistique et la science des données" src="./R_stat_sc_donnees.png"></a></p>
+</div></div>
+<div id="bside">
+<div class="article">
+<h2>Plan</h2>
+<p><a href="index.html"><font color="grey">Présentation MOOC</font></a><br>
+<p><a href="intro.html"><font color="grey">Introduction</font></a><br>
+<br><a href="plan.html"><font color="grey">Planification d'expériences</font></a><br>
+<br><a href="caract.html"><font color="grey">Caractérisation de produits</font></a><br>
+<br> <a href="perf.html"><strong><font color="black">Evaluation de la performance d'un jury</font></strong></a><br>
+<br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
+<br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
+<br><a href="carto.html"><font color="grey">Cartographie des préférences</font></a><br>
+<br><font color="grey"><a href="https://groups.google.com/g/cours-de-sensometrie"><font color="grey">Forum</font></a></font><br>
+<br><a href="conclu.html"><font color="grey">Compléments</font></a><br>
+</p>
+</div></div>
+
+		<div id="content">
+<a name="Caracterisation"></a>
+<h1>Quiz sur la performance des juges</h1>
+Pour toutes les questions, cocher la ou les affirmations vraies.<br>
+
+<form name="quiz">
+<p style="background-color: #FDE5E4;">
+<b>Q1) Une interaction produit - séance significative signifie</b><br>
+<input type="checkbox" name="q1" value="q1.1">que les produits sont perçus de la même façon à toutes les séances<br>
+<input type="checkbox" name="q1" value="q1.2">que tous les produits sont perçus différemment à toutes les séances<br>
+<input type="checkbox" name="q1" value="q1.3">qu'au moins un produit n'est pas perçu de la même façon à au moins une séance<br>
+<input type="checkbox" name="q1" value="q1.4">que les juges ne sont pas d'accord entre eux<br>
+<input type="checkbox" name="q1" value="q1.5">que le jury dans son ensemble ne fait pas une évaluation des produits stable d'une séance à l'autre<br>
+<input type="checkbox" name="q1" value="q1.6">rien, on ne peut pas conclure<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
+
+
+<p style="background-color: #F5ECFB;">
+<b>Q2) A partir des données d'un juge, on peut construire un modèle d'analyse de variance expliquant la note du descripteur en fonction</b><br>
+<input type="checkbox" name="q2" value="q2.1">de l'effet produit<br>
+<input type="checkbox" name="q2" value="q2.2">de l'effet juge<br>
+<input type="checkbox" name="q2" value="q2.3">de l'interaction produit - juge<br>
+<input type="checkbox" name="q2" value="q2.4">de l'interaction produit - séance<br>
+<input type="checkbox" name="q2" value="q2.5">de l'effet séance<br>
+<input type="checkbox" name="q2" value="q2.6">des autres descripteurs<br>
+<textarea name="t2" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q3) Lors de l'évaluation sensorielle de 12 jus d'orange, 12 juges ont évalué chacun des jus 2 fois (lors de 2 séances de dégustation).<br>
+Le consensus d'un juge avec l'ensemble du panel est évalué à l'aide du coefficient de corrélation entre les moyennes ajustées du juge pour chaque produit et les moyennes ajustées du panel pour chaque produit. Les coefficients de corrélation sont regroupés pour tous les juges (en ligne dans le tableau) et tous les descripteurs dans le tableau ci-dessous.</b><br>
+<img width="90%" src="./paneliperf_R2_or.jpeg" alt="">
+<br>
+<input type="checkbox" name="q3" value="q3.1">un juge est consensuel avec le panel si la case est blanche (si le coefficient de corrélation est proche de 0)<br>
+<input type="checkbox" name="q3" value="q3.2">tous les juges évaluent les produits à peu près comme le panel pour le caractère pulpeux<br>
+<input type="checkbox" name="q3" value="q3.3">au niveau de l'intensité d'attaque, seul le juge 8 est bon<br>
+<input type="checkbox" name="q3" value="q3.4">pour l'intensité de l'odeur (O.intensity), le juge 12 note indépendamment des autres juges<br>
+<input type="checkbox" name="q3" value="q3.5">les juges ne sont pas assez nombreux dans l'analyse, ce qui explique que le coefficient de corrélation soit petit<br>
+<input type="checkbox" name="q3" value="q3.6">les juges devraient s'entraîner sur le caractère pulpeux principalement<br>
+<textarea name="t3" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
+
+<p style="background-color: #F5ECFB;">
+<b>Q4) Lors de l'évaluation sensorielle de 12 jus d'orange, 12 juges ont évalué chacun des jus 2 fois (lors de 2 séances de dégustation).<br>
+La performance de chaque juge est évaluée à l'aide d'un modèle d'analyse de la variance construit sur les notes de ce seul juge. Les probabilités critiques de l'effet produit sont regroupées pour tous les juges (en ligne dans le tableau) et tous les descripteurs dans le tableau ci-dessous.</b><br>
+<img width="90%" src="./paneliperf_proba_or.jpeg" alt=""><br>
+<input type="checkbox" name="q4" value="q4.1">le juge 12 est le moins bon car plusieurs probabilité critiques sont inférieures à 5%<br>
+<input type="checkbox" name="q4" value="q4.2">le descripteur pulpeux est le plus facile car beaucoup de juges discriminent les produits selon ce descripteur<br>
+<input type="checkbox" name="q4" value="q4.3">le juge 4 différencie bien les jus d'orange pulpeux des non pulpeux<br>
+<input type="checkbox" name="q4" value="q4.4">l'intensité de l'odeur (O.intensité) est un descripteur facile car il n'y a pas d'effet produit<br>
+<input type="checkbox" name="q4" value="q4.5">le juge 4 devrait s'entraîner sur de nombreux descripteurs pour être plus répétable d'une séance à l'autre<br>
+<input type="checkbox" name="q4" value="q4.6">la saveur acide et la saveur sucrée sont liées pour le juge 2<br>
+<textarea name="t4" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
+
+<p style="background-color: #FDE5E4;">
+<b>Q5) Lors de l'évaluation sensorielle de 12 jus d'orange, 12 juges ont évalué chacun des jus 2 fois (lors de 2 séances de dégustation).<br>
+La performance du panel est évaluée à l'aide d'un modèle d'analyse de la variance prenant en compte les effets produits, juge (considéré comme aléatoire) et séance ainsi que toutes les interactions d'ordre 2. Les résultats sont regroupés dans le tableau ci-dessous.
+</b><br>
+<img width="90%" src="./panelperf_or.jpeg" alt=""><br>
+<input type="checkbox" name="q5" value="q5.1">on ne peut rien conclure quant à l'effet produit pour les descripteurs qui ont un effet produit significatif et une interaction produit:juge significative<br>
+<input type="checkbox" name="q5" value="q5.2">il y a toujours un effet juge significatif donc les juges ne classent pas les produits dans le même ordre<br>
+<input type="checkbox" name="q5" value="q5.3">le descripteur acide discrimine les produits (au moins un produit a une acidité différente des autres)<br>
+<input type="checkbox" name="q5" value="q5.4">l'interaction produit:séance est significative pour le pulpeux donc les juges perçoivent à une séance un produit comme très pulpeux et à une autre séance ce même produit comme peu pulpeux<br>
+<input type="checkbox" name="q5" value="q5.5">l'effet séance significatif pour l'intensité de couleur indique qu'au moins un produit a changé de couleur d'une séance à l'autre<br>
+<input type="checkbox" name="q5" value="q5.6">le descripteur pulpeux discrimine très bien les produits car c'est le descripteur pour lequel la probabilité critique de l'effet produit est la plus faible.<br>
+<textarea name="t5" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
+
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="5" cols="40"></textarea>
+</form>
+</div>
+
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professeur en statistique<br> <p>francois.husson[at]institut-agro.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2>Department of Statistics and Computer Science</h2> <p> Institut Agro<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->

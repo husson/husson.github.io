@@ -23,14 +23,14 @@
 	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
 
 	<!-- Google API's -->
-<script type="text/javascript" src="./assets/jsapi"></script>
-<script language="Javascript" type="text/javascript">
+<script type="text/javascript" src="../assets/jsapi"></script>
+<script language="Javascript" type="../text/javascript">
 	//<![CDATA[
 	google.load("jquery", "1.5.1");
 	google.load("jqueryui", "1.8.11");
 	google.load("swfobject", "2.2");
 	//]]>
-</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+</script><script src="../assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="../assets/swfobject.js.téléchargement" type="../text/javascript"></script>
 	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
 	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
 	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
@@ -131,7 +131,7 @@ $(window).load(function() {
 	#content div.fancy-dialog { display: none; }
 </style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="../assets/js"></script>
+<script async="" src="./assets/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -140,8 +140,85 @@ $(window).load(function() {
   gtag('config', 'UA-113893701-1');
 </script>
 	
-</head>
+<script language="JavaScript">
+<!--
 
+// var numQues = 5;
+// var numChoi = 7;
+
+let numChoi = [3, 3, 3, 3, 3, 2];
+var numQues = 6;
+
+var answers = new Array(6);
+var answers_true = new Array(6);
+var answers_false = new Array(6);
+answers[0] = "q1.2";
+answers_true[0] = "Bravo";
+answers_false[0] = "Essayez encore !";
+answers[1] = "q2.3";
+answers_true[1] = "Bravo";
+answers_false[1] = "Essayez encore !";
+answers[2] = "q3.1, q3.2, q3.3";
+answers_true[2] = "Bravo.";
+answers_false[2] = "";
+answers[3] = "q4.2, q4.3";
+answers_true[3] = "Bravo";
+answers_false[3] = "Essayez encore !";
+answers[4] = "q5.1, q5.3";
+answers_true[4] = "Bravo";
+answers_false[4] = "Essayez encore !";
+answers[5] = "q6.1, q6.2";
+answers_true[5] = "Bravo";
+answers_false[5] = "Les noms des fonctions sont les bons";
+
+function getScore(form) {
+  var score = 0;
+  var currElt = 0;
+  var currSelection;
+  var bon = false;
+
+  for (i=0; i<numQues; i++) {
+//    currElt = i*(numChoi+1);
+    bon=false;
+    for (j=0; j<numChoi[i]; j++) {
+      currSelection = form.elements[currElt + j];
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=true;}
+      if ((currSelection.checked)&&(answers[i].indexOf(currSelection.value) == -1)) {
+        bon=false;
+        break;
+        }
+      if (!(currSelection.checked)&&(answers[i].indexOf(currSelection.value) != -1)) {
+        bon=false;
+        break;
+        }
+    }
+	currElt += numChoi[i]+1;
+    if (bon==true) {
+          score++;
+          form.elements[currElt-1].value=answers_true[i];
+    }
+    else {
+          form.elements[currElt-1].value=answers_false[i];
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+}
+
+function getReponse(form) {
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// -->
+</script>
+	
+</head>
 <body>
 <div id="nav">
 <h1 style="margin-top:-5px;">François Husson</h1>
@@ -167,11 +244,11 @@ $(window).load(function() {
 <h2>Plan</h2>
 <p><a href="index.html"><font color="grey">Présentation MOOC</font></a><br>
 <p><a href="intro.html"><font color="grey">Introduction</font></a><br>
-<br><a href="plan.html"><font color="grey">Planification d'expériences</font></a><br>
+<br><a href="plan.html"><font color="black"><strong>Planification d'expériences</strong></font></a><br>
 <br><a href="caract.html"><font color="grey">Caractérisation de produits</font></a><br>
-<br> <a href="perf.html"><font color="black">Evaluation de la performance d'un jury</font></a><br>
+<br> <a href="perf.html"><font color="grey">Evaluation de la performance d'un jury</font></a><br>
 <br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
-<br><a href="catego.html"><strong><font color="grey">Analyse de données de catégorisation</font></strong></a><br>
+<br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
 <br><a href="carto.html"><font color="grey">Cartographie des préférences</font></a><br>
 <br><font color="grey"><a href="https://groups.google.com/g/cours-de-sensometrie"><font color="grey">Forum</font></a></font><br>
 <br><a href="conclu.html"><font color="grey">Compléments</font></a><br>
@@ -179,39 +256,67 @@ $(window).load(function() {
 </div></div>
 
 		<div id="content">
-<a name="Catego"></a>
-<h2>Etude de cas sur les données de catégorisation</h2>
-<p style="text-align: justify;">A vous de jouer !</p>
+<a name="Plan"></a>
+<h1>Quiz planification d'expériences</h1>
+Pour toutes les questions, cocher la ou les affirmations vraies.<br>
 
-<h4>Description du jeu de données :</h4>
+<form name="quiz">
+<p style="background-color: #FDE5E4;">
+<b>Q1) En analyse sensorielle,</b><br>
+<input type="checkbox" name="q1" value="q1.1">F : il n'est pas nécessaire de construire des plans d'expériences pour une dégustation sensorielle<br>
+<input type="checkbox" name="q1" value="q1.2">V : le plan d'expériences ne dépend pas des descripteurs qui seront évalués<br>
+<input type="checkbox" name="q1" value="q1.3">F : si le plan d'expériences est bien fait, il y aura nécessairement un effet produit significatif<br>
+<textarea name="t1" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
-<p>Une évaluation sensorielle a été organisée pour caractériser 12 jus d'orange.Les données sont disponibles dans <a href="https://husson.github.io/img/orange10-11.zip">le fichier zip suivant</a>.</p>
+<p style="background-color: #F5ECFB;">
+<b>Q2) Dans une évaluation sensorielle,</b><br>
+<input type="checkbox" name="q2" value="q2.1">F : si les juges n'évaluent pas tous les produits, on ne peut pas faire d'analyse<br>
+<input type="checkbox" name="q2" value="q2.2">F : les produits sont toujours évalués dans le même ordre<br>
+<input type="checkbox" name="q2" value="q2.3">V : il faut plusieurs juges, et plusieurs produits<br>
+<textarea name="t2" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-Les 12 jus d'orange sont présentés dans le fichier nom_orange1011.xls.
+<p style="background-color: #FDE5E4;">
+<b>Q3) Lors d'une dégustation sensorielle, </b><br>
+<input type="checkbox" name="q3" value="q3.1">V : si tous les produits sont dégustés un même nombre de fois à chaque rang, alors l'effet rang et l'effet produit sont orthogonaux<br>
+<input type="checkbox" name="q3" value="q3.2">V : si un juge n'évalue pas un produit, alors les facteurs produit et juge ne sont pas orthogonaux<br>
+<input type="checkbox" name="q3" value="q3.3">V : deux facteurs sont orthogonaux si toutes les modalités d'un facteur ont été testées un même nombre de fois avec toutes les modalités de l'autre facteur<br>
+<textarea name="t3" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
-Un jury constitué de 59 étudiants, a évalué chacun de ces 12 jus d'orange lors d'une épreuve de catégorisation (voir catego_orange.csv).
+<p style="background-color: #F5ECFB;">
+<b>Q4) Parmi les indicateurs suivants, quel(s) est (sont) les indicateurs de liaison entre variables quantitatives :</b><br>
+<input type="checkbox" name="q4" value="q4.1">F : Une évaluation de 10 produits avec un plan de Williams ne peut pas se faire avec 20 juges<br>
+<input type="checkbox" name="q4" value="q4.2">V : Les plans de Williams gèrent les effets de rang et les effets de succession<br>
+<input type="checkbox" name="q4" value="q4.3">V : Avec un plan de Williams, chaque produit est dégusté au moins une fois après un produit quelconque (sauf lui-même)<br>
+<textarea name="t4" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-Un second jury, constitué de 12 étudiants (entraînés), a évalué chacun des 12 jus d'orange lors de 2 séances de dégustation selon un liste de 9 descripteurs (voir  QDA_orange1011.csv). Les descripteurs sont les suivants : intensité de la couleur, intensité de l'odeur, intensité d'attaque, saveur sucrée, saveur acide, saveur amère, pulpeux, typicité du goût orange.
-Les notes varient entre 0 et 10; une note de 0 signifie que l'odeur ou la saveur évaluée est extrêmement faible et une note de 10 signifie qu'elle est très importante.
+<p style="background-color: #FDE5E4;">
+<b>Q5) Les plans d'expériences optimaux, </b><br>
+<input type="checkbox" name="q5" value="q5.1">V : sont construits grâce à des algorithme d'échanges<br>
+<input type="checkbox" name="q5" value="q5.2">F : ont tous les produits un même nombre de fois en premier<br>
+<input type="checkbox" name="q5" value="q5.3">V : permettent de trouver des plans pour un nombre de produits quelconque et un nombre de juge quelconque<br>
+<textarea name="t5" style="background-color: #FDE5E4;" rows="3" cols="50" ></textarea>
+</p>
 
+<p style="background-color: #F5ECFB;">
+<b>Q6) Dans SensoMineR, </b><br>
+<input type="checkbox" name="q6" value="q6.1">La fonction WilliamsDesign permet de construire des plans de Williams<br>
+<input type="checkbox" name="q6" value="q6.2">La fonction optimalDesign permet de construire des plans optimaux<br>
+<textarea name="t6" style="background-color: #F5ECFB;" rows="3" cols="50" ></textarea>
+</p>
 
-<h4>Questions :</h4>
-
-<ul>
-<li>Analyser les données de catégorisation et décrire chacun des produits.
-</li><li>Comparer la description des jus d'orange obtenu par catégorisation et la description obtenue par le recueil de données classique de type QDA.
-</li></ul>
-
-<h4>Complément : importation de données dans R</h4>
-<table>
-<tr><td align="center" valign="middle"><a href="https://www.youtube.com/watch?v=NODQFUE037s"><img class="alignnone size-full wp-image-559" src="./import_senso_moodle.jpg" alt="PCAFacto" height="120" /></a></td></tr>
-</tr>
-</table>
-
+<input type="button" value="Score" onClick="getScore(this.form)">
+<input type="reset" value="Remise à zéro">
+<input type="button" value="Réponse" onClick="getReponse(this.form)"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Réponses correctes :<br>
+<textarea name="solutions" wrap="virtual" rows="5" cols="40"></textarea>
+</form>
 </div>
 
-  		</div>
-		
 <div id="footer">
 <!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
 <div class="inline-block-2">
@@ -229,5 +334,3 @@ Professeur en statistique<br> <p>francois.husson[at]institut-agro.fr<br>Tel : +3
 <!--[if IE]>
 </div>
 <![endif]-->
-
-<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
