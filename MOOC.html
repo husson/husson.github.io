@@ -140,6 +140,8 @@ $(window).load(function() {
   gtag('config', 'UA-113893701-1');
 </script>
 	
+
+
 </head>
 
 <body>
@@ -165,80 +167,58 @@ $(window).load(function() {
 
 		<div id="content">
 <h1>4 MOOCs</h1>
-3 MOOCS in French and 1 MOOC in English<ul>
+These MOOCs correspond to courses that represent approximately 30 hours of work each for the learner. Three MOOCS are in French and one MOOC is in English.
+
+<ul>
 <li><a href="./MOOC_AnaDo/index.html">MOOC d'analyse de données</a> (in French)</li>
 <li><a href="./MOOC_plan/index.html">MOOC de Planification expérimentale</a> (in French)</li>
 <li><a href="./MOOC_senso/index.html">MOOC de sensométrie</a> (in French)</li>
-<li><a href="./MOOC.html#AnaDoGB">MOOC Exploratory Multivariate Data Analysis</a> (in English)</li>
+<li><a href="./MOOC_GB/index.html">MOOC Exploratory Multivariate Data Analysis</a> (in English)</li>
 </ul>
-<a name="AnaDo"></a>
-<h1>MOOC d'analyse de données (in French)</h1>
-<p>MOOC (Massive Open Online Course) disponible sur la plateforme FUN et suivi par plus de 38 000 personnes (1 session par an depuis 2015).
-Les sessions sont jouées en férvier-mars tous les ans, vous pourrez vous inscrire sur <a href="https://www.fun-mooc.fr/">FUN</a>.<br>
-Ce cours complet est un module qui nécessite environ 32h d'apprentissage.
-<br><a href="./MOOC_AnaDo/index.html">MOOC d'analyse de données</a></p> <p></p>
 
-<a name="Plan"></a>
-<h1>MOOC de plan d'expériences (in French)</h1>
-<p>Ce cours complet correspond à un module de master 1 de 28h.
-<br><a href="./MOOC_plan/index.html">MOOC de Planification expérimentale</a></p> <p></p>
+<!---    
+<form>
+      <button type="submit" formaction="./MOOC_AnaDo/index.html">MOOC d'analyse de données</button>
+      <button type="submit" formaction="./MOOC_plan/index.html">MOOC de Planification expérimentale</button>
+      <button type="submit" formaction="./MOOC_senso/index.html">MOOC de sensométrie</button>
+    </form>
+--->
 
-<a name="Senso"></a>
-<h1>MOOC de sensométrie (in French)</h1>
-<p>Ce cours complet correspond à un module de master 1 de 28h.
-<br><a href="./MOOC_senso/index.html">MOOC de sensométrie</a></p> <p></p>
+<!--- <script type="text/javascript">
+function toggle_text(id) {
+  var span = document.getElementById(id);
+  if(span.style.display == "none") {
+    span.style.display = "inline";
+  } else {
+    span.style.display = "none";
+  }
+}
+</script>	
 
-<a name="AnaDoGB"></a>
-<h1>Course on Exploratory Multivariate Data Analysis (in English)</h1>
+<table>
+<tr>
+<td><button type="button" class="button" onclick="toggle_text('span_txt1');">Démarche statistique</button><br>
+<span id="span_txt1" style="display:none;">Présentation des objectifs<br>Visualisation<br>Tests d'hypothèses<br>Analyse de variance à 1 facteur<br>Régression simple<br>Modélisation</span>
+</td>
+<td><button type="button" onclick="toggle_text('span_txt2');" class="button">Analyse de données</button><br>
+<span id="span_txt2" style="display:none;">ACP<br>Analyse des correspondances<br>Analyse des correspondances<br>Classifcation<br>Analyse Factorielle Multiple</span>
+</td>
+<td><button type="button" class="button" onclick="toggle_text('span_txt3');">Planification expérimentale</button><br>
+<span id="span_txt3" style="display:none;">Plans fractionnaires<br>Plans pour surface de réponses<br>Plans mixtes<br>Plans optimaux<br>Plans de mélange</span>
+</td>
+<td><button type="button" class="button" onclick="toggle_text('span_txt4');">Sensométrie</button><br>
+<span id="span_txt4" style="display:none;">Plans en analyse sensorielle<br>Caractérisation de produits<br>Evaluation de la performance d'un jury<br>Construction d'un espace produit<br>Données de catégorisation<br>cartographie des préférences</span>
+</td>
+</tr>
+</table>
+--->
 
-<strong>The course is available <a href="MOOC_GB/index.html">here</a>.</strong>
 
-<h3>What you will learn</h3>
-<p>At the end of this course, you will be able to:</p>
+ 
+<!--- <iframe width="800" height="600" src="https://mm.tt/app/map/3033627670?t=4YGtAevt26"></iframe>
+--->
 
-<ul>
-<li>how to summarise and synthesise datasets using simple graphs
-</li><li>how to use visualization methods adapted to multidimensional exploratory analysis
-</li><li>how to interpret the results of a factor analysis and a classification;
-</li><li>how to ecognise the method adapted to the exploration of a dataset according to the nature and structure of the variables;
-</li><li>how to analyse the responses to a survey;
-</li><li>how to perform a textmining
-</li><li>how to implement factorial and classification methods on the free software R
-</li><li>In summary, you will be able to implement and interpret multidimensional exploratory analyses.
-</li>
 
-<h3>Description</h3>
-<p>Exploratory multivariate data analysis is studied and teached in a French-way since a long time in France. This course focuses on four essential and basic methods, those with the largest potential in terms of applications: principal component analysis (PCA) when variables are quantitative, correspondence analysis (CA) and multiple correspondence analysis (MCA) when variables are categorical and clustering. An extension to Multiple Factor Analysis (MFA) will give you the opportunity to analyse more complex dataset that are structured by groups.
-<br>
-We hope that with this course, the participant will be fully equipped (theory, examples, software) to confront multivariate real-life data.
-</p>
-<h3>Format</h3>
-<p>This course is application-oriented; formalism and mathematics writing have been reduced as much as possible while examples and intuition have been emphasized and the numerous exercises done with FactoMineR (a package of the free R software) will make the participant efficient and reliable face to data analysis.
-</p>
-
-<h3>Prerequisites</h3>
-<p>This course will be held in English. It has been designed for scientists whose aim is not to become statisticians but who feel the need to analyze the data themselves. It is therefore addressed to practitioners who are confronted with the analysis of data in marketing, surveys, ecology, biology, geography, etc.
-
-<br>
-An undergraduate level is quite sufficient to capture all the concepts introduced. 
-<br>
-Basic knowledges in statistics are necessary, such as: correlation coefficient, chi-squared test, one-way ANOVA.
-<br>
-On the sofware side, an introduction to the R language is sufficient, at least at first.
-</p>
-
-<h3>Outline</h3>
-This course is a complete course on Exploratory Multivariate Data Analysis. You will find courses on the following method:
-
-<ol>
-<li>PCA - Principal Component Analysis</li>
-<li>CA - Correspondence Analysis</li>
-<li>MCA - Muliple Correspondence Analysis</li>
-<li>Clustering</li>
-<li>MFA - Multiple Factor Analysis</li>
-</ol>
-</p> 
-The course is available <a href="MOOC_GB/index.html">here</a>.
 </div>
 		
 <div id="footer">
