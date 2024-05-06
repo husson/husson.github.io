@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0083)https://math.institut-agro-rennes-angers.fr/frmembres/Francois.Husson/donnees -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script data-ad-client="ca-pub-6867834269616170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<title>F. Husson - MOOC senso</title>
+	<!--<meta name="Keywords" content=""/>-->
+  <meta name="keywords" content="Husson, R, package, teaching, enseignement, MOOC de statistique, MOOC sensmoétrie, FactoMineR, SensoMineR, missMDA, data analysis MOOC, statistics, statistique, analyse de donn&eacute;es, sensom&eacute;trie, sensorielle" />
+  <meta name="robots" content="index, follow, noarchive" />
+
+	
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+	<link type="text/css" href="../assets/css-member-site.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.fancybox-1.3.4.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery.carousel.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-lma2-static" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/css-fancy-dialog" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-1.8.11.new.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/jquery-ui-large_col.content.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="../assets/lma-css-print.css" rel="stylesheet" media="print">
+	<link rel="shortcut icon" href="../img/fh_ico.ico" type="image/x-icon">
+	<link rel="icon" href="../img/fh_ico.ico" type="image/x-icon">
+
+	<!-- Google API's -->
+<script type="text/javascript" src="./assets/jsapi"></script>
+<script language="Javascript" type="text/javascript">
+	//<![CDATA[
+	google.load("jquery", "1.5.1");
+	google.load("jqueryui", "1.8.11");
+	google.load("swfobject", "2.2");
+	//]]>
+</script><script src="./assets/jquery.min.js.téléchargement" type="text/javascript"></script><script src="../assets/jquery-ui.min.js.téléchargement" type="text/javascript"></script><script src="./assets/swfobject.js.téléchargement" type="text/javascript"></script>
+	<script type="text/javascript" src="../assets/jquery.fancybox-1.3.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.easing-1.3.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.mousewheel-3.0.4.pack.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jquery.carouFredSel-4.2.3-packed.js.téléchargement"></script>
+	<script type="text/javascript" src="../assets/jwplayer.js.téléchargement"></script>
+	<script type="text/javascript">
+function formatTitle(title, currentArray, currentIndex, currentOpts) {
+	return ( title && title.length ? '<b>' + title + '</b>' : '' ) + ( currentArray.length > 1 ? '<span style="float: right;">' + (currentIndex + 1) + ' / ' + currentArray.length + '</span><div style="clear: both;"></div>' : '' );
+}
+function centerVertically(selector) {
+	if ($(selector).height()<$(selector).parent().innerHeight()) {
+		$(selector).css('margin-top',($(selector).parent().innerHeight()-$(selector).height())/2);
+	}
+}
+$(document).ready(function() {
+	/* >>>> IMG & FANCY CLASS */
+    $('a[href$=".jpg"], .fancybox').fancybox({
+		cyclic: true,
+		scrolling: "no",
+		centerOnScroll: true,
+		titlePosition: "inside",
+		titleFormat: formatTitle
+    });
+	/* IMG & FANCY CLASS <<<< */
+	
+	/* >>>> MODAL DIALOG BOX */
+	/* init dialog box */
+    $("a.fancy-dialog").fancybox({
+        'centerOnScroll'	: 'true',
+        'titleShow'			: false
+    });
+	/* open the intial dialog box aim by the anchor url
+		(usefull on the first load of the page) */
+	var url = document.location.toString();
+	if (url.match('#')) {
+		var anchor = url.split('#')[1];
+		if ($('a.fancy-dialog[href="#'+anchor+'"]').length==1) {
+			$('a.fancy-dialog[href="#'+anchor+'"]').trigger('click');
+		}
+	}
+	/* MODAL DIALOG BOX <<<< */
+	
+	/* >>>> IFRAME BOX */
+	$("a.fancy-frame").fancybox({
+		'padding'			: 0,
+		'width'             : '75%',
+		'height'            : '75%',
+		'autoScale'         : false,
+		'centerOnScroll'	: 'true',
+		'type'				: 'iframe'
+	});
+	/* IFRAME BOX <<<< */
+	
+	/* >>>> FLASH BOX (SWF) */
+	$("a.fancy-flash").fancybox({
+		'padding'			: 0,
+		'width'				: '100%',
+		'height'			: '100%',
+		'autoScale'			: false,
+		'centerOnScroll'	: 'true'
+	});
+	/* FLASH BOX (SWF) <<<< */
+	
+	/* >>>> CSS DESIGN *
+	$(".nav").addClass("ui-helper-clearfix");
+	$("#header").addClass("corner10-all ui-helper-clearfix");
+	$("#header .nav").addClass("corner4-left bg-glass box-outset-soft");
+	$("#header .nav a").addClass("corner10-all");
+	$("#nav").addClass("ui-helper-clearfix");
+	$("#nav .nav a").addClass("corner4-bottom");
+	$("#breadcrumb").addClass("corner10-all");
+	$("#aside .nav a").addClass("corner10-left");
+	$("#aside a.button").addClass("corner4-all");
+	$("#aside div.listButtons").addClass("corner4-all");
+	$("#content .article").addClass("corner10-all");
+	$("#content .article h2").addClass("corner10-top");
+	$("#content .article img").addClass("corner10-tl corner10-br");
+	$(".article tr:odd td").css("background-color", "#eee");
+	$("#footer").addClass("corner10-all");
+	/* CSS DESIGN <<<< */
+	
+	/* >>>> JQUERY UI */
+	$("#content .tabs").tabs();
+	$("#content a.button").button();
+	$("#content button").button();
+	/* JQUERY UI <<<< */
+});
+$(window).resize(function() {
+	$(".center-vertical").each(function() {
+		centerVertically($(this));
+	});
+});
+$(window).load(function() {
+	$(window).resize();
+});
+</script>
+<style type="text/css">
+	#content div.fancy-dialog { display: none; }
+</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="../assets/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113893701-1');
+</script>
+	
+</head>
+
+<body>
+<div id="nav">
+<h1 style="margin-top:-5px;">François Husson</h1>
+<ul class="nav">
+<li><a href="../index.html" title="">Home</a></li>
+<li><a href="../research.html" title="">Research</a></li>
+<li><a href="../packages.html" title="">Packages</a></li>
+<li><a href="../teaching.html" title="">Teaching</a></li>
+<li><a href="../MOOC.html" title="" class="current">MOOC</a></li>
+<li><a href="../books.html" title="">Books</a></li>
+<li><a href="../tutorials.html" title="">Tutorials</a></li>
+<li><a href="../data.html" title="">Data sets</a></li>
+</ul>
+		</div>
+
+<div id="aside">
+<div class="article">
+<h2>Liens</h2>
+<p><a href="../index.html">Site F. Husson</a><br><br><a href="http://sensominer.free.fr"><img height="24" src="../img/sensominer.png" alt=""></a><br><br><a href="http://factominer.free.fr"><img height="24" src="../img/factominer.png" alt=""></a><br><br> <a href="http://factominer.free.fr/missMDA/index.html"><img height="18" alt="" src="../img/missMDA.png"></a><br><br> <a href="../MOOC_AnaDo/index.html">MOOC analyse de données</a><br><br><a href="http://factominer.free.fr/livre/"><img height="75" alt="Livre Analyse de données" src="./anado2_petit.jpg"></a><a href="https://r-stat-sc-donnees.github.io/">   <img height="75" alt="Livre R pour la statistique et la science des données" src="./R_stat_sc_donnees.png"></a></p>
+</div></div>
+<div id="bside">
+<div class="article">
+<h2>Plan</h2>
+<p><a href="index.html"><font color="grey">Présentation MOOC</font></a><br>
+<p><a href="intro.html"><font color="grey">Introduction</font></a><br>
+<br><a href="plan.html"><font color="grey">Planification d'expériences</font></a><br>
+<br><a href="caract.html"><font color="grey">Caractérisation de produits</font></a><br>
+<br> <a href="perf.html"><font color="grey">Evaluation de la performance d'un jury</font></a><br>
+<br> <a href="espaceprod.html"><font color="grey">Construction d'un espace produit</font></a><br>
+<br><a href="catego.html"><font color="grey">Analyse de données de catégorisation</font></a><br>
+<br><a href="carto.html"><font color="black"><strong>Cartographie des préférences</strong></font></a><br>
+<br><a href="eval.html"><font color="grey">Evaluation finale</font></a><br>
+<br><font color="grey"><a href="https://groups.google.com/g/cours-de-sensometrie"><font color="grey">Forum</font></a></font>
+<br><a href="conclu.html"><font color="grey">Compléments</font></a><br>
+</p>
+</div></div>
+
+		<div id="content">
+<a name="Carto"></a>
+<h2>Etude de cas sur la cartographie des préférences</h2>
+<p style="text-align: justify;">A vous de jouer !</p>
+
+<h4>Description du jeu de données :</h4>
+
+<p>Trois évaluations sensorielles ont été organisées pour caractériser 10 vins blancs du Val de Loire. L'ensemble des données est disponible dans <a href="https://husson.github.io/img/vins.zip">le fichier zip suivant</a>.</p>
+
+<p>Les 10 vins sont présentés dans le fichier noms_vins.doc. Il s'agit de 5 Touraine du cépage Sauvignon (les vins numérotés de 1 à 5) et 5 Vouvray du cépage Chenin (les vins de 6 à 10).<br>
+Un jury de 10 oenologues a évalué chaque vin une seule fois selon une liste de 39 descripteurs (QDA_vins_pro.csv).<br>
+Un jury de 11 étudiants a évalué chaque vin 2 fois selon une liste de 15 descripteurs (QDA_vins_jury1.csv).<br>
+Un jury de 12 étudiants a évalué chaque vin 3 fois selon une liste de 15 descripteurs (QDA_vins_jury2.Ccsv).<br>
+Les notes varient entre 0 et 10; une note de 0 signifie que l'odeur ou la saveur évaluée est extrêmement faible et une note de 10 signifie qu'elle est très importante.</p>
+<p>Par ailleurs, un jury de 60 consommateurs a donné une note d'appréciation pour chaque vin allant de 0, je n'aime pas du tout ce vin, à 10, j'aime beaucoup ce vin (hedo_vins.csv).</p>
+
+<h4>Questions :</h4>
+
+<ul>
+<li>Considérer l'évaluation sensorielle des experts et calculer le tableau moyen avec en lignes les produits, en colonnes les descripteurs et dans une case du tableau la moyenne des notes pour ce produit et ce descripteur. 
+</li><li>Après avoir vérifié que les lignes de ce tableau étaient rangées dans le même ordre que dans le tableau des préférences, concaténer le tableau des moyennes sensorielles et le tableau des préférences.
+</li><li>Faire une cartographie interne et commenter les résultats.
+</li><li>Faire une cartographie externe en utilisant un modèle vectoriel puis un modèle quadratique.
+</li><li>Construire une autre carte des préférences en utilisant un autre jeu de données sensorielles et comparer les cartes.
+</li></ul>
+
+<h4>Complément : importation de données dans R</h4>
+<table>
+<tr><td align="center" valign="middle"><a href="https://www.youtube.com/watch?v=NODQFUE037s"><img class="alignnone size-full wp-image-559" src="./import_senso_moodle.jpg" alt="PCAFacto" height="120" /></a></td></tr>
+</tr>
+</table>
+
+</div>
+
+  		</div>
+		
+<div id="footer">
+<!--%<span class="control">control-ue9MxWpewZWBK7Tz</span>-->
+<div class="inline-block-2">
+<div class="article">
+<h2>François Husson</h2>
+Professeur en statistique<br> <p>francois.husson[at]institut-agro.fr<br>Tel : +33 2 23 48 58 86<br><a href="https://www.youtube.com/user/HussonFrancois">Chaine Youtube</a><a href="https://francoishusson.wordpress.com/"><br>Blog : https://francoishusson.wordpress.com/</a><br><a href="https://scholar.google.fr/citations?user=0qVOGCMAAAAJ&amp;hl=fr">Citation Google Scholar</a></p>
+	</div>
+</div><div class="inline-block-2">
+<div class="article">
+<h2>Department of Statistics and Computer Science</h2> <p> Institut Agro<br> 65 rue de St-Brieuc CS 84215<br> 35042 Rennes Cedex (France)<br><a href="https://irmar.univ-rennes1.fr/">IRMAR - UMR 6625 du CNRS</p>
+	</div>
+</div>
+		</div>
+	</div>
+<!--[if IE]>
+</div>
+<![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
