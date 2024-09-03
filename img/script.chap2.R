@@ -1,10 +1,10 @@
-#     Charger le logiciel (Xplortext)
+ï»¿#     Charger le logiciel (Xplortext)
 rm(list = ls())
 library(Xplortext)
-#     Charger les données
+#     Charger les donnÃ©es
 load("Aspiration_Int_Fr.RData") 
  
-# ########## 2. Construction du TLE et du tableau segmental; résumé des résultats et glossaures
+# ########## 2. Construction du TLE et du tableau segmental; rÃ©sumÃ© des rÃ©sultats et glossaures
 U_stoplist<-c("bien","bonne","tout")
 res.TD<-TextData(base_Fr,var.text=c(9,10), idiom="fr", var.agg="Sexe_Age", Fmin=100, Dmin=80,
                   stop.word.user=U_stoplist, stop.word.tm=TRUE,,graph=FALSE)
@@ -37,7 +37,7 @@ round(dm3*100,2)
 res.chi2<-chisq.test(TableLex)
 print(res.chi2)
 
-#     Tableaux des effectifs observés et théoriques (sous l'hypothèse d'indépendance). 
+#     Tableaux des effectifs observÃ©s et thÃ©oriques (sous l'hypothÃ¨se d'indÃ©pendance). 
 tabobser<-res.chi2$observed
 tabobser <- addmargins(tabobser)
 rownames(tabobser)[nrow(tabobser)]<-"somme"
@@ -54,37 +54,37 @@ round(tabexpect,1)
 tau<-(res.chi2$observed)/res.chi2$expected
 round(tau,2)
 
-#     Analyse des correspondances du tableau lexical agrégé selon la variable Sexe_Age
+#     Analyse des correspondances du tableau lexical agrÃ©gÃ© selon la variable Sexe_Age
 res.LexCA<-LexCA(res.TD, graph=FALSE)
 
 #    Graphique des valeurs propres
 plot(res.LexCA,eigen=TRUE,selDoc=NULL,selWord=NULL,title="Valeurs propres")
 
-#    Résultats pour les documents
+#    RÃ©sultats pour les documents
 summary(res.LexCA,nword=0)
 
-#     Représentation des catégories d'âges, trajectoires séparées pour chaque sexe; échelles fixées.
-plot(res.LexCA,selWord=NULL,xlim=c(-0.3,0.3),ylim=c(-0.3,0.3),cex=1.2,col.doc="black",title="Représentation des documents")
+#     ReprÃ©sentation des catÃ©gories d'Ã¢ges, trajectoires sÃ©parÃ©es pour chaque sexe; Ã©chelles fixÃ©es.
+plot(res.LexCA,selWord=NULL,xlim=c(-0.3,0.3),ylim=c(-0.3,0.3),cex=1.2,col.doc="black",title="ReprÃ©sentation des documents")
 lines(res.LexCA$row$coord[1:3,1],res.LexCA$row$coord[1:3,2],lwd=1.5,col="grey20")
 lines(res.LexCA$row$coord[4:6,1],res.LexCA$row$coord[4:6,2],lwd=1.5,col="grey20")
 
-#     Représentation de tous les mots; mêmes échelles que sur le graphique précédent
+#     ReprÃ©sentation de tous les mots; mÃªmes Ã©chelles que sur le graphique prÃ©cÃ©dent
 plot(res.LexCA,gtype="DocWord",selDoc=NULL,xlim=c(-0.3,0.3),ylim=c(-0.3,0.3),col.word="black",cex=1.2,
-title="Représentation des mots")
+title="ReprÃ©sentation des mots")
 
-#     Représentation des lignes et des colonnes sur le même graphique. mêmes échelles que sur les graphique précédents
+#     ReprÃ©sentation des lignes et des colonnes sur le mÃªme graphique. mÃªmes Ã©chelles que sur les graphique prÃ©cÃ©dents
 plot(res.LexCA,gtype="DocWord",xlim=c(-0.3,0.3),ylim=c(-0.3,0.3),col.doc="grey50",col.word="black",cex=1.2,
-title="Représentation simultanée des documents et des mots")
+title="ReprÃ©sentation simultanÃ©e des documents et des mots")
 lines(res.LexCA$row$coord[1:3,1],res.LexCA$row$coord[1:3,2],lwd=1,col="black")
 lines(res.LexCA$row$coord[4:6,1],res.LexCA$row$coord[4:6,2],lwd=1,col="black")
 
-#     Ellipses de confiance autour des catégories d'âge et représentation des trajectoires
+#     Ellipses de confiance autour des catÃ©gories d'Ã¢ge et reprÃ©sentation des trajectoires
 ellipseLexCA(res.LexCA,selWord=NULL,col.doc="black",
 title="Documents - Ellipses de confiance")
 lines(res.LexCA$row$coord[1:3,1],res.LexCA$row$coord[1:3,2],lwd=1,col="blue")
 lines(res.LexCA$row$coord[4:6,1],res.LexCA$row$coord[4:6,2],lwd=1,col="blue")
 
-#     Ellipses de confiance autour des mots de contribution supérieure à la contribution moyenne sur l'un ou l'autre des axes
+#     Ellipses de confiance autour des mots de contribution supÃ©rieure Ã  la contribution moyenne sur l'un ou l'autre des axes
 ellipseLexCA(res.LexCA,selWord="meta 0.5",selDoc=NULL,col.word="black",
 title="Quelques mots - Ellipses de confiance")
 
