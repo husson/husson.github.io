@@ -3,17 +3,23 @@ Pour la présentation : définir la problématique, donner les principes génér
 donner les lignes de code permettant de mettre en oeuvre la méthode, mettre en oeuvre sur un exemple et interpréter, comparer avec une méthode plus classique
 
 Projets possibles : 
+- Analyse en composantes indépendantes
+- Candecomp - parafac
+- Non-negative Matrix Factorization
+- Empirical Orthogonal Function
+- HOSVD (Non-negative Matrix Factorization)
+- Kernel PCA
+- ACP robuste
+- randomized SVD 
+- Incremental SVD
 - Analyse canonique des corrélations (canonical correspondence analysis)
 - Analyse canonique généralisée
-- Méthode Statis
 - General Procrustes Analysis
 - CA-Galt
 - multi-level simultaneous component analysis : Multilevel component analysis - Marieke E. Timmerman
-- dual multiple factor analysis
+- Dual multiple factor analysis
 - Analyse de co-inertie
 - (multidimensional scaling) MDS
-- ACP robuste
-- randomized SVD 
 
 Il est aussi possible de proposer une très belle application.
 Attention : il faut que l'application soit originale (évolution temporelle, recueil particulier, visualisation spatiale, etc.)
