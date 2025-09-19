@@ -161,7 +161,11 @@ I <- nrow(table(don))
 J <- ncol(table(don))
 ncp <- min(5,I-1,J-1)
 
-sweep(mca$var$coord[1:I,1:ncp],2,sqrt(mca$eig[1:ncp,1]),FUN="/")/sweep(ca$row$coord[,1:ncp],2,sqrt(ca$eig[1:ncp,1]),FUN="/")
-sweep(mca$var$coord[(I+1):(I+J),1:ncp],2,sqrt(mca$eig[1:ncp,1]),FUN="/")/sweep(ca$col$coord[,1:ncp],2,sqrt(ca$eig[1:ncp,1]),FUN="/")
+(mca$var$coord[1:I,1:ncp]%*%diag(1/sqrt(mca$eig[1:ncp,1])))/(ca$row$coord[,1:ncp]%*%diag(1/sqrt(ca$eig[1:ncp,1])))
+(mca$var$coord[(1+I):(I+J),1:ncp]%*%diag(1/sqrt(mca$eig[1:ncp,1])))/(ca$col$coord[,1:ncp]%*%diag(1/sqrt(ca$eig[1:ncp,1])))
+
+# Attention pour les valeurs propres :
+aux = CA(t(tab.disjonctif(don))%*%tab.disjonctif(don))
+mca$eig[1:3,1]^2 / aux$eig[1:3,1]
 ```
 
